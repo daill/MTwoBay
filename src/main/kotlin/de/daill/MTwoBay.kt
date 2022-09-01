@@ -17,18 +17,15 @@
 
 package de.daill
 
-import de.daill.socket.BotSocketEvent
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.context.ApplicationListener
-import java.util.*
 
 
 @SpringBootApplication
-class MTwoBay: ApplicationRunner, ApplicationListener<BotSocketEvent> {
+class MTwoBay: ApplicationRunner{
     val LOG = LoggerFactory.getLogger(MTwoBay::class.java)
 
     @Autowired
@@ -38,9 +35,7 @@ class MTwoBay: ApplicationRunner, ApplicationListener<BotSocketEvent> {
         LOG.info("get gateway info")
     }
 
-    override fun onApplicationEvent(event: BotSocketEvent) {
-        TODO("Not yet implemented")
-    }
+
 
 }
 
