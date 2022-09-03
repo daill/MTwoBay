@@ -57,7 +57,10 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-websocket:2.5.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.8.+")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation("com.google.code.gson:gson:2.7")
+    implementation("com.ebay.auth:ebay-oauth-java-client:1.1.7")
     testImplementation(platform("org.junit:junit-bom:5.7.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
