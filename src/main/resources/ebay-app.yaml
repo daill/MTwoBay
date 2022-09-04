@@ -1,0 +1,16 @@
+name: ebay-app-config
+
+# Trading API OAuth - https://developer.ebay.com/api-docs/static/oauth-tokens.html
+
+# UPDATE the values in this file, before running the tests
+api.sandbox.ebay.com:
+  appid: Christan-schraube-SBX-be8829ee1-5f56ecac
+  certid: SBX-e8829ee140d2-0538-4f06-a64c-6bf7
+  devid: e3cefe94-3766-4492-903e-b8c3fab8758b
+  redirecturi: https://home.daill.de:8443/auth
+
+api.ebay.com:
+  appid: <appid-from-developer-portal>
+  certid: <certid-from-developer-portal>
+  devid: <devid-from-developer-portal>
+  redirecturi: <redirect_uri-from-developer-portal>

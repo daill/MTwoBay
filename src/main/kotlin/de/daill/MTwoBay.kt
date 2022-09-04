@@ -26,6 +26,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import java.io.File
+import java.io.FileInputStream
 import java.util.*
 
 
@@ -44,16 +46,17 @@ class MTwoBay: ApplicationRunner{
     }
 
     fun getToken() {
-        val SCOPE_LIST_SANDBOX: List<String> = arrayOf("https://api.ebay.com/oauth/api_scope", "https://api.ebay.com/oauth/api_scope/buy.item.feed").toList()
+        val SCOPE_LIST_SANDBOX: List<String> = arrayOf("https://api.ebay.com/oauth/api_scope", "https://api.ebay.com/oauth/api_scope/sell.marketing.readonly").toList()
         val SCOPE_LIST_PRODUCTION: List<String> = arrayOf("https://api.ebay.com/oauth/api_scope").toList()
         val INVALID_SCOPE_LIST: List<String> = arrayOf("https://api.ebay.com/oauthxxx").toList()
         val ERROR_INVALID_SCOPE = "\"error\":\"invalid_scope\""
 
-        CredentialUtil.load()
+        CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
         val oauth2Api = OAuth2Api()
+        LOG.debug(oauth2Api.generateUserAuthorizationUrl(Environment.SANDBOX,SCOPE_LIST_SANDBOX,Optional.of("current-page")))
         val oauth2Response = oauth2Api.getApplicationToken(Environment.SANDBOX, SCOPE_LIST_SANDBOX)
         val applicationToken: Optional<AccessToken> = oauth2Response.accessToken
-        LOG.debug(applicationToken.get().toString())
+        //LOG.debug(applicationToken.get().toString())
     }
 
 
