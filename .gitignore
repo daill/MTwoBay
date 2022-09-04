@@ -5,4 +5,5 @@ gradlew
 .idea
 gradlew.bat
 weserbot.image
-#src/main/resources/application.properties
+src/main/resources/application.properties
+src/main/resources/ebay-app.yaml
