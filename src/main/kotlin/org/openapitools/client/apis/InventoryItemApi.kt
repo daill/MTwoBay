@@ -38,7 +38,7 @@ class InventoryItemApi(basePath: String = defaultBasePath, token: String) : ApiC
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("org.openapitools.client.baseUrl", "https://api.sandbox.ebay.com/sell/inventory/v1")
+            System.getProperties().getProperty("org.openapitools.client.baseUrl", "https://api.ebay.com/sell/inventory/v1")
         }
 
     }

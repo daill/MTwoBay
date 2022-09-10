@@ -48,7 +48,7 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         val oauth2Api = OAuth2Api()
         CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
         LOG.debug(authEvent.getCode())
-        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.SANDBOX, authEvent.getCode())
+        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.PRODUCTION, authEvent.getCode())
         LOG.debug(oauth2Response.toString())
         if (oauth2Response.refreshToken.isPresent) {
             LOG.debug(oauth2Response.refreshToken.get().toString())
