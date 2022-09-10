@@ -19,44 +19,51 @@ package de.daill
 
 import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
-import com.ebay.api.client.auth.oauth2.model.AccessToken
 import com.ebay.api.client.auth.oauth2.model.Environment
+import org.openapitools.client.ApiClient
+import client.api.InventoryItemApi
+import client.auth.OAuth
+import org.openapitools.client.infrastructure.ApiClient
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.context.ApplicationListener
 import java.io.File
-import java.io.FileInputStream
-import java.util.*
 
 
 @SpringBootApplication
-class MTwoBay: ApplicationRunner{
+class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
     val LOG = LoggerFactory.getLogger(MTwoBay::class.java)
+
 
     @Autowired
     lateinit var props: AppProperties
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-        getToken()
-
 
     }
 
-    fun getToken() {
-        val SCOPE_LIST_SANDBOX: List<String> = arrayOf("https://api.ebay.com/oauth/api_scope", "https://api.ebay.com/oauth/api_scope/sell.marketing.readonly").toList()
-        val SCOPE_LIST_PRODUCTION: List<String> = arrayOf("https://api.ebay.com/oauth/api_scope").toList()
-        val INVALID_SCOPE_LIST: List<String> = arrayOf("https://api.ebay.com/oauthxxx").toList()
-        val ERROR_INVALID_SCOPE = "\"error\":\"invalid_scope\""
-
-        CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
+    fun exchangeToken(authEvent: AuthEvent) {
         val oauth2Api = OAuth2Api()
-        LOG.debug(oauth2Api.generateUserAuthorizationUrl(Environment.SANDBOX,SCOPE_LIST_SANDBOX,Optional.of("current-page")))
-        val oauth2Response = oauth2Api.getApplicationToken(Environment.SANDBOX, SCOPE_LIST_SANDBOX)
-        val applicationToken: Optional<AccessToken> = oauth2Response.accessToken
-        //LOG.debug(applicationToken.get().toString())
+        CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
+        LOG.debug(authEvent.getCode())
+        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.PRODUCTION, authEvent.getCode())
+        LOG.debug(oauth2Response.toString())
+        if (oauth2Response.refreshToken.isPresent) {
+            LOG.debug(oauth2Response.refreshToken.get().toString())
+        }
+        if (oauth2Response.accessToken.isPresent) {
+            LOG.debug(oauth2Response.accessToken.get().token.toString())
+        }
+        val client = ApiClient("https://auth.sandbox.ebay.com/oauth2/authorize")
+        val conf = client.Companion.apiKey
+    }
+
+    override fun onApplicationEvent(event: AuthEvent) {
+        exchangeToken(event)
     }
 
 
