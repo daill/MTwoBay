@@ -56,9 +56,9 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         if (oauth2Response.accessToken.isPresent) {
             LOG.debug(oauth2Response.accessToken.get().token.toString())
         }
-        var client = InventoryItemApi()
+        var client = InventoryItemApi(token=oauth2Response.accessToken.get().token.toString())
 
-        client.getInventoryItems("100", "0")
+        LOG.debug(client.getInventoryItems("100", "0").size.toString())
     }
 
     override fun onApplicationEvent(event: AuthEvent) {
@@ -68,4 +68,3 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
 
 
 }
-

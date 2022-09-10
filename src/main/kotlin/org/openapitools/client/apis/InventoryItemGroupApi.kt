@@ -26,7 +26,7 @@ import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class InventoryItemGroupApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class InventoryItemGroupApi(basePath: kotlin.String = defaultBasePath, token: String) : ApiClient(basePath, token) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {

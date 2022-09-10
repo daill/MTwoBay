@@ -34,12 +34,13 @@ import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class InventoryItemApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class InventoryItemApi(basePath: String = defaultBasePath, token: String) : ApiClient(basePath, token) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
             System.getProperties().getProperty("org.openapitools.client.baseUrl", "https://api.sandbox.ebay.com/sell/inventory/v1")
         }
+
     }
 
     /**

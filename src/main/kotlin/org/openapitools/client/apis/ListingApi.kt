@@ -26,7 +26,7 @@ import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class ListingApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class ListingApi(basePath: kotlin.String = defaultBasePath, token: String) : ApiClient(basePath, token) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {

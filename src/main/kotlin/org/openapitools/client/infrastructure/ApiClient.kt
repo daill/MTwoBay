@@ -1,5 +1,7 @@
 package org.openapitools.client.infrastructure
 
+import com.squareup.moshi.FromJson
+import com.squareup.moshi.ToJson
 import okhttp3.Credentials
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
@@ -13,6 +15,7 @@ import okhttp3.Request
 import okhttp3.Headers
 import okhttp3.MultipartBody
 import java.io.File
+import java.math.BigDecimal
 import java.net.URLConnection
 import java.util.Date
 import java.time.LocalDate
@@ -21,7 +24,12 @@ import java.time.LocalTime
 import java.time.OffsetDateTime
 import java.time.OffsetTime
 
-open class ApiClient(val baseUrl: String) {
+open class ApiClient(val baseUrl: String, var accessToken: String) {
+    val apiKey: MutableMap<String, String> = mutableMapOf()
+    val apiKeyPrefix: MutableMap<String, String> = mutableMapOf()
+    var username: String? = null
+    var password: String? = null
+
     companion object {
         protected const val ContentType = "Content-Type"
         protected const val Accept = "Accept"
@@ -29,13 +37,8 @@ open class ApiClient(val baseUrl: String) {
         protected const val JsonMediaType = "application/json"
         protected const val FormDataMediaType = "multipart/form-data"
         protected const val FormUrlEncMediaType = "application/x-www-form-urlencoded"
-        protected const val XmlMediaType = "application/xml"
 
-        val apiKey: MutableMap<String, String> = mutableMapOf()
-        val apiKeyPrefix: MutableMap<String, String> = mutableMapOf()
-        var username: String? = null
-        var password: String? = null
-        var accessToken: String? = null
+        protected const val XmlMediaType = "application/xml"
 
         @JvmStatic
         val client: OkHttpClient by lazy {
