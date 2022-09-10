@@ -1,5 +1,6 @@
-package de.daill
+package de.daill.services.api
 
+import de.daill.AuthEvent
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationEventPublisher

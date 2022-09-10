@@ -20,9 +20,7 @@ package de.daill
 import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
-import org.openapitools.client.ApiClient
-import client.api.InventoryItemApi
-import client.auth.OAuth
+import org.openapitools.client.apis.InventoryItemApi
 import org.openapitools.client.infrastructure.ApiClient
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -50,7 +48,7 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         val oauth2Api = OAuth2Api()
         CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
         LOG.debug(authEvent.getCode())
-        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.PRODUCTION, authEvent.getCode())
+        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.SANDBOX, authEvent.getCode())
         LOG.debug(oauth2Response.toString())
         if (oauth2Response.refreshToken.isPresent) {
             LOG.debug(oauth2Response.refreshToken.get().toString())
@@ -58,8 +56,9 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         if (oauth2Response.accessToken.isPresent) {
             LOG.debug(oauth2Response.accessToken.get().token.toString())
         }
-        val client = ApiClient("https://auth.sandbox.ebay.com/oauth2/authorize")
-        val conf = client.Companion.apiKey
+        var client = InventoryItemApi()
+
+        client.getInventoryItems("100", "0")
     }
 
     override fun onApplicationEvent(event: AuthEvent) {
