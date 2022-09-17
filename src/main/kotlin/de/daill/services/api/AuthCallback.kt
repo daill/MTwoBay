@@ -24,4 +24,8 @@ class AuthCallback {
         applicationEventPublisher?.publishEvent(AuthEvent(this, request.getParameter("code")))
     }
 
+    @GetMapping("/magento/success")
+    fun magentoCallback(request: HttpServletRequest) {
+        LOG.debug(request.getParameter("code"))
+    }
 }
