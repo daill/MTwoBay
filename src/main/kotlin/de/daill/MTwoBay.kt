@@ -20,14 +20,15 @@ package de.daill
 import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
-import org.openapitools.client.apis.InventoryItemApi
-import org.openapitools.client.infrastructure.ApiClient
+import de.daill.ebay.apis.InventoryItemApi
+import de.daill.magento.api.ProductsApi
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.ApplicationListener
+import org.springframework.context.annotation.ComponentScan
 import java.io.File
 
 
@@ -41,7 +42,8 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-
+        var productsApi = ProductsApi()
+        productsApi.getProducts()
     }
 
     fun exchangeToken(authEvent: AuthEvent) {
@@ -56,7 +58,7 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         if (oauth2Response.accessToken.isPresent) {
             LOG.debug(oauth2Response.accessToken.get().token.toString())
         }
-        var client = InventoryItemApi(token=oauth2Response.accessToken.get().token.toString())
+        var client = InventoryItemApi(token = oauth2Response.accessToken.get().token.toString())
 
         LOG.debug(client.getInventoryItems("100", "0").size.toString())
     }
