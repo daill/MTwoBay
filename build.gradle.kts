@@ -53,19 +53,25 @@ allOpen {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.springframework.boot:spring-boot-starter:2.5.0")
-    implementation("org.springframework.boot:spring-boot-starter-websocket:2.5.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation("org.springframework.boot:spring-boot-starter:2.7.4")
+    implementation("org.springframework.boot:spring-boot-starter-websocket:2.7.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
     implementation("com.squareup.moshi:moshi:1.14.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     implementation("com.squareup.moshi:moshi-adapters:1.14.0")
-    implementation("com.google.code.gson:gson:2.7")
-    implementation("io.gsonfire:gson-fire:1.0.1")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("io.gsonfire:gson-fire:1.8.5")
     implementation("com.ebay.auth:ebay-oauth-java-client:1.1.7")
-    testImplementation(platform("org.junit:junit-bom:5.7.2"))
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.7.5")
+    implementation("org.postgresql:postgresql:42.5.0")
+
+
+    testImplementation(platform("org.junit:junit-bom:5.9.0"))
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.4")
+    testImplementation("org.springframework.boot:spring-boot-test-autoconfigure:2.7.4")
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 

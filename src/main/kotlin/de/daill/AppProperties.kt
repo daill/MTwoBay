@@ -21,8 +21,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.stereotype.Component
 import java.util.*
 
-@Component
-@ConfigurationProperties("bot")
+//@Component
+//@ConfigurationProperties("bot")
 data class AppProperties(
     var token:String = "",
     var endpoint:String = "",

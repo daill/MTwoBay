@@ -1,9 +1,10 @@
 version: "3.9"
 services:
   backend:
-    image: couchdb:3.2.2
+    image: postgres
     ports:
-      - "5984:5984"
+      - "5432:5432"
     environment:
-      COUCHDB_USER: admin
-      COUCHDB_PASSWORD: password
+      POSTGRES_USER: mtwobay
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: mtwobay

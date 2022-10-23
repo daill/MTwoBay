@@ -1,21 +1,30 @@
 package de.daill
 
-import de.daill.magento.auth.MagentoApiClient
-import okhttp3.Request
-import org.junit.jupiter.api.Assertions.assertNotNull
+import de.daill.magento.auth.MagentoProperties
+import de.daill.services.MagentoPropertiesRepository
 import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
+import org.springframework.boot.test.context.SpringBootTest
 
+
+@SpringBootTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class MagentoApiTest {
 
+    @Autowired
+    lateinit var repository: MagentoPropertiesRepository
+
+
     @Test
-    fun testRequestToken() {
-       var client = MagentoApiClient()
-       client.getRequestToken()
+    fun saveProperties() {
+        var props = MagentoProperties()
+        props.callbackUrl="asdasd"
+        repository.save(props)
     }
 
     @Test
-    fun testAccessToken() {
-        var request = Request.Builder().url("https://gla")
+    fun loadProperties() {
 
     }
 
