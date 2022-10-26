@@ -20,33 +20,37 @@ package de.daill
 import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
-import de.daill.ebay.apis.InventoryItemApi
-import de.daill.services.MagentoPropertiesRepository
+import de.daill.api.ebay.EbayInventoryItemApi
+import de.daill.services.magento.MagentoAuthEvent
+import de.daill.services.magento.MagentoPropertiesRepository
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.ApplicationListener
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories
+import org.springframework.scheduling.annotation.EnableScheduling
 import java.io.File
 
 
 @SpringBootApplication
-class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
+@EnableScheduling
+class MTwoBay: ApplicationRunner, ApplicationListener<MagentoAuthEvent> {
     val LOG = LoggerFactory.getLogger(MTwoBay::class.java)
 
 
-    @Autowired
-    lateinit var repository: MagentoPropertiesRepository
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
         //productsApi.getProducts()
-        repository.count()
+
     }
 
-    fun exchangeToken(authEvent: AuthEvent) {
+    fun initProperties() {
+
+    }
+
+    fun exchangeToken(authEvent: MagentoAuthEvent) {
         val oauth2Api = OAuth2Api()
         CredentialUtil.load(File("src/main/resources/ebay-app.yaml").inputStream())
         LOG.debug(authEvent.getCode())
@@ -58,12 +62,12 @@ class MTwoBay: ApplicationRunner, ApplicationListener<AuthEvent> {
         if (oauth2Response.accessToken.isPresent) {
             LOG.debug(oauth2Response.accessToken.get().token.toString())
         }
-        var client = InventoryItemApi(token = oauth2Response.accessToken.get().token.toString())
+        var client = EbayInventoryItemApi(token = oauth2Response.accessToken.get().token.toString())
 
         LOG.debug(client.getInventoryItems("100", "0").size.toString())
     }
 
-    override fun onApplicationEvent(event: AuthEvent) {
+    override fun onApplicationEvent(event: MagentoAuthEvent) {
         exchangeToken(event)
     }
 

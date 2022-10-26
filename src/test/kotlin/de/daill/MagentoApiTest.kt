@@ -1,7 +1,7 @@
 package de.daill
 
-import de.daill.magento.auth.MagentoProperties
-import de.daill.services.MagentoPropertiesRepository
+import de.daill.services.magento.MagentoProperties
+import de.daill.services.magento.MagentoPropertiesRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
