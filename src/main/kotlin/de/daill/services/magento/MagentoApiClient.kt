@@ -17,11 +17,22 @@ import javax.crypto.spec.SecretKeySpec
 class MagentoApiClient {
     val LOG = LoggerFactory.getLogger(this::class.java)
 
-    @Autowired
     lateinit var magentoProperties: MagentoProperties
 
-    @Autowired
     lateinit var repository: MagentoPropertiesRepository
+
+    @Autowired
+    constructor(repository: MagentoPropertiesRepository) {
+        this.repository = repository
+        var props = repository.findAll()
+        if (props.count() > 0) {
+            magentoProperties = props.last()
+        }
+        if (!this::magentoProperties.isInitialized) {
+            magentoProperties = MagentoProperties()
+        }
+    }
+
 
     fun buildParamString(paramMap: Map<String, String>) : String {
         var concatenatedParams = paramMap.entries.joinToString(separator = ",", transform =  { "${it.key}=\"${URLEncoder.encode(it.value, "UTF-8")}\""})

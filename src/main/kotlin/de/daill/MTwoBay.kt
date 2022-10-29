@@ -46,9 +46,6 @@ class MTwoBay: ApplicationRunner, ApplicationListener<MagentoAuthEvent> {
 
     }
 
-    fun initProperties() {
-
-    }
 
     fun exchangeToken(authEvent: MagentoAuthEvent) {
         val oauth2Api = OAuth2Api()

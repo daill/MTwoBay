@@ -1,25 +1,25 @@
 package de.daill.services.magento
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import javax.persistence.*
 
-@Component
+
 @Entity
 @Table(name = "magento_settings")
-class MagentoProperties {
-
-
+open class MagentoProperties {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    var id: Long? = null
+    open var id: Long? = null
 
-    var consumerKey = ""
-    var consumerSecret = ""
-    var token = ""
-    var tokenSecret = ""
-    var verifier = ""
-    var storeBaseUrl = ""
-    var callbackUrl = ""
+    open var consumerKey = ""
+    open var consumerSecret = ""
+    open var token = ""
+    open var tokenSecret = ""
+    open var verifier = ""
+    open var storeBaseUrl = ""
+    open var callbackUrl = ""
+
 
 }
