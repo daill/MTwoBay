@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest
 @RequestMapping("/api/auth")
 class MagentoAuthCallback {
     @Autowired
+    lateinit var propertiesRepository: MagentoPropertiesRepository
+
+    @Autowired
     private val applicationEventPublisher: ApplicationEventPublisher? = null
 
     @Autowired
@@ -52,10 +55,14 @@ class MagentoAuthCallback {
     @PostMapping("/magento/success")
     fun magentoCallbackPost(request: HttpServletRequest) : String {
         var body = request.reader.lines().collect(Collectors.joining(System.lineSeparator()))
+
+        propertiesRepository.deleteAll()
+        authApi.magentoClient.magentoProperties = MagentoProperties()
+
         MagentoApiTools.parseMagentoParams(body, authApi.magentoClient)
+
         LOG.debug("try to exchange token")
         authApi.getRequestToken()
-
 
         return "verifier"
     }

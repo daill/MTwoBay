@@ -2,6 +2,7 @@ package de.daill.api.magento
 
 import de.daill.services.magento.MagentoApiTools
 import de.daill.services.magento.MagentoApiClient
+import de.daill.services.magento.MagentoProperties
 import de.daill.services.magento.MagentoPropertiesRepository
 import okhttp3.FormBody
 import okhttp3.Request
@@ -60,7 +61,9 @@ class MagentoAuthApi {
         request.addHeader("Authorization", "OAuth $paramString")
         LOG.debug("Authorization=OAuth $paramString")
         var response = magentoClient.sendRequest(request.build())
-        LOG.debug(response.body?.string())
+        var bodyString = response.body?.string().orEmpty()
+        LOG.debug(bodyString)
+        MagentoApiTools.parseMagentoParams(bodyString, magentoClient)
         propertyRepository.save(magentoClient.magentoProperties)
     }
 
@@ -100,12 +103,8 @@ class MagentoAuthApi {
         request.addHeader("Authorization", "OAuth $paramString")
         LOG.debug("Authorization=OAuth $paramString")
         var response = magentoClient.sendRequest(request.build())
-        var body = response.body?.string().orEmpty()
-        LOG.debug(body)
-        if (body.isEmpty()) {
-            LOG.error("could not parse request token body. Body is null.")
-        }
-        MagentoApiTools.parseMagentoParams(body, magentoClient)
+        var bodyString = response.body?.string().orEmpty()
+        MagentoApiTools.parseMagentoParams(bodyString, magentoClient)
 
         getAccessToken()
 

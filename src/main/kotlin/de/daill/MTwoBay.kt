@@ -21,6 +21,7 @@ import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
 import de.daill.api.ebay.EbayInventoryItemApi
+import de.daill.api.magento.MagentoProductsApi
 import de.daill.services.magento.MagentoAuthEvent
 import de.daill.services.magento.MagentoPropertiesRepository
 import org.slf4j.LoggerFactory
@@ -39,6 +40,8 @@ class MTwoBay: ApplicationRunner, ApplicationListener<MagentoAuthEvent> {
     val LOG = LoggerFactory.getLogger(MTwoBay::class.java)
 
 
+    @Autowired
+    lateinit var productsApi: MagentoProductsApi
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")

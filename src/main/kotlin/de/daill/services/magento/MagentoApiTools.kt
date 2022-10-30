@@ -1,5 +1,6 @@
 package de.daill.services.magento
 
+import okhttp3.ResponseBody
 import org.slf4j.LoggerFactory
 
 class MagentoApiTools {
