@@ -1,6 +1,7 @@
 package de.daill.services.magento
 
 import de.daill.api.magento.MagentoAuthApi
+import de.daill.model.magento.MagentoProperties
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationEventPublisher

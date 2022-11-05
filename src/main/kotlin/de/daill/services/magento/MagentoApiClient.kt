@@ -1,5 +1,6 @@
 package de.daill.services.magento
 
+import de.daill.model.magento.MagentoProperties
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response

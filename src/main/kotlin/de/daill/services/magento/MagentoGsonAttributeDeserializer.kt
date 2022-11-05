@@ -15,16 +15,15 @@ class MagentoGsonAttributeDeserializer: JsonDeserializer<FrameworkAttributeInter
         typeOfT: Type?,
         context: JsonDeserializationContext?
     ):FrameworkAttributeInterface {
-        LOG.debug(json.toString())
         var attributeInterface =  FrameworkAttributeInterface()
         var jsonObject = json?.asJsonObject!!
 
         attributeInterface.attributeCode = jsonObject["attribute_code"].asString
         if (jsonObject["value"].isJsonArray) {
-            jsonObject["value"].asJsonArray.forEach { attributeInterface.value. }
+            jsonObject["value"].asJsonArray.forEach { attributeInterface.value.add(it.asString) }
+        } else if (jsonObject["value"].isJsonPrimitive) {
+            attributeInterface.value.add(jsonObject["value"].asString)
         }
-
-
 
         return attributeInterface
     }

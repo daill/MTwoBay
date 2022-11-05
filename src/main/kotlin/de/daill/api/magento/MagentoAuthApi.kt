@@ -2,7 +2,6 @@ package de.daill.api.magento
 
 import de.daill.services.magento.MagentoApiTools
 import de.daill.services.magento.MagentoApiClient
-import de.daill.services.magento.MagentoProperties
 import de.daill.services.magento.MagentoPropertiesRepository
 import okhttp3.FormBody
 import okhttp3.Request

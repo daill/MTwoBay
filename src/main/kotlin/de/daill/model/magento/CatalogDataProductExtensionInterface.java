@@ -18,6 +18,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +26,16 @@ import java.util.List;
  * ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductInterface
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
+@Entity
+@Table(name = "magento_product_extension")
 public class CatalogDataProductExtensionInterface {
   public static final String SERIALIZED_NAME_WEBSITE_IDS = "website_ids";
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id", nullable = false)
+  private Long id;
+
   @SerializedName(SERIALIZED_NAME_WEBSITE_IDS)
   private List<Integer> websiteIds = null;
 
@@ -66,6 +74,14 @@ public class CatalogDataProductExtensionInterface {
   public static final String SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS = "configurable_product_links";
   @SerializedName(SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS)
   private List<Integer> configurableProductLinks = null;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
 
   public CatalogDataProductExtensionInterface websiteIds(List<Integer> websiteIds) {

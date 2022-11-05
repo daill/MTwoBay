@@ -18,6 +18,7 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +26,12 @@ import java.util.List;
 /**
  * CatalogDataProductInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
+@Entity
 public class CatalogDataProductInterface {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @Id
+  @Column(name = "id", nullable = false)
   private Integer id;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
@@ -72,11 +75,15 @@ public class CatalogDataProductInterface {
   private BigDecimal weight;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
+  @OneToOne
+  @JoinColumn(name = "extension_attributes_id")
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductExtensionInterface extensionAttributes;
 
   public static final String SERIALIZED_NAME_PRODUCT_LINKS = "product_links";
   @SerializedName(SERIALIZED_NAME_PRODUCT_LINKS)
+  @OneToMany
+  @JoinColumn(name = "extension_attributes_id")
   private List<CatalogDataProductLinkInterface> productLinks = null;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";

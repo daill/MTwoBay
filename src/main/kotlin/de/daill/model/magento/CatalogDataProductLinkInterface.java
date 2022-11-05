@@ -17,13 +17,22 @@ import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
 
+import javax.persistence.*;
+
 
 /**
  * CatalogDataProductLinkInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
+@Entity
+@Table(name = "magento_product_link")
 public class CatalogDataProductLinkInterface {
   public static final String SERIALIZED_NAME_SKU = "sku";
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id", nullable = false)
+  private Long id;
+
   @SerializedName(SERIALIZED_NAME_SKU)
   private String sku;
 
@@ -47,6 +56,13 @@ public class CatalogDataProductLinkInterface {
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductLinkExtensionInterface extensionAttributes;
 
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public CatalogDataProductLinkInterface sku(String sku) {
     

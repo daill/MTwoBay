@@ -28,6 +28,8 @@ class SyncTask {
         LOG.debug(products.toString())
 
         // sync with products in internal database
+
+
         // create delta set
         // update ebay products
 

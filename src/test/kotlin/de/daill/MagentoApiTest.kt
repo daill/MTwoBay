@@ -1,6 +1,6 @@
 package de.daill
 
-import de.daill.services.magento.MagentoProperties
+import de.daill.model.magento.MagentoProperties
 import de.daill.services.magento.MagentoPropertiesRepository
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

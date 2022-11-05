@@ -1,16 +1,13 @@
 package de.daill
 
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import de.daill.model.magento.CatalogDataProductSearchResultsInterface
 import de.daill.model.magento.FrameworkAttributeInterface
 import de.daill.services.magento.MagentoGsonAttributeDeserializer
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.core.io.Resource
 import org.springframework.util.ResourceUtils
 
-class MagentoProductsTests {
+class MagentoApiProductsTests {
 
     @Test
     fun testProductsSearchJsonTest() {

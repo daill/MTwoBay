@@ -13,6 +13,7 @@
 
 package de.daill.model.magento;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public class FrameworkAttributeInterface {
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  private List value;
+  private List value = new ArrayList();
 
 
   public FrameworkAttributeInterface attributeCode(String attributeCode) {
@@ -73,7 +74,7 @@ public class FrameworkAttributeInterface {
   }
 
 
-  public void setValue(String[] value) {
+  public void setValue(List value) {
     this.value = value;
   }
 

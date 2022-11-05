@@ -1,4 +1,4 @@
-package de.daill.services.magento
+package de.daill.model.magento
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
