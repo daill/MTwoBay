@@ -22,6 +22,9 @@ import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
 import de.daill.api.ebay.EbayInventoryItemApi
 import de.daill.api.magento.MagentoProductsApi
+import de.daill.model.magento.CatalogDataProductQueryFilterParam
+import de.daill.model.magento.CatalogDataProductQueryPageSizeParam
+import de.daill.services.SyncTask
 import de.daill.services.magento.MagentoAuthEvent
 import de.daill.services.magento.MagentoPropertiesRepository
 import org.slf4j.LoggerFactory
@@ -35,17 +38,18 @@ import java.io.File
 
 
 @SpringBootApplication
-@EnableScheduling
 class MTwoBay: ApplicationRunner, ApplicationListener<MagentoAuthEvent> {
     val LOG = LoggerFactory.getLogger(MTwoBay::class.java)
 
 
+
     @Autowired
-    lateinit var productsApi: MagentoProductsApi
+    lateinit var task: SyncTask
+
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-        //productsApi.getProducts()
+        task.process()
 
     }
 

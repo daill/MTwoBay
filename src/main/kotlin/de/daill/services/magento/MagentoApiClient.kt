@@ -7,6 +7,7 @@ import okio.ByteString
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.lang.IllegalStateException
 import java.net.URLEncoder
 import java.time.Instant
 import java.util.*
@@ -19,7 +20,7 @@ class MagentoApiClient {
 
     lateinit var magentoProperties: MagentoProperties
 
-    lateinit var repository: MagentoPropertiesRepository
+    var repository: MagentoPropertiesRepository
 
     @Autowired
     constructor(repository: MagentoPropertiesRepository) {
@@ -35,7 +36,7 @@ class MagentoApiClient {
 
 
     fun buildParamString(paramMap: Map<String, String>) : String {
-        var concatenatedParams = paramMap.entries.joinToString(separator = ",", transform =  { "${it.key}=\"${URLEncoder.encode(it.value, "UTF-8")}\""})
+        var concatenatedParams = paramMap.entries.joinToString(separator = ",", transform =  { "${URLEncoder.encode(it.key, "UTF-8")}=\"${URLEncoder.encode(it.value, "UTF-8")}\""})
 
         LOG.debug("concatenated params $concatenatedParams")
         return concatenatedParams
@@ -55,7 +56,7 @@ class MagentoApiClient {
     fun createSignature(method: String, url: String, paramMap: Map<String, String>, consumerSecret: String, tokenSecret: String) : String {
         var signatureString = String()
 
-        var paramString = paramMap.toSortedMap().entries.joinToString(separator = "&", transform =  { "${it.key}=${URLEncoder.encode(it.value, "UTF-8")}" })
+        var paramString = paramMap.toSortedMap().entries.joinToString(separator = "&", transform =  { "${URLEncoder.encode(it.key, "UTF-8")}=${URLEncoder.encode(it.value, "UTF-8")}" })
 
         LOG.debug("concatenated params $paramString")
 
@@ -72,11 +73,11 @@ class MagentoApiClient {
         return ByteString.of(*signature).base64()
     }
 
-    fun buildAuthParam(url: String) : String {
+    fun buildAuthParam(method: String, url: String, additionalParameters: Map<String, String> = emptyMap()) : String {
         val nonce = UUID.randomUUID().toString()
         val timestamp = Instant.now().epochSecond.toString()
 
-        val paramMap = mapOf(
+        var paramMap = mapOf(
             "oauth_consumer_key" to magentoProperties.consumerKey,
             "oauth_signature_method" to "HMAC-SHA256",
             "oauth_token" to magentoProperties.token,
@@ -87,9 +88,11 @@ class MagentoApiClient {
             "oauth_callback" to magentoProperties.callbackUrl,
         )
 
+        paramMap += additionalParameters
+
         var paramString = buildParamString(paramMap)
 
-        paramString += ",oauth_signature=\"${URLEncoder.encode(createSignature("POST", "", paramMap = paramMap, consumerSecret = magentoProperties.consumerSecret, tokenSecret = magentoProperties.tokenSecret), "UTF-8")}\""
+        paramString += ",oauth_signature=\"${URLEncoder.encode(createSignature(method, url, paramMap = paramMap, consumerSecret = magentoProperties.consumerSecret, tokenSecret = magentoProperties.tokenSecret), "UTF-8")}\""
 
         LOG.debug("Authorization=OAuth $paramString")
         return "OAuth $paramString"
@@ -98,10 +101,11 @@ class MagentoApiClient {
 
     fun sendRequest(request: Request): Response {
         var client = OkHttpClient()
-        try {
-            return client.newCall(request).execute()
-        } finally {
-
+        return try {
+            client.newCall(request).execute()
+        } catch (e: IllegalStateException) {
+            LOG.error("execution failed, empty response returned", e)
+            Response.Builder().build()
         }
     }
 }

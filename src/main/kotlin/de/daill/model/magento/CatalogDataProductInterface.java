@@ -91,6 +91,7 @@ public class CatalogDataProductInterface {
   @SerializedName(SERIALIZED_NAME_TIER_PRICES)
   private List<CatalogDataProductTierPriceInterface> tierPrices = null;
 
+
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
   @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;

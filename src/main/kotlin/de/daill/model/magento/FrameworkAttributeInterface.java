@@ -13,6 +13,7 @@
 
 package de.daill.model.magento;
 
+import java.util.List;
 import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ public class FrameworkAttributeInterface {
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  private List value;
 
 
   public FrameworkAttributeInterface attributeCode(String attributeCode) {
@@ -55,7 +56,7 @@ public class FrameworkAttributeInterface {
   }
 
 
-  public FrameworkAttributeInterface value(String value) {
+  public FrameworkAttributeInterface value(String attributeCode, List value) {
     
     this.value = value;
     return this;
@@ -67,12 +68,12 @@ public class FrameworkAttributeInterface {
   **/
   
 
-  public String getValue() {
+  public List getValue() {
     return value;
   }
 
 
-  public void setValue(String value) {
+  public void setValue(String[] value) {
     this.value = value;
   }
 
