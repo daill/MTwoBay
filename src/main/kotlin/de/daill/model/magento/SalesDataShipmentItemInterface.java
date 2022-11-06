@@ -13,12 +13,10 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Shipment item interface. A shipment is a delivery package that contains products. A shipment document accompanies the shipment. This document lists the products and their quantities in the delivery package. A product is an item in a shipment.

@@ -13,12 +13,10 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Product Special Price Interface is used to encapsulate data that can be processed by efficient price API.

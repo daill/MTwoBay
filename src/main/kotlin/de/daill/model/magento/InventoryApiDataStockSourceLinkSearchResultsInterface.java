@@ -13,13 +13,11 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Search results of Repository::getList method Used fully qualified namespaces in annotations for proper work of WebApi request parser

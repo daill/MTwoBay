@@ -49,7 +49,7 @@ class MTwoBay: ApplicationRunner, ApplicationListener<MagentoAuthEvent> {
 
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-        task.process()
+        //task.process()
 
     }
 

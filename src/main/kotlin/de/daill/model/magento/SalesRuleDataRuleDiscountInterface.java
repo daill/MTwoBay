@@ -13,16 +13,15 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
+
+import java.util.Objects;
 
 
 /**
  * Rule discount Interface
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesRuleDataRuleDiscountInterface {
   public static final String SERIALIZED_NAME_DISCOUNT_DATA = "discount_data";
   @SerializedName(SERIALIZED_NAME_DISCOUNT_DATA)
@@ -125,13 +124,12 @@ public class SalesRuleDataRuleDiscountInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SalesRuleDataRuleDiscountInterface {\n");
-    sb.append("    discountData: ").append(toIndentedString(discountData)).append("\n");
-    sb.append("    ruleLabel: ").append(toIndentedString(ruleLabel)).append("\n");
-    sb.append("    ruleId: ").append(toIndentedString(ruleId)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class SalesRuleDataRuleDiscountInterface {\n" +
+            "    discountData: " + toIndentedString(discountData) + "\n" +
+            "    ruleLabel: " + toIndentedString(ruleLabel) + "\n" +
+            "    ruleId: " + toIndentedString(ruleId) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

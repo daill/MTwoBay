@@ -13,17 +13,14 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * CatalogDataProductCustomOptionValuesInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductCustomOptionValuesInterface {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -209,16 +206,15 @@ public class CatalogDataProductCustomOptionValuesInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductCustomOptionValuesInterface {\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
-    sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    priceType: ").append(toIndentedString(priceType)).append("\n");
-    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    optionTypeId: ").append(toIndentedString(optionTypeId)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductCustomOptionValuesInterface {\n" +
+            "    title: " + toIndentedString(title) + "\n" +
+            "    sortOrder: " + toIndentedString(sortOrder) + "\n" +
+            "    price: " + toIndentedString(price) + "\n" +
+            "    priceType: " + toIndentedString(priceType) + "\n" +
+            "    sku: " + toIndentedString(sku) + "\n" +
+            "    optionTypeId: " + toIndentedString(optionTypeId) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

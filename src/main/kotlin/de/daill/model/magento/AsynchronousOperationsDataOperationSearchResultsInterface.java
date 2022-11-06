@@ -13,13 +13,11 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Bulk operation search result interface. An bulk is a group of queue messages. An bulk operation item is a queue message.

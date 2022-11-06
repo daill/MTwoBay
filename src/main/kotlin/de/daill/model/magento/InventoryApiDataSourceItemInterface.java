@@ -13,12 +13,10 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Represents amount of product on physical storage Entity id getter is missed because entity identifies by compound identifier (sku and source_code) Used fully qualified namespaces in annotations for proper work of WebApi request parser

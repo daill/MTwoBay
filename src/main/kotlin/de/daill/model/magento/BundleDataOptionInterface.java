@@ -13,19 +13,16 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Interface OptionInterface
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class BundleDataOptionInterface {
   public static final String SERIALIZED_NAME_OPTION_ID = "option_id";
   @SerializedName(SERIALIZED_NAME_OPTION_ID)
@@ -279,18 +276,17 @@ public class BundleDataOptionInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class BundleDataOptionInterface {\n");
-    sb.append("    optionId: ").append(toIndentedString(optionId)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    position: ").append(toIndentedString(position)).append("\n");
-    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    productLinks: ").append(toIndentedString(productLinks)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class BundleDataOptionInterface {\n" +
+            "    optionId: " + toIndentedString(optionId) + "\n" +
+            "    title: " + toIndentedString(title) + "\n" +
+            "    required: " + toIndentedString(required) + "\n" +
+            "    type: " + toIndentedString(type) + "\n" +
+            "    position: " + toIndentedString(position) + "\n" +
+            "    sku: " + toIndentedString(sku) + "\n" +
+            "    productLinks: " + toIndentedString(productLinks) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

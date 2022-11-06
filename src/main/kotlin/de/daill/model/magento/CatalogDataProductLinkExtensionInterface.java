@@ -13,20 +13,19 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductLinkInterface
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
+
 public class CatalogDataProductLinkExtensionInterface {
   public static final String SERIALIZED_NAME_QTY = "qty";
+
   @SerializedName(SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
@@ -74,11 +73,10 @@ public class CatalogDataProductLinkExtensionInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductLinkExtensionInterface {\n");
-    sb.append("    qty: ").append(toIndentedString(qty)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductLinkExtensionInterface {\n" +
+            "    qty: " + toIndentedString(qty) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

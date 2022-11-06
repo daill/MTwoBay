@@ -65,8 +65,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.9.0")
     implementation("io.gsonfire:gson-fire:1.8.5")
     implementation("com.ebay.auth:ebay-oauth-java-client:1.1.7")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.7.5")
-    implementation("org.postgresql:postgresql:42.5.0")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.5")
+
 
 
     testImplementation(platform("org.junit:junit-bom:5.9.0"))

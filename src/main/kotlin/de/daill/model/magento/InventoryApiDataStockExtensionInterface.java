@@ -13,13 +13,11 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * TODO: temporal fix of extension classes generation during installation ExtensionInterface class for @see \\Magento\\InventoryApi\\Api\\Data\\StockInterface

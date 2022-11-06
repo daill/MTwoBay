@@ -13,12 +13,10 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Represents a Source Item Configuration object Used fully qualified namespaces in annotations for proper work of WebApi request parser

@@ -13,19 +13,18 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * CatalogDataProductTierPriceInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductTierPriceInterface {
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP_ID = "customer_group_id";
+
+
   @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP_ID)
   private Integer customerGroupId;
 
@@ -40,7 +39,6 @@ public class CatalogDataProductTierPriceInterface {
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductTierPriceExtensionInterface extensionAttributes;
-
 
   public CatalogDataProductTierPriceInterface customerGroupId(Integer customerGroupId) {
     
@@ -154,14 +152,13 @@ public class CatalogDataProductTierPriceInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductTierPriceInterface {\n");
-    sb.append("    customerGroupId: ").append(toIndentedString(customerGroupId)).append("\n");
-    sb.append("    qty: ").append(toIndentedString(qty)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductTierPriceInterface {\n" +
+            "    customerGroupId: " + toIndentedString(customerGroupId) + "\n" +
+            "    qty: " + toIndentedString(qty) + "\n" +
+            "    value: " + toIndentedString(value) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

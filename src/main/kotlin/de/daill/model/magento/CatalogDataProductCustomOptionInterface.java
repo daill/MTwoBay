@@ -13,21 +13,20 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * CatalogDataProductCustomOptionInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductCustomOptionInterface {
   public static final String SERIALIZED_NAME_PRODUCT_SKU = "product_sku";
+
+
   @SerializedName(SERIALIZED_NAME_PRODUCT_SKU)
   private String productSku;
 
@@ -86,7 +85,6 @@ public class CatalogDataProductCustomOptionInterface {
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
-
 
   public CatalogDataProductCustomOptionInterface productSku(String productSku) {
     
@@ -470,25 +468,24 @@ public class CatalogDataProductCustomOptionInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductCustomOptionInterface {\n");
-    sb.append("    productSku: ").append(toIndentedString(productSku)).append("\n");
-    sb.append("    optionId: ").append(toIndentedString(optionId)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
-    sb.append("    isRequire: ").append(toIndentedString(isRequire)).append("\n");
-    sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    priceType: ").append(toIndentedString(priceType)).append("\n");
-    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
-    sb.append("    maxCharacters: ").append(toIndentedString(maxCharacters)).append("\n");
-    sb.append("    imageSizeX: ").append(toIndentedString(imageSizeX)).append("\n");
-    sb.append("    imageSizeY: ").append(toIndentedString(imageSizeY)).append("\n");
-    sb.append("    values: ").append(toIndentedString(values)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductCustomOptionInterface {\n" +
+            "    productSku: " + toIndentedString(productSku) + "\n" +
+            "    optionId: " + toIndentedString(optionId) + "\n" +
+            "    title: " + toIndentedString(title) + "\n" +
+            "    type: " + toIndentedString(type) + "\n" +
+            "    sortOrder: " + toIndentedString(sortOrder) + "\n" +
+            "    isRequire: " + toIndentedString(isRequire) + "\n" +
+            "    price: " + toIndentedString(price) + "\n" +
+            "    priceType: " + toIndentedString(priceType) + "\n" +
+            "    sku: " + toIndentedString(sku) + "\n" +
+            "    fileExtension: " + toIndentedString(fileExtension) + "\n" +
+            "    maxCharacters: " + toIndentedString(maxCharacters) + "\n" +
+            "    imageSizeX: " + toIndentedString(imageSizeX) + "\n" +
+            "    imageSizeY: " + toIndentedString(imageSizeY) + "\n" +
+            "    values: " + toIndentedString(values) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

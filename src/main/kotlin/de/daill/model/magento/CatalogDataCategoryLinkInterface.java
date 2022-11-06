@@ -13,17 +13,18 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
+
+import java.util.Objects;
 
 
 /**
  * CatalogDataCategoryLinkInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataCategoryLinkInterface {
   public static final String SERIALIZED_NAME_POSITION = "position";
+
+
   @SerializedName(SERIALIZED_NAME_POSITION)
   private Integer position;
 
@@ -34,7 +35,6 @@ public class CatalogDataCategoryLinkInterface {
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
-
 
   public CatalogDataCategoryLinkInterface position(Integer position) {
     
@@ -126,13 +126,12 @@ public class CatalogDataCategoryLinkInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataCategoryLinkInterface {\n");
-    sb.append("    position: ").append(toIndentedString(position)).append("\n");
-    sb.append("    categoryId: ").append(toIndentedString(categoryId)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataCategoryLinkInterface {\n" +
+            "    position: " + toIndentedString(position) + "\n" +
+            "    categoryId: " + toIndentedString(categoryId) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

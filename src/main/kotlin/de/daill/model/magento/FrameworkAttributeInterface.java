@@ -13,20 +13,20 @@
 
 package de.daill.model.magento;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
 
 
 /**
  * Interface for custom attribute value.
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class FrameworkAttributeInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attribute_code";
+
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
@@ -100,12 +100,11 @@ public class FrameworkAttributeInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class FrameworkAttributeInterface {\n");
-    sb.append("    attributeCode: ").append(toIndentedString(attributeCode)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class FrameworkAttributeInterface {\n" +
+            "    attributeCode: " + toIndentedString(attributeCode) + "\n" +
+            "    value: " + toIndentedString(value) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

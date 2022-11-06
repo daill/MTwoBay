@@ -13,25 +13,19 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * CatalogDataProductInterface
  */
-@Entity
 public class CatalogDataProductInterface {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  @Id
-  @Column(name = "id", nullable = false)
   private Integer id;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
@@ -75,15 +69,12 @@ public class CatalogDataProductInterface {
   private BigDecimal weight;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @OneToOne
-  @JoinColumn(name = "extension_attributes_id")
+
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductExtensionInterface extensionAttributes;
 
   public static final String SERIALIZED_NAME_PRODUCT_LINKS = "product_links";
   @SerializedName(SERIALIZED_NAME_PRODUCT_LINKS)
-  @OneToMany
-  @JoinColumn(name = "extension_attributes_id")
   private List<CatalogDataProductLinkInterface> productLinks = null;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
@@ -570,27 +561,26 @@ public class CatalogDataProductInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductInterface {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    attributeSetId: ").append(toIndentedString(attributeSetId)).append("\n");
-    sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    visibility: ").append(toIndentedString(visibility)).append("\n");
-    sb.append("    typeId: ").append(toIndentedString(typeId)).append("\n");
-    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
-    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
-    sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("    productLinks: ").append(toIndentedString(productLinks)).append("\n");
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
-    sb.append("    mediaGalleryEntries: ").append(toIndentedString(mediaGalleryEntries)).append("\n");
-    sb.append("    tierPrices: ").append(toIndentedString(tierPrices)).append("\n");
-    sb.append("    customAttributes: ").append(toIndentedString(customAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductInterface {\n" +
+            "    id: " + toIndentedString(id) + "\n" +
+            "    sku: " + toIndentedString(sku) + "\n" +
+            "    name: " + toIndentedString(name) + "\n" +
+            "    attributeSetId: " + toIndentedString(attributeSetId) + "\n" +
+            "    price: " + toIndentedString(price) + "\n" +
+            "    status: " + toIndentedString(status) + "\n" +
+            "    visibility: " + toIndentedString(visibility) + "\n" +
+            "    typeId: " + toIndentedString(typeId) + "\n" +
+            "    createdAt: " + toIndentedString(createdAt) + "\n" +
+            "    updatedAt: " + toIndentedString(updatedAt) + "\n" +
+            "    weight: " + toIndentedString(weight) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "    productLinks: " + toIndentedString(productLinks) + "\n" +
+            "    options: " + toIndentedString(options) + "\n" +
+            "    mediaGalleryEntries: " + toIndentedString(mediaGalleryEntries) + "\n" +
+            "    tierPrices: " + toIndentedString(tierPrices) + "\n" +
+            "    customAttributes: " + toIndentedString(customAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

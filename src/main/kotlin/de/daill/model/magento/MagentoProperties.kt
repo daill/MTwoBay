@@ -1,17 +1,14 @@
 package de.daill.model.magento
 
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.stereotype.Component
-import javax.persistence.*
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 
 
-@Entity
-@Table(name = "magento_settings")
+@Document
 open class MagentoProperties {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    open var id: Long? = null
+    open var id: String? = null
 
     open var consumerKey = ""
     open var consumerSecret = ""

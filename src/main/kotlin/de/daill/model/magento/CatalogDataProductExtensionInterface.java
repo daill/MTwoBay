@@ -13,28 +13,18 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * ExtensionInterface class for @see \\Magento\\Catalog\\Api\\Data\\ProductInterface
  */
 
-@Entity
-@Table(name = "magento_product_extension")
 public class CatalogDataProductExtensionInterface {
   public static final String SERIALIZED_NAME_WEBSITE_IDS = "website_ids";
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id", nullable = false)
-  private Long id;
 
   @SerializedName(SERIALIZED_NAME_WEBSITE_IDS)
   private List<Integer> websiteIds = null;
@@ -74,15 +64,6 @@ public class CatalogDataProductExtensionInterface {
   public static final String SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS = "configurable_product_links";
   @SerializedName(SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS)
   private List<Integer> configurableProductLinks = null;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
 
   public CatalogDataProductExtensionInterface websiteIds(List<Integer> websiteIds) {
     
@@ -415,20 +396,19 @@ public class CatalogDataProductExtensionInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductExtensionInterface {\n");
-    sb.append("    websiteIds: ").append(toIndentedString(websiteIds)).append("\n");
-    sb.append("    categoryLinks: ").append(toIndentedString(categoryLinks)).append("\n");
-    sb.append("    bundleProductOptions: ").append(toIndentedString(bundleProductOptions)).append("\n");
-    sb.append("    stockItem: ").append(toIndentedString(stockItem)).append("\n");
-    sb.append("    discounts: ").append(toIndentedString(discounts)).append("\n");
-    sb.append("    downloadableProductLinks: ").append(toIndentedString(downloadableProductLinks)).append("\n");
-    sb.append("    downloadableProductSamples: ").append(toIndentedString(downloadableProductSamples)).append("\n");
-    sb.append("    giftcardAmounts: ").append(toIndentedString(giftcardAmounts)).append("\n");
-    sb.append("    configurableProductOptions: ").append(toIndentedString(configurableProductOptions)).append("\n");
-    sb.append("    configurableProductLinks: ").append(toIndentedString(configurableProductLinks)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductExtensionInterface {\n" +
+            "    websiteIds: " + toIndentedString(websiteIds) + "\n" +
+            "    categoryLinks: " + toIndentedString(categoryLinks) + "\n" +
+            "    bundleProductOptions: " + toIndentedString(bundleProductOptions) + "\n" +
+            "    stockItem: " + toIndentedString(stockItem) + "\n" +
+            "    discounts: " + toIndentedString(discounts) + "\n" +
+            "    downloadableProductLinks: " + toIndentedString(downloadableProductLinks) + "\n" +
+            "    downloadableProductSamples: " + toIndentedString(downloadableProductSamples) + "\n" +
+            "    giftcardAmounts: " + toIndentedString(giftcardAmounts) + "\n" +
+            "    configurableProductOptions: " + toIndentedString(configurableProductOptions) + "\n" +
+            "    configurableProductLinks: " + toIndentedString(configurableProductLinks) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

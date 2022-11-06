@@ -13,18 +13,15 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * CatalogDataProductAttributeMediaGalleryEntryInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductAttributeMediaGalleryEntryInterface {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -298,19 +295,18 @@ public class CatalogDataProductAttributeMediaGalleryEntryInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductAttributeMediaGalleryEntryInterface {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    mediaType: ").append(toIndentedString(mediaType)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    sb.append("    position: ").append(toIndentedString(position)).append("\n");
-    sb.append("    disabled: ").append(toIndentedString(disabled)).append("\n");
-    sb.append("    types: ").append(toIndentedString(types)).append("\n");
-    sb.append("    file: ").append(toIndentedString(file)).append("\n");
-    sb.append("    content: ").append(toIndentedString(content)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductAttributeMediaGalleryEntryInterface {\n" +
+            "    id: " + toIndentedString(id) + "\n" +
+            "    mediaType: " + toIndentedString(mediaType) + "\n" +
+            "    label: " + toIndentedString(label) + "\n" +
+            "    position: " + toIndentedString(position) + "\n" +
+            "    disabled: " + toIndentedString(disabled) + "\n" +
+            "    types: " + toIndentedString(types) + "\n" +
+            "    file: " + toIndentedString(file) + "\n" +
+            "    content: " + toIndentedString(content) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

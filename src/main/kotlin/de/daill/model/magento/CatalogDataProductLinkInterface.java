@@ -13,25 +13,17 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-import javax.persistence.*;
+import java.util.Objects;
 
 
 /**
  * CatalogDataProductLinkInterface
  */
-@Entity
-@Table(name = "magento_product_link")
+
 public class CatalogDataProductLinkInterface {
   public static final String SERIALIZED_NAME_SKU = "sku";
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id", nullable = false)
-  private Long id;
 
   @SerializedName(SERIALIZED_NAME_SKU)
   private String sku;
@@ -55,14 +47,6 @@ public class CatalogDataProductLinkInterface {
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
   @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductLinkExtensionInterface extensionAttributes;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
 
   public CatalogDataProductLinkInterface sku(String sku) {
     
@@ -222,16 +206,15 @@ public class CatalogDataProductLinkInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogDataProductLinkInterface {\n");
-    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
-    sb.append("    linkedProductSku: ").append(toIndentedString(linkedProductSku)).append("\n");
-    sb.append("    linkedProductType: ").append(toIndentedString(linkedProductType)).append("\n");
-    sb.append("    position: ").append(toIndentedString(position)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogDataProductLinkInterface {\n" +
+            "    sku: " + toIndentedString(sku) + "\n" +
+            "    linkType: " + toIndentedString(linkType) + "\n" +
+            "    linkedProductSku: " + toIndentedString(linkedProductSku) + "\n" +
+            "    linkedProductType: " + toIndentedString(linkedProductType) + "\n" +
+            "    position: " + toIndentedString(position) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

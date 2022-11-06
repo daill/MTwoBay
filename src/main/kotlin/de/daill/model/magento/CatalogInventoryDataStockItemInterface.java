@@ -13,18 +13,15 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * Interface StockItem
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogInventoryDataStockItemInterface {
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
   @SerializedName(SERIALIZED_NAME_ITEM_ID)
@@ -779,37 +776,36 @@ public class CatalogInventoryDataStockItemInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogInventoryDataStockItemInterface {\n");
-    sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
-    sb.append("    stockId: ").append(toIndentedString(stockId)).append("\n");
-    sb.append("    qty: ").append(toIndentedString(qty)).append("\n");
-    sb.append("    isInStock: ").append(toIndentedString(isInStock)).append("\n");
-    sb.append("    isQtyDecimal: ").append(toIndentedString(isQtyDecimal)).append("\n");
-    sb.append("    showDefaultNotificationMessage: ").append(toIndentedString(showDefaultNotificationMessage)).append("\n");
-    sb.append("    useConfigMinQty: ").append(toIndentedString(useConfigMinQty)).append("\n");
-    sb.append("    minQty: ").append(toIndentedString(minQty)).append("\n");
-    sb.append("    useConfigMinSaleQty: ").append(toIndentedString(useConfigMinSaleQty)).append("\n");
-    sb.append("    minSaleQty: ").append(toIndentedString(minSaleQty)).append("\n");
-    sb.append("    useConfigMaxSaleQty: ").append(toIndentedString(useConfigMaxSaleQty)).append("\n");
-    sb.append("    maxSaleQty: ").append(toIndentedString(maxSaleQty)).append("\n");
-    sb.append("    useConfigBackorders: ").append(toIndentedString(useConfigBackorders)).append("\n");
-    sb.append("    backorders: ").append(toIndentedString(backorders)).append("\n");
-    sb.append("    useConfigNotifyStockQty: ").append(toIndentedString(useConfigNotifyStockQty)).append("\n");
-    sb.append("    notifyStockQty: ").append(toIndentedString(notifyStockQty)).append("\n");
-    sb.append("    useConfigQtyIncrements: ").append(toIndentedString(useConfigQtyIncrements)).append("\n");
-    sb.append("    qtyIncrements: ").append(toIndentedString(qtyIncrements)).append("\n");
-    sb.append("    useConfigEnableQtyInc: ").append(toIndentedString(useConfigEnableQtyInc)).append("\n");
-    sb.append("    enableQtyIncrements: ").append(toIndentedString(enableQtyIncrements)).append("\n");
-    sb.append("    useConfigManageStock: ").append(toIndentedString(useConfigManageStock)).append("\n");
-    sb.append("    manageStock: ").append(toIndentedString(manageStock)).append("\n");
-    sb.append("    lowStockDate: ").append(toIndentedString(lowStockDate)).append("\n");
-    sb.append("    isDecimalDivided: ").append(toIndentedString(isDecimalDivided)).append("\n");
-    sb.append("    stockStatusChangedAuto: ").append(toIndentedString(stockStatusChangedAuto)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class CatalogInventoryDataStockItemInterface {\n" +
+            "    itemId: " + toIndentedString(itemId) + "\n" +
+            "    productId: " + toIndentedString(productId) + "\n" +
+            "    stockId: " + toIndentedString(stockId) + "\n" +
+            "    qty: " + toIndentedString(qty) + "\n" +
+            "    isInStock: " + toIndentedString(isInStock) + "\n" +
+            "    isQtyDecimal: " + toIndentedString(isQtyDecimal) + "\n" +
+            "    showDefaultNotificationMessage: " + toIndentedString(showDefaultNotificationMessage) + "\n" +
+            "    useConfigMinQty: " + toIndentedString(useConfigMinQty) + "\n" +
+            "    minQty: " + toIndentedString(minQty) + "\n" +
+            "    useConfigMinSaleQty: " + toIndentedString(useConfigMinSaleQty) + "\n" +
+            "    minSaleQty: " + toIndentedString(minSaleQty) + "\n" +
+            "    useConfigMaxSaleQty: " + toIndentedString(useConfigMaxSaleQty) + "\n" +
+            "    maxSaleQty: " + toIndentedString(maxSaleQty) + "\n" +
+            "    useConfigBackorders: " + toIndentedString(useConfigBackorders) + "\n" +
+            "    backorders: " + toIndentedString(backorders) + "\n" +
+            "    useConfigNotifyStockQty: " + toIndentedString(useConfigNotifyStockQty) + "\n" +
+            "    notifyStockQty: " + toIndentedString(notifyStockQty) + "\n" +
+            "    useConfigQtyIncrements: " + toIndentedString(useConfigQtyIncrements) + "\n" +
+            "    qtyIncrements: " + toIndentedString(qtyIncrements) + "\n" +
+            "    useConfigEnableQtyInc: " + toIndentedString(useConfigEnableQtyInc) + "\n" +
+            "    enableQtyIncrements: " + toIndentedString(enableQtyIncrements) + "\n" +
+            "    useConfigManageStock: " + toIndentedString(useConfigManageStock) + "\n" +
+            "    manageStock: " + toIndentedString(manageStock) + "\n" +
+            "    lowStockDate: " + toIndentedString(lowStockDate) + "\n" +
+            "    isDecimalDivided: " + toIndentedString(isDecimalDivided) + "\n" +
+            "    stockStatusChangedAuto: " + toIndentedString(stockStatusChangedAuto) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

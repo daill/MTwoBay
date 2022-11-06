@@ -13,17 +13,14 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
 
-
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * DownloadableDataLinkInterface
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class DownloadableDataLinkInterface {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -460,25 +457,24 @@ public class DownloadableDataLinkInterface {
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class DownloadableDataLinkInterface {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    sortOrder: ").append(toIndentedString(sortOrder)).append("\n");
-    sb.append("    isShareable: ").append(toIndentedString(isShareable)).append("\n");
-    sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    numberOfDownloads: ").append(toIndentedString(numberOfDownloads)).append("\n");
-    sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
-    sb.append("    linkFile: ").append(toIndentedString(linkFile)).append("\n");
-    sb.append("    linkFileContent: ").append(toIndentedString(linkFileContent)).append("\n");
-    sb.append("    linkUrl: ").append(toIndentedString(linkUrl)).append("\n");
-    sb.append("    sampleType: ").append(toIndentedString(sampleType)).append("\n");
-    sb.append("    sampleFile: ").append(toIndentedString(sampleFile)).append("\n");
-    sb.append("    sampleFileContent: ").append(toIndentedString(sampleFileContent)).append("\n");
-    sb.append("    sampleUrl: ").append(toIndentedString(sampleUrl)).append("\n");
-    sb.append("    extensionAttributes: ").append(toIndentedString(extensionAttributes)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    String sb = "class DownloadableDataLinkInterface {\n" +
+            "    id: " + toIndentedString(id) + "\n" +
+            "    title: " + toIndentedString(title) + "\n" +
+            "    sortOrder: " + toIndentedString(sortOrder) + "\n" +
+            "    isShareable: " + toIndentedString(isShareable) + "\n" +
+            "    price: " + toIndentedString(price) + "\n" +
+            "    numberOfDownloads: " + toIndentedString(numberOfDownloads) + "\n" +
+            "    linkType: " + toIndentedString(linkType) + "\n" +
+            "    linkFile: " + toIndentedString(linkFile) + "\n" +
+            "    linkFileContent: " + toIndentedString(linkFileContent) + "\n" +
+            "    linkUrl: " + toIndentedString(linkUrl) + "\n" +
+            "    sampleType: " + toIndentedString(sampleType) + "\n" +
+            "    sampleFile: " + toIndentedString(sampleFile) + "\n" +
+            "    sampleFileContent: " + toIndentedString(sampleFileContent) + "\n" +
+            "    sampleUrl: " + toIndentedString(sampleUrl) + "\n" +
+            "    extensionAttributes: " + toIndentedString(extensionAttributes) + "\n" +
+            "}";
+    return sb;
   }
 
   /**

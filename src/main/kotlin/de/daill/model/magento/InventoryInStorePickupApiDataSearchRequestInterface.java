@@ -13,13 +13,11 @@
 
 package de.daill.model.magento;
 
-import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Endpoint used to search Pickup Locations by different parameters: - by attribute filters fields @see \\Magento\\InventoryInStorePickupApi\\Api\\Data\\SearchRequest\\FiltersInterface - by distance to the address @see \\Magento\\InventoryInStorePickupApi\\Api\\Data\\SearchRequest\\AreaInterface Also, endpoint supports paging and sort orders.
