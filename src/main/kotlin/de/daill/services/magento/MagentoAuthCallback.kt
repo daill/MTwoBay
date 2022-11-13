@@ -16,22 +16,14 @@ import javax.servlet.http.HttpServletRequest
 @RestController
 @RequestMapping("/api/auth")
 class MagentoAuthCallback {
+    val LOG = LoggerFactory.getLogger(this::class.java)
+
     @Autowired
     lateinit var propertiesRepository: MagentoPropertiesRepository
 
     @Autowired
-    private val applicationEventPublisher: ApplicationEventPublisher? = null
-
-    @Autowired
     lateinit var authApi: MagentoAuthApi
 
-    val LOG = LoggerFactory.getLogger(MagentoAuthCallback::class.java)
-
-    @GetMapping("/success")
-    fun callback(request: HttpServletRequest) {
-        LOG.debug(request.getParameter("code"))
-        applicationEventPublisher?.publishEvent(MagentoAuthEvent(this, request.getParameter("code")))
-    }
 
     @GetMapping("/magento/success")
     fun magentoCallbackGet(request: HttpServletRequest): String {

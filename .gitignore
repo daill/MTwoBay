@@ -4,8 +4,6 @@ build/
 gradlew
 .idea
 gradlew.bat
-weserbot.image
 src/main/resources/application.properties
-src/main/resources/ebay-app.yaml
+src/main/resources/ebay.properties
 /src/main/resources/home.daill.p12
-conf/magento.properties

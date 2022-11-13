@@ -1,8 +1,10 @@
 package de.daill.api.magento
 
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import de.daill.model.magento.*
 import de.daill.services.magento.MagentoApiClient
+import de.daill.services.magento.MagentoGsonAttributeDeserializer
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.Request
 import org.slf4j.LoggerFactory
@@ -14,7 +16,6 @@ import java.net.URLDecoder
 class MagentoProductsApi {
     val LOG = LoggerFactory.getLogger(this::class.java)
 
-    var gson: Gson = Gson()
 
     @Autowired
     lateinit var magentoClient: MagentoApiClient
@@ -35,6 +36,8 @@ class MagentoProductsApi {
     fun getProducts(params: List<Any>): CatalogDataProductSearchResultsInterface? {
         var apiResource = "rest/V1/products"
         val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
+
+        var gson =  GsonBuilder().registerTypeAdapter(FrameworkAttributeInterface::class.java, MagentoGsonAttributeDeserializer()).create()
 
         val queryUrl = url.toHttpUrl().newBuilder()
         val queryParams = mutableMapOf<String, String>()

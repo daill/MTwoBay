@@ -13,17 +13,14 @@ package de.daill.api.ebay
 
 import de.daill.model.ebay.*
 import de.daill.services.ebay.*
+import org.springframework.beans.factory.annotation.Autowired
 import de.daill.model.ebay.InventoryItem as InventoryItem1
 
 
-class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : EbayApiClient(basePath, token) {
-    companion object {
-        @JvmStatic
-        val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("org.openapitools.client.baseUrl", "https://api.ebay.com/sell/inventory/v1")
-        }
+class EbayInventoryItemApi() {
 
-    }
+    @Autowired
+    lateinit var client: EbayApiClient
 
     /**
     * 
@@ -46,7 +43,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<BulkInventoryItemResponse>(
+        val localVarResponse = client.request<BulkInventoryItemResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -87,7 +84,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<BulkGetInventoryItemResponse>(
+        val localVarResponse = client.request<BulkGetInventoryItemResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -128,7 +125,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<BulkPriceQuantityResponse>(
+        val localVarResponse = client.request<BulkPriceQuantityResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -172,7 +169,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<BaseResponse>(
+        val localVarResponse = client.request<BaseResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -212,7 +209,8 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+
+        val localVarResponse = client.request<Any?>(
             localVariableConfig,
             localVariableBody
         )
@@ -253,7 +251,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<InventoryItemWithSkuLocaleGroupid>(
+        val localVarResponse = client.request<InventoryItemWithSkuLocaleGroupid>(
             localVariableConfig,
             localVariableBody
         )
@@ -303,7 +301,7 @@ class EbayInventoryItemApi(basePath: String = defaultBasePath, token: String) : 
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<InventoryItems>(
+        val localVarResponse = client.request<InventoryItems>(
             localVariableConfig,
             localVariableBody
         )

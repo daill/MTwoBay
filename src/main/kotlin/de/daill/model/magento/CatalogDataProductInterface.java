@@ -14,6 +14,8 @@
 package de.daill.model.magento;
 
 import com.google.gson.annotations.SerializedName;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -23,9 +25,11 @@ import java.util.Objects;
 /**
  * CatalogDataProductInterface
  */
+@Document(collection = "syncedMagentoProducts")
 public class CatalogDataProductInterface {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @Id
   private Integer id;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
