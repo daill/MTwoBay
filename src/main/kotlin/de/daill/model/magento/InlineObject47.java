@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,7 +26,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject47 {
   public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
+  @Json(name = SERIALIZED_NAME_DATA)
   private RmaDataCommentInterface data;
 
 

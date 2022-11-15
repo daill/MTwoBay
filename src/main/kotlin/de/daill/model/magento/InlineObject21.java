@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject21 {
   public static final String SERIALIZED_NAME_ORIGIN_SOURCE_CODE = "originSourceCode";
-  @SerializedName(SERIALIZED_NAME_ORIGIN_SOURCE_CODE)
+  @Json(name = SERIALIZED_NAME_ORIGIN_SOURCE_CODE)
   private String originSourceCode;
 
   public static final String SERIALIZED_NAME_DESTINATION_SOURCE_CODE = "destinationSourceCode";
-  @SerializedName(SERIALIZED_NAME_DESTINATION_SOURCE_CODE)
+  @Json(name = SERIALIZED_NAME_DESTINATION_SOURCE_CODE)
   private String destinationSourceCode;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<InventoryCatalogApiDataPartialInventoryTransferItemInterface> items = new ArrayList<InventoryCatalogApiDataPartialInventoryTransferItemInterface>();
 
 

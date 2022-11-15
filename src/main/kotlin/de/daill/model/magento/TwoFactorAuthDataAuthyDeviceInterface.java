@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TwoFactorAuthDataAuthyDeviceInterface {
   public static final String SERIALIZED_NAME_COUNTRY = "country";
-  @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @Json(name = SERIALIZED_NAME_COUNTRY)
   private String country;
 
   public static final String SERIALIZED_NAME_PHONE_NUMBER = "phone_number";
-  @SerializedName(SERIALIZED_NAME_PHONE_NUMBER)
+  @Json(name = SERIALIZED_NAME_PHONE_NUMBER)
   private String phoneNumber;
 
   public static final String SERIALIZED_NAME_METHOD = "method";
-  @SerializedName(SERIALIZED_NAME_METHOD)
+  @Json(name = SERIALIZED_NAME_METHOD)
   private String method;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

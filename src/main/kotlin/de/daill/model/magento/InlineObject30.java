@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject30 {
   public static final String SERIALIZED_NAME_QUOTE_ID = "quoteId";
-  @SerializedName(SERIALIZED_NAME_QUOTE_ID)
+  @Json(name = SERIALIZED_NAME_QUOTE_ID)
   private Integer quoteId;
 
   public static final String SERIALIZED_NAME_QUOTE_NAME = "quoteName";
-  @SerializedName(SERIALIZED_NAME_QUOTE_NAME)
+  @Json(name = SERIALIZED_NAME_QUOTE_NAME)
   private String quoteName;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private String comment;
 
   public static final String SERIALIZED_NAME_FILES = "files";
-  @SerializedName(SERIALIZED_NAME_FILES)
+  @Json(name = SERIALIZED_NAME_FILES)
   private List<NegotiableQuoteDataAttachmentContentInterface> files = null;
 
 

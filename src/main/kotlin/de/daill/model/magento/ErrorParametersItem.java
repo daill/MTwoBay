@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class ErrorParametersItem {
   public static final String SERIALIZED_NAME_RESOURCES = "resources";
-  @SerializedName(SERIALIZED_NAME_RESOURCES)
+  @Json(name = SERIALIZED_NAME_RESOURCES)
   private String resources;
 
   public static final String SERIALIZED_NAME_FIELD_NAME = "fieldName";
-  @SerializedName(SERIALIZED_NAME_FIELD_NAME)
+  @Json(name = SERIALIZED_NAME_FIELD_NAME)
   private String fieldName;
 
   public static final String SERIALIZED_NAME_FIELD_VALUE = "fieldValue";
-  @SerializedName(SERIALIZED_NAME_FIELD_VALUE)
+  @Json(name = SERIALIZED_NAME_FIELD_VALUE)
   private String fieldValue;
 
 

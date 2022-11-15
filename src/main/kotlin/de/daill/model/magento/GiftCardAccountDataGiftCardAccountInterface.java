@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,27 +29,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftCardAccountDataGiftCardAccountInterface {
   public static final String SERIALIZED_NAME_GIFT_CARDS = "gift_cards";
-  @SerializedName(SERIALIZED_NAME_GIFT_CARDS)
+  @Json(name = SERIALIZED_NAME_GIFT_CARDS)
   private List<String> giftCards = null;
 
   public static final String SERIALIZED_NAME_GIFT_CARDS_AMOUNT = "gift_cards_amount";
-  @SerializedName(SERIALIZED_NAME_GIFT_CARDS_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GIFT_CARDS_AMOUNT)
   private BigDecimal giftCardsAmount;
 
   public static final String SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT = "base_gift_cards_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT)
   private BigDecimal baseGiftCardsAmount;
 
   public static final String SERIALIZED_NAME_GIFT_CARDS_AMOUNT_USED = "gift_cards_amount_used";
-  @SerializedName(SERIALIZED_NAME_GIFT_CARDS_AMOUNT_USED)
+  @Json(name = SERIALIZED_NAME_GIFT_CARDS_AMOUNT_USED)
   private BigDecimal giftCardsAmountUsed;
 
   public static final String SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT_USED = "base_gift_cards_amount_used";
-  @SerializedName(SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT_USED)
+  @Json(name = SERIALIZED_NAME_BASE_GIFT_CARDS_AMOUNT_USED)
   private BigDecimal baseGiftCardsAmountUsed;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -26,7 +28,7 @@ import java.util.Objects;
 public class CatalogDataProductLinkExtensionInterface {
   public static final String SERIALIZED_NAME_QTY = "qty";
 
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
 

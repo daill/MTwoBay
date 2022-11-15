@@ -60,7 +60,7 @@ class SyncTask {
 
         }
 
-        productsRepository.saveAll(products?.items)
+        //productsRepository.saveAll(products?.items)
 
         // sync with products in internal database
 

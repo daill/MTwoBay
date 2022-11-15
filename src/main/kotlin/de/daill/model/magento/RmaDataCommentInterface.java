@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,43 +28,43 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class RmaDataCommentInterface {
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private String comment;
 
   public static final String SERIALIZED_NAME_RMA_ENTITY_ID = "rma_entity_id";
-  @SerializedName(SERIALIZED_NAME_RMA_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_RMA_ENTITY_ID)
   private Integer rmaEntityId;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_CUSTOMER_NOTIFIED = "customer_notified";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_NOTIFIED)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_NOTIFIED)
   private Boolean customerNotified;
 
   public static final String SERIALIZED_NAME_VISIBLE_ON_FRONT = "visible_on_front";
-  @SerializedName(SERIALIZED_NAME_VISIBLE_ON_FRONT)
+  @Json(name = SERIALIZED_NAME_VISIBLE_ON_FRONT)
   private Boolean visibleOnFront;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private String status;
 
   public static final String SERIALIZED_NAME_ADMIN = "admin";
-  @SerializedName(SERIALIZED_NAME_ADMIN)
+  @Json(name = SERIALIZED_NAME_ADMIN)
   private Boolean admin;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,31 +28,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class DirectoryDataCountryInformationInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private String id;
 
   public static final String SERIALIZED_NAME_TWO_LETTER_ABBREVIATION = "two_letter_abbreviation";
-  @SerializedName(SERIALIZED_NAME_TWO_LETTER_ABBREVIATION)
+  @Json(name = SERIALIZED_NAME_TWO_LETTER_ABBREVIATION)
   private String twoLetterAbbreviation;
 
   public static final String SERIALIZED_NAME_THREE_LETTER_ABBREVIATION = "three_letter_abbreviation";
-  @SerializedName(SERIALIZED_NAME_THREE_LETTER_ABBREVIATION)
+  @Json(name = SERIALIZED_NAME_THREE_LETTER_ABBREVIATION)
   private String threeLetterAbbreviation;
 
   public static final String SERIALIZED_NAME_FULL_NAME_LOCALE = "full_name_locale";
-  @SerializedName(SERIALIZED_NAME_FULL_NAME_LOCALE)
+  @Json(name = SERIALIZED_NAME_FULL_NAME_LOCALE)
   private String fullNameLocale;
 
   public static final String SERIALIZED_NAME_FULL_NAME_ENGLISH = "full_name_english";
-  @SerializedName(SERIALIZED_NAME_FULL_NAME_ENGLISH)
+  @Json(name = SERIALIZED_NAME_FULL_NAME_ENGLISH)
   private String fullNameEnglish;
 
   public static final String SERIALIZED_NAME_AVAILABLE_REGIONS = "available_regions";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_REGIONS)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_REGIONS)
   private List<DirectoryDataRegionInformationInterface> availableRegions = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

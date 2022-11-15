@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataTotalSegmentInterface {
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private BigDecimal value;
 
   public static final String SERIALIZED_NAME_AREA = "area";
-  @SerializedName(SERIALIZED_NAME_AREA)
+  @Json(name = SERIALIZED_NAME_AREA)
   private String area;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private QuoteDataTotalSegmentExtensionInterface extensionAttributes;
 
 

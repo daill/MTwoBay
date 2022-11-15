@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,15 +28,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CheckoutDataPaymentDetailsInterface {
   public static final String SERIALIZED_NAME_PAYMENT_METHODS = "payment_methods";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_METHODS)
+  @Json(name = SERIALIZED_NAME_PAYMENT_METHODS)
   private List<QuoteDataPaymentMethodInterface> paymentMethods = new ArrayList<QuoteDataPaymentMethodInterface>();
 
   public static final String SERIALIZED_NAME_TOTALS = "totals";
-  @SerializedName(SERIALIZED_NAME_TOTALS)
+  @Json(name = SERIALIZED_NAME_TOTALS)
   private QuoteDataTotalsInterface totals;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -27,11 +29,11 @@ import java.util.Objects;
 public class FrameworkAttributeInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attribute_code";
 
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private List value = new ArrayList();
 
 

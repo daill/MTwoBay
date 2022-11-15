@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogInventoryDataStockStatusInterface {
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @Json(name = SERIALIZED_NAME_PRODUCT_ID)
   private Integer productId;
 
   public static final String SERIALIZED_NAME_STOCK_ID = "stock_id";
-  @SerializedName(SERIALIZED_NAME_STOCK_ID)
+  @Json(name = SERIALIZED_NAME_STOCK_ID)
   private Integer stockId;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private Integer qty;
 
   public static final String SERIALIZED_NAME_STOCK_STATUS = "stock_status";
-  @SerializedName(SERIALIZED_NAME_STOCK_STATUS)
+  @Json(name = SERIALIZED_NAME_STOCK_STATUS)
   private Integer stockStatus;
 
   public static final String SERIALIZED_NAME_STOCK_ITEM = "stock_item";
-  @SerializedName(SERIALIZED_NAME_STOCK_ITEM)
+  @Json(name = SERIALIZED_NAME_STOCK_ITEM)
   private CatalogInventoryDataStockItemInterface stockItem;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

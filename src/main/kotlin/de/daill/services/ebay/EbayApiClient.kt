@@ -1,26 +1,19 @@
 package de.daill.services.ebay
 
-import com.ebay.api.client.auth.oauth2.CredentialUtil
-import com.ebay.api.client.auth.oauth2.CredentialUtil.CredentialType
-import com.ebay.api.client.auth.oauth2.OAuth2Api
-import com.ebay.api.client.auth.oauth2.model.Environment
-import com.ebay.api.client.auth.oauth2.model.OAuthResponse
 import de.daill.model.ebay.EbayEnvironments
 import de.daill.model.ebay.EbayProperties
-import de.daill.model.ebay.EbayPropertiesValues
 import okhttp3.*
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.joda.time.DateTime
 import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.io.File
 import java.net.URLConnection
 import java.time.*
 import java.util.*
-import java.util.concurrent.ConcurrentHashMap
 
 @Service
 open class EbayApiClient() {
@@ -32,8 +25,10 @@ open class EbayApiClient() {
     val baseUrl: String? = null
     var accessToken: String? = null
     var client = OkHttpClient()
-    var credentials: EbayProperties? = null
-    var environment: EbayEnvironments? = null
+
+    @Autowired
+    lateinit var properties: EbayProperties
+    var environment: EbayEnvironments = EbayEnvironments.SANDBOX
 
     val ContentType = "Content-Type"
     val Accept = "Accept"
@@ -243,17 +238,18 @@ open class EbayApiClient() {
 
     fun exchangeAccessToken(code: String) {
         val client = OkHttpClient()
-        var environmentalCreds = credentials!!.sandbox
+        var environmentalCreds = properties!!.sandbox
+
         if (environment == EbayEnvironments.PRODUCTION) {
-            environmentalCreds = credentials!!.production
+            environmentalCreds = properties!!.production
         }
 
         val requestData = StringBuilder()
         requestData.append("grant_type=authorization_code").append("&")
         requestData.append(String.format("redirect_uri=%s", environmentalCreds.redirectUri)).append("&")
         requestData.append(String.format("code=%s", code))
-        val requestBody = RequestBody.create("application/x-www-form-urlencoded".toMediaTypeOrNull(), requestData.toString())
-        var authHeader = Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray())
+        val requestBody = requestData.toString().toRequestBody("application/x-www-form-urlencoded".toMediaTypeOrNull())
+        var authHeader = String(Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray()))
 
         val request: Request = Request.Builder().url(environment!!.apiEndpoint)
             .header("Authorization", "Basic $authHeader")
@@ -262,7 +258,8 @@ open class EbayApiClient() {
             .build()
 
         val response = client.newCall(request).execute()
-        LOG.debug(response.toString())
+        LOG.debug(response.body?.string())
+        response.close()
     }
 
 }

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,31 +27,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataTierPriceInterface {
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRICE_TYPE = "price_type";
-  @SerializedName(SERIALIZED_NAME_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_PRICE_TYPE)
   private String priceType;
 
   public static final String SERIALIZED_NAME_WEBSITE_ID = "website_id";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_ID)
+  @Json(name = SERIALIZED_NAME_WEBSITE_ID)
   private Integer websiteId;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP = "customer_group";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP)
   private String customerGroup;
 
   public static final String SERIALIZED_NAME_QUANTITY = "quantity";
-  @SerializedName(SERIALIZED_NAME_QUANTITY)
+  @Json(name = SERIALIZED_NAME_QUANTITY)
   private BigDecimal quantity;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

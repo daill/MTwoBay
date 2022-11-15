@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TwoFactorAuthDataGoogleConfigureInterface {
   public static final String SERIALIZED_NAME_QR_CODE_BASE64 = "qr_code_base64";
-  @SerializedName(SERIALIZED_NAME_QR_CODE_BASE64)
+  @Json(name = SERIALIZED_NAME_QR_CODE_BASE64)
   private String qrCodeBase64;
 
   public static final String SERIALIZED_NAME_SECRET_CODE = "secret_code";
-  @SerializedName(SERIALIZED_NAME_SECRET_CODE)
+  @Json(name = SERIALIZED_NAME_SECRET_CODE)
   private String secretCode;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

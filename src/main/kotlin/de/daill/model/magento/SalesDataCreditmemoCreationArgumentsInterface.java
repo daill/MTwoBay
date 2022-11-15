@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataCreditmemoCreationArgumentsInterface {
   public static final String SERIALIZED_NAME_SHIPPING_AMOUNT = "shipping_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_AMOUNT)
   private BigDecimal shippingAmount;
 
   public static final String SERIALIZED_NAME_ADJUSTMENT_POSITIVE = "adjustment_positive";
-  @SerializedName(SERIALIZED_NAME_ADJUSTMENT_POSITIVE)
+  @Json(name = SERIALIZED_NAME_ADJUSTMENT_POSITIVE)
   private BigDecimal adjustmentPositive;
 
   public static final String SERIALIZED_NAME_ADJUSTMENT_NEGATIVE = "adjustment_negative";
-  @SerializedName(SERIALIZED_NAME_ADJUSTMENT_NEGATIVE)
+  @Json(name = SERIALIZED_NAME_ADJUSTMENT_NEGATIVE)
   private BigDecimal adjustmentNegative;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private SalesDataCreditmemoCreationArgumentsExtensionInterface extensionAttributes;
 
 

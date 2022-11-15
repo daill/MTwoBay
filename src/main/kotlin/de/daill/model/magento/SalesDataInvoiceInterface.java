@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,191 +29,191 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataInvoiceInterface {
   public static final String SERIALIZED_NAME_BASE_CURRENCY_CODE = "base_currency_code";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_CODE)
   private String baseCurrencyCode;
 
   public static final String SERIALIZED_NAME_BASE_DISCOUNT_AMOUNT = "base_discount_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_DISCOUNT_AMOUNT)
   private BigDecimal baseDiscountAmount;
 
   public static final String SERIALIZED_NAME_BASE_GRAND_TOTAL = "base_grand_total";
-  @SerializedName(SERIALIZED_NAME_BASE_GRAND_TOTAL)
+  @Json(name = SERIALIZED_NAME_BASE_GRAND_TOTAL)
   private BigDecimal baseGrandTotal;
 
   public static final String SERIALIZED_NAME_BASE_DISCOUNT_TAX_COMPENSATION_AMOUNT = "base_discount_tax_compensation_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_DISCOUNT_TAX_COMPENSATION_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_DISCOUNT_TAX_COMPENSATION_AMOUNT)
   private BigDecimal baseDiscountTaxCompensationAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_AMOUNT = "base_shipping_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
   private BigDecimal baseShippingAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT = "base_shipping_discount_tax_compensation_amnt";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT)
   private BigDecimal baseShippingDiscountTaxCompensationAmnt;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX = "base_shipping_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX)
   private BigDecimal baseShippingInclTax;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT = "base_shipping_tax_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT)
   private BigDecimal baseShippingTaxAmount;
 
   public static final String SERIALIZED_NAME_BASE_SUBTOTAL = "base_subtotal";
-  @SerializedName(SERIALIZED_NAME_BASE_SUBTOTAL)
+  @Json(name = SERIALIZED_NAME_BASE_SUBTOTAL)
   private BigDecimal baseSubtotal;
 
   public static final String SERIALIZED_NAME_BASE_SUBTOTAL_INCL_TAX = "base_subtotal_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_SUBTOTAL_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_SUBTOTAL_INCL_TAX)
   private BigDecimal baseSubtotalInclTax;
 
   public static final String SERIALIZED_NAME_BASE_TAX_AMOUNT = "base_tax_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_TAX_AMOUNT)
   private BigDecimal baseTaxAmount;
 
   public static final String SERIALIZED_NAME_BASE_TOTAL_REFUNDED = "base_total_refunded";
-  @SerializedName(SERIALIZED_NAME_BASE_TOTAL_REFUNDED)
+  @Json(name = SERIALIZED_NAME_BASE_TOTAL_REFUNDED)
   private BigDecimal baseTotalRefunded;
 
   public static final String SERIALIZED_NAME_BASE_TO_GLOBAL_RATE = "base_to_global_rate";
-  @SerializedName(SERIALIZED_NAME_BASE_TO_GLOBAL_RATE)
+  @Json(name = SERIALIZED_NAME_BASE_TO_GLOBAL_RATE)
   private BigDecimal baseToGlobalRate;
 
   public static final String SERIALIZED_NAME_BASE_TO_ORDER_RATE = "base_to_order_rate";
-  @SerializedName(SERIALIZED_NAME_BASE_TO_ORDER_RATE)
+  @Json(name = SERIALIZED_NAME_BASE_TO_ORDER_RATE)
   private BigDecimal baseToOrderRate;
 
   public static final String SERIALIZED_NAME_BILLING_ADDRESS_ID = "billing_address_id";
-  @SerializedName(SERIALIZED_NAME_BILLING_ADDRESS_ID)
+  @Json(name = SERIALIZED_NAME_BILLING_ADDRESS_ID)
   private Integer billingAddressId;
 
   public static final String SERIALIZED_NAME_CAN_VOID_FLAG = "can_void_flag";
-  @SerializedName(SERIALIZED_NAME_CAN_VOID_FLAG)
+  @Json(name = SERIALIZED_NAME_CAN_VOID_FLAG)
   private Integer canVoidFlag;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_DISCOUNT_AMOUNT = "discount_amount";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_AMOUNT)
   private BigDecimal discountAmount;
 
   public static final String SERIALIZED_NAME_DISCOUNT_DESCRIPTION = "discount_description";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_DESCRIPTION)
   private String discountDescription;
 
   public static final String SERIALIZED_NAME_EMAIL_SENT = "email_sent";
-  @SerializedName(SERIALIZED_NAME_EMAIL_SENT)
+  @Json(name = SERIALIZED_NAME_EMAIL_SENT)
   private Integer emailSent;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_GLOBAL_CURRENCY_CODE = "global_currency_code";
-  @SerializedName(SERIALIZED_NAME_GLOBAL_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_GLOBAL_CURRENCY_CODE)
   private String globalCurrencyCode;
 
   public static final String SERIALIZED_NAME_GRAND_TOTAL = "grand_total";
-  @SerializedName(SERIALIZED_NAME_GRAND_TOTAL)
+  @Json(name = SERIALIZED_NAME_GRAND_TOTAL)
   private BigDecimal grandTotal;
 
   public static final String SERIALIZED_NAME_DISCOUNT_TAX_COMPENSATION_AMOUNT = "discount_tax_compensation_amount";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_TAX_COMPENSATION_AMOUNT)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_TAX_COMPENSATION_AMOUNT)
   private BigDecimal discountTaxCompensationAmount;
 
   public static final String SERIALIZED_NAME_INCREMENT_ID = "increment_id";
-  @SerializedName(SERIALIZED_NAME_INCREMENT_ID)
+  @Json(name = SERIALIZED_NAME_INCREMENT_ID)
   private String incrementId;
 
   public static final String SERIALIZED_NAME_IS_USED_FOR_REFUND = "is_used_for_refund";
-  @SerializedName(SERIALIZED_NAME_IS_USED_FOR_REFUND)
+  @Json(name = SERIALIZED_NAME_IS_USED_FOR_REFUND)
   private Integer isUsedForRefund;
 
   public static final String SERIALIZED_NAME_ORDER_CURRENCY_CODE = "order_currency_code";
-  @SerializedName(SERIALIZED_NAME_ORDER_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_ORDER_CURRENCY_CODE)
   private String orderCurrencyCode;
 
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ID)
   private Integer orderId;
 
   public static final String SERIALIZED_NAME_SHIPPING_ADDRESS_ID = "shipping_address_id";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_ADDRESS_ID)
+  @Json(name = SERIALIZED_NAME_SHIPPING_ADDRESS_ID)
   private Integer shippingAddressId;
 
   public static final String SERIALIZED_NAME_SHIPPING_AMOUNT = "shipping_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_AMOUNT)
   private BigDecimal shippingAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT = "shipping_discount_tax_compensation_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT)
   private BigDecimal shippingDiscountTaxCompensationAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_INCL_TAX = "shipping_incl_tax";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_SHIPPING_INCL_TAX)
   private BigDecimal shippingInclTax;
 
   public static final String SERIALIZED_NAME_SHIPPING_TAX_AMOUNT = "shipping_tax_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_TAX_AMOUNT)
   private BigDecimal shippingTaxAmount;
 
   public static final String SERIALIZED_NAME_STATE = "state";
-  @SerializedName(SERIALIZED_NAME_STATE)
+  @Json(name = SERIALIZED_NAME_STATE)
   private Integer state;
 
   public static final String SERIALIZED_NAME_STORE_CURRENCY_CODE = "store_currency_code";
-  @SerializedName(SERIALIZED_NAME_STORE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_STORE_CURRENCY_CODE)
   private String storeCurrencyCode;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_STORE_TO_BASE_RATE = "store_to_base_rate";
-  @SerializedName(SERIALIZED_NAME_STORE_TO_BASE_RATE)
+  @Json(name = SERIALIZED_NAME_STORE_TO_BASE_RATE)
   private BigDecimal storeToBaseRate;
 
   public static final String SERIALIZED_NAME_STORE_TO_ORDER_RATE = "store_to_order_rate";
-  @SerializedName(SERIALIZED_NAME_STORE_TO_ORDER_RATE)
+  @Json(name = SERIALIZED_NAME_STORE_TO_ORDER_RATE)
   private BigDecimal storeToOrderRate;
 
   public static final String SERIALIZED_NAME_SUBTOTAL = "subtotal";
-  @SerializedName(SERIALIZED_NAME_SUBTOTAL)
+  @Json(name = SERIALIZED_NAME_SUBTOTAL)
   private BigDecimal subtotal;
 
   public static final String SERIALIZED_NAME_SUBTOTAL_INCL_TAX = "subtotal_incl_tax";
-  @SerializedName(SERIALIZED_NAME_SUBTOTAL_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_SUBTOTAL_INCL_TAX)
   private BigDecimal subtotalInclTax;
 
   public static final String SERIALIZED_NAME_TAX_AMOUNT = "tax_amount";
-  @SerializedName(SERIALIZED_NAME_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_TAX_AMOUNT)
   private BigDecimal taxAmount;
 
   public static final String SERIALIZED_NAME_TOTAL_QTY = "total_qty";
-  @SerializedName(SERIALIZED_NAME_TOTAL_QTY)
+  @Json(name = SERIALIZED_NAME_TOTAL_QTY)
   private BigDecimal totalQty;
 
   public static final String SERIALIZED_NAME_TRANSACTION_ID = "transaction_id";
-  @SerializedName(SERIALIZED_NAME_TRANSACTION_ID)
+  @Json(name = SERIALIZED_NAME_TRANSACTION_ID)
   private String transactionId;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<SalesDataInvoiceItemInterface> items = new ArrayList<SalesDataInvoiceItemInterface>();
 
   public static final String SERIALIZED_NAME_COMMENTS = "comments";
-  @SerializedName(SERIALIZED_NAME_COMMENTS)
+  @Json(name = SERIALIZED_NAME_COMMENTS)
   private List<SalesDataInvoiceCommentInterface> comments = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private SalesDataInvoiceExtensionInterface extensionAttributes;
 
 

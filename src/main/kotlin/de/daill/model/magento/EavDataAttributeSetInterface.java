@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeSetInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_SET_ID = "attribute_set_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_SET_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_SET_ID)
   private Integer attributeSetId;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_SET_NAME = "attribute_set_name";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_SET_NAME)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_SET_NAME)
   private String attributeSetName;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE_ID = "entity_type_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_TYPE_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_TYPE_ID)
   private Integer entityTypeId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

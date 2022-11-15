@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,19 +26,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject40 {
   public static final String SERIALIZED_NAME_ATTRIBUTE_SET_ID = "attributeSetId";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_SET_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_SET_ID)
   private Integer attributeSetId;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_GROUP_ID = "attributeGroupId";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_GROUP_ID)
   private Integer attributeGroupId;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attributeCode";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sortOrder";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
 

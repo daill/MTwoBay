@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,31 +28,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class DirectoryDataCurrencyInformationInterface {
   public static final String SERIALIZED_NAME_BASE_CURRENCY_CODE = "base_currency_code";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_CODE)
   private String baseCurrencyCode;
 
   public static final String SERIALIZED_NAME_BASE_CURRENCY_SYMBOL = "base_currency_symbol";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_SYMBOL)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_SYMBOL)
   private String baseCurrencySymbol;
 
   public static final String SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE = "default_display_currency_code";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE)
   private String defaultDisplayCurrencyCode;
 
   public static final String SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_SYMBOL = "default_display_currency_symbol";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_SYMBOL)
+  @Json(name = SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_SYMBOL)
   private String defaultDisplayCurrencySymbol;
 
   public static final String SERIALIZED_NAME_AVAILABLE_CURRENCY_CODES = "available_currency_codes";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_CURRENCY_CODES)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_CURRENCY_CODES)
   private List<String> availableCurrencyCodes = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_EXCHANGE_RATES = "exchange_rates";
-  @SerializedName(SERIALIZED_NAME_EXCHANGE_RATES)
+  @Json(name = SERIALIZED_NAME_EXCHANGE_RATES)
   private List<DirectoryDataExchangeRateInterface> exchangeRates = new ArrayList<DirectoryDataExchangeRateInterface>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject25 {
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<SalesDataCreditmemoItemCreationInterface> items = null;
 
   public static final String SERIALIZED_NAME_IS_ONLINE = "isOnline";
-  @SerializedName(SERIALIZED_NAME_IS_ONLINE)
+  @Json(name = SERIALIZED_NAME_IS_ONLINE)
   private Boolean isOnline;
 
   public static final String SERIALIZED_NAME_NOTIFY = "notify";
-  @SerializedName(SERIALIZED_NAME_NOTIFY)
+  @Json(name = SERIALIZED_NAME_NOTIFY)
   private Boolean notify;
 
   public static final String SERIALIZED_NAME_APPEND_COMMENT = "appendComment";
-  @SerializedName(SERIALIZED_NAME_APPEND_COMMENT)
+  @Json(name = SERIALIZED_NAME_APPEND_COMMENT)
   private Boolean appendComment;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private SalesDataCreditmemoCommentCreationInterface comment;
 
   public static final String SERIALIZED_NAME_ARGUMENTS = "arguments";
-  @SerializedName(SERIALIZED_NAME_ARGUMENTS)
+  @Json(name = SERIALIZED_NAME_ARGUMENTS)
   private SalesDataCreditmemoCreationArgumentsInterface arguments;
 
 

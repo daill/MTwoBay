@@ -14,20 +14,19 @@ package de.daill.api.ebay
 import de.daill.model.ebay.BaseResponse
 import de.daill.model.ebay.InventoryItemGroup
 import de.daill.services.ebay.*
+import org.springframework.beans.factory.annotation.Autowired
 
 
-class EbayInventoryItemGroupApi(basePath: kotlin.String = defaultBasePath, token: String) : EbayApiClient(basePath, token) {
-    companion object {
-        @JvmStatic
-        val defaultBasePath: String by lazy {
-            System.getProperties().getProperty("org.openapitools.client.baseUrl", "https://api.ebay.com/sell/inventory/v1")
-        }
-    }
+class EbayInventoryItemGroupApi() {
+
+
+    @Autowired
+    lateinit var apiClient: EbayApiClient
 
     /**
     * 
-    * &lt;span class&#x3D;\&quot;tablenote\&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Each listing can be revised up to 250 times in one calendar day. If this revision threshold is reached, the seller will be blocked from revising the item until the next calendar day.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;This call creates a new inventory item group or updates an existing inventory item group. It is up to sellers whether they want to create a complete inventory item group record right from the start, or sellers can provide only some information with the initial &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; call, and then make one or more additional &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; calls to complete the inventory item group record. Upon first creating an inventory item group record, the only required elements are  the &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; identifier in the call URI, and the members of the inventory item group specified through the &lt;strong&gt;variantSKUs&lt;/strong&gt; array in the request payload. &lt;br&gt;&lt;br&gt;In the case of updating/replacing an existing inventory item group, this call does a complete replacement of the existing inventory item group record, so all fields (including the member SKUs) that make up the inventory item group are required, regardless of whether their values changed. So, when replacing/updating an inventory item group record, it is advised that the seller run a &lt;strong&gt;getInventoryItemGroup&lt;/strong&gt; call for that inventory item group to see all of its current values/settings/members before attempting to update the record. And if changes are made to an inventory item group that is part of a live, multiple-variation eBay listing, these changes automatically update the eBay listing. For example, if a SKU value is removed from the inventory item group, the corresponding product variation will be removed from the eBay listing as well.&lt;br/&gt;&lt;br/&gt; In addition to the required inventory item group identifier and member SKUs, other key information that is set with this call include: &lt;ul&gt; &lt;li&gt;Title and description of the inventory item group. The string values provided in these fields will actually become the listing title and listing description of the listing once the first SKU of the inventory item group is published successfully&lt;/li&gt; &lt;li&gt;Common aspects that inventory items in the qroup share&lt;/li&gt; &lt;li&gt;Product aspects that vary within each product variation&lt;/li&gt; &lt;li&gt;Links to images demonstrating the variations of the product, and these images should correspond to the product aspect that is set with the &lt;strong&gt;variesBy.aspectsImageVariesBy&lt;/strong&gt; field&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;In addition to the &lt;code&gt;authorization&lt;/code&gt; header, which is required for all eBay REST API calls, the &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; call also requires the &lt;code&gt;Content-Language&lt;/code&gt; header, that sets the natural language that will be used in the field values of the request payload. For US English, the code value passed in this header should be &lt;code&gt;en-US&lt;/code&gt;. To view other supported &lt;code&gt;Content-Language&lt;/code&gt; values, and to read more about all supported HTTP headers for eBay REST API calls, see the &lt;a href&#x3D;\&quot;/api-docs/static/rest-request-components.html#HTTP\&quot;&gt;HTTP request headers&lt;/a&gt; topic in the &lt;strong&gt;Using eBay RESTful APIs&lt;/strong&gt; document.&lt;/p&gt;
-    * @param contentLanguage This request header sets the natural language that will be provided in the field values of the request payload. 
+    * &lt;span class&#x3D;\&quot;tablenote\&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Each listing can be revised up to 250 times in one calendar day. If this revision threshold is reached, the seller will be blocked from revising the item until the next calendar day.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;This call creates a new inventory item group or updates an existing inventory item group. It is up to sellers whether they want to create a complete inventory item group record right from the start, or sellers can provide only some information with the initial &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; call, and then make one or more additional &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; calls to complete the inventory item group record. Upon first creating an inventory item group record, the only required elements are  the &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; identifier in the call URI, and the members of the inventory item group specified through the &lt;strong&gt;variantSKUs&lt;/strong&gt; array in the apiClient.request payload. &lt;br&gt;&lt;br&gt;In the case of updating/replacing an existing inventory item group, this call does a complete replacement of the existing inventory item group record, so all fields (including the member SKUs) that make up the inventory item group are required, regardless of whether their values changed. So, when replacing/updating an inventory item group record, it is advised that the seller run a &lt;strong&gt;getInventoryItemGroup&lt;/strong&gt; call for that inventory item group to see all of its current values/settings/members before attempting to update the record. And if changes are made to an inventory item group that is part of a live, multiple-variation eBay listing, these changes automatically update the eBay listing. For example, if a SKU value is removed from the inventory item group, the corresponding product variation will be removed from the eBay listing as well.&lt;br/&gt;&lt;br/&gt; In addition to the required inventory item group identifier and member SKUs, other key information that is set with this call include: &lt;ul&gt; &lt;li&gt;Title and description of the inventory item group. The string values provided in these fields will actually become the listing title and listing description of the listing once the first SKU of the inventory item group is published successfully&lt;/li&gt; &lt;li&gt;Common aspects that inventory items in the qroup share&lt;/li&gt; &lt;li&gt;Product aspects that vary within each product variation&lt;/li&gt; &lt;li&gt;Links to images demonstrating the variations of the product, and these images should correspond to the product aspect that is set with the &lt;strong&gt;variesBy.aspectsImageVariesBy&lt;/strong&gt; field&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;In addition to the &lt;code&gt;authorization&lt;/code&gt; header, which is required for all eBay REST API calls, the &lt;strong&gt;createOrReplaceInventoryItemGroup&lt;/strong&gt; call also requires the &lt;code&gt;Content-Language&lt;/code&gt; header, that sets the natural language that will be used in the field values of the apiClient.request payload. For US English, the code value passed in this header should be &lt;code&gt;en-US&lt;/code&gt;. To view other supported &lt;code&gt;Content-Language&lt;/code&gt; values, and to read more about all supported HTTP headers for eBay REST API calls, see the &lt;a href&#x3D;\&quot;/api-docs/static/rest-apiClient.request-components.html#HTTP\&quot;&gt;HTTP apiClient.request headers&lt;/a&gt; topic in the &lt;strong&gt;Using eBay RESTful APIs&lt;/strong&gt; document.&lt;/p&gt;
+    * @param contentLanguage This apiClient.request header sets the natural language that will be provided in the field values of the apiClient.request payload.
     * @param inventoryItemGroupKey Unique identifier of the inventory item group. This identifier is supplied by the seller. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to create/update is passed in at the end of the call URI. This value cannot be changed once it is set. 
     * @param body Details of the inventory Item Group 
     * @return BaseResponse
@@ -48,7 +47,7 @@ class EbayInventoryItemGroupApi(basePath: kotlin.String = defaultBasePath, token
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<BaseResponse>(
+        val localVarResponse = apiClient.request<BaseResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -88,7 +87,7 @@ class EbayInventoryItemGroupApi(basePath: kotlin.String = defaultBasePath, token
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = apiClient.request<Any?>(
             localVariableConfig,
             localVariableBody
         )
@@ -129,7 +128,7 @@ class EbayInventoryItemGroupApi(basePath: kotlin.String = defaultBasePath, token
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<InventoryItemGroup>(
+        val localVarResponse = apiClient.request<InventoryItemGroup>(
             localVariableConfig,
             localVariableBody
         )

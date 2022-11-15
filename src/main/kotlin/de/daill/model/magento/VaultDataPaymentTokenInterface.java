@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,47 +27,47 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class VaultDataPaymentTokenInterface {
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ID)
   private Integer customerId;
 
   public static final String SERIALIZED_NAME_PUBLIC_HASH = "public_hash";
-  @SerializedName(SERIALIZED_NAME_PUBLIC_HASH)
+  @Json(name = SERIALIZED_NAME_PUBLIC_HASH)
   private String publicHash;
 
   public static final String SERIALIZED_NAME_PAYMENT_METHOD_CODE = "payment_method_code";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_METHOD_CODE)
+  @Json(name = SERIALIZED_NAME_PAYMENT_METHOD_CODE)
   private String paymentMethodCode;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_EXPIRES_AT = "expires_at";
-  @SerializedName(SERIALIZED_NAME_EXPIRES_AT)
+  @Json(name = SERIALIZED_NAME_EXPIRES_AT)
   private String expiresAt;
 
   public static final String SERIALIZED_NAME_GATEWAY_TOKEN = "gateway_token";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_TOKEN)
+  @Json(name = SERIALIZED_NAME_GATEWAY_TOKEN)
   private String gatewayToken;
 
   public static final String SERIALIZED_NAME_TOKEN_DETAILS = "token_details";
-  @SerializedName(SERIALIZED_NAME_TOKEN_DETAILS)
+  @Json(name = SERIALIZED_NAME_TOKEN_DETAILS)
   private String tokenDetails;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE = "is_visible";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE)
   private Boolean isVisible;
 
 

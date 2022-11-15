@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,15 +28,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataAddressExtensionInterface {
   public static final String SERIALIZED_NAME_DISCOUNTS = "discounts";
-  @SerializedName(SERIALIZED_NAME_DISCOUNTS)
+  @Json(name = SERIALIZED_NAME_DISCOUNTS)
   private List<SalesRuleDataRuleDiscountInterface> discounts = null;
 
   public static final String SERIALIZED_NAME_GIFT_REGISTRY_ID = "gift_registry_id";
-  @SerializedName(SERIALIZED_NAME_GIFT_REGISTRY_ID)
+  @Json(name = SERIALIZED_NAME_GIFT_REGISTRY_ID)
   private Integer giftRegistryId;
 
   public static final String SERIALIZED_NAME_PICKUP_LOCATION_CODE = "pickup_location_code";
-  @SerializedName(SERIALIZED_NAME_PICKUP_LOCATION_CODE)
+  @Json(name = SERIALIZED_NAME_PICKUP_LOCATION_CODE)
   private String pickupLocationCode;
 
 

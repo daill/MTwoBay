@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,95 +28,95 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataCustomerInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
-  @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_GROUP_ID)
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_DEFAULT_BILLING = "default_billing";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_BILLING)
+  @Json(name = SERIALIZED_NAME_DEFAULT_BILLING)
   private String defaultBilling;
 
   public static final String SERIALIZED_NAME_DEFAULT_SHIPPING = "default_shipping";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_SHIPPING)
+  @Json(name = SERIALIZED_NAME_DEFAULT_SHIPPING)
   private String defaultShipping;
 
   public static final String SERIALIZED_NAME_CONFIRMATION = "confirmation";
-  @SerializedName(SERIALIZED_NAME_CONFIRMATION)
+  @Json(name = SERIALIZED_NAME_CONFIRMATION)
   private String confirmation;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_CREATED_IN = "created_in";
-  @SerializedName(SERIALIZED_NAME_CREATED_IN)
+  @Json(name = SERIALIZED_NAME_CREATED_IN)
   private String createdIn;
 
   public static final String SERIALIZED_NAME_DOB = "dob";
-  @SerializedName(SERIALIZED_NAME_DOB)
+  @Json(name = SERIALIZED_NAME_DOB)
   private String dob;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
+  @Json(name = SERIALIZED_NAME_EMAIL)
   private String email;
 
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
-  @SerializedName(SERIALIZED_NAME_FIRSTNAME)
+  @Json(name = SERIALIZED_NAME_FIRSTNAME)
   private String firstname;
 
   public static final String SERIALIZED_NAME_LASTNAME = "lastname";
-  @SerializedName(SERIALIZED_NAME_LASTNAME)
+  @Json(name = SERIALIZED_NAME_LASTNAME)
   private String lastname;
 
   public static final String SERIALIZED_NAME_MIDDLENAME = "middlename";
-  @SerializedName(SERIALIZED_NAME_MIDDLENAME)
+  @Json(name = SERIALIZED_NAME_MIDDLENAME)
   private String middlename;
 
   public static final String SERIALIZED_NAME_PREFIX = "prefix";
-  @SerializedName(SERIALIZED_NAME_PREFIX)
+  @Json(name = SERIALIZED_NAME_PREFIX)
   private String prefix;
 
   public static final String SERIALIZED_NAME_SUFFIX = "suffix";
-  @SerializedName(SERIALIZED_NAME_SUFFIX)
+  @Json(name = SERIALIZED_NAME_SUFFIX)
   private String suffix;
 
   public static final String SERIALIZED_NAME_GENDER = "gender";
-  @SerializedName(SERIALIZED_NAME_GENDER)
+  @Json(name = SERIALIZED_NAME_GENDER)
   private Integer gender;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_TAXVAT = "taxvat";
-  @SerializedName(SERIALIZED_NAME_TAXVAT)
+  @Json(name = SERIALIZED_NAME_TAXVAT)
   private String taxvat;
 
   public static final String SERIALIZED_NAME_WEBSITE_ID = "website_id";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_ID)
+  @Json(name = SERIALIZED_NAME_WEBSITE_ID)
   private Integer websiteId;
 
   public static final String SERIALIZED_NAME_ADDRESSES = "addresses";
-  @SerializedName(SERIALIZED_NAME_ADDRESSES)
+  @Json(name = SERIALIZED_NAME_ADDRESSES)
   private List<CustomerDataAddressInterface> addresses = null;
 
   public static final String SERIALIZED_NAME_DISABLE_AUTO_GROUP_CHANGE = "disable_auto_group_change";
-  @SerializedName(SERIALIZED_NAME_DISABLE_AUTO_GROUP_CHANGE)
+  @Json(name = SERIALIZED_NAME_DISABLE_AUTO_GROUP_CHANGE)
   private Integer disableAutoGroupChange;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CustomerDataCustomerExtensionInterface extensionAttributes;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class FrameworkDataImageContentInterface {
   public static final String SERIALIZED_NAME_BASE64_ENCODED_DATA = "base64_encoded_data";
-  @SerializedName(SERIALIZED_NAME_BASE64_ENCODED_DATA)
+  @Json(name = SERIALIZED_NAME_BASE64_ENCODED_DATA)
   private String base64EncodedData;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
 

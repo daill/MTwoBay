@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventorySourceSelectionApiDataAddressInterface {
   public static final String SERIALIZED_NAME_COUNTRY = "country";
-  @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @Json(name = SERIALIZED_NAME_COUNTRY)
   private String country;
 
   public static final String SERIALIZED_NAME_POSTCODE = "postcode";
-  @SerializedName(SERIALIZED_NAME_POSTCODE)
+  @Json(name = SERIALIZED_NAME_POSTCODE)
   private String postcode;
 
   public static final String SERIALIZED_NAME_STREET = "street";
-  @SerializedName(SERIALIZED_NAME_STREET)
+  @Json(name = SERIALIZED_NAME_STREET)
   private String street;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private String region;
 
   public static final String SERIALIZED_NAME_CITY = "city";
-  @SerializedName(SERIALIZED_NAME_CITY)
+  @Json(name = SERIALIZED_NAME_CITY)
   private String city;
 
 

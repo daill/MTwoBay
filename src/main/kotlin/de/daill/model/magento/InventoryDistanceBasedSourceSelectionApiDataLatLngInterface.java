@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryDistanceBasedSourceSelectionApiDataLatLngInterface {
   public static final String SERIALIZED_NAME_LAT = "lat";
-  @SerializedName(SERIALIZED_NAME_LAT)
+  @Json(name = SERIALIZED_NAME_LAT)
   private BigDecimal lat;
 
   public static final String SERIALIZED_NAME_LNG = "lng";
-  @SerializedName(SERIALIZED_NAME_LNG)
+  @Json(name = SERIALIZED_NAME_LNG)
   private BigDecimal lng;
 
 

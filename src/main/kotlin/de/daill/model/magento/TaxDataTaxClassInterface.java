@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataTaxClassInterface {
   public static final String SERIALIZED_NAME_CLASS_ID = "class_id";
-  @SerializedName(SERIALIZED_NAME_CLASS_ID)
+  @Json(name = SERIALIZED_NAME_CLASS_ID)
   private Integer classId;
 
   public static final String SERIALIZED_NAME_CLASS_NAME = "class_name";
-  @SerializedName(SERIALIZED_NAME_CLASS_NAME)
+  @Json(name = SERIALIZED_NAME_CLASS_NAME)
   private String className;
 
   public static final String SERIALIZED_NAME_CLASS_TYPE = "class_type";
-  @SerializedName(SERIALIZED_NAME_CLASS_TYPE)
+  @Json(name = SERIALIZED_NAME_CLASS_TYPE)
   private String classType;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,11 +28,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataValidationResultsInterface {
   public static final String SERIALIZED_NAME_VALID = "valid";
-  @SerializedName(SERIALIZED_NAME_VALID)
+  @Json(name = SERIALIZED_NAME_VALID)
   private Boolean valid;
 
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
-  @SerializedName(SERIALIZED_NAME_MESSAGES)
+  @Json(name = SERIALIZED_NAME_MESSAGES)
   private List<String> messages = new ArrayList<String>();
 
 

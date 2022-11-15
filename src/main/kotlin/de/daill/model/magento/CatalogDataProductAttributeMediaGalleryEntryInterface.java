@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -24,39 +26,39 @@ import java.util.Objects;
  */
 public class CatalogDataProductAttributeMediaGalleryEntryInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_MEDIA_TYPE = "media_type";
-  @SerializedName(SERIALIZED_NAME_MEDIA_TYPE)
+  @Json(name = SERIALIZED_NAME_MEDIA_TYPE)
   private String mediaType;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
-  @SerializedName(SERIALIZED_NAME_LABEL)
+  @Json(name = SERIALIZED_NAME_LABEL)
   private String label;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
-  @SerializedName(SERIALIZED_NAME_DISABLED)
+  @Json(name = SERIALIZED_NAME_DISABLED)
   private Boolean disabled;
 
   public static final String SERIALIZED_NAME_TYPES = "types";
-  @SerializedName(SERIALIZED_NAME_TYPES)
+  @Json(name = SERIALIZED_NAME_TYPES)
   private List<String> types = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_FILE = "file";
-  @SerializedName(SERIALIZED_NAME_FILE)
+  @Json(name = SERIALIZED_NAME_FILE)
   private String file;
 
   public static final String SERIALIZED_NAME_CONTENT = "content";
-  @SerializedName(SERIALIZED_NAME_CONTENT)
+  @Json(name = SERIALIZED_NAME_CONTENT)
   private FrameworkDataImageContentInterface content;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductAttributeMediaGalleryEntryExtensionInterface extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,35 +27,35 @@ import java.util.Objects;
 
 public class BundleDataOptionInterface {
   public static final String SERIALIZED_NAME_OPTION_ID = "option_id";
-  @SerializedName(SERIALIZED_NAME_OPTION_ID)
+  @Json(name = SERIALIZED_NAME_OPTION_ID)
   private Integer optionId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_REQUIRED = "required";
-  @SerializedName(SERIALIZED_NAME_REQUIRED)
+  @Json(name = SERIALIZED_NAME_REQUIRED)
   private Boolean required;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_PRODUCT_LINKS = "product_links";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_LINKS)
+  @Json(name = SERIALIZED_NAME_PRODUCT_LINKS)
   private List<BundleDataLinkInterface> productLinks = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

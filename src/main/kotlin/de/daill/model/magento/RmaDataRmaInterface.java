@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,59 +28,59 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class RmaDataRmaInterface {
   public static final String SERIALIZED_NAME_INCREMENT_ID = "increment_id";
-  @SerializedName(SERIALIZED_NAME_INCREMENT_ID)
+  @Json(name = SERIALIZED_NAME_INCREMENT_ID)
   private String incrementId;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ID)
   private Integer orderId;
 
   public static final String SERIALIZED_NAME_ORDER_INCREMENT_ID = "order_increment_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_INCREMENT_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_INCREMENT_ID)
   private String orderIncrementId;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ID)
   private Integer customerId;
 
   public static final String SERIALIZED_NAME_DATE_REQUESTED = "date_requested";
-  @SerializedName(SERIALIZED_NAME_DATE_REQUESTED)
+  @Json(name = SERIALIZED_NAME_DATE_REQUESTED)
   private String dateRequested;
 
   public static final String SERIALIZED_NAME_CUSTOMER_CUSTOM_EMAIL = "customer_custom_email";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_CUSTOM_EMAIL)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_CUSTOM_EMAIL)
   private String customerCustomEmail;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<RmaDataItemInterface> items = new ArrayList<RmaDataItemInterface>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private String status;
 
   public static final String SERIALIZED_NAME_COMMENTS = "comments";
-  @SerializedName(SERIALIZED_NAME_COMMENTS)
+  @Json(name = SERIALIZED_NAME_COMMENTS)
   private List<RmaDataCommentInterface> comments = new ArrayList<RmaDataCommentInterface>();
 
   public static final String SERIALIZED_NAME_TRACKS = "tracks";
-  @SerializedName(SERIALIZED_NAME_TRACKS)
+  @Json(name = SERIALIZED_NAME_TRACKS)
   private List<RmaDataTrackInterface> tracks = new ArrayList<RmaDataTrackInterface>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,47 +27,47 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataShippingMethodInterface {
   public static final String SERIALIZED_NAME_CARRIER_CODE = "carrier_code";
-  @SerializedName(SERIALIZED_NAME_CARRIER_CODE)
+  @Json(name = SERIALIZED_NAME_CARRIER_CODE)
   private String carrierCode;
 
   public static final String SERIALIZED_NAME_METHOD_CODE = "method_code";
-  @SerializedName(SERIALIZED_NAME_METHOD_CODE)
+  @Json(name = SERIALIZED_NAME_METHOD_CODE)
   private String methodCode;
 
   public static final String SERIALIZED_NAME_CARRIER_TITLE = "carrier_title";
-  @SerializedName(SERIALIZED_NAME_CARRIER_TITLE)
+  @Json(name = SERIALIZED_NAME_CARRIER_TITLE)
   private String carrierTitle;
 
   public static final String SERIALIZED_NAME_METHOD_TITLE = "method_title";
-  @SerializedName(SERIALIZED_NAME_METHOD_TITLE)
+  @Json(name = SERIALIZED_NAME_METHOD_TITLE)
   private String methodTitle;
 
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT = "base_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT)
   private BigDecimal baseAmount;
 
   public static final String SERIALIZED_NAME_AVAILABLE = "available";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE)
+  @Json(name = SERIALIZED_NAME_AVAILABLE)
   private Boolean available;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "error_message";
-  @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
+  @Json(name = SERIALIZED_NAME_ERROR_MESSAGE)
   private String errorMessage;
 
   public static final String SERIALIZED_NAME_PRICE_EXCL_TAX = "price_excl_tax";
-  @SerializedName(SERIALIZED_NAME_PRICE_EXCL_TAX)
+  @Json(name = SERIALIZED_NAME_PRICE_EXCL_TAX)
   private BigDecimal priceExclTax;
 
   public static final String SERIALIZED_NAME_PRICE_INCL_TAX = "price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_PRICE_INCL_TAX)
   private BigDecimal priceInclTax;
 
 

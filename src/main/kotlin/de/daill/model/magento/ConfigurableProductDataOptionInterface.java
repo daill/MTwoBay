@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,35 +28,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class ConfigurableProductDataOptionInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_ID = "attribute_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_ID)
   private String attributeId;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
-  @SerializedName(SERIALIZED_NAME_LABEL)
+  @Json(name = SERIALIZED_NAME_LABEL)
   private String label;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_IS_USE_DEFAULT = "is_use_default";
-  @SerializedName(SERIALIZED_NAME_IS_USE_DEFAULT)
+  @Json(name = SERIALIZED_NAME_IS_USE_DEFAULT)
   private Boolean isUseDefault;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
-  @SerializedName(SERIALIZED_NAME_VALUES)
+  @Json(name = SERIALIZED_NAME_VALUES)
   private List<ConfigurableProductDataOptionValueInterface> values = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @Json(name = SERIALIZED_NAME_PRODUCT_ID)
   private Integer productId;
 
 

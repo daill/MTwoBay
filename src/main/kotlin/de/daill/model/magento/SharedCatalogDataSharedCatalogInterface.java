@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SharedCatalogDataSharedCatalogInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP_ID = "customer_group_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP_ID)
   private Integer customerGroupId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private Integer type;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_CREATED_BY = "created_by";
-  @SerializedName(SERIALIZED_NAME_CREATED_BY)
+  @Json(name = SERIALIZED_NAME_CREATED_BY)
   private Integer createdBy;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_TAX_CLASS_ID = "tax_class_id";
-  @SerializedName(SERIALIZED_NAME_TAX_CLASS_ID)
+  @Json(name = SERIALIZED_NAME_TAX_CLASS_ID)
   private Integer taxClassId;
 
 

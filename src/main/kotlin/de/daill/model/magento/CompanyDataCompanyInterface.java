@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,87 +28,87 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyDataCompanyInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private Integer status;
 
   public static final String SERIALIZED_NAME_COMPANY_NAME = "company_name";
-  @SerializedName(SERIALIZED_NAME_COMPANY_NAME)
+  @Json(name = SERIALIZED_NAME_COMPANY_NAME)
   private String companyName;
 
   public static final String SERIALIZED_NAME_LEGAL_NAME = "legal_name";
-  @SerializedName(SERIALIZED_NAME_LEGAL_NAME)
+  @Json(name = SERIALIZED_NAME_LEGAL_NAME)
   private String legalName;
 
   public static final String SERIALIZED_NAME_COMPANY_EMAIL = "company_email";
-  @SerializedName(SERIALIZED_NAME_COMPANY_EMAIL)
+  @Json(name = SERIALIZED_NAME_COMPANY_EMAIL)
   private String companyEmail;
 
   public static final String SERIALIZED_NAME_VAT_TAX_ID = "vat_tax_id";
-  @SerializedName(SERIALIZED_NAME_VAT_TAX_ID)
+  @Json(name = SERIALIZED_NAME_VAT_TAX_ID)
   private String vatTaxId;
 
   public static final String SERIALIZED_NAME_RESELLER_ID = "reseller_id";
-  @SerializedName(SERIALIZED_NAME_RESELLER_ID)
+  @Json(name = SERIALIZED_NAME_RESELLER_ID)
   private String resellerId;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private String comment;
 
   public static final String SERIALIZED_NAME_STREET = "street";
-  @SerializedName(SERIALIZED_NAME_STREET)
+  @Json(name = SERIALIZED_NAME_STREET)
   private List<String> street = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_CITY = "city";
-  @SerializedName(SERIALIZED_NAME_CITY)
+  @Json(name = SERIALIZED_NAME_CITY)
   private String city;
 
   public static final String SERIALIZED_NAME_COUNTRY_ID = "country_id";
-  @SerializedName(SERIALIZED_NAME_COUNTRY_ID)
+  @Json(name = SERIALIZED_NAME_COUNTRY_ID)
   private String countryId;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private String region;
 
   public static final String SERIALIZED_NAME_REGION_ID = "region_id";
-  @SerializedName(SERIALIZED_NAME_REGION_ID)
+  @Json(name = SERIALIZED_NAME_REGION_ID)
   private String regionId;
 
   public static final String SERIALIZED_NAME_POSTCODE = "postcode";
-  @SerializedName(SERIALIZED_NAME_POSTCODE)
+  @Json(name = SERIALIZED_NAME_POSTCODE)
   private String postcode;
 
   public static final String SERIALIZED_NAME_TELEPHONE = "telephone";
-  @SerializedName(SERIALIZED_NAME_TELEPHONE)
+  @Json(name = SERIALIZED_NAME_TELEPHONE)
   private String telephone;
 
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP_ID = "customer_group_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP_ID)
   private Integer customerGroupId;
 
   public static final String SERIALIZED_NAME_SALES_REPRESENTATIVE_ID = "sales_representative_id";
-  @SerializedName(SERIALIZED_NAME_SALES_REPRESENTATIVE_ID)
+  @Json(name = SERIALIZED_NAME_SALES_REPRESENTATIVE_ID)
   private Integer salesRepresentativeId;
 
   public static final String SERIALIZED_NAME_REJECT_REASON = "reject_reason";
-  @SerializedName(SERIALIZED_NAME_REJECT_REASON)
+  @Json(name = SERIALIZED_NAME_REJECT_REASON)
   private String rejectReason;
 
   public static final String SERIALIZED_NAME_REJECTED_AT = "rejected_at";
-  @SerializedName(SERIALIZED_NAME_REJECTED_AT)
+  @Json(name = SERIALIZED_NAME_REJECTED_AT)
   private String rejectedAt;
 
   public static final String SERIALIZED_NAME_SUPER_USER_ID = "super_user_id";
-  @SerializedName(SERIALIZED_NAME_SUPER_USER_ID)
+  @Json(name = SERIALIZED_NAME_SUPER_USER_ID)
   private Integer superUserId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CompanyDataCompanyExtensionInterface extensionAttributes;
 
 

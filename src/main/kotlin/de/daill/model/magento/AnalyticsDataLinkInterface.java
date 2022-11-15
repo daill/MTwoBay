@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class AnalyticsDataLinkInterface {
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  @Json(name = SERIALIZED_NAME_URL)
   private String url;
 
   public static final String SERIALIZED_NAME_INITIALIZATION_VECTOR = "initialization_vector";
-  @SerializedName(SERIALIZED_NAME_INITIALIZATION_VECTOR)
+  @Json(name = SERIALIZED_NAME_INITIALIZATION_VECTOR)
   private String initializationVector;
 
 

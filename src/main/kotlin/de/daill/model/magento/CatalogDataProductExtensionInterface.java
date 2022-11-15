@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,43 +28,43 @@ import java.util.Objects;
 public class CatalogDataProductExtensionInterface {
   public static final String SERIALIZED_NAME_WEBSITE_IDS = "website_ids";
 
-  @SerializedName(SERIALIZED_NAME_WEBSITE_IDS)
+  @Json(name = SERIALIZED_NAME_WEBSITE_IDS)
   private List<Integer> websiteIds = null;
 
   public static final String SERIALIZED_NAME_CATEGORY_LINKS = "category_links";
-  @SerializedName(SERIALIZED_NAME_CATEGORY_LINKS)
+  @Json(name = SERIALIZED_NAME_CATEGORY_LINKS)
   private List<CatalogDataCategoryLinkInterface> categoryLinks = null;
 
   public static final String SERIALIZED_NAME_BUNDLE_PRODUCT_OPTIONS = "bundle_product_options";
-  @SerializedName(SERIALIZED_NAME_BUNDLE_PRODUCT_OPTIONS)
+  @Json(name = SERIALIZED_NAME_BUNDLE_PRODUCT_OPTIONS)
   private List<BundleDataOptionInterface> bundleProductOptions = null;
 
   public static final String SERIALIZED_NAME_STOCK_ITEM = "stock_item";
-  @SerializedName(SERIALIZED_NAME_STOCK_ITEM)
+  @Json(name = SERIALIZED_NAME_STOCK_ITEM)
   private CatalogInventoryDataStockItemInterface stockItem;
 
   public static final String SERIALIZED_NAME_DISCOUNTS = "discounts";
-  @SerializedName(SERIALIZED_NAME_DISCOUNTS)
+  @Json(name = SERIALIZED_NAME_DISCOUNTS)
   private List<SalesRuleDataRuleDiscountInterface> discounts = null;
 
   public static final String SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_LINKS = "downloadable_product_links";
-  @SerializedName(SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_LINKS)
+  @Json(name = SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_LINKS)
   private List<DownloadableDataLinkInterface> downloadableProductLinks = null;
 
   public static final String SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_SAMPLES = "downloadable_product_samples";
-  @SerializedName(SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_SAMPLES)
+  @Json(name = SERIALIZED_NAME_DOWNLOADABLE_PRODUCT_SAMPLES)
   private List<DownloadableDataSampleInterface> downloadableProductSamples = null;
 
   public static final String SERIALIZED_NAME_GIFTCARD_AMOUNTS = "giftcard_amounts";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_AMOUNTS)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_AMOUNTS)
   private List<GiftCardDataGiftcardAmountInterface> giftcardAmounts = null;
 
   public static final String SERIALIZED_NAME_CONFIGURABLE_PRODUCT_OPTIONS = "configurable_product_options";
-  @SerializedName(SERIALIZED_NAME_CONFIGURABLE_PRODUCT_OPTIONS)
+  @Json(name = SERIALIZED_NAME_CONFIGURABLE_PRODUCT_OPTIONS)
   private List<ConfigurableProductDataOptionInterface> configurableProductOptions = null;
 
   public static final String SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS = "configurable_product_links";
-  @SerializedName(SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS)
+  @Json(name = SERIALIZED_NAME_CONFIGURABLE_PRODUCT_LINKS)
   private List<Integer> configurableProductLinks = null;
 
   public CatalogDataProductExtensionInterface websiteIds(List<Integer> websiteIds) {

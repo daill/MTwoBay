@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,51 +28,51 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductRenderInterface {
   public static final String SERIALIZED_NAME_ADD_TO_CART_BUTTON = "add_to_cart_button";
-  @SerializedName(SERIALIZED_NAME_ADD_TO_CART_BUTTON)
+  @Json(name = SERIALIZED_NAME_ADD_TO_CART_BUTTON)
   private CatalogDataProductRenderButtonInterface addToCartButton;
 
   public static final String SERIALIZED_NAME_ADD_TO_COMPARE_BUTTON = "add_to_compare_button";
-  @SerializedName(SERIALIZED_NAME_ADD_TO_COMPARE_BUTTON)
+  @Json(name = SERIALIZED_NAME_ADD_TO_COMPARE_BUTTON)
   private CatalogDataProductRenderButtonInterface addToCompareButton;
 
   public static final String SERIALIZED_NAME_PRICE_INFO = "price_info";
-  @SerializedName(SERIALIZED_NAME_PRICE_INFO)
+  @Json(name = SERIALIZED_NAME_PRICE_INFO)
   private CatalogDataProductRenderPriceInfoInterface priceInfo;
 
   public static final String SERIALIZED_NAME_IMAGES = "images";
-  @SerializedName(SERIALIZED_NAME_IMAGES)
+  @Json(name = SERIALIZED_NAME_IMAGES)
   private List<CatalogDataProductRenderImageInterface> images = new ArrayList<CatalogDataProductRenderImageInterface>();
 
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  @Json(name = SERIALIZED_NAME_URL)
   private String url;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_IS_SALABLE = "is_salable";
-  @SerializedName(SERIALIZED_NAME_IS_SALABLE)
+  @Json(name = SERIALIZED_NAME_IS_SALABLE)
   private String isSalable;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_CURRENCY_CODE)
   private String currencyCode;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductRenderExtensionInterface extensionAttributes;
 
 

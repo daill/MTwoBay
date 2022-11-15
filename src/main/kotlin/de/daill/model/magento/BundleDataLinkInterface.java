@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,43 +27,43 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class BundleDataLinkInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private String id;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_OPTION_ID = "option_id";
-  @SerializedName(SERIALIZED_NAME_OPTION_ID)
+  @Json(name = SERIALIZED_NAME_OPTION_ID)
   private Integer optionId;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_IS_DEFAULT = "is_default";
-  @SerializedName(SERIALIZED_NAME_IS_DEFAULT)
+  @Json(name = SERIALIZED_NAME_IS_DEFAULT)
   private Boolean isDefault;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRICE_TYPE = "price_type";
-  @SerializedName(SERIALIZED_NAME_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_PRICE_TYPE)
   private Integer priceType;
 
   public static final String SERIALIZED_NAME_CAN_CHANGE_QUANTITY = "can_change_quantity";
-  @SerializedName(SERIALIZED_NAME_CAN_CHANGE_QUANTITY)
+  @Json(name = SERIALIZED_NAME_CAN_CHANGE_QUANTITY)
   private Integer canChangeQuantity;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

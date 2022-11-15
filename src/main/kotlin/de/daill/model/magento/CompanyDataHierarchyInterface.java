@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyDataHierarchyInterface {
   public static final String SERIALIZED_NAME_STRUCTURE_ID = "structure_id";
-  @SerializedName(SERIALIZED_NAME_STRUCTURE_ID)
+  @Json(name = SERIALIZED_NAME_STRUCTURE_ID)
   private Integer structureId;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
-  @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
+  @Json(name = SERIALIZED_NAME_ENTITY_TYPE)
   private String entityType;
 
   public static final String SERIALIZED_NAME_STRUCTURE_PARENT_ID = "structure_parent_id";
-  @SerializedName(SERIALIZED_NAME_STRUCTURE_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_STRUCTURE_PARENT_ID)
   private Integer structureParentId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

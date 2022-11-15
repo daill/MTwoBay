@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,79 +27,79 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CmsDataPageInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
-  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
+  @Json(name = SERIALIZED_NAME_IDENTIFIER)
   private String identifier;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_PAGE_LAYOUT = "page_layout";
-  @SerializedName(SERIALIZED_NAME_PAGE_LAYOUT)
+  @Json(name = SERIALIZED_NAME_PAGE_LAYOUT)
   private String pageLayout;
 
   public static final String SERIALIZED_NAME_META_TITLE = "meta_title";
-  @SerializedName(SERIALIZED_NAME_META_TITLE)
+  @Json(name = SERIALIZED_NAME_META_TITLE)
   private String metaTitle;
 
   public static final String SERIALIZED_NAME_META_KEYWORDS = "meta_keywords";
-  @SerializedName(SERIALIZED_NAME_META_KEYWORDS)
+  @Json(name = SERIALIZED_NAME_META_KEYWORDS)
   private String metaKeywords;
 
   public static final String SERIALIZED_NAME_META_DESCRIPTION = "meta_description";
-  @SerializedName(SERIALIZED_NAME_META_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_META_DESCRIPTION)
   private String metaDescription;
 
   public static final String SERIALIZED_NAME_CONTENT_HEADING = "content_heading";
-  @SerializedName(SERIALIZED_NAME_CONTENT_HEADING)
+  @Json(name = SERIALIZED_NAME_CONTENT_HEADING)
   private String contentHeading;
 
   public static final String SERIALIZED_NAME_CONTENT = "content";
-  @SerializedName(SERIALIZED_NAME_CONTENT)
+  @Json(name = SERIALIZED_NAME_CONTENT)
   private String content;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
-  @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @Json(name = SERIALIZED_NAME_CREATION_TIME)
   private String creationTime;
 
   public static final String SERIALIZED_NAME_UPDATE_TIME = "update_time";
-  @SerializedName(SERIALIZED_NAME_UPDATE_TIME)
+  @Json(name = SERIALIZED_NAME_UPDATE_TIME)
   private String updateTime;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private String sortOrder;
 
   public static final String SERIALIZED_NAME_LAYOUT_UPDATE_XML = "layout_update_xml";
-  @SerializedName(SERIALIZED_NAME_LAYOUT_UPDATE_XML)
+  @Json(name = SERIALIZED_NAME_LAYOUT_UPDATE_XML)
   private String layoutUpdateXml;
 
   public static final String SERIALIZED_NAME_CUSTOM_THEME = "custom_theme";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_THEME)
+  @Json(name = SERIALIZED_NAME_CUSTOM_THEME)
   private String customTheme;
 
   public static final String SERIALIZED_NAME_CUSTOM_ROOT_TEMPLATE = "custom_root_template";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ROOT_TEMPLATE)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ROOT_TEMPLATE)
   private String customRootTemplate;
 
   public static final String SERIALIZED_NAME_CUSTOM_LAYOUT_UPDATE_XML = "custom_layout_update_xml";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_LAYOUT_UPDATE_XML)
+  @Json(name = SERIALIZED_NAME_CUSTOM_LAYOUT_UPDATE_XML)
   private String customLayoutUpdateXml;
 
   public static final String SERIALIZED_NAME_CUSTOM_THEME_FROM = "custom_theme_from";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_THEME_FROM)
+  @Json(name = SERIALIZED_NAME_CUSTOM_THEME_FROM)
   private String customThemeFrom;
 
   public static final String SERIALIZED_NAME_CUSTOM_THEME_TO = "custom_theme_to";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_THEME_TO)
+  @Json(name = SERIALIZED_NAME_CUSTOM_THEME_TO)
   private String customThemeTo;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
-  @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @Json(name = SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
 

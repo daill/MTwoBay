@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,7 +27,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeExtensionInterface {
   public static final String SERIALIZED_NAME_IS_PAGEBUILDER_ENABLED = "is_pagebuilder_enabled";
-  @SerializedName(SERIALIZED_NAME_IS_PAGEBUILDER_ENABLED)
+  @Json(name = SERIALIZED_NAME_IS_PAGEBUILDER_ENABLED)
   private Boolean isPagebuilderEnabled;
 
 

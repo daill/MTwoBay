@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,31 +27,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyCreditDataCreditDataInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_COMPANY_ID = "company_id";
-  @SerializedName(SERIALIZED_NAME_COMPANY_ID)
+  @Json(name = SERIALIZED_NAME_COMPANY_ID)
   private Integer companyId;
 
   public static final String SERIALIZED_NAME_CREDIT_LIMIT = "credit_limit";
-  @SerializedName(SERIALIZED_NAME_CREDIT_LIMIT)
+  @Json(name = SERIALIZED_NAME_CREDIT_LIMIT)
   private BigDecimal creditLimit;
 
   public static final String SERIALIZED_NAME_BALANCE = "balance";
-  @SerializedName(SERIALIZED_NAME_BALANCE)
+  @Json(name = SERIALIZED_NAME_BALANCE)
   private BigDecimal balance;
 
   public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_CURRENCY_CODE)
   private String currencyCode;
 
   public static final String SERIALIZED_NAME_EXCEED_LIMIT = "exceed_limit";
-  @SerializedName(SERIALIZED_NAME_EXCEED_LIMIT)
+  @Json(name = SERIALIZED_NAME_EXCEED_LIMIT)
   private Boolean exceedLimit;
 
   public static final String SERIALIZED_NAME_AVAILABLE_LIMIT = "available_limit";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_LIMIT)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_LIMIT)
   private BigDecimal availableLimit;
 
 

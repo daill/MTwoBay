@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,59 +28,59 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataCategoryInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_LEVEL = "level";
-  @SerializedName(SERIALIZED_NAME_LEVEL)
+  @Json(name = SERIALIZED_NAME_LEVEL)
   private Integer level;
 
   public static final String SERIALIZED_NAME_CHILDREN = "children";
-  @SerializedName(SERIALIZED_NAME_CHILDREN)
+  @Json(name = SERIALIZED_NAME_CHILDREN)
   private String children;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_PATH = "path";
-  @SerializedName(SERIALIZED_NAME_PATH)
+  @Json(name = SERIALIZED_NAME_PATH)
   private String path;
 
   public static final String SERIALIZED_NAME_AVAILABLE_SORT_BY = "available_sort_by";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_SORT_BY)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_SORT_BY)
   private List<String> availableSortBy = null;
 
   public static final String SERIALIZED_NAME_INCLUDE_IN_MENU = "include_in_menu";
-  @SerializedName(SERIALIZED_NAME_INCLUDE_IN_MENU)
+  @Json(name = SERIALIZED_NAME_INCLUDE_IN_MENU)
   private Boolean includeInMenu;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

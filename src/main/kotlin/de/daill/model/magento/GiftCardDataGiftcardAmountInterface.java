@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftCardDataGiftcardAmountInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_ID = "attribute_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_ID)
   private Integer attributeId;
 
   public static final String SERIALIZED_NAME_WEBSITE_ID = "website_id";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_ID)
+  @Json(name = SERIALIZED_NAME_WEBSITE_ID)
   private Integer websiteId;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private BigDecimal value;
 
   public static final String SERIALIZED_NAME_WEBSITE_VALUE = "website_value";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_VALUE)
+  @Json(name = SERIALIZED_NAME_WEBSITE_VALUE)
   private BigDecimal websiteValue;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

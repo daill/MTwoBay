@@ -2,9 +2,12 @@ package de.daill.api.magento
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.squareup.moshi.Moshi
+import de.daill.BigDecimalAdapter
 import de.daill.model.magento.*
 import de.daill.services.magento.MagentoApiClient
 import de.daill.services.magento.MagentoGsonAttributeDeserializer
+import de.daill.services.magento.MagentoMoshiAttributeAdapter
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.Request
 import org.slf4j.LoggerFactory
@@ -37,7 +40,7 @@ class MagentoProductsApi {
         var apiResource = "rest/V1/products"
         val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
 
-        var gson =  GsonBuilder().registerTypeAdapter(FrameworkAttributeInterface::class.java, MagentoGsonAttributeDeserializer()).create()
+        var moshi = Moshi.Builder().add(BigDecimalAdapter).add(FrameworkAttributeInterface::class.java, MagentoMoshiAttributeAdapter()).build()
 
         val queryUrl = url.toHttpUrl().newBuilder()
         val queryParams = mutableMapOf<String, String>()
@@ -82,8 +85,7 @@ class MagentoProductsApi {
         var body = response.body?.string()
         LOG.debug("body read: ${body}")
 
-        return gson.fromJson(body, CatalogDataProductSearchResultsInterface::class.java)
-
+        return moshi.adapter(CatalogDataProductSearchResultsInterface::class.java).fromJson(body)
 
     }
 }

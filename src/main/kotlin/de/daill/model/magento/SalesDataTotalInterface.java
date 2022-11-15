@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,79 +27,79 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataTotalInterface {
   public static final String SERIALIZED_NAME_BASE_SHIPPING_AMOUNT = "base_shipping_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
   private BigDecimal baseShippingAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_CANCELED = "base_shipping_canceled";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_CANCELED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_CANCELED)
   private BigDecimal baseShippingCanceled;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_AMOUNT = "base_shipping_discount_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_AMOUNT)
   private BigDecimal baseShippingDiscountAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT = "base_shipping_discount_tax_compensation_amnt";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMNT)
   private BigDecimal baseShippingDiscountTaxCompensationAmnt;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX = "base_shipping_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_INCL_TAX)
   private BigDecimal baseShippingInclTax;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_INVOICED = "base_shipping_invoiced";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_INVOICED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_INVOICED)
   private BigDecimal baseShippingInvoiced;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_REFUNDED = "base_shipping_refunded";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_REFUNDED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_REFUNDED)
   private BigDecimal baseShippingRefunded;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT = "base_shipping_tax_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_TAX_AMOUNT)
   private BigDecimal baseShippingTaxAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_TAX_REFUNDED = "base_shipping_tax_refunded";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_TAX_REFUNDED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_TAX_REFUNDED)
   private BigDecimal baseShippingTaxRefunded;
 
   public static final String SERIALIZED_NAME_SHIPPING_AMOUNT = "shipping_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_AMOUNT)
   private BigDecimal shippingAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_CANCELED = "shipping_canceled";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_CANCELED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_CANCELED)
   private BigDecimal shippingCanceled;
 
   public static final String SERIALIZED_NAME_SHIPPING_DISCOUNT_AMOUNT = "shipping_discount_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_DISCOUNT_AMOUNT)
   private BigDecimal shippingDiscountAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT = "shipping_discount_tax_compensation_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_DISCOUNT_TAX_COMPENSATION_AMOUNT)
   private BigDecimal shippingDiscountTaxCompensationAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_INCL_TAX = "shipping_incl_tax";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_SHIPPING_INCL_TAX)
   private BigDecimal shippingInclTax;
 
   public static final String SERIALIZED_NAME_SHIPPING_INVOICED = "shipping_invoiced";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_INVOICED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_INVOICED)
   private BigDecimal shippingInvoiced;
 
   public static final String SERIALIZED_NAME_SHIPPING_REFUNDED = "shipping_refunded";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_REFUNDED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_REFUNDED)
   private BigDecimal shippingRefunded;
 
   public static final String SERIALIZED_NAME_SHIPPING_TAX_AMOUNT = "shipping_tax_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_TAX_AMOUNT)
   private BigDecimal shippingTaxAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_TAX_REFUNDED = "shipping_tax_refunded";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_TAX_REFUNDED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_TAX_REFUNDED)
   private BigDecimal shippingTaxRefunded;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

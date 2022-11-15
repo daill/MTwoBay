@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataRegionInterface {
   public static final String SERIALIZED_NAME_REGION_CODE = "region_code";
-  @SerializedName(SERIALIZED_NAME_REGION_CODE)
+  @Json(name = SERIALIZED_NAME_REGION_CODE)
   private String regionCode;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private String region;
 
   public static final String SERIALIZED_NAME_REGION_ID = "region_id";
-  @SerializedName(SERIALIZED_NAME_REGION_ID)
+  @Json(name = SERIALIZED_NAME_REGION_ID)
   private Integer regionId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

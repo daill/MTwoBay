@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject4 {
   public static final String SERIALIZED_NAME_PRODUCT = "product";
-  @SerializedName(SERIALIZED_NAME_PRODUCT)
+  @Json(name = SERIALIZED_NAME_PRODUCT)
   private CatalogDataProductInterface product;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
-  @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @Json(name = SERIALIZED_NAME_OPTIONS)
   private List<ConfigurableProductDataOptionInterface> options = new ArrayList<ConfigurableProductDataOptionInterface>();
 
 

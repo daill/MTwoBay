@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataCommentAttachmentInterface {
   public static final String SERIALIZED_NAME_ATTACHMENT_ID = "attachment_id";
-  @SerializedName(SERIALIZED_NAME_ATTACHMENT_ID)
+  @Json(name = SERIALIZED_NAME_ATTACHMENT_ID)
   private Integer attachmentId;
 
   public static final String SERIALIZED_NAME_COMMENT_ID = "comment_id";
-  @SerializedName(SERIALIZED_NAME_COMMENT_ID)
+  @Json(name = SERIALIZED_NAME_COMMENT_ID)
   private Integer commentId;
 
   public static final String SERIALIZED_NAME_FILE_NAME = "file_name";
-  @SerializedName(SERIALIZED_NAME_FILE_NAME)
+  @Json(name = SERIALIZED_NAME_FILE_NAME)
   private String fileName;
 
   public static final String SERIALIZED_NAME_FILE_PATH = "file_path";
-  @SerializedName(SERIALIZED_NAME_FILE_PATH)
+  @Json(name = SERIALIZED_NAME_FILE_PATH)
   private String filePath;
 
   public static final String SERIALIZED_NAME_FILE_TYPE = "file_type";
-  @SerializedName(SERIALIZED_NAME_FILE_TYPE)
+  @Json(name = SERIALIZED_NAME_FILE_TYPE)
   private String fileType;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

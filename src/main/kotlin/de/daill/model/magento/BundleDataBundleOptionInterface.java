@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,19 +28,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class BundleDataBundleOptionInterface {
   public static final String SERIALIZED_NAME_OPTION_ID = "option_id";
-  @SerializedName(SERIALIZED_NAME_OPTION_ID)
+  @Json(name = SERIALIZED_NAME_OPTION_ID)
   private Integer optionId;
 
   public static final String SERIALIZED_NAME_OPTION_QTY = "option_qty";
-  @SerializedName(SERIALIZED_NAME_OPTION_QTY)
+  @Json(name = SERIALIZED_NAME_OPTION_QTY)
   private Integer optionQty;
 
   public static final String SERIALIZED_NAME_OPTION_SELECTIONS = "option_selections";
-  @SerializedName(SERIALIZED_NAME_OPTION_SELECTIONS)
+  @Json(name = SERIALIZED_NAME_OPTION_SELECTIONS)
   private List<Integer> optionSelections = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

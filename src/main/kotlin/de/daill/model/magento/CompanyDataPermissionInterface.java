@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyDataPermissionInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_ROLE_ID = "role_id";
-  @SerializedName(SERIALIZED_NAME_ROLE_ID)
+  @Json(name = SERIALIZED_NAME_ROLE_ID)
   private Integer roleId;
 
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resource_id";
-  @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
+  @Json(name = SERIALIZED_NAME_RESOURCE_ID)
   private String resourceId;
 
   public static final String SERIALIZED_NAME_PERMISSION = "permission";
-  @SerializedName(SERIALIZED_NAME_PERMISSION)
+  @Json(name = SERIALIZED_NAME_PERMISSION)
   private String permission;
 
 

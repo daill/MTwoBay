@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,39 +28,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TwoFactorAuthProviderInterface {
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
-  @SerializedName(SERIALIZED_NAME_ENABLED)
+  @Json(name = SERIALIZED_NAME_ENABLED)
   private Boolean enabled;
 
   public static final String SERIALIZED_NAME_ENGINE = "engine";
-  @SerializedName(SERIALIZED_NAME_ENGINE)
+  @Json(name = SERIALIZED_NAME_ENGINE)
   private TwoFactorAuthEngineInterface engine;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_ICON = "icon";
-  @SerializedName(SERIALIZED_NAME_ICON)
+  @Json(name = SERIALIZED_NAME_ICON)
   private String icon;
 
   public static final String SERIALIZED_NAME_RESET_ALLOWED = "reset_allowed";
-  @SerializedName(SERIALIZED_NAME_RESET_ALLOWED)
+  @Json(name = SERIALIZED_NAME_RESET_ALLOWED)
   private Boolean resetAllowed;
 
   public static final String SERIALIZED_NAME_CONFIGURE_ACTION = "configure_action";
-  @SerializedName(SERIALIZED_NAME_CONFIGURE_ACTION)
+  @Json(name = SERIALIZED_NAME_CONFIGURE_ACTION)
   private String configureAction;
 
   public static final String SERIALIZED_NAME_AUTH_ACTION = "auth_action";
-  @SerializedName(SERIALIZED_NAME_AUTH_ACTION)
+  @Json(name = SERIALIZED_NAME_AUTH_ACTION)
   private String authAction;
 
   public static final String SERIALIZED_NAME_EXTRA_ACTIONS = "extra_actions";
-  @SerializedName(SERIALIZED_NAME_EXTRA_ACTIONS)
+  @Json(name = SERIALIZED_NAME_EXTRA_ACTIONS)
   private List<String> extraActions = new ArrayList<String>();
 
 

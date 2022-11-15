@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,15 +28,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftWrappingDataWrappingSearchResultsInterface {
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<GiftWrappingDataWrappingInterface> items = new ArrayList<GiftWrappingDataWrappingInterface>();
 
   public static final String SERIALIZED_NAME_SEARCH_CRITERIA = "search_criteria";
-  @SerializedName(SERIALIZED_NAME_SEARCH_CRITERIA)
+  @Json(name = SERIALIZED_NAME_SEARCH_CRITERIA)
   private FrameworkSearchCriteriaInterface searchCriteria;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
-  @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @Json(name = SERIALIZED_NAME_TOTAL_COUNT)
   private Integer totalCount;
 
 

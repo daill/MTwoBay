@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,43 +28,43 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataCommentInterface {
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_CREATOR_TYPE = "creator_type";
-  @SerializedName(SERIALIZED_NAME_CREATOR_TYPE)
+  @Json(name = SERIALIZED_NAME_CREATOR_TYPE)
   private Integer creatorType;
 
   public static final String SERIALIZED_NAME_IS_DECLINE = "is_decline";
-  @SerializedName(SERIALIZED_NAME_IS_DECLINE)
+  @Json(name = SERIALIZED_NAME_IS_DECLINE)
   private Integer isDecline;
 
   public static final String SERIALIZED_NAME_IS_DRAFT = "is_draft";
-  @SerializedName(SERIALIZED_NAME_IS_DRAFT)
+  @Json(name = SERIALIZED_NAME_IS_DRAFT)
   private Integer isDraft;
 
   public static final String SERIALIZED_NAME_CREATOR_ID = "creator_id";
-  @SerializedName(SERIALIZED_NAME_CREATOR_ID)
+  @Json(name = SERIALIZED_NAME_CREATOR_ID)
   private Integer creatorId;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private String comment;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_ATTACHMENTS = "attachments";
-  @SerializedName(SERIALIZED_NAME_ATTACHMENTS)
+  @Json(name = SERIALIZED_NAME_ATTACHMENTS)
   private List<NegotiableQuoteDataCommentAttachmentInterface> attachments = new ArrayList<NegotiableQuoteDataCommentAttachmentInterface>();
 
 

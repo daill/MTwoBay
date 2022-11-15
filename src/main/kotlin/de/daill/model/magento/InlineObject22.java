@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject22 {
   public static final String SERIALIZED_NAME_SKUS = "skus";
-  @SerializedName(SERIALIZED_NAME_SKUS)
+  @Json(name = SERIALIZED_NAME_SKUS)
   private List<String> skus = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_ORIGIN_SOURCE = "originSource";
-  @SerializedName(SERIALIZED_NAME_ORIGIN_SOURCE)
+  @Json(name = SERIALIZED_NAME_ORIGIN_SOURCE)
   private String originSource;
 
   public static final String SERIALIZED_NAME_DESTINATION_SOURCE = "destinationSource";
-  @SerializedName(SERIALIZED_NAME_DESTINATION_SOURCE)
+  @Json(name = SERIALIZED_NAME_DESTINATION_SOURCE)
   private String destinationSource;
 
   public static final String SERIALIZED_NAME_UNASSIGN_FROM_ORIGIN = "unassignFromOrigin";
-  @SerializedName(SERIALIZED_NAME_UNASSIGN_FROM_ORIGIN)
+  @Json(name = SERIALIZED_NAME_UNASSIGN_FROM_ORIGIN)
   private Boolean unassignFromOrigin;
 
 

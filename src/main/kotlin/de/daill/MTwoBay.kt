@@ -39,15 +39,10 @@ class MTwoBay: ApplicationRunner {
     @Autowired
     lateinit var task: SyncTask
 
-    @Autowired
-    lateinit var creds: EbayProperties
-
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-        //task.process()
-        LOG.debug(creds.production.toString())
-        apiClient.credentials = creds
-        apiClient.environment = EbayEnvironments.PRODUCTION
+        task.process()
+        LOG.debug(apiClient.properties.production.toString())
 
     }
 

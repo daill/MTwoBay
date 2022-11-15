@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeGroupInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_GROUP_ID = "attribute_group_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_GROUP_ID)
   private String attributeGroupId;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_GROUP_NAME = "attribute_group_name";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_GROUP_NAME)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_GROUP_NAME)
   private String attributeGroupName;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_SET_ID = "attribute_set_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_SET_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_SET_ID)
   private Integer attributeSetId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private EavDataAttributeGroupExtensionInterface extensionAttributes;
 
 

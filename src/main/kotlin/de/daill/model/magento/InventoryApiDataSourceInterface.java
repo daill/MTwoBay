@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,79 +29,79 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryApiDataSourceInterface {
   public static final String SERIALIZED_NAME_SOURCE_CODE = "source_code";
-  @SerializedName(SERIALIZED_NAME_SOURCE_CODE)
+  @Json(name = SERIALIZED_NAME_SOURCE_CODE)
   private String sourceCode;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
+  @Json(name = SERIALIZED_NAME_EMAIL)
   private String email;
 
   public static final String SERIALIZED_NAME_CONTACT_NAME = "contact_name";
-  @SerializedName(SERIALIZED_NAME_CONTACT_NAME)
+  @Json(name = SERIALIZED_NAME_CONTACT_NAME)
   private String contactName;
 
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
-  @SerializedName(SERIALIZED_NAME_ENABLED)
+  @Json(name = SERIALIZED_NAME_ENABLED)
   private Boolean enabled;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
-  @SerializedName(SERIALIZED_NAME_LATITUDE)
+  @Json(name = SERIALIZED_NAME_LATITUDE)
   private BigDecimal latitude;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
-  @SerializedName(SERIALIZED_NAME_LONGITUDE)
+  @Json(name = SERIALIZED_NAME_LONGITUDE)
   private BigDecimal longitude;
 
   public static final String SERIALIZED_NAME_COUNTRY_ID = "country_id";
-  @SerializedName(SERIALIZED_NAME_COUNTRY_ID)
+  @Json(name = SERIALIZED_NAME_COUNTRY_ID)
   private String countryId;
 
   public static final String SERIALIZED_NAME_REGION_ID = "region_id";
-  @SerializedName(SERIALIZED_NAME_REGION_ID)
+  @Json(name = SERIALIZED_NAME_REGION_ID)
   private Integer regionId;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private String region;
 
   public static final String SERIALIZED_NAME_CITY = "city";
-  @SerializedName(SERIALIZED_NAME_CITY)
+  @Json(name = SERIALIZED_NAME_CITY)
   private String city;
 
   public static final String SERIALIZED_NAME_STREET = "street";
-  @SerializedName(SERIALIZED_NAME_STREET)
+  @Json(name = SERIALIZED_NAME_STREET)
   private String street;
 
   public static final String SERIALIZED_NAME_POSTCODE = "postcode";
-  @SerializedName(SERIALIZED_NAME_POSTCODE)
+  @Json(name = SERIALIZED_NAME_POSTCODE)
   private String postcode;
 
   public static final String SERIALIZED_NAME_PHONE = "phone";
-  @SerializedName(SERIALIZED_NAME_PHONE)
+  @Json(name = SERIALIZED_NAME_PHONE)
   private String phone;
 
   public static final String SERIALIZED_NAME_FAX = "fax";
-  @SerializedName(SERIALIZED_NAME_FAX)
+  @Json(name = SERIALIZED_NAME_FAX)
   private String fax;
 
   public static final String SERIALIZED_NAME_USE_DEFAULT_CARRIER_CONFIG = "use_default_carrier_config";
-  @SerializedName(SERIALIZED_NAME_USE_DEFAULT_CARRIER_CONFIG)
+  @Json(name = SERIALIZED_NAME_USE_DEFAULT_CARRIER_CONFIG)
   private Boolean useDefaultCarrierConfig;
 
   public static final String SERIALIZED_NAME_CARRIER_LINKS = "carrier_links";
-  @SerializedName(SERIALIZED_NAME_CARRIER_LINKS)
+  @Json(name = SERIALIZED_NAME_CARRIER_LINKS)
   private List<InventoryApiDataSourceCarrierLinkInterface> carrierLinks = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private InventoryApiDataSourceExtensionInterface extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataOrderPaymentExtensionInterface {
   public static final String SERIALIZED_NAME_NOTIFICATION_MESSAGE = "notification_message";
-  @SerializedName(SERIALIZED_NAME_NOTIFICATION_MESSAGE)
+  @Json(name = SERIALIZED_NAME_NOTIFICATION_MESSAGE)
   private String notificationMessage;
 
   public static final String SERIALIZED_NAME_VAULT_PAYMENT_TOKEN = "vault_payment_token";
-  @SerializedName(SERIALIZED_NAME_VAULT_PAYMENT_TOKEN)
+  @Json(name = SERIALIZED_NAME_VAULT_PAYMENT_TOKEN)
   private VaultDataPaymentTokenInterface vaultPaymentToken;
 
 

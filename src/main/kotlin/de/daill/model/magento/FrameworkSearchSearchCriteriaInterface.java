@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,23 +28,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class FrameworkSearchSearchCriteriaInterface {
   public static final String SERIALIZED_NAME_REQUEST_NAME = "request_name";
-  @SerializedName(SERIALIZED_NAME_REQUEST_NAME)
+  @Json(name = SERIALIZED_NAME_REQUEST_NAME)
   private String requestName;
 
   public static final String SERIALIZED_NAME_FILTER_GROUPS = "filter_groups";
-  @SerializedName(SERIALIZED_NAME_FILTER_GROUPS)
+  @Json(name = SERIALIZED_NAME_FILTER_GROUPS)
   private List<FrameworkSearchFilterGroup> filterGroups = new ArrayList<FrameworkSearchFilterGroup>();
 
   public static final String SERIALIZED_NAME_SORT_ORDERS = "sort_orders";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDERS)
+  @Json(name = SERIALIZED_NAME_SORT_ORDERS)
   private List<FrameworkSortOrder> sortOrders = null;
 
   public static final String SERIALIZED_NAME_PAGE_SIZE = "page_size";
-  @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  @Json(name = SERIALIZED_NAME_PAGE_SIZE)
   private Integer pageSize;
 
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
-  @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
+  @Json(name = SERIALIZED_NAME_CURRENT_PAGE)
   private Integer currentPage;
 
 

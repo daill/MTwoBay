@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,19 +27,19 @@ public class CatalogDataProductTierPriceInterface {
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP_ID = "customer_group_id";
 
 
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP_ID)
   private Integer customerGroupId;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private BigDecimal value;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductTierPriceExtensionInterface extensionAttributes;
 
   public CatalogDataProductTierPriceInterface customerGroupId(Integer customerGroupId) {

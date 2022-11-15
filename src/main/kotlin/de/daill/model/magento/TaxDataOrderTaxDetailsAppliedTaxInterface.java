@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataOrderTaxDetailsAppliedTaxInterface {
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_PERCENT = "percent";
-  @SerializedName(SERIALIZED_NAME_PERCENT)
+  @Json(name = SERIALIZED_NAME_PERCENT)
   private BigDecimal percent;
 
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT = "base_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT)
   private BigDecimal baseAmount;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private TaxDataOrderTaxDetailsAppliedTaxExtensionInterface extensionAttributes;
 
 

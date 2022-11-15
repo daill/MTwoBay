@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,43 +29,43 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftWrappingDataWrappingInterface {
   public static final String SERIALIZED_NAME_WRAPPING_ID = "wrapping_id";
-  @SerializedName(SERIALIZED_NAME_WRAPPING_ID)
+  @Json(name = SERIALIZED_NAME_WRAPPING_ID)
   private Integer wrappingId;
 
   public static final String SERIALIZED_NAME_DESIGN = "design";
-  @SerializedName(SERIALIZED_NAME_DESIGN)
+  @Json(name = SERIALIZED_NAME_DESIGN)
   private String design;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private Integer status;
 
   public static final String SERIALIZED_NAME_BASE_PRICE = "base_price";
-  @SerializedName(SERIALIZED_NAME_BASE_PRICE)
+  @Json(name = SERIALIZED_NAME_BASE_PRICE)
   private BigDecimal basePrice;
 
   public static final String SERIALIZED_NAME_IMAGE_NAME = "image_name";
-  @SerializedName(SERIALIZED_NAME_IMAGE_NAME)
+  @Json(name = SERIALIZED_NAME_IMAGE_NAME)
   private String imageName;
 
   public static final String SERIALIZED_NAME_IMAGE_BASE64_CONTENT = "image_base64_content";
-  @SerializedName(SERIALIZED_NAME_IMAGE_BASE64_CONTENT)
+  @Json(name = SERIALIZED_NAME_IMAGE_BASE64_CONTENT)
   private String imageBase64Content;
 
   public static final String SERIALIZED_NAME_BASE_CURRENCY_CODE = "base_currency_code";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_CODE)
   private String baseCurrencyCode;
 
   public static final String SERIALIZED_NAME_WEBSITE_IDS = "website_ids";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_IDS)
+  @Json(name = SERIALIZED_NAME_WEBSITE_IDS)
   private List<Integer> websiteIds = null;
 
   public static final String SERIALIZED_NAME_IMAGE_URL = "image_url";
-  @SerializedName(SERIALIZED_NAME_IMAGE_URL)
+  @Json(name = SERIALIZED_NAME_IMAGE_URL)
   private String imageUrl;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

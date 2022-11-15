@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class FrameworkDataVideoContentInterface {
   public static final String SERIALIZED_NAME_MEDIA_TYPE = "media_type";
-  @SerializedName(SERIALIZED_NAME_MEDIA_TYPE)
+  @Json(name = SERIALIZED_NAME_MEDIA_TYPE)
   private String mediaType;
 
   public static final String SERIALIZED_NAME_VIDEO_PROVIDER = "video_provider";
-  @SerializedName(SERIALIZED_NAME_VIDEO_PROVIDER)
+  @Json(name = SERIALIZED_NAME_VIDEO_PROVIDER)
   private String videoProvider;
 
   public static final String SERIALIZED_NAME_VIDEO_URL = "video_url";
-  @SerializedName(SERIALIZED_NAME_VIDEO_URL)
+  @Json(name = SERIALIZED_NAME_VIDEO_URL)
   private String videoUrl;
 
   public static final String SERIALIZED_NAME_VIDEO_TITLE = "video_title";
-  @SerializedName(SERIALIZED_NAME_VIDEO_TITLE)
+  @Json(name = SERIALIZED_NAME_VIDEO_TITLE)
   private String videoTitle;
 
   public static final String SERIALIZED_NAME_VIDEO_DESCRIPTION = "video_description";
-  @SerializedName(SERIALIZED_NAME_VIDEO_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_VIDEO_DESCRIPTION)
   private String videoDescription;
 
   public static final String SERIALIZED_NAME_VIDEO_METADATA = "video_metadata";
-  @SerializedName(SERIALIZED_NAME_VIDEO_METADATA)
+  @Json(name = SERIALIZED_NAME_VIDEO_METADATA)
   private String videoMetadata;
 
 

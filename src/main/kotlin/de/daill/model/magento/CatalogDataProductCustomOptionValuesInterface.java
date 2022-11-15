@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -23,27 +25,27 @@ import java.util.Objects;
  */
 public class CatalogDataProductCustomOptionValuesInterface {
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRICE_TYPE = "price_type";
-  @SerializedName(SERIALIZED_NAME_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_PRICE_TYPE)
   private String priceType;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_OPTION_TYPE_ID = "option_type_id";
-  @SerializedName(SERIALIZED_NAME_OPTION_TYPE_ID)
+  @Json(name = SERIALIZED_NAME_OPTION_TYPE_ID)
   private Integer optionTypeId;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class AsynchronousOperationsDataOperationInterface {
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private AsynchronousOperationsDataOperationExtensionInterface extensionAttributes;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_BULK_UUID = "bulk_uuid";
-  @SerializedName(SERIALIZED_NAME_BULK_UUID)
+  @Json(name = SERIALIZED_NAME_BULK_UUID)
   private String bulkUuid;
 
   public static final String SERIALIZED_NAME_TOPIC_NAME = "topic_name";
-  @SerializedName(SERIALIZED_NAME_TOPIC_NAME)
+  @Json(name = SERIALIZED_NAME_TOPIC_NAME)
   private String topicName;
 
   public static final String SERIALIZED_NAME_SERIALIZED_DATA = "serialized_data";
-  @SerializedName(SERIALIZED_NAME_SERIALIZED_DATA)
+  @Json(name = SERIALIZED_NAME_SERIALIZED_DATA)
   private String serializedData;
 
   public static final String SERIALIZED_NAME_RESULT_SERIALIZED_DATA = "result_serialized_data";
-  @SerializedName(SERIALIZED_NAME_RESULT_SERIALIZED_DATA)
+  @Json(name = SERIALIZED_NAME_RESULT_SERIALIZED_DATA)
   private String resultSerializedData;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private Integer status;
 
   public static final String SERIALIZED_NAME_RESULT_MESSAGE = "result_message";
-  @SerializedName(SERIALIZED_NAME_RESULT_MESSAGE)
+  @Json(name = SERIALIZED_NAME_RESULT_MESSAGE)
   private String resultMessage;
 
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
-  @SerializedName(SERIALIZED_NAME_ERROR_CODE)
+  @Json(name = SERIALIZED_NAME_ERROR_CODE)
   private Integer errorCode;
 
 

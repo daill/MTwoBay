@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesRuleDataCouponGenerationSpecInterface {
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
-  @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @Json(name = SERIALIZED_NAME_RULE_ID)
   private Integer ruleId;
 
   public static final String SERIALIZED_NAME_FORMAT = "format";
-  @SerializedName(SERIALIZED_NAME_FORMAT)
+  @Json(name = SERIALIZED_NAME_FORMAT)
   private String format;
 
   public static final String SERIALIZED_NAME_QUANTITY = "quantity";
-  @SerializedName(SERIALIZED_NAME_QUANTITY)
+  @Json(name = SERIALIZED_NAME_QUANTITY)
   private Integer quantity;
 
   public static final String SERIALIZED_NAME_LENGTH = "length";
-  @SerializedName(SERIALIZED_NAME_LENGTH)
+  @Json(name = SERIALIZED_NAME_LENGTH)
   private Integer length;
 
   public static final String SERIALIZED_NAME_PREFIX = "prefix";
-  @SerializedName(SERIALIZED_NAME_PREFIX)
+  @Json(name = SERIALIZED_NAME_PREFIX)
   private String prefix;
 
   public static final String SERIALIZED_NAME_SUFFIX = "suffix";
-  @SerializedName(SERIALIZED_NAME_SUFFIX)
+  @Json(name = SERIALIZED_NAME_SUFFIX)
   private String suffix;
 
   public static final String SERIALIZED_NAME_DELIMITER_AT_EVERY = "delimiter_at_every";
-  @SerializedName(SERIALIZED_NAME_DELIMITER_AT_EVERY)
+  @Json(name = SERIALIZED_NAME_DELIMITER_AT_EVERY)
   private Integer delimiterAtEvery;
 
   public static final String SERIALIZED_NAME_DELIMITER = "delimiter";
-  @SerializedName(SERIALIZED_NAME_DELIMITER)
+  @Json(name = SERIALIZED_NAME_DELIMITER)
   private String delimiter;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

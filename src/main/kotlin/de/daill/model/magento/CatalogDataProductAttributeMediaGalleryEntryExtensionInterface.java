@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,7 +27,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductAttributeMediaGalleryEntryExtensionInterface {
   public static final String SERIALIZED_NAME_VIDEO_CONTENT = "video_content";
-  @SerializedName(SERIALIZED_NAME_VIDEO_CONTENT)
+  @Json(name = SERIALIZED_NAME_VIDEO_CONTENT)
   private FrameworkDataVideoContentInterface videoContent;
 
 

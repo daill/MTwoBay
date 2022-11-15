@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,15 +28,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryInStorePickupSalesApiDataResultInterface {
   public static final String SERIALIZED_NAME_SUCCESSFUL = "successful";
-  @SerializedName(SERIALIZED_NAME_SUCCESSFUL)
+  @Json(name = SERIALIZED_NAME_SUCCESSFUL)
   private Boolean successful;
 
   public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
+  @Json(name = SERIALIZED_NAME_ERRORS)
   private List<String> errors = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

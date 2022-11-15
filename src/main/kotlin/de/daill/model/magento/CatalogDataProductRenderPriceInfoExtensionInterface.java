@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,19 +28,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductRenderPriceInfoExtensionInterface {
   public static final String SERIALIZED_NAME_MSRP = "msrp";
-  @SerializedName(SERIALIZED_NAME_MSRP)
+  @Json(name = SERIALIZED_NAME_MSRP)
   private MsrpDataProductRenderMsrpPriceInfoInterface msrp;
 
   public static final String SERIALIZED_NAME_TAX_ADJUSTMENTS = "tax_adjustments";
-  @SerializedName(SERIALIZED_NAME_TAX_ADJUSTMENTS)
+  @Json(name = SERIALIZED_NAME_TAX_ADJUSTMENTS)
   private CatalogDataProductRenderPriceInfoInterface taxAdjustments;
 
   public static final String SERIALIZED_NAME_WEEE_ATTRIBUTES = "weee_attributes";
-  @SerializedName(SERIALIZED_NAME_WEEE_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_WEEE_ATTRIBUTES)
   private List<WeeeDataProductRenderWeeeAdjustmentAttributeInterface> weeeAttributes = null;
 
   public static final String SERIALIZED_NAME_WEEE_ADJUSTMENT = "weee_adjustment";
-  @SerializedName(SERIALIZED_NAME_WEEE_ADJUSTMENT)
+  @Json(name = SERIALIZED_NAME_WEEE_ADJUSTMENT)
   private String weeeAdjustment;
 
 

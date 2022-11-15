@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class WeeeDataProductRenderWeeeAdjustmentAttributeInterface {
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private String amount;
 
   public static final String SERIALIZED_NAME_TAX_AMOUNT = "tax_amount";
-  @SerializedName(SERIALIZED_NAME_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_TAX_AMOUNT)
   private String taxAmount;
 
   public static final String SERIALIZED_NAME_TAX_AMOUNT_INCL_TAX = "tax_amount_incl_tax";
-  @SerializedName(SERIALIZED_NAME_TAX_AMOUNT_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_TAX_AMOUNT_INCL_TAX)
   private String taxAmountInclTax;
 
   public static final String SERIALIZED_NAME_AMOUNT_EXCL_TAX = "amount_excl_tax";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_EXCL_TAX)
+  @Json(name = SERIALIZED_NAME_AMOUNT_EXCL_TAX)
   private String amountExclTax;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attribute_code";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

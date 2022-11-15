@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,71 +27,71 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyCreditDataHistoryDataInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_COMPANY_CREDIT_ID = "company_credit_id";
-  @SerializedName(SERIALIZED_NAME_COMPANY_CREDIT_ID)
+  @Json(name = SERIALIZED_NAME_COMPANY_CREDIT_ID)
   private Integer companyCreditId;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
-  @SerializedName(SERIALIZED_NAME_USER_ID)
+  @Json(name = SERIALIZED_NAME_USER_ID)
   private Integer userId;
 
   public static final String SERIALIZED_NAME_USER_TYPE = "user_type";
-  @SerializedName(SERIALIZED_NAME_USER_TYPE)
+  @Json(name = SERIALIZED_NAME_USER_TYPE)
   private Integer userType;
 
   public static final String SERIALIZED_NAME_CURRENCY_CREDIT = "currency_credit";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_CREDIT)
+  @Json(name = SERIALIZED_NAME_CURRENCY_CREDIT)
   private String currencyCredit;
 
   public static final String SERIALIZED_NAME_CURRENCY_OPERATION = "currency_operation";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_OPERATION)
+  @Json(name = SERIALIZED_NAME_CURRENCY_OPERATION)
   private String currencyOperation;
 
   public static final String SERIALIZED_NAME_RATE = "rate";
-  @SerializedName(SERIALIZED_NAME_RATE)
+  @Json(name = SERIALIZED_NAME_RATE)
   private BigDecimal rate;
 
   public static final String SERIALIZED_NAME_RATE_CREDIT = "rate_credit";
-  @SerializedName(SERIALIZED_NAME_RATE_CREDIT)
+  @Json(name = SERIALIZED_NAME_RATE_CREDIT)
   private BigDecimal rateCredit;
 
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
   public static final String SERIALIZED_NAME_BALANCE = "balance";
-  @SerializedName(SERIALIZED_NAME_BALANCE)
+  @Json(name = SERIALIZED_NAME_BALANCE)
   private BigDecimal balance;
 
   public static final String SERIALIZED_NAME_CREDIT_LIMIT = "credit_limit";
-  @SerializedName(SERIALIZED_NAME_CREDIT_LIMIT)
+  @Json(name = SERIALIZED_NAME_CREDIT_LIMIT)
   private BigDecimal creditLimit;
 
   public static final String SERIALIZED_NAME_AVAILABLE_LIMIT = "available_limit";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_LIMIT)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_LIMIT)
   private BigDecimal availableLimit;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private Integer type;
 
   public static final String SERIALIZED_NAME_DATETIME = "datetime";
-  @SerializedName(SERIALIZED_NAME_DATETIME)
+  @Json(name = SERIALIZED_NAME_DATETIME)
   private String datetime;
 
   public static final String SERIALIZED_NAME_PURCHASE_ORDER = "purchase_order";
-  @SerializedName(SERIALIZED_NAME_PURCHASE_ORDER)
+  @Json(name = SERIALIZED_NAME_PURCHASE_ORDER)
   private String purchaseOrder;
 
   public static final String SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER = "custom_reference_number";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER)
+  @Json(name = SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER)
   private String customReferenceNumber;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private String comment;
 
 

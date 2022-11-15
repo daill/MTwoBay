@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class MsrpDataProductRenderMsrpPriceInfoInterface {
   public static final String SERIALIZED_NAME_MSRP_PRICE = "msrp_price";
-  @SerializedName(SERIALIZED_NAME_MSRP_PRICE)
+  @Json(name = SERIALIZED_NAME_MSRP_PRICE)
   private String msrpPrice;
 
   public static final String SERIALIZED_NAME_IS_APPLICABLE = "is_applicable";
-  @SerializedName(SERIALIZED_NAME_IS_APPLICABLE)
+  @Json(name = SERIALIZED_NAME_IS_APPLICABLE)
   private String isApplicable;
 
   public static final String SERIALIZED_NAME_IS_SHOWN_PRICE_ON_GESTURE = "is_shown_price_on_gesture";
-  @SerializedName(SERIALIZED_NAME_IS_SHOWN_PRICE_ON_GESTURE)
+  @Json(name = SERIALIZED_NAME_IS_SHOWN_PRICE_ON_GESTURE)
   private String isShownPriceOnGesture;
 
   public static final String SERIALIZED_NAME_MSRP_MESSAGE = "msrp_message";
-  @SerializedName(SERIALIZED_NAME_MSRP_MESSAGE)
+  @Json(name = SERIALIZED_NAME_MSRP_MESSAGE)
   private String msrpMessage;
 
   public static final String SERIALIZED_NAME_EXPLANATION_MESSAGE = "explanation_message";
-  @SerializedName(SERIALIZED_NAME_EXPLANATION_MESSAGE)
+  @Json(name = SERIALIZED_NAME_EXPLANATION_MESSAGE)
   private String explanationMessage;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

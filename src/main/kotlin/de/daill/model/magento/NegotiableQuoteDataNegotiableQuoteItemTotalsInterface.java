@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,51 +27,51 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface {
   public static final String SERIALIZED_NAME_COST = "cost";
-  @SerializedName(SERIALIZED_NAME_COST)
+  @Json(name = SERIALIZED_NAME_COST)
   private BigDecimal cost;
 
   public static final String SERIALIZED_NAME_CATALOG_PRICE = "catalog_price";
-  @SerializedName(SERIALIZED_NAME_CATALOG_PRICE)
+  @Json(name = SERIALIZED_NAME_CATALOG_PRICE)
   private BigDecimal catalogPrice;
 
   public static final String SERIALIZED_NAME_BASE_CATALOG_PRICE = "base_catalog_price";
-  @SerializedName(SERIALIZED_NAME_BASE_CATALOG_PRICE)
+  @Json(name = SERIALIZED_NAME_BASE_CATALOG_PRICE)
   private BigDecimal baseCatalogPrice;
 
   public static final String SERIALIZED_NAME_CATALOG_PRICE_INCL_TAX = "catalog_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_CATALOG_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_CATALOG_PRICE_INCL_TAX)
   private BigDecimal catalogPriceInclTax;
 
   public static final String SERIALIZED_NAME_BASE_CATALOG_PRICE_INCL_TAX = "base_catalog_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_CATALOG_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_CATALOG_PRICE_INCL_TAX)
   private BigDecimal baseCatalogPriceInclTax;
 
   public static final String SERIALIZED_NAME_CART_PRICE = "cart_price";
-  @SerializedName(SERIALIZED_NAME_CART_PRICE)
+  @Json(name = SERIALIZED_NAME_CART_PRICE)
   private BigDecimal cartPrice;
 
   public static final String SERIALIZED_NAME_BASE_CART_PRICE = "base_cart_price";
-  @SerializedName(SERIALIZED_NAME_BASE_CART_PRICE)
+  @Json(name = SERIALIZED_NAME_BASE_CART_PRICE)
   private BigDecimal baseCartPrice;
 
   public static final String SERIALIZED_NAME_CART_TAX = "cart_tax";
-  @SerializedName(SERIALIZED_NAME_CART_TAX)
+  @Json(name = SERIALIZED_NAME_CART_TAX)
   private BigDecimal cartTax;
 
   public static final String SERIALIZED_NAME_BASE_CART_TAX = "base_cart_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_CART_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_CART_TAX)
   private BigDecimal baseCartTax;
 
   public static final String SERIALIZED_NAME_CART_PRICE_INCL_TAX = "cart_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_CART_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_CART_PRICE_INCL_TAX)
   private BigDecimal cartPriceInclTax;
 
   public static final String SERIALIZED_NAME_BASE_CART_PRICE_INCL_TAX = "base_cart_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_CART_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_CART_PRICE_INCL_TAX)
   private BigDecimal baseCartPriceInclTax;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

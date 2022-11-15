@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,79 +29,79 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataShipmentInterface {
   public static final String SERIALIZED_NAME_BILLING_ADDRESS_ID = "billing_address_id";
-  @SerializedName(SERIALIZED_NAME_BILLING_ADDRESS_ID)
+  @Json(name = SERIALIZED_NAME_BILLING_ADDRESS_ID)
   private Integer billingAddressId;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ID)
   private Integer customerId;
 
   public static final String SERIALIZED_NAME_EMAIL_SENT = "email_sent";
-  @SerializedName(SERIALIZED_NAME_EMAIL_SENT)
+  @Json(name = SERIALIZED_NAME_EMAIL_SENT)
   private Integer emailSent;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_INCREMENT_ID = "increment_id";
-  @SerializedName(SERIALIZED_NAME_INCREMENT_ID)
+  @Json(name = SERIALIZED_NAME_INCREMENT_ID)
   private String incrementId;
 
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ID)
   private Integer orderId;
 
   public static final String SERIALIZED_NAME_PACKAGES = "packages";
-  @SerializedName(SERIALIZED_NAME_PACKAGES)
+  @Json(name = SERIALIZED_NAME_PACKAGES)
   private List<SalesDataShipmentPackageInterface> packages = null;
 
   public static final String SERIALIZED_NAME_SHIPMENT_STATUS = "shipment_status";
-  @SerializedName(SERIALIZED_NAME_SHIPMENT_STATUS)
+  @Json(name = SERIALIZED_NAME_SHIPMENT_STATUS)
   private Integer shipmentStatus;
 
   public static final String SERIALIZED_NAME_SHIPPING_ADDRESS_ID = "shipping_address_id";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_ADDRESS_ID)
+  @Json(name = SERIALIZED_NAME_SHIPPING_ADDRESS_ID)
   private Integer shippingAddressId;
 
   public static final String SERIALIZED_NAME_SHIPPING_LABEL = "shipping_label";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_LABEL)
+  @Json(name = SERIALIZED_NAME_SHIPPING_LABEL)
   private String shippingLabel;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_TOTAL_QTY = "total_qty";
-  @SerializedName(SERIALIZED_NAME_TOTAL_QTY)
+  @Json(name = SERIALIZED_NAME_TOTAL_QTY)
   private BigDecimal totalQty;
 
   public static final String SERIALIZED_NAME_TOTAL_WEIGHT = "total_weight";
-  @SerializedName(SERIALIZED_NAME_TOTAL_WEIGHT)
+  @Json(name = SERIALIZED_NAME_TOTAL_WEIGHT)
   private BigDecimal totalWeight;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<SalesDataShipmentItemInterface> items = new ArrayList<SalesDataShipmentItemInterface>();
 
   public static final String SERIALIZED_NAME_TRACKS = "tracks";
-  @SerializedName(SERIALIZED_NAME_TRACKS)
+  @Json(name = SERIALIZED_NAME_TRACKS)
   private List<SalesDataShipmentTrackInterface> tracks = new ArrayList<SalesDataShipmentTrackInterface>();
 
   public static final String SERIALIZED_NAME_COMMENTS = "comments";
-  @SerializedName(SERIALIZED_NAME_COMMENTS)
+  @Json(name = SERIALIZED_NAME_COMMENTS)
   private List<SalesDataShipmentCommentInterface> comments = new ArrayList<SalesDataShipmentCommentInterface>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private SalesDataShipmentExtensionInterface extensionAttributes;
 
 

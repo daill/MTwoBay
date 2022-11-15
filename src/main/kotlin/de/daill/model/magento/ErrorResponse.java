@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class ErrorResponse {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @Json(name = SERIALIZED_NAME_MESSAGE)
   private String message;
 
   public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
+  @Json(name = SERIALIZED_NAME_ERRORS)
   private List<ErrorErrorsItem> errors = null;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private Integer code;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
-  @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @Json(name = SERIALIZED_NAME_PARAMETERS)
   private List<ErrorParametersItem> parameters = null;
 
   public static final String SERIALIZED_NAME_TRACE = "trace";
-  @SerializedName(SERIALIZED_NAME_TRACE)
+  @Json(name = SERIALIZED_NAME_TRACE)
   private String trace;
 
 

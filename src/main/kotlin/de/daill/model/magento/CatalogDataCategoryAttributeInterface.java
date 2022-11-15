@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,151 +27,151 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataCategoryAttributeInterface {
   public static final String SERIALIZED_NAME_IS_WYSIWYG_ENABLED = "is_wysiwyg_enabled";
-  @SerializedName(SERIALIZED_NAME_IS_WYSIWYG_ENABLED)
+  @Json(name = SERIALIZED_NAME_IS_WYSIWYG_ENABLED)
   private Boolean isWysiwygEnabled;
 
   public static final String SERIALIZED_NAME_IS_HTML_ALLOWED_ON_FRONT = "is_html_allowed_on_front";
-  @SerializedName(SERIALIZED_NAME_IS_HTML_ALLOWED_ON_FRONT)
+  @Json(name = SERIALIZED_NAME_IS_HTML_ALLOWED_ON_FRONT)
   private Boolean isHtmlAllowedOnFront;
 
   public static final String SERIALIZED_NAME_USED_FOR_SORT_BY = "used_for_sort_by";
-  @SerializedName(SERIALIZED_NAME_USED_FOR_SORT_BY)
+  @Json(name = SERIALIZED_NAME_USED_FOR_SORT_BY)
   private Boolean usedForSortBy;
 
   public static final String SERIALIZED_NAME_IS_FILTERABLE = "is_filterable";
-  @SerializedName(SERIALIZED_NAME_IS_FILTERABLE)
+  @Json(name = SERIALIZED_NAME_IS_FILTERABLE)
   private Boolean isFilterable;
 
   public static final String SERIALIZED_NAME_IS_FILTERABLE_IN_SEARCH = "is_filterable_in_search";
-  @SerializedName(SERIALIZED_NAME_IS_FILTERABLE_IN_SEARCH)
+  @Json(name = SERIALIZED_NAME_IS_FILTERABLE_IN_SEARCH)
   private Boolean isFilterableInSearch;
 
   public static final String SERIALIZED_NAME_IS_USED_IN_GRID = "is_used_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_USED_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_USED_IN_GRID)
   private Boolean isUsedInGrid;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE_IN_GRID = "is_visible_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE_IN_GRID)
   private Boolean isVisibleInGrid;
 
   public static final String SERIALIZED_NAME_IS_FILTERABLE_IN_GRID = "is_filterable_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_FILTERABLE_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_FILTERABLE_IN_GRID)
   private Boolean isFilterableInGrid;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_APPLY_TO = "apply_to";
-  @SerializedName(SERIALIZED_NAME_APPLY_TO)
+  @Json(name = SERIALIZED_NAME_APPLY_TO)
   private List<String> applyTo = null;
 
   public static final String SERIALIZED_NAME_IS_SEARCHABLE = "is_searchable";
-  @SerializedName(SERIALIZED_NAME_IS_SEARCHABLE)
+  @Json(name = SERIALIZED_NAME_IS_SEARCHABLE)
   private String isSearchable;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE_IN_ADVANCED_SEARCH = "is_visible_in_advanced_search";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE_IN_ADVANCED_SEARCH)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE_IN_ADVANCED_SEARCH)
   private String isVisibleInAdvancedSearch;
 
   public static final String SERIALIZED_NAME_IS_COMPARABLE = "is_comparable";
-  @SerializedName(SERIALIZED_NAME_IS_COMPARABLE)
+  @Json(name = SERIALIZED_NAME_IS_COMPARABLE)
   private String isComparable;
 
   public static final String SERIALIZED_NAME_IS_USED_FOR_PROMO_RULES = "is_used_for_promo_rules";
-  @SerializedName(SERIALIZED_NAME_IS_USED_FOR_PROMO_RULES)
+  @Json(name = SERIALIZED_NAME_IS_USED_FOR_PROMO_RULES)
   private String isUsedForPromoRules;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE_ON_FRONT = "is_visible_on_front";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE_ON_FRONT)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE_ON_FRONT)
   private String isVisibleOnFront;
 
   public static final String SERIALIZED_NAME_USED_IN_PRODUCT_LISTING = "used_in_product_listing";
-  @SerializedName(SERIALIZED_NAME_USED_IN_PRODUCT_LISTING)
+  @Json(name = SERIALIZED_NAME_USED_IN_PRODUCT_LISTING)
   private String usedInProductListing;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE = "is_visible";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE)
   private Boolean isVisible;
 
   public static final String SERIALIZED_NAME_SCOPE = "scope";
-  @SerializedName(SERIALIZED_NAME_SCOPE)
+  @Json(name = SERIALIZED_NAME_SCOPE)
   private String scope;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_ID = "attribute_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_ID)
   private Integer attributeId;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attribute_code";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
   public static final String SERIALIZED_NAME_FRONTEND_INPUT = "frontend_input";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_INPUT)
+  @Json(name = SERIALIZED_NAME_FRONTEND_INPUT)
   private String frontendInput;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE_ID = "entity_type_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_TYPE_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_TYPE_ID)
   private String entityTypeId;
 
   public static final String SERIALIZED_NAME_IS_REQUIRED = "is_required";
-  @SerializedName(SERIALIZED_NAME_IS_REQUIRED)
+  @Json(name = SERIALIZED_NAME_IS_REQUIRED)
   private Boolean isRequired;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
-  @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @Json(name = SERIALIZED_NAME_OPTIONS)
   private List<EavDataAttributeOptionInterface> options = null;
 
   public static final String SERIALIZED_NAME_IS_USER_DEFINED = "is_user_defined";
-  @SerializedName(SERIALIZED_NAME_IS_USER_DEFINED)
+  @Json(name = SERIALIZED_NAME_IS_USER_DEFINED)
   private Boolean isUserDefined;
 
   public static final String SERIALIZED_NAME_DEFAULT_FRONTEND_LABEL = "default_frontend_label";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_FRONTEND_LABEL)
+  @Json(name = SERIALIZED_NAME_DEFAULT_FRONTEND_LABEL)
   private String defaultFrontendLabel;
 
   public static final String SERIALIZED_NAME_FRONTEND_LABELS = "frontend_labels";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_LABELS)
+  @Json(name = SERIALIZED_NAME_FRONTEND_LABELS)
   private List<EavDataAttributeFrontendLabelInterface> frontendLabels = new ArrayList<EavDataAttributeFrontendLabelInterface>();
 
   public static final String SERIALIZED_NAME_NOTE = "note";
-  @SerializedName(SERIALIZED_NAME_NOTE)
+  @Json(name = SERIALIZED_NAME_NOTE)
   private String note;
 
   public static final String SERIALIZED_NAME_BACKEND_TYPE = "backend_type";
-  @SerializedName(SERIALIZED_NAME_BACKEND_TYPE)
+  @Json(name = SERIALIZED_NAME_BACKEND_TYPE)
   private String backendType;
 
   public static final String SERIALIZED_NAME_BACKEND_MODEL = "backend_model";
-  @SerializedName(SERIALIZED_NAME_BACKEND_MODEL)
+  @Json(name = SERIALIZED_NAME_BACKEND_MODEL)
   private String backendModel;
 
   public static final String SERIALIZED_NAME_SOURCE_MODEL = "source_model";
-  @SerializedName(SERIALIZED_NAME_SOURCE_MODEL)
+  @Json(name = SERIALIZED_NAME_SOURCE_MODEL)
   private String sourceModel;
 
   public static final String SERIALIZED_NAME_DEFAULT_VALUE = "default_value";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_VALUE)
+  @Json(name = SERIALIZED_NAME_DEFAULT_VALUE)
   private String defaultValue;
 
   public static final String SERIALIZED_NAME_IS_UNIQUE = "is_unique";
-  @SerializedName(SERIALIZED_NAME_IS_UNIQUE)
+  @Json(name = SERIALIZED_NAME_IS_UNIQUE)
   private String isUnique;
 
   public static final String SERIALIZED_NAME_FRONTEND_CLASS = "frontend_class";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_CLASS)
+  @Json(name = SERIALIZED_NAME_FRONTEND_CLASS)
   private String frontendClass;
 
   public static final String SERIALIZED_NAME_VALIDATION_RULES = "validation_rules";
-  @SerializedName(SERIALIZED_NAME_VALIDATION_RULES)
+  @Json(name = SERIALIZED_NAME_VALIDATION_RULES)
   private List<EavDataAttributeValidationRuleInterface> validationRules = null;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

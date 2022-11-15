@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataGroupInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_TAX_CLASS_ID = "tax_class_id";
-  @SerializedName(SERIALIZED_NAME_TAX_CLASS_ID)
+  @Json(name = SERIALIZED_NAME_TAX_CLASS_ID)
   private Integer taxClassId;
 
   public static final String SERIALIZED_NAME_TAX_CLASS_NAME = "tax_class_name";
-  @SerializedName(SERIALIZED_NAME_TAX_CLASS_NAME)
+  @Json(name = SERIALIZED_NAME_TAX_CLASS_NAME)
   private String taxClassName;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CustomerDataGroupExtensionInterface extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,35 +27,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataCategoryTreeInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_LEVEL = "level";
-  @SerializedName(SERIALIZED_NAME_LEVEL)
+  @Json(name = SERIALIZED_NAME_LEVEL)
   private Integer level;
 
   public static final String SERIALIZED_NAME_PRODUCT_COUNT = "product_count";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_COUNT)
+  @Json(name = SERIALIZED_NAME_PRODUCT_COUNT)
   private Integer productCount;
 
   public static final String SERIALIZED_NAME_CHILDREN_DATA = "children_data";
-  @SerializedName(SERIALIZED_NAME_CHILDREN_DATA)
+  @Json(name = SERIALIZED_NAME_CHILDREN_DATA)
   private List<CatalogDataCategoryTreeInterface> childrenData = new ArrayList<CatalogDataCategoryTreeInterface>();
 
 

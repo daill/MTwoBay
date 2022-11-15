@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,23 +28,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeOptionInterface {
   public static final String SERIALIZED_NAME_LABEL = "label";
-  @SerializedName(SERIALIZED_NAME_LABEL)
+  @Json(name = SERIALIZED_NAME_LABEL)
   private String label;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private String value;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_IS_DEFAULT = "is_default";
-  @SerializedName(SERIALIZED_NAME_IS_DEFAULT)
+  @Json(name = SERIALIZED_NAME_IS_DEFAULT)
   private Boolean isDefault;
 
   public static final String SERIALIZED_NAME_STORE_LABELS = "store_labels";
-  @SerializedName(SERIALIZED_NAME_STORE_LABELS)
+  @Json(name = SERIALIZED_NAME_STORE_LABELS)
   private List<EavDataAttributeOptionLabelInterface> storeLabels = null;
 
 

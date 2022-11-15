@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftMessageDataMessageExtensionInterface {
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private String entityId;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
-  @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
+  @Json(name = SERIALIZED_NAME_ENTITY_TYPE)
   private String entityType;
 
   public static final String SERIALIZED_NAME_WRAPPING_ID = "wrapping_id";
-  @SerializedName(SERIALIZED_NAME_WRAPPING_ID)
+  @Json(name = SERIALIZED_NAME_WRAPPING_ID)
   private Integer wrappingId;
 
   public static final String SERIALIZED_NAME_WRAPPING_ALLOW_GIFT_RECEIPT = "wrapping_allow_gift_receipt";
-  @SerializedName(SERIALIZED_NAME_WRAPPING_ALLOW_GIFT_RECEIPT)
+  @Json(name = SERIALIZED_NAME_WRAPPING_ALLOW_GIFT_RECEIPT)
   private Boolean wrappingAllowGiftReceipt;
 
   public static final String SERIALIZED_NAME_WRAPPING_ADD_PRINTED_CARD = "wrapping_add_printed_card";
-  @SerializedName(SERIALIZED_NAME_WRAPPING_ADD_PRINTED_CARD)
+  @Json(name = SERIALIZED_NAME_WRAPPING_ADD_PRINTED_CARD)
   private Boolean wrappingAddPrintedCard;
 
 

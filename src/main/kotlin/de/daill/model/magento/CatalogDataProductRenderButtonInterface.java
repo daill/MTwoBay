@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductRenderButtonInterface {
   public static final String SERIALIZED_NAME_POST_DATA = "post_data";
-  @SerializedName(SERIALIZED_NAME_POST_DATA)
+  @Json(name = SERIALIZED_NAME_POST_DATA)
   private String postData;
 
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  @Json(name = SERIALIZED_NAME_URL)
   private String url;
 
   public static final String SERIALIZED_NAME_REQUIRED_OPTIONS = "required_options";
-  @SerializedName(SERIALIZED_NAME_REQUIRED_OPTIONS)
+  @Json(name = SERIALIZED_NAME_REQUIRED_OPTIONS)
   private Boolean requiredOptions;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

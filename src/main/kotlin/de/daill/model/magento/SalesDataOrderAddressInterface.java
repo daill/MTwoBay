@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,111 +28,111 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataOrderAddressInterface {
   public static final String SERIALIZED_NAME_ADDRESS_TYPE = "address_type";
-  @SerializedName(SERIALIZED_NAME_ADDRESS_TYPE)
+  @Json(name = SERIALIZED_NAME_ADDRESS_TYPE)
   private String addressType;
 
   public static final String SERIALIZED_NAME_CITY = "city";
-  @SerializedName(SERIALIZED_NAME_CITY)
+  @Json(name = SERIALIZED_NAME_CITY)
   private String city;
 
   public static final String SERIALIZED_NAME_COMPANY = "company";
-  @SerializedName(SERIALIZED_NAME_COMPANY)
+  @Json(name = SERIALIZED_NAME_COMPANY)
   private String company;
 
   public static final String SERIALIZED_NAME_COUNTRY_ID = "country_id";
-  @SerializedName(SERIALIZED_NAME_COUNTRY_ID)
+  @Json(name = SERIALIZED_NAME_COUNTRY_ID)
   private String countryId;
 
   public static final String SERIALIZED_NAME_CUSTOMER_ADDRESS_ID = "customer_address_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ADDRESS_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ADDRESS_ID)
   private Integer customerAddressId;
 
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ID)
   private Integer customerId;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
+  @Json(name = SERIALIZED_NAME_EMAIL)
   private String email;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_FAX = "fax";
-  @SerializedName(SERIALIZED_NAME_FAX)
+  @Json(name = SERIALIZED_NAME_FAX)
   private String fax;
 
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
-  @SerializedName(SERIALIZED_NAME_FIRSTNAME)
+  @Json(name = SERIALIZED_NAME_FIRSTNAME)
   private String firstname;
 
   public static final String SERIALIZED_NAME_LASTNAME = "lastname";
-  @SerializedName(SERIALIZED_NAME_LASTNAME)
+  @Json(name = SERIALIZED_NAME_LASTNAME)
   private String lastname;
 
   public static final String SERIALIZED_NAME_MIDDLENAME = "middlename";
-  @SerializedName(SERIALIZED_NAME_MIDDLENAME)
+  @Json(name = SERIALIZED_NAME_MIDDLENAME)
   private String middlename;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_POSTCODE = "postcode";
-  @SerializedName(SERIALIZED_NAME_POSTCODE)
+  @Json(name = SERIALIZED_NAME_POSTCODE)
   private String postcode;
 
   public static final String SERIALIZED_NAME_PREFIX = "prefix";
-  @SerializedName(SERIALIZED_NAME_PREFIX)
+  @Json(name = SERIALIZED_NAME_PREFIX)
   private String prefix;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private String region;
 
   public static final String SERIALIZED_NAME_REGION_CODE = "region_code";
-  @SerializedName(SERIALIZED_NAME_REGION_CODE)
+  @Json(name = SERIALIZED_NAME_REGION_CODE)
   private String regionCode;
 
   public static final String SERIALIZED_NAME_REGION_ID = "region_id";
-  @SerializedName(SERIALIZED_NAME_REGION_ID)
+  @Json(name = SERIALIZED_NAME_REGION_ID)
   private Integer regionId;
 
   public static final String SERIALIZED_NAME_STREET = "street";
-  @SerializedName(SERIALIZED_NAME_STREET)
+  @Json(name = SERIALIZED_NAME_STREET)
   private List<String> street = null;
 
   public static final String SERIALIZED_NAME_SUFFIX = "suffix";
-  @SerializedName(SERIALIZED_NAME_SUFFIX)
+  @Json(name = SERIALIZED_NAME_SUFFIX)
   private String suffix;
 
   public static final String SERIALIZED_NAME_TELEPHONE = "telephone";
-  @SerializedName(SERIALIZED_NAME_TELEPHONE)
+  @Json(name = SERIALIZED_NAME_TELEPHONE)
   private String telephone;
 
   public static final String SERIALIZED_NAME_VAT_ID = "vat_id";
-  @SerializedName(SERIALIZED_NAME_VAT_ID)
+  @Json(name = SERIALIZED_NAME_VAT_ID)
   private String vatId;
 
   public static final String SERIALIZED_NAME_VAT_IS_VALID = "vat_is_valid";
-  @SerializedName(SERIALIZED_NAME_VAT_IS_VALID)
+  @Json(name = SERIALIZED_NAME_VAT_IS_VALID)
   private Integer vatIsValid;
 
   public static final String SERIALIZED_NAME_VAT_REQUEST_DATE = "vat_request_date";
-  @SerializedName(SERIALIZED_NAME_VAT_REQUEST_DATE)
+  @Json(name = SERIALIZED_NAME_VAT_REQUEST_DATE)
   private String vatRequestDate;
 
   public static final String SERIALIZED_NAME_VAT_REQUEST_ID = "vat_request_id";
-  @SerializedName(SERIALIZED_NAME_VAT_REQUEST_ID)
+  @Json(name = SERIALIZED_NAME_VAT_REQUEST_ID)
   private String vatRequestId;
 
   public static final String SERIALIZED_NAME_VAT_REQUEST_SUCCESS = "vat_request_success";
-  @SerializedName(SERIALIZED_NAME_VAT_REQUEST_SUCCESS)
+  @Json(name = SERIALIZED_NAME_VAT_REQUEST_SUCCESS)
   private Integer vatRequestSuccess;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

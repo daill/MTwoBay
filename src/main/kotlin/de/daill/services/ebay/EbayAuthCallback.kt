@@ -4,6 +4,7 @@ import com.ebay.api.client.auth.oauth2.CredentialUtil
 import com.ebay.api.client.auth.oauth2.OAuth2Api
 import com.ebay.api.client.auth.oauth2.model.Environment
 import de.daill.api.ebay.EbayInventoryItemApi
+import de.daill.model.ebay.EbayEnvironments
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationEventPublisher
@@ -22,6 +23,9 @@ class EbayAuthCallback: ApplicationListener<EbayAuthEvent> {
     @Autowired
     private val applicationEventPublisher: ApplicationEventPublisher? = null
 
+    @Autowired
+    lateinit var apiClient: EbayApiClient
+
     @GetMapping("/success")
     fun callback(request: HttpServletRequest): String {
         LOG.debug(request.getParameter("code"))
@@ -29,26 +33,9 @@ class EbayAuthCallback: ApplicationListener<EbayAuthEvent> {
         return "<script>window.close();</script>"
     }
 
-
-    fun exchangeToken(authEvent: EbayAuthEvent) {
-        val oauth2Api = OAuth2Api()
-        CredentialUtil.load(File("src/main/resources/ebay.properties").inputStream())
-        LOG.debug(authEvent.getCode())
-        val oauth2Response = oauth2Api.exchangeCodeForAccessToken(Environment.PRODUCTION, authEvent.getCode())
-        LOG.debug(oauth2Response.toString())
-        if (oauth2Response.refreshToken.isPresent) {
-            LOG.debug(oauth2Response.refreshToken.get().toString())
-        }
-        if (oauth2Response.accessToken.isPresent) {
-            LOG.debug(oauth2Response.accessToken.get().toString())
-        }
-        //var client = EbayInventoryItemApi(token = oauth2Response.accessToken.get().token.toString())
-
-        //LOG.debug(client.getInventoryItems("100", "0").size.toString())
-    }
-
     override fun onApplicationEvent(event: EbayAuthEvent) {
-        exchangeToken(event)
+        apiClient.environment = EbayEnvironments.PRODUCTION
+        apiClient.exchangeAccessToken(event.authCode.orEmpty())
     }
 
 }

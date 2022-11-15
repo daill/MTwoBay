@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,7 +26,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject20 {
   public static final String SERIALIZED_NAME_NEW_PARENT_ID = "newParentId";
-  @SerializedName(SERIALIZED_NAME_NEW_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_NEW_PARENT_ID)
   private Integer newParentId;
 
 

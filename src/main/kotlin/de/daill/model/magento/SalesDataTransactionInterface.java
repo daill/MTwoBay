@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,51 +28,51 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataTransactionInterface {
   public static final String SERIALIZED_NAME_TRANSACTION_ID = "transaction_id";
-  @SerializedName(SERIALIZED_NAME_TRANSACTION_ID)
+  @Json(name = SERIALIZED_NAME_TRANSACTION_ID)
   private Integer transactionId;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_ORDER_ID = "order_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ID)
   private Integer orderId;
 
   public static final String SERIALIZED_NAME_PAYMENT_ID = "payment_id";
-  @SerializedName(SERIALIZED_NAME_PAYMENT_ID)
+  @Json(name = SERIALIZED_NAME_PAYMENT_ID)
   private Integer paymentId;
 
   public static final String SERIALIZED_NAME_TXN_ID = "txn_id";
-  @SerializedName(SERIALIZED_NAME_TXN_ID)
+  @Json(name = SERIALIZED_NAME_TXN_ID)
   private String txnId;
 
   public static final String SERIALIZED_NAME_PARENT_TXN_ID = "parent_txn_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_TXN_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_TXN_ID)
   private String parentTxnId;
 
   public static final String SERIALIZED_NAME_TXN_TYPE = "txn_type";
-  @SerializedName(SERIALIZED_NAME_TXN_TYPE)
+  @Json(name = SERIALIZED_NAME_TXN_TYPE)
   private String txnType;
 
   public static final String SERIALIZED_NAME_IS_CLOSED = "is_closed";
-  @SerializedName(SERIALIZED_NAME_IS_CLOSED)
+  @Json(name = SERIALIZED_NAME_IS_CLOSED)
   private Integer isClosed;
 
   public static final String SERIALIZED_NAME_ADDITIONAL_INFORMATION = "additional_information";
-  @SerializedName(SERIALIZED_NAME_ADDITIONAL_INFORMATION)
+  @Json(name = SERIALIZED_NAME_ADDITIONAL_INFORMATION)
   private List<String> additionalInformation = null;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_CHILD_TRANSACTIONS = "child_transactions";
-  @SerializedName(SERIALIZED_NAME_CHILD_TRANSACTIONS)
+  @Json(name = SERIALIZED_NAME_CHILD_TRANSACTIONS)
   private List<SalesDataTransactionInterface> childTransactions = new ArrayList<SalesDataTransactionInterface>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

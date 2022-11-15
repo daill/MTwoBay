@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,31 +27,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject36 {
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<SalesDataShipmentItemCreationInterface> items = null;
 
   public static final String SERIALIZED_NAME_NOTIFY = "notify";
-  @SerializedName(SERIALIZED_NAME_NOTIFY)
+  @Json(name = SERIALIZED_NAME_NOTIFY)
   private Boolean notify;
 
   public static final String SERIALIZED_NAME_APPEND_COMMENT = "appendComment";
-  @SerializedName(SERIALIZED_NAME_APPEND_COMMENT)
+  @Json(name = SERIALIZED_NAME_APPEND_COMMENT)
   private Boolean appendComment;
 
   public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
+  @Json(name = SERIALIZED_NAME_COMMENT)
   private SalesDataShipmentCommentCreationInterface comment;
 
   public static final String SERIALIZED_NAME_TRACKS = "tracks";
-  @SerializedName(SERIALIZED_NAME_TRACKS)
+  @Json(name = SERIALIZED_NAME_TRACKS)
   private List<SalesDataShipmentTrackCreationInterface> tracks = null;
 
   public static final String SERIALIZED_NAME_PACKAGES = "packages";
-  @SerializedName(SERIALIZED_NAME_PACKAGES)
+  @Json(name = SERIALIZED_NAME_PACKAGES)
   private List<SalesDataShipmentPackageCreationInterface> packages = null;
 
   public static final String SERIALIZED_NAME_ARGUMENTS = "arguments";
-  @SerializedName(SERIALIZED_NAME_ARGUMENTS)
+  @Json(name = SERIALIZED_NAME_ARGUMENTS)
   private SalesDataShipmentCreationArgumentsInterface arguments;
 
 

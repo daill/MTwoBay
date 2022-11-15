@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataCreditmemoCreationArgumentsExtensionInterface {
   public static final String SERIALIZED_NAME_RETURN_TO_STOCK_ITEMS = "return_to_stock_items";
-  @SerializedName(SERIALIZED_NAME_RETURN_TO_STOCK_ITEMS)
+  @Json(name = SERIALIZED_NAME_RETURN_TO_STOCK_ITEMS)
   private List<Integer> returnToStockItems = null;
 
 

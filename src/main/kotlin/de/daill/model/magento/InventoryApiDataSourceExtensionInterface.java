@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryApiDataSourceExtensionInterface {
   public static final String SERIALIZED_NAME_IS_PICKUP_LOCATION_ACTIVE = "is_pickup_location_active";
-  @SerializedName(SERIALIZED_NAME_IS_PICKUP_LOCATION_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_PICKUP_LOCATION_ACTIVE)
   private Boolean isPickupLocationActive;
 
   public static final String SERIALIZED_NAME_FRONTEND_NAME = "frontend_name";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_NAME)
+  @Json(name = SERIALIZED_NAME_FRONTEND_NAME)
   private String frontendName;
 
   public static final String SERIALIZED_NAME_FRONTEND_DESCRIPTION = "frontend_description";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_FRONTEND_DESCRIPTION)
   private String frontendDescription;
 
 

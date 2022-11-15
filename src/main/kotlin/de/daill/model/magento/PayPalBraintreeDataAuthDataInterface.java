@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class PayPalBraintreeDataAuthDataInterface {
   public static final String SERIALIZED_NAME_CLIENT_TOKEN = "client_token";
-  @SerializedName(SERIALIZED_NAME_CLIENT_TOKEN)
+  @Json(name = SERIALIZED_NAME_CLIENT_TOKEN)
   private String clientToken;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "display_name";
-  @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  @Json(name = SERIALIZED_NAME_DISPLAY_NAME)
   private String displayName;
 
   public static final String SERIALIZED_NAME_ACTION_SUCCESS = "action_success";
-  @SerializedName(SERIALIZED_NAME_ACTION_SUCCESS)
+  @Json(name = SERIALIZED_NAME_ACTION_SUCCESS)
   private String actionSuccess;
 
   public static final String SERIALIZED_NAME_LOGGED_IN = "logged_in";
-  @SerializedName(SERIALIZED_NAME_LOGGED_IN)
+  @Json(name = SERIALIZED_NAME_LOGGED_IN)
   private Boolean loggedIn;
 
   public static final String SERIALIZED_NAME_STORE_CODE = "store_code";
-  @SerializedName(SERIALIZED_NAME_STORE_CODE)
+  @Json(name = SERIALIZED_NAME_STORE_CODE)
   private String storeCode;
 
 

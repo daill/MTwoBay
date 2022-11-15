@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject6 {
   public static final String SERIALIZED_NAME_CODES = "codes";
-  @SerializedName(SERIALIZED_NAME_CODES)
+  @Json(name = SERIALIZED_NAME_CODES)
   private List<String> codes = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_IGNORE_INVALID_COUPONS = "ignoreInvalidCoupons";
-  @SerializedName(SERIALIZED_NAME_IGNORE_INVALID_COUPONS)
+  @Json(name = SERIALIZED_NAME_IGNORE_INVALID_COUPONS)
   private Boolean ignoreInvalidCoupons;
 
 

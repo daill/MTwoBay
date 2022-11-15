@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventorySourceSelectionApiDataSourceSelectionItemInterface {
   public static final String SERIALIZED_NAME_SOURCE_CODE = "source_code";
-  @SerializedName(SERIALIZED_NAME_SOURCE_CODE)
+  @Json(name = SERIALIZED_NAME_SOURCE_CODE)
   private String sourceCode;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_QTY_TO_DEDUCT = "qty_to_deduct";
-  @SerializedName(SERIALIZED_NAME_QTY_TO_DEDUCT)
+  @Json(name = SERIALIZED_NAME_QTY_TO_DEDUCT)
   private BigDecimal qtyToDeduct;
 
   public static final String SERIALIZED_NAME_QTY_AVAILABLE = "qty_available";
-  @SerializedName(SERIALIZED_NAME_QTY_AVAILABLE)
+  @Json(name = SERIALIZED_NAME_QTY_AVAILABLE)
   private BigDecimal qtyAvailable;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

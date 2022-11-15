@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,51 +29,51 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataTaxRateInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_TAX_COUNTRY_ID = "tax_country_id";
-  @SerializedName(SERIALIZED_NAME_TAX_COUNTRY_ID)
+  @Json(name = SERIALIZED_NAME_TAX_COUNTRY_ID)
   private String taxCountryId;
 
   public static final String SERIALIZED_NAME_TAX_REGION_ID = "tax_region_id";
-  @SerializedName(SERIALIZED_NAME_TAX_REGION_ID)
+  @Json(name = SERIALIZED_NAME_TAX_REGION_ID)
   private Integer taxRegionId;
 
   public static final String SERIALIZED_NAME_REGION_NAME = "region_name";
-  @SerializedName(SERIALIZED_NAME_REGION_NAME)
+  @Json(name = SERIALIZED_NAME_REGION_NAME)
   private String regionName;
 
   public static final String SERIALIZED_NAME_TAX_POSTCODE = "tax_postcode";
-  @SerializedName(SERIALIZED_NAME_TAX_POSTCODE)
+  @Json(name = SERIALIZED_NAME_TAX_POSTCODE)
   private String taxPostcode;
 
   public static final String SERIALIZED_NAME_ZIP_IS_RANGE = "zip_is_range";
-  @SerializedName(SERIALIZED_NAME_ZIP_IS_RANGE)
+  @Json(name = SERIALIZED_NAME_ZIP_IS_RANGE)
   private Integer zipIsRange;
 
   public static final String SERIALIZED_NAME_ZIP_FROM = "zip_from";
-  @SerializedName(SERIALIZED_NAME_ZIP_FROM)
+  @Json(name = SERIALIZED_NAME_ZIP_FROM)
   private Integer zipFrom;
 
   public static final String SERIALIZED_NAME_ZIP_TO = "zip_to";
-  @SerializedName(SERIALIZED_NAME_ZIP_TO)
+  @Json(name = SERIALIZED_NAME_ZIP_TO)
   private Integer zipTo;
 
   public static final String SERIALIZED_NAME_RATE = "rate";
-  @SerializedName(SERIALIZED_NAME_RATE)
+  @Json(name = SERIALIZED_NAME_RATE)
   private BigDecimal rate;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_TITLES = "titles";
-  @SerializedName(SERIALIZED_NAME_TITLES)
+  @Json(name = SERIALIZED_NAME_TITLES)
   private List<TaxDataTaxRateTitleInterface> titles = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

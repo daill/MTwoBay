@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,55 +27,55 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataShipmentItemInterface {
   public static final String SERIALIZED_NAME_ADDITIONAL_DATA = "additional_data";
-  @SerializedName(SERIALIZED_NAME_ADDITIONAL_DATA)
+  @Json(name = SERIALIZED_NAME_ADDITIONAL_DATA)
   private String additionalData;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @Json(name = SERIALIZED_NAME_PRODUCT_ID)
   private Integer productId;
 
   public static final String SERIALIZED_NAME_ROW_TOTAL = "row_total";
-  @SerializedName(SERIALIZED_NAME_ROW_TOTAL)
+  @Json(name = SERIALIZED_NAME_ROW_TOTAL)
   private BigDecimal rowTotal;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
-  @SerializedName(SERIALIZED_NAME_WEIGHT)
+  @Json(name = SERIALIZED_NAME_WEIGHT)
   private BigDecimal weight;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_ORDER_ITEM_ID = "order_item_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ITEM_ID)
   private Integer orderItemId;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
 

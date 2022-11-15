@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyCreditDataCreditBalanceOptionsInterface {
   public static final String SERIALIZED_NAME_PURCHASE_ORDER = "purchase_order";
-  @SerializedName(SERIALIZED_NAME_PURCHASE_ORDER)
+  @Json(name = SERIALIZED_NAME_PURCHASE_ORDER)
   private String purchaseOrder;
 
   public static final String SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER = "custom_reference_number";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER)
+  @Json(name = SERIALIZED_NAME_CUSTOM_REFERENCE_NUMBER)
   private String customReferenceNumber;
 
   public static final String SERIALIZED_NAME_ORDER_INCREMENT = "order_increment";
-  @SerializedName(SERIALIZED_NAME_ORDER_INCREMENT)
+  @Json(name = SERIALIZED_NAME_ORDER_INCREMENT)
   private String orderIncrement;
 
   public static final String SERIALIZED_NAME_CURRENCY_DISPLAY = "currency_display";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_DISPLAY)
+  @Json(name = SERIALIZED_NAME_CURRENCY_DISPLAY)
   private String currencyDisplay;
 
   public static final String SERIALIZED_NAME_CURRENCY_BASE = "currency_base";
-  @SerializedName(SERIALIZED_NAME_CURRENCY_BASE)
+  @Json(name = SERIALIZED_NAME_CURRENCY_BASE)
   private String currencyBase;
 
 

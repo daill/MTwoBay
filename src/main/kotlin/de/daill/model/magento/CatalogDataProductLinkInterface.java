@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 public class CatalogDataProductLinkInterface {
   public static final String SERIALIZED_NAME_SKU = "sku";
 
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_LINK_TYPE = "link_type";
-  @SerializedName(SERIALIZED_NAME_LINK_TYPE)
+  @Json(name = SERIALIZED_NAME_LINK_TYPE)
   private String linkType;
 
   public static final String SERIALIZED_NAME_LINKED_PRODUCT_SKU = "linked_product_sku";
-  @SerializedName(SERIALIZED_NAME_LINKED_PRODUCT_SKU)
+  @Json(name = SERIALIZED_NAME_LINKED_PRODUCT_SKU)
   private String linkedProductSku;
 
   public static final String SERIALIZED_NAME_LINKED_PRODUCT_TYPE = "linked_product_type";
-  @SerializedName(SERIALIZED_NAME_LINKED_PRODUCT_TYPE)
+  @Json(name = SERIALIZED_NAME_LINKED_PRODUCT_TYPE)
   private String linkedProductType;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductLinkExtensionInterface extensionAttributes;
 
   public CatalogDataProductLinkInterface sku(String sku) {

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,35 +27,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogDataProductRenderFormattedPriceInfoInterface {
   public static final String SERIALIZED_NAME_FINAL_PRICE = "final_price";
-  @SerializedName(SERIALIZED_NAME_FINAL_PRICE)
+  @Json(name = SERIALIZED_NAME_FINAL_PRICE)
   private String finalPrice;
 
   public static final String SERIALIZED_NAME_MAX_PRICE = "max_price";
-  @SerializedName(SERIALIZED_NAME_MAX_PRICE)
+  @Json(name = SERIALIZED_NAME_MAX_PRICE)
   private String maxPrice;
 
   public static final String SERIALIZED_NAME_MINIMAL_PRICE = "minimal_price";
-  @SerializedName(SERIALIZED_NAME_MINIMAL_PRICE)
+  @Json(name = SERIALIZED_NAME_MINIMAL_PRICE)
   private String minimalPrice;
 
   public static final String SERIALIZED_NAME_MAX_REGULAR_PRICE = "max_regular_price";
-  @SerializedName(SERIALIZED_NAME_MAX_REGULAR_PRICE)
+  @Json(name = SERIALIZED_NAME_MAX_REGULAR_PRICE)
   private String maxRegularPrice;
 
   public static final String SERIALIZED_NAME_MINIMAL_REGULAR_PRICE = "minimal_regular_price";
-  @SerializedName(SERIALIZED_NAME_MINIMAL_REGULAR_PRICE)
+  @Json(name = SERIALIZED_NAME_MINIMAL_REGULAR_PRICE)
   private String minimalRegularPrice;
 
   public static final String SERIALIZED_NAME_SPECIAL_PRICE = "special_price";
-  @SerializedName(SERIALIZED_NAME_SPECIAL_PRICE)
+  @Json(name = SERIALIZED_NAME_SPECIAL_PRICE)
   private String specialPrice;
 
   public static final String SERIALIZED_NAME_REGULAR_PRICE = "regular_price";
-  @SerializedName(SERIALIZED_NAME_REGULAR_PRICE)
+  @Json(name = SERIALIZED_NAME_REGULAR_PRICE)
   private String regularPrice;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

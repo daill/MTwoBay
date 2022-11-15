@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CheckoutAgreementsDataAgreementInterface {
   public static final String SERIALIZED_NAME_AGREEMENT_ID = "agreement_id";
-  @SerializedName(SERIALIZED_NAME_AGREEMENT_ID)
+  @Json(name = SERIALIZED_NAME_AGREEMENT_ID)
   private Integer agreementId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_CONTENT = "content";
-  @SerializedName(SERIALIZED_NAME_CONTENT)
+  @Json(name = SERIALIZED_NAME_CONTENT)
   private String content;
 
   public static final String SERIALIZED_NAME_CONTENT_HEIGHT = "content_height";
-  @SerializedName(SERIALIZED_NAME_CONTENT_HEIGHT)
+  @Json(name = SERIALIZED_NAME_CONTENT_HEIGHT)
   private String contentHeight;
 
   public static final String SERIALIZED_NAME_CHECKBOX_TEXT = "checkbox_text";
-  @SerializedName(SERIALIZED_NAME_CHECKBOX_TEXT)
+  @Json(name = SERIALIZED_NAME_CHECKBOX_TEXT)
   private String checkboxText;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_IS_HTML = "is_html";
-  @SerializedName(SERIALIZED_NAME_IS_HTML)
+  @Json(name = SERIALIZED_NAME_IS_HTML)
   private Boolean isHtml;
 
   public static final String SERIALIZED_NAME_MODE = "mode";
-  @SerializedName(SERIALIZED_NAME_MODE)
+  @Json(name = SERIALIZED_NAME_MODE)
   private Integer mode;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

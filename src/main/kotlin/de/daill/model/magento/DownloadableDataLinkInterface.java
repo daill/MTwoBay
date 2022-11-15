@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -23,63 +25,63 @@ import java.util.Objects;
  */
 public class DownloadableDataLinkInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_IS_SHAREABLE = "is_shareable";
-  @SerializedName(SERIALIZED_NAME_IS_SHAREABLE)
+  @Json(name = SERIALIZED_NAME_IS_SHAREABLE)
   private Integer isShareable;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_DOWNLOADS = "number_of_downloads";
-  @SerializedName(SERIALIZED_NAME_NUMBER_OF_DOWNLOADS)
+  @Json(name = SERIALIZED_NAME_NUMBER_OF_DOWNLOADS)
   private Integer numberOfDownloads;
 
   public static final String SERIALIZED_NAME_LINK_TYPE = "link_type";
-  @SerializedName(SERIALIZED_NAME_LINK_TYPE)
+  @Json(name = SERIALIZED_NAME_LINK_TYPE)
   private String linkType;
 
   public static final String SERIALIZED_NAME_LINK_FILE = "link_file";
-  @SerializedName(SERIALIZED_NAME_LINK_FILE)
+  @Json(name = SERIALIZED_NAME_LINK_FILE)
   private String linkFile;
 
   public static final String SERIALIZED_NAME_LINK_FILE_CONTENT = "link_file_content";
-  @SerializedName(SERIALIZED_NAME_LINK_FILE_CONTENT)
+  @Json(name = SERIALIZED_NAME_LINK_FILE_CONTENT)
   private DownloadableDataFileContentInterface linkFileContent;
 
   public static final String SERIALIZED_NAME_LINK_URL = "link_url";
-  @SerializedName(SERIALIZED_NAME_LINK_URL)
+  @Json(name = SERIALIZED_NAME_LINK_URL)
   private String linkUrl;
 
   public static final String SERIALIZED_NAME_SAMPLE_TYPE = "sample_type";
-  @SerializedName(SERIALIZED_NAME_SAMPLE_TYPE)
+  @Json(name = SERIALIZED_NAME_SAMPLE_TYPE)
   private String sampleType;
 
   public static final String SERIALIZED_NAME_SAMPLE_FILE = "sample_file";
-  @SerializedName(SERIALIZED_NAME_SAMPLE_FILE)
+  @Json(name = SERIALIZED_NAME_SAMPLE_FILE)
   private String sampleFile;
 
   public static final String SERIALIZED_NAME_SAMPLE_FILE_CONTENT = "sample_file_content";
-  @SerializedName(SERIALIZED_NAME_SAMPLE_FILE_CONTENT)
+  @Json(name = SERIALIZED_NAME_SAMPLE_FILE_CONTENT)
   private DownloadableDataFileContentInterface sampleFileContent;
 
   public static final String SERIALIZED_NAME_SAMPLE_URL = "sample_url";
-  @SerializedName(SERIALIZED_NAME_SAMPLE_URL)
+  @Json(name = SERIALIZED_NAME_SAMPLE_URL)
   private String sampleUrl;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

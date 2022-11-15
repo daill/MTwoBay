@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,71 +27,71 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class StoreDataStoreConfigInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_WEBSITE_ID = "website_id";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_ID)
+  @Json(name = SERIALIZED_NAME_WEBSITE_ID)
   private Integer websiteId;
 
   public static final String SERIALIZED_NAME_LOCALE = "locale";
-  @SerializedName(SERIALIZED_NAME_LOCALE)
+  @Json(name = SERIALIZED_NAME_LOCALE)
   private String locale;
 
   public static final String SERIALIZED_NAME_BASE_CURRENCY_CODE = "base_currency_code";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_CODE)
   private String baseCurrencyCode;
 
   public static final String SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE = "default_display_currency_code";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_DEFAULT_DISPLAY_CURRENCY_CODE)
   private String defaultDisplayCurrencyCode;
 
   public static final String SERIALIZED_NAME_TIMEZONE = "timezone";
-  @SerializedName(SERIALIZED_NAME_TIMEZONE)
+  @Json(name = SERIALIZED_NAME_TIMEZONE)
   private String timezone;
 
   public static final String SERIALIZED_NAME_WEIGHT_UNIT = "weight_unit";
-  @SerializedName(SERIALIZED_NAME_WEIGHT_UNIT)
+  @Json(name = SERIALIZED_NAME_WEIGHT_UNIT)
   private String weightUnit;
 
   public static final String SERIALIZED_NAME_BASE_URL = "base_url";
-  @SerializedName(SERIALIZED_NAME_BASE_URL)
+  @Json(name = SERIALIZED_NAME_BASE_URL)
   private String baseUrl;
 
   public static final String SERIALIZED_NAME_BASE_LINK_URL = "base_link_url";
-  @SerializedName(SERIALIZED_NAME_BASE_LINK_URL)
+  @Json(name = SERIALIZED_NAME_BASE_LINK_URL)
   private String baseLinkUrl;
 
   public static final String SERIALIZED_NAME_BASE_STATIC_URL = "base_static_url";
-  @SerializedName(SERIALIZED_NAME_BASE_STATIC_URL)
+  @Json(name = SERIALIZED_NAME_BASE_STATIC_URL)
   private String baseStaticUrl;
 
   public static final String SERIALIZED_NAME_BASE_MEDIA_URL = "base_media_url";
-  @SerializedName(SERIALIZED_NAME_BASE_MEDIA_URL)
+  @Json(name = SERIALIZED_NAME_BASE_MEDIA_URL)
   private String baseMediaUrl;
 
   public static final String SERIALIZED_NAME_SECURE_BASE_URL = "secure_base_url";
-  @SerializedName(SERIALIZED_NAME_SECURE_BASE_URL)
+  @Json(name = SERIALIZED_NAME_SECURE_BASE_URL)
   private String secureBaseUrl;
 
   public static final String SERIALIZED_NAME_SECURE_BASE_LINK_URL = "secure_base_link_url";
-  @SerializedName(SERIALIZED_NAME_SECURE_BASE_LINK_URL)
+  @Json(name = SERIALIZED_NAME_SECURE_BASE_LINK_URL)
   private String secureBaseLinkUrl;
 
   public static final String SERIALIZED_NAME_SECURE_BASE_STATIC_URL = "secure_base_static_url";
-  @SerializedName(SERIALIZED_NAME_SECURE_BASE_STATIC_URL)
+  @Json(name = SERIALIZED_NAME_SECURE_BASE_STATIC_URL)
   private String secureBaseStaticUrl;
 
   public static final String SERIALIZED_NAME_SECURE_BASE_MEDIA_URL = "secure_base_media_url";
-  @SerializedName(SERIALIZED_NAME_SECURE_BASE_MEDIA_URL)
+  @Json(name = SERIALIZED_NAME_SECURE_BASE_MEDIA_URL)
   private String secureBaseMediaUrl;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,23 +27,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataNegotiableQuoteItemInterface {
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
-  @SerializedName(SERIALIZED_NAME_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ITEM_ID)
   private Integer itemId;
 
   public static final String SERIALIZED_NAME_ORIGINAL_PRICE = "original_price";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_PRICE)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_PRICE)
   private BigDecimal originalPrice;
 
   public static final String SERIALIZED_NAME_ORIGINAL_TAX_AMOUNT = "original_tax_amount";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_TAX_AMOUNT)
   private BigDecimal originalTaxAmount;
 
   public static final String SERIALIZED_NAME_ORIGINAL_DISCOUNT_AMOUNT = "original_discount_amount";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_DISCOUNT_AMOUNT)
   private BigDecimal originalDiscountAmount;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

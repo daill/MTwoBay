@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,67 +27,67 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataNegotiableQuoteTotalsInterface {
   public static final String SERIALIZED_NAME_ITEMS_COUNT = "items_count";
-  @SerializedName(SERIALIZED_NAME_ITEMS_COUNT)
+  @Json(name = SERIALIZED_NAME_ITEMS_COUNT)
   private Integer itemsCount;
 
   public static final String SERIALIZED_NAME_QUOTE_STATUS = "quote_status";
-  @SerializedName(SERIALIZED_NAME_QUOTE_STATUS)
+  @Json(name = SERIALIZED_NAME_QUOTE_STATUS)
   private String quoteStatus;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP = "customer_group";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP)
   private Integer customerGroup;
 
   public static final String SERIALIZED_NAME_BASE_TO_QUOTE_RATE = "base_to_quote_rate";
-  @SerializedName(SERIALIZED_NAME_BASE_TO_QUOTE_RATE)
+  @Json(name = SERIALIZED_NAME_BASE_TO_QUOTE_RATE)
   private BigDecimal baseToQuoteRate;
 
   public static final String SERIALIZED_NAME_COST_TOTAL = "cost_total";
-  @SerializedName(SERIALIZED_NAME_COST_TOTAL)
+  @Json(name = SERIALIZED_NAME_COST_TOTAL)
   private BigDecimal costTotal;
 
   public static final String SERIALIZED_NAME_BASE_COST_TOTAL = "base_cost_total";
-  @SerializedName(SERIALIZED_NAME_BASE_COST_TOTAL)
+  @Json(name = SERIALIZED_NAME_BASE_COST_TOTAL)
   private BigDecimal baseCostTotal;
 
   public static final String SERIALIZED_NAME_ORIGINAL_TOTAL = "original_total";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_TOTAL)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_TOTAL)
   private BigDecimal originalTotal;
 
   public static final String SERIALIZED_NAME_BASE_ORIGINAL_TOTAL = "base_original_total";
-  @SerializedName(SERIALIZED_NAME_BASE_ORIGINAL_TOTAL)
+  @Json(name = SERIALIZED_NAME_BASE_ORIGINAL_TOTAL)
   private BigDecimal baseOriginalTotal;
 
   public static final String SERIALIZED_NAME_ORIGINAL_TAX = "original_tax";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_TAX)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_TAX)
   private BigDecimal originalTax;
 
   public static final String SERIALIZED_NAME_BASE_ORIGINAL_TAX = "base_original_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_ORIGINAL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_ORIGINAL_TAX)
   private BigDecimal baseOriginalTax;
 
   public static final String SERIALIZED_NAME_ORIGINAL_PRICE_INCL_TAX = "original_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_PRICE_INCL_TAX)
   private BigDecimal originalPriceInclTax;
 
   public static final String SERIALIZED_NAME_BASE_ORIGINAL_PRICE_INCL_TAX = "base_original_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_BASE_ORIGINAL_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_BASE_ORIGINAL_PRICE_INCL_TAX)
   private BigDecimal baseOriginalPriceInclTax;
 
   public static final String SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE = "negotiated_price_type";
-  @SerializedName(SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE)
   private Integer negotiatedPriceType;
 
   public static final String SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE = "negotiated_price_value";
-  @SerializedName(SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE)
+  @Json(name = SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE)
   private BigDecimal negotiatedPriceValue;
 
 

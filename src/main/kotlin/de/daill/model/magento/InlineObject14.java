@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,11 +26,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject14 {
   public static final String SERIALIZED_NAME_CUSTOMER_EMAIL = "customerEmail";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_EMAIL)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_EMAIL)
   private String customerEmail;
 
   public static final String SERIALIZED_NAME_WEBSITE_ID = "websiteId";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_ID)
+  @Json(name = SERIALIZED_NAME_WEBSITE_ID)
   private Integer websiteId;
 
 

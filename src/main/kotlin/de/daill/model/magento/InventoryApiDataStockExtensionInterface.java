@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryApiDataStockExtensionInterface {
   public static final String SERIALIZED_NAME_SALES_CHANNELS = "sales_channels";
-  @SerializedName(SERIALIZED_NAME_SALES_CHANNELS)
+  @Json(name = SERIALIZED_NAME_SALES_CHANNELS)
   private List<InventorySalesApiDataSalesChannelInterface> salesChannels = null;
 
 

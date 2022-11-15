@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,15 +27,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataCustomerExtensionInterface {
   public static final String SERIALIZED_NAME_COMPANY_ATTRIBUTES = "company_attributes";
-  @SerializedName(SERIALIZED_NAME_COMPANY_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_COMPANY_ATTRIBUTES)
   private CompanyDataCompanyCustomerInterface companyAttributes;
 
   public static final String SERIALIZED_NAME_ASSISTANCE_ALLOWED = "assistance_allowed";
-  @SerializedName(SERIALIZED_NAME_ASSISTANCE_ALLOWED)
+  @Json(name = SERIALIZED_NAME_ASSISTANCE_ALLOWED)
   private Integer assistanceAllowed;
 
   public static final String SERIALIZED_NAME_IS_SUBSCRIBED = "is_subscribed";
-  @SerializedName(SERIALIZED_NAME_IS_SUBSCRIBED)
+  @Json(name = SERIALIZED_NAME_IS_SUBSCRIBED)
   private Boolean isSubscribed;
 
 

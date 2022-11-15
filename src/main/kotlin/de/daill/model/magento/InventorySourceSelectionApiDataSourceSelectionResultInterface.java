@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,15 +28,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventorySourceSelectionApiDataSourceSelectionResultInterface {
   public static final String SERIALIZED_NAME_SOURCE_SELECTION_ITEMS = "source_selection_items";
-  @SerializedName(SERIALIZED_NAME_SOURCE_SELECTION_ITEMS)
+  @Json(name = SERIALIZED_NAME_SOURCE_SELECTION_ITEMS)
   private List<InventorySourceSelectionApiDataSourceSelectionItemInterface> sourceSelectionItems = new ArrayList<InventorySourceSelectionApiDataSourceSelectionItemInterface>();
 
   public static final String SERIALIZED_NAME_SHIPPABLE = "shippable";
-  @SerializedName(SERIALIZED_NAME_SHIPPABLE)
+  @Json(name = SERIALIZED_NAME_SHIPPABLE)
   private Boolean shippable;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

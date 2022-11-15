@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,35 +27,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryInStorePickupApiDataSearchRequestFiltersInterface {
   public static final String SERIALIZED_NAME_COUNTRY = "country";
-  @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @Json(name = SERIALIZED_NAME_COUNTRY)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface country;
 
   public static final String SERIALIZED_NAME_POSTCODE = "postcode";
-  @SerializedName(SERIALIZED_NAME_POSTCODE)
+  @Json(name = SERIALIZED_NAME_POSTCODE)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface postcode;
 
   public static final String SERIALIZED_NAME_REGION = "region";
-  @SerializedName(SERIALIZED_NAME_REGION)
+  @Json(name = SERIALIZED_NAME_REGION)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface region;
 
   public static final String SERIALIZED_NAME_REGION_ID = "region_id";
-  @SerializedName(SERIALIZED_NAME_REGION_ID)
+  @Json(name = SERIALIZED_NAME_REGION_ID)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface regionId;
 
   public static final String SERIALIZED_NAME_CITY = "city";
-  @SerializedName(SERIALIZED_NAME_CITY)
+  @Json(name = SERIALIZED_NAME_CITY)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface city;
 
   public static final String SERIALIZED_NAME_STREET = "street";
-  @SerializedName(SERIALIZED_NAME_STREET)
+  @Json(name = SERIALIZED_NAME_STREET)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface street;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface name;
 
   public static final String SERIALIZED_NAME_PICKUP_LOCATION_CODE = "pickup_location_code";
-  @SerializedName(SERIALIZED_NAME_PICKUP_LOCATION_CODE)
+  @Json(name = SERIALIZED_NAME_PICKUP_LOCATION_CODE)
   private InventoryInStorePickupApiDataSearchRequestFilterInterface pickupLocationCode;
 
 

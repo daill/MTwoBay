@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,87 +28,87 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CustomerDataAttributeMetadataInterface {
   public static final String SERIALIZED_NAME_FRONTEND_INPUT = "frontend_input";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_INPUT)
+  @Json(name = SERIALIZED_NAME_FRONTEND_INPUT)
   private String frontendInput;
 
   public static final String SERIALIZED_NAME_INPUT_FILTER = "input_filter";
-  @SerializedName(SERIALIZED_NAME_INPUT_FILTER)
+  @Json(name = SERIALIZED_NAME_INPUT_FILTER)
   private String inputFilter;
 
   public static final String SERIALIZED_NAME_STORE_LABEL = "store_label";
-  @SerializedName(SERIALIZED_NAME_STORE_LABEL)
+  @Json(name = SERIALIZED_NAME_STORE_LABEL)
   private String storeLabel;
 
   public static final String SERIALIZED_NAME_VALIDATION_RULES = "validation_rules";
-  @SerializedName(SERIALIZED_NAME_VALIDATION_RULES)
+  @Json(name = SERIALIZED_NAME_VALIDATION_RULES)
   private List<CustomerDataValidationRuleInterface> validationRules = new ArrayList<CustomerDataValidationRuleInterface>();
 
   public static final String SERIALIZED_NAME_MULTILINE_COUNT = "multiline_count";
-  @SerializedName(SERIALIZED_NAME_MULTILINE_COUNT)
+  @Json(name = SERIALIZED_NAME_MULTILINE_COUNT)
   private Integer multilineCount;
 
   public static final String SERIALIZED_NAME_VISIBLE = "visible";
-  @SerializedName(SERIALIZED_NAME_VISIBLE)
+  @Json(name = SERIALIZED_NAME_VISIBLE)
   private Boolean visible;
 
   public static final String SERIALIZED_NAME_REQUIRED = "required";
-  @SerializedName(SERIALIZED_NAME_REQUIRED)
+  @Json(name = SERIALIZED_NAME_REQUIRED)
   private Boolean required;
 
   public static final String SERIALIZED_NAME_DATA_MODEL = "data_model";
-  @SerializedName(SERIALIZED_NAME_DATA_MODEL)
+  @Json(name = SERIALIZED_NAME_DATA_MODEL)
   private String dataModel;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
-  @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @Json(name = SERIALIZED_NAME_OPTIONS)
   private List<CustomerDataOptionInterface> options = new ArrayList<CustomerDataOptionInterface>();
 
   public static final String SERIALIZED_NAME_FRONTEND_CLASS = "frontend_class";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_CLASS)
+  @Json(name = SERIALIZED_NAME_FRONTEND_CLASS)
   private String frontendClass;
 
   public static final String SERIALIZED_NAME_USER_DEFINED = "user_defined";
-  @SerializedName(SERIALIZED_NAME_USER_DEFINED)
+  @Json(name = SERIALIZED_NAME_USER_DEFINED)
   private Boolean userDefined;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_FRONTEND_LABEL = "frontend_label";
-  @SerializedName(SERIALIZED_NAME_FRONTEND_LABEL)
+  @Json(name = SERIALIZED_NAME_FRONTEND_LABEL)
   private String frontendLabel;
 
   public static final String SERIALIZED_NAME_NOTE = "note";
-  @SerializedName(SERIALIZED_NAME_NOTE)
+  @Json(name = SERIALIZED_NAME_NOTE)
   private String note;
 
   public static final String SERIALIZED_NAME_SYSTEM = "system";
-  @SerializedName(SERIALIZED_NAME_SYSTEM)
+  @Json(name = SERIALIZED_NAME_SYSTEM)
   private Boolean system;
 
   public static final String SERIALIZED_NAME_BACKEND_TYPE = "backend_type";
-  @SerializedName(SERIALIZED_NAME_BACKEND_TYPE)
+  @Json(name = SERIALIZED_NAME_BACKEND_TYPE)
   private String backendType;
 
   public static final String SERIALIZED_NAME_IS_USED_IN_GRID = "is_used_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_USED_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_USED_IN_GRID)
   private Boolean isUsedInGrid;
 
   public static final String SERIALIZED_NAME_IS_VISIBLE_IN_GRID = "is_visible_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_VISIBLE_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_VISIBLE_IN_GRID)
   private Boolean isVisibleInGrid;
 
   public static final String SERIALIZED_NAME_IS_FILTERABLE_IN_GRID = "is_filterable_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_FILTERABLE_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_FILTERABLE_IN_GRID)
   private Boolean isFilterableInGrid;
 
   public static final String SERIALIZED_NAME_IS_SEARCHABLE_IN_GRID = "is_searchable_in_grid";
-  @SerializedName(SERIALIZED_NAME_IS_SEARCHABLE_IN_GRID)
+  @Json(name = SERIALIZED_NAME_IS_SEARCHABLE_IN_GRID)
   private Boolean isSearchableInGrid;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_CODE = "attribute_code";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_CODE)
   private String attributeCode;
 
 

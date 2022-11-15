@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,35 +27,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class GiftCardDataGiftCardOptionInterface {
   public static final String SERIALIZED_NAME_GIFTCARD_AMOUNT = "giftcard_amount";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_AMOUNT)
   private String giftcardAmount;
 
   public static final String SERIALIZED_NAME_CUSTOM_GIFTCARD_AMOUNT = "custom_giftcard_amount";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_GIFTCARD_AMOUNT)
+  @Json(name = SERIALIZED_NAME_CUSTOM_GIFTCARD_AMOUNT)
   private BigDecimal customGiftcardAmount;
 
   public static final String SERIALIZED_NAME_GIFTCARD_SENDER_NAME = "giftcard_sender_name";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_SENDER_NAME)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_SENDER_NAME)
   private String giftcardSenderName;
 
   public static final String SERIALIZED_NAME_GIFTCARD_RECIPIENT_NAME = "giftcard_recipient_name";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_RECIPIENT_NAME)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_RECIPIENT_NAME)
   private String giftcardRecipientName;
 
   public static final String SERIALIZED_NAME_GIFTCARD_SENDER_EMAIL = "giftcard_sender_email";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_SENDER_EMAIL)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_SENDER_EMAIL)
   private String giftcardSenderEmail;
 
   public static final String SERIALIZED_NAME_GIFTCARD_RECIPIENT_EMAIL = "giftcard_recipient_email";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_RECIPIENT_EMAIL)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_RECIPIENT_EMAIL)
   private String giftcardRecipientEmail;
 
   public static final String SERIALIZED_NAME_GIFTCARD_MESSAGE = "giftcard_message";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_MESSAGE)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_MESSAGE)
   private String giftcardMessage;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private GiftCardDataGiftCardOptionExtensionInterface extensionAttributes;
 
 

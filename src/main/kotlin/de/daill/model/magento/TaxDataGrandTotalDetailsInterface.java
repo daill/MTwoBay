@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,15 +29,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataGrandTotalDetailsInterface {
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
   public static final String SERIALIZED_NAME_RATES = "rates";
-  @SerializedName(SERIALIZED_NAME_RATES)
+  @Json(name = SERIALIZED_NAME_RATES)
   private List<TaxDataGrandTotalRatesInterface> rates = new ArrayList<TaxDataGrandTotalRatesInterface>();
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
-  @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @Json(name = SERIALIZED_NAME_GROUP_ID)
   private Integer groupId;
 
 

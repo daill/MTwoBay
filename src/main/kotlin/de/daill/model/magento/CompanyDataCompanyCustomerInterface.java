@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,27 +27,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyDataCompanyCustomerInterface {
   public static final String SERIALIZED_NAME_CUSTOMER_ID = "customer_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_ID)
   private Integer customerId;
 
   public static final String SERIALIZED_NAME_COMPANY_ID = "company_id";
-  @SerializedName(SERIALIZED_NAME_COMPANY_ID)
+  @Json(name = SERIALIZED_NAME_COMPANY_ID)
   private Integer companyId;
 
   public static final String SERIALIZED_NAME_JOB_TITLE = "job_title";
-  @SerializedName(SERIALIZED_NAME_JOB_TITLE)
+  @Json(name = SERIALIZED_NAME_JOB_TITLE)
   private String jobTitle;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private Integer status;
 
   public static final String SERIALIZED_NAME_TELEPHONE = "telephone";
-  @SerializedName(SERIALIZED_NAME_TELEPHONE)
+  @Json(name = SERIALIZED_NAME_TELEPHONE)
   private String telephone;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

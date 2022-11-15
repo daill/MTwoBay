@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,31 +27,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataTotalsExtensionInterface {
   public static final String SERIALIZED_NAME_COUPON_LABEL = "coupon_label";
-  @SerializedName(SERIALIZED_NAME_COUPON_LABEL)
+  @Json(name = SERIALIZED_NAME_COUPON_LABEL)
   private String couponLabel;
 
   public static final String SERIALIZED_NAME_NEGOTIABLE_QUOTE_TOTALS = "negotiable_quote_totals";
-  @SerializedName(SERIALIZED_NAME_NEGOTIABLE_QUOTE_TOTALS)
+  @Json(name = SERIALIZED_NAME_NEGOTIABLE_QUOTE_TOTALS)
   private NegotiableQuoteDataNegotiableQuoteTotalsInterface negotiableQuoteTotals;
 
   public static final String SERIALIZED_NAME_BASE_CUSTOMER_BALANCE_AMOUNT = "base_customer_balance_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_CUSTOMER_BALANCE_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_CUSTOMER_BALANCE_AMOUNT)
   private BigDecimal baseCustomerBalanceAmount;
 
   public static final String SERIALIZED_NAME_CUSTOMER_BALANCE_AMOUNT = "customer_balance_amount";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_BALANCE_AMOUNT)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_BALANCE_AMOUNT)
   private BigDecimal customerBalanceAmount;
 
   public static final String SERIALIZED_NAME_REWARD_POINTS_BALANCE = "reward_points_balance";
-  @SerializedName(SERIALIZED_NAME_REWARD_POINTS_BALANCE)
+  @Json(name = SERIALIZED_NAME_REWARD_POINTS_BALANCE)
   private BigDecimal rewardPointsBalance;
 
   public static final String SERIALIZED_NAME_REWARD_CURRENCY_AMOUNT = "reward_currency_amount";
-  @SerializedName(SERIALIZED_NAME_REWARD_CURRENCY_AMOUNT)
+  @Json(name = SERIALIZED_NAME_REWARD_CURRENCY_AMOUNT)
   private BigDecimal rewardCurrencyAmount;
 
   public static final String SERIALIZED_NAME_BASE_REWARD_CURRENCY_AMOUNT = "base_reward_currency_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_REWARD_CURRENCY_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_REWARD_CURRENCY_AMOUNT)
   private BigDecimal baseRewardCurrencyAmount;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,39 +28,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataTaxRuleInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
+  @Json(name = SERIALIZED_NAME_CODE)
   private String code;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
-  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @Json(name = SERIALIZED_NAME_PRIORITY)
   private Integer priority;
 
   public static final String SERIALIZED_NAME_POSITION = "position";
-  @SerializedName(SERIALIZED_NAME_POSITION)
+  @Json(name = SERIALIZED_NAME_POSITION)
   private Integer position;
 
   public static final String SERIALIZED_NAME_CUSTOMER_TAX_CLASS_IDS = "customer_tax_class_ids";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_TAX_CLASS_IDS)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_TAX_CLASS_IDS)
   private List<Integer> customerTaxClassIds = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_PRODUCT_TAX_CLASS_IDS = "product_tax_class_ids";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_TAX_CLASS_IDS)
+  @Json(name = SERIALIZED_NAME_PRODUCT_TAX_CLASS_IDS)
   private List<Integer> productTaxClassIds = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_TAX_RATE_IDS = "tax_rate_ids";
-  @SerializedName(SERIALIZED_NAME_TAX_RATE_IDS)
+  @Json(name = SERIALIZED_NAME_TAX_RATE_IDS)
   private List<Integer> taxRateIds = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_CALCULATE_SUBTOTAL = "calculate_subtotal";
-  @SerializedName(SERIALIZED_NAME_CALCULATE_SUBTOTAL)
+  @Json(name = SERIALIZED_NAME_CALCULATE_SUBTOTAL)
   private Boolean calculateSubtotal;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

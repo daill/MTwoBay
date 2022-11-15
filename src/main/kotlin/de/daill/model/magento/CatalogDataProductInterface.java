@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -28,74 +30,74 @@ import java.util.Objects;
 @Document(collection = "syncedMagentoProducts")
 public class CatalogDataProductInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   @Id
   private Integer id;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_SET_ID = "attribute_set_id";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_SET_ID)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_SET_ID)
   private Integer attributeSetId;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private Integer status;
 
   public static final String SERIALIZED_NAME_VISIBILITY = "visibility";
-  @SerializedName(SERIALIZED_NAME_VISIBILITY)
+  @Json(name = SERIALIZED_NAME_VISIBILITY)
   private Integer visibility;
 
   public static final String SERIALIZED_NAME_TYPE_ID = "type_id";
-  @SerializedName(SERIALIZED_NAME_TYPE_ID)
+  @Json(name = SERIALIZED_NAME_TYPE_ID)
   private String typeId;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
-  @SerializedName(SERIALIZED_NAME_WEIGHT)
+  @Json(name = SERIALIZED_NAME_WEIGHT)
   private BigDecimal weight;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
 
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private CatalogDataProductExtensionInterface extensionAttributes;
 
   public static final String SERIALIZED_NAME_PRODUCT_LINKS = "product_links";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_LINKS)
+  @Json(name = SERIALIZED_NAME_PRODUCT_LINKS)
   private List<CatalogDataProductLinkInterface> productLinks = null;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
-  @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @Json(name = SERIALIZED_NAME_OPTIONS)
   private List<CatalogDataProductCustomOptionInterface> options = null;
 
   public static final String SERIALIZED_NAME_MEDIA_GALLERY_ENTRIES = "media_gallery_entries";
-  @SerializedName(SERIALIZED_NAME_MEDIA_GALLERY_ENTRIES)
+  @Json(name = SERIALIZED_NAME_MEDIA_GALLERY_ENTRIES)
   private List<CatalogDataProductAttributeMediaGalleryEntryInterface> mediaGalleryEntries = null;
 
   public static final String SERIALIZED_NAME_TIER_PRICES = "tier_prices";
-  @SerializedName(SERIALIZED_NAME_TIER_PRICES)
+  @Json(name = SERIALIZED_NAME_TIER_PRICES)
   private List<CatalogDataProductTierPriceInterface> tierPrices = null;
 
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

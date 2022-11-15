@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TwoFactorAuthDataU2fWebAuthnRequestInterface {
   public static final String SERIALIZED_NAME_CREDENTIAL_REQUEST_OPTIONS_JSON = "credential_request_options_json";
-  @SerializedName(SERIALIZED_NAME_CREDENTIAL_REQUEST_OPTIONS_JSON)
+  @Json(name = SERIALIZED_NAME_CREDENTIAL_REQUEST_OPTIONS_JSON)
   private String credentialRequestOptionsJson;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

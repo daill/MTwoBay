@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataCartItemInterface {
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
-  @SerializedName(SERIALIZED_NAME_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ITEM_ID)
   private Integer itemId;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRODUCT_TYPE = "product_type";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_TYPE)
+  @Json(name = SERIALIZED_NAME_PRODUCT_TYPE)
   private String productType;
 
   public static final String SERIALIZED_NAME_QUOTE_ID = "quote_id";
-  @SerializedName(SERIALIZED_NAME_QUOTE_ID)
+  @Json(name = SERIALIZED_NAME_QUOTE_ID)
   private String quoteId;
 
   public static final String SERIALIZED_NAME_PRODUCT_OPTION = "product_option";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_OPTION)
+  @Json(name = SERIALIZED_NAME_PRODUCT_OPTION)
   private QuoteDataProductOptionInterface productOption;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private QuoteDataCartItemExtensionInterface extensionAttributes;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,51 +27,51 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class RmaDataItemInterface {
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_RMA_ENTITY_ID = "rma_entity_id";
-  @SerializedName(SERIALIZED_NAME_RMA_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_RMA_ENTITY_ID)
   private Integer rmaEntityId;
 
   public static final String SERIALIZED_NAME_ORDER_ITEM_ID = "order_item_id";
-  @SerializedName(SERIALIZED_NAME_ORDER_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ORDER_ITEM_ID)
   private Integer orderItemId;
 
   public static final String SERIALIZED_NAME_QTY_REQUESTED = "qty_requested";
-  @SerializedName(SERIALIZED_NAME_QTY_REQUESTED)
+  @Json(name = SERIALIZED_NAME_QTY_REQUESTED)
   private Integer qtyRequested;
 
   public static final String SERIALIZED_NAME_QTY_AUTHORIZED = "qty_authorized";
-  @SerializedName(SERIALIZED_NAME_QTY_AUTHORIZED)
+  @Json(name = SERIALIZED_NAME_QTY_AUTHORIZED)
   private Integer qtyAuthorized;
 
   public static final String SERIALIZED_NAME_QTY_APPROVED = "qty_approved";
-  @SerializedName(SERIALIZED_NAME_QTY_APPROVED)
+  @Json(name = SERIALIZED_NAME_QTY_APPROVED)
   private Integer qtyApproved;
 
   public static final String SERIALIZED_NAME_QTY_RETURNED = "qty_returned";
-  @SerializedName(SERIALIZED_NAME_QTY_RETURNED)
+  @Json(name = SERIALIZED_NAME_QTY_RETURNED)
   private Integer qtyReturned;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
-  @SerializedName(SERIALIZED_NAME_REASON)
+  @Json(name = SERIALIZED_NAME_REASON)
   private String reason;
 
   public static final String SERIALIZED_NAME_CONDITION = "condition";
-  @SerializedName(SERIALIZED_NAME_CONDITION)
+  @Json(name = SERIALIZED_NAME_CONDITION)
   private String condition;
 
   public static final String SERIALIZED_NAME_RESOLUTION = "resolution";
-  @SerializedName(SERIALIZED_NAME_RESOLUTION)
+  @Json(name = SERIALIZED_NAME_RESOLUTION)
   private String resolution;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private String status;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

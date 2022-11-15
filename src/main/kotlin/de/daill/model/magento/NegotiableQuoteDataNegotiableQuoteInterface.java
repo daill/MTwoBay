@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,95 +27,95 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class NegotiableQuoteDataNegotiableQuoteInterface {
   public static final String SERIALIZED_NAME_QUOTE_ID = "quote_id";
-  @SerializedName(SERIALIZED_NAME_QUOTE_ID)
+  @Json(name = SERIALIZED_NAME_QUOTE_ID)
   private Integer quoteId;
 
   public static final String SERIALIZED_NAME_IS_REGULAR_QUOTE = "is_regular_quote";
-  @SerializedName(SERIALIZED_NAME_IS_REGULAR_QUOTE)
+  @Json(name = SERIALIZED_NAME_IS_REGULAR_QUOTE)
   private Boolean isRegularQuote;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  @Json(name = SERIALIZED_NAME_STATUS)
   private String status;
 
   public static final String SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE = "negotiated_price_type";
-  @SerializedName(SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_NEGOTIATED_PRICE_TYPE)
   private Integer negotiatedPriceType;
 
   public static final String SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE = "negotiated_price_value";
-  @SerializedName(SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE)
+  @Json(name = SERIALIZED_NAME_NEGOTIATED_PRICE_VALUE)
   private BigDecimal negotiatedPriceValue;
 
   public static final String SERIALIZED_NAME_SHIPPING_PRICE = "shipping_price";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_PRICE)
+  @Json(name = SERIALIZED_NAME_SHIPPING_PRICE)
   private BigDecimal shippingPrice;
 
   public static final String SERIALIZED_NAME_QUOTE_NAME = "quote_name";
-  @SerializedName(SERIALIZED_NAME_QUOTE_NAME)
+  @Json(name = SERIALIZED_NAME_QUOTE_NAME)
   private String quoteName;
 
   public static final String SERIALIZED_NAME_EXPIRATION_PERIOD = "expiration_period";
-  @SerializedName(SERIALIZED_NAME_EXPIRATION_PERIOD)
+  @Json(name = SERIALIZED_NAME_EXPIRATION_PERIOD)
   private String expirationPeriod;
 
   public static final String SERIALIZED_NAME_EMAIL_NOTIFICATION_STATUS = "email_notification_status";
-  @SerializedName(SERIALIZED_NAME_EMAIL_NOTIFICATION_STATUS)
+  @Json(name = SERIALIZED_NAME_EMAIL_NOTIFICATION_STATUS)
   private Integer emailNotificationStatus;
 
   public static final String SERIALIZED_NAME_HAS_UNCONFIRMED_CHANGES = "has_unconfirmed_changes";
-  @SerializedName(SERIALIZED_NAME_HAS_UNCONFIRMED_CHANGES)
+  @Json(name = SERIALIZED_NAME_HAS_UNCONFIRMED_CHANGES)
   private Boolean hasUnconfirmedChanges;
 
   public static final String SERIALIZED_NAME_IS_SHIPPING_TAX_CHANGED = "is_shipping_tax_changed";
-  @SerializedName(SERIALIZED_NAME_IS_SHIPPING_TAX_CHANGED)
+  @Json(name = SERIALIZED_NAME_IS_SHIPPING_TAX_CHANGED)
   private Boolean isShippingTaxChanged;
 
   public static final String SERIALIZED_NAME_IS_CUSTOMER_PRICE_CHANGED = "is_customer_price_changed";
-  @SerializedName(SERIALIZED_NAME_IS_CUSTOMER_PRICE_CHANGED)
+  @Json(name = SERIALIZED_NAME_IS_CUSTOMER_PRICE_CHANGED)
   private Boolean isCustomerPriceChanged;
 
   public static final String SERIALIZED_NAME_NOTIFICATIONS = "notifications";
-  @SerializedName(SERIALIZED_NAME_NOTIFICATIONS)
+  @Json(name = SERIALIZED_NAME_NOTIFICATIONS)
   private Integer notifications;
 
   public static final String SERIALIZED_NAME_APPLIED_RULE_IDS = "applied_rule_ids";
-  @SerializedName(SERIALIZED_NAME_APPLIED_RULE_IDS)
+  @Json(name = SERIALIZED_NAME_APPLIED_RULE_IDS)
   private String appliedRuleIds;
 
   public static final String SERIALIZED_NAME_IS_ADDRESS_DRAFT = "is_address_draft";
-  @SerializedName(SERIALIZED_NAME_IS_ADDRESS_DRAFT)
+  @Json(name = SERIALIZED_NAME_IS_ADDRESS_DRAFT)
   private Boolean isAddressDraft;
 
   public static final String SERIALIZED_NAME_DELETED_SKU = "deleted_sku";
-  @SerializedName(SERIALIZED_NAME_DELETED_SKU)
+  @Json(name = SERIALIZED_NAME_DELETED_SKU)
   private String deletedSku;
 
   public static final String SERIALIZED_NAME_CREATOR_ID = "creator_id";
-  @SerializedName(SERIALIZED_NAME_CREATOR_ID)
+  @Json(name = SERIALIZED_NAME_CREATOR_ID)
   private Integer creatorId;
 
   public static final String SERIALIZED_NAME_CREATOR_TYPE = "creator_type";
-  @SerializedName(SERIALIZED_NAME_CREATOR_TYPE)
+  @Json(name = SERIALIZED_NAME_CREATOR_TYPE)
   private Integer creatorType;
 
   public static final String SERIALIZED_NAME_ORIGINAL_TOTAL_PRICE = "original_total_price";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_TOTAL_PRICE)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_TOTAL_PRICE)
   private BigDecimal originalTotalPrice;
 
   public static final String SERIALIZED_NAME_BASE_ORIGINAL_TOTAL_PRICE = "base_original_total_price";
-  @SerializedName(SERIALIZED_NAME_BASE_ORIGINAL_TOTAL_PRICE)
+  @Json(name = SERIALIZED_NAME_BASE_ORIGINAL_TOTAL_PRICE)
   private BigDecimal baseOriginalTotalPrice;
 
   public static final String SERIALIZED_NAME_NEGOTIATED_TOTAL_PRICE = "negotiated_total_price";
-  @SerializedName(SERIALIZED_NAME_NEGOTIATED_TOTAL_PRICE)
+  @Json(name = SERIALIZED_NAME_NEGOTIATED_TOTAL_PRICE)
   private BigDecimal negotiatedTotalPrice;
 
   public static final String SERIALIZED_NAME_BASE_NEGOTIATED_TOTAL_PRICE = "base_negotiated_total_price";
-  @SerializedName(SERIALIZED_NAME_BASE_NEGOTIATED_TOTAL_PRICE)
+  @Json(name = SERIALIZED_NAME_BASE_NEGOTIATED_TOTAL_PRICE)
   private BigDecimal baseNegotiatedTotalPrice;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

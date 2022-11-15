@@ -1,0 +1,25 @@
+package de.daill.services.magento
+
+import com.squareup.moshi.FromJson
+import com.squareup.moshi.JsonReader
+import com.squareup.moshi.JsonWriter
+import com.squareup.moshi.ToJson
+import de.daill.model.magento.FrameworkAttributeInterface
+import org.slf4j.LoggerFactory
+import com.squareup.moshi.JsonAdapter
+
+class MagentoMoshiAttributeAdapter: JsonAdapter<FrameworkAttributeInterface>() {
+
+    val LOG = LoggerFactory.getLogger(this::class.java)
+
+
+    override fun fromJson(reader: JsonReader): FrameworkAttributeInterface? {
+        LOG.debug(reader.peekJson().toString())
+
+        return FrameworkAttributeInterface()
+    }
+
+
+    override fun toJson(writer: JsonWriter, value: FrameworkAttributeInterface?) {
+    }
+}

@@ -13,7 +13,9 @@
 
 package de.daill.model.magento;
 
-import com.google.gson.annotations.SerializedName;
+import com.squareup.moshi.Json;
+
+import com.squareup.moshi.Json;
 
 import java.util.Objects;
 
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class AdobeStockAssetApiDataAssetInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_MEDIA_GALLERY_ID = "media_gallery_id";
-  @SerializedName(SERIALIZED_NAME_MEDIA_GALLERY_ID)
+  @Json(name = SERIALIZED_NAME_MEDIA_GALLERY_ID)
   private Integer mediaGalleryId;
 
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
-  @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @Json(name = SERIALIZED_NAME_CATEGORY_ID)
   private Integer categoryId;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
-  @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @Json(name = SERIALIZED_NAME_CATEGORY)
   private AdobeStockAssetApiDataCategoryInterface category;
 
   public static final String SERIALIZED_NAME_CREATOR_ID = "creator_id";
-  @SerializedName(SERIALIZED_NAME_CREATOR_ID)
+  @Json(name = SERIALIZED_NAME_CREATOR_ID)
   private Integer creatorId;
 
   public static final String SERIALIZED_NAME_CREATOR = "creator";
-  @SerializedName(SERIALIZED_NAME_CREATOR)
+  @Json(name = SERIALIZED_NAME_CREATOR)
   private AdobeStockAssetApiDataCreatorInterface creator;
 
   public static final String SERIALIZED_NAME_IS_LICENSED = "is_licensed";
-  @SerializedName(SERIALIZED_NAME_IS_LICENSED)
+  @Json(name = SERIALIZED_NAME_IS_LICENSED)
   private Integer isLicensed;
 
   public static final String SERIALIZED_NAME_CREATION_DATE = "creation_date";
-  @SerializedName(SERIALIZED_NAME_CREATION_DATE)
+  @Json(name = SERIALIZED_NAME_CREATION_DATE)
   private String creationDate;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

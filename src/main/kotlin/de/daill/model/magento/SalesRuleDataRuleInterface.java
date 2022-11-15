@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,115 +29,115 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesRuleDataRuleInterface {
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
-  @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @Json(name = SERIALIZED_NAME_RULE_ID)
   private Integer ruleId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  @Json(name = SERIALIZED_NAME_NAME)
   private String name;
 
   public static final String SERIALIZED_NAME_STORE_LABELS = "store_labels";
-  @SerializedName(SERIALIZED_NAME_STORE_LABELS)
+  @Json(name = SERIALIZED_NAME_STORE_LABELS)
   private List<SalesRuleDataRuleLabelInterface> storeLabels = null;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
   public static final String SERIALIZED_NAME_WEBSITE_IDS = "website_ids";
-  @SerializedName(SERIALIZED_NAME_WEBSITE_IDS)
+  @Json(name = SERIALIZED_NAME_WEBSITE_IDS)
   private List<Integer> websiteIds = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_CUSTOMER_GROUP_IDS = "customer_group_ids";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_GROUP_IDS)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_GROUP_IDS)
   private List<Integer> customerGroupIds = new ArrayList<Integer>();
 
   public static final String SERIALIZED_NAME_FROM_DATE = "from_date";
-  @SerializedName(SERIALIZED_NAME_FROM_DATE)
+  @Json(name = SERIALIZED_NAME_FROM_DATE)
   private String fromDate;
 
   public static final String SERIALIZED_NAME_TO_DATE = "to_date";
-  @SerializedName(SERIALIZED_NAME_TO_DATE)
+  @Json(name = SERIALIZED_NAME_TO_DATE)
   private String toDate;
 
   public static final String SERIALIZED_NAME_USES_PER_CUSTOMER = "uses_per_customer";
-  @SerializedName(SERIALIZED_NAME_USES_PER_CUSTOMER)
+  @Json(name = SERIALIZED_NAME_USES_PER_CUSTOMER)
   private Integer usesPerCustomer;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_CONDITION = "condition";
-  @SerializedName(SERIALIZED_NAME_CONDITION)
+  @Json(name = SERIALIZED_NAME_CONDITION)
   private SalesRuleDataConditionInterface condition;
 
   public static final String SERIALIZED_NAME_ACTION_CONDITION = "action_condition";
-  @SerializedName(SERIALIZED_NAME_ACTION_CONDITION)
+  @Json(name = SERIALIZED_NAME_ACTION_CONDITION)
   private SalesRuleDataConditionInterface actionCondition;
 
   public static final String SERIALIZED_NAME_STOP_RULES_PROCESSING = "stop_rules_processing";
-  @SerializedName(SERIALIZED_NAME_STOP_RULES_PROCESSING)
+  @Json(name = SERIALIZED_NAME_STOP_RULES_PROCESSING)
   private Boolean stopRulesProcessing;
 
   public static final String SERIALIZED_NAME_IS_ADVANCED = "is_advanced";
-  @SerializedName(SERIALIZED_NAME_IS_ADVANCED)
+  @Json(name = SERIALIZED_NAME_IS_ADVANCED)
   private Boolean isAdvanced;
 
   public static final String SERIALIZED_NAME_PRODUCT_IDS = "product_ids";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_IDS)
+  @Json(name = SERIALIZED_NAME_PRODUCT_IDS)
   private List<Integer> productIds = null;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_SIMPLE_ACTION = "simple_action";
-  @SerializedName(SERIALIZED_NAME_SIMPLE_ACTION)
+  @Json(name = SERIALIZED_NAME_SIMPLE_ACTION)
   private String simpleAction;
 
   public static final String SERIALIZED_NAME_DISCOUNT_AMOUNT = "discount_amount";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_AMOUNT)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_AMOUNT)
   private BigDecimal discountAmount;
 
   public static final String SERIALIZED_NAME_DISCOUNT_QTY = "discount_qty";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_QTY)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_QTY)
   private BigDecimal discountQty;
 
   public static final String SERIALIZED_NAME_DISCOUNT_STEP = "discount_step";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_STEP)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_STEP)
   private Integer discountStep;
 
   public static final String SERIALIZED_NAME_APPLY_TO_SHIPPING = "apply_to_shipping";
-  @SerializedName(SERIALIZED_NAME_APPLY_TO_SHIPPING)
+  @Json(name = SERIALIZED_NAME_APPLY_TO_SHIPPING)
   private Boolean applyToShipping;
 
   public static final String SERIALIZED_NAME_TIMES_USED = "times_used";
-  @SerializedName(SERIALIZED_NAME_TIMES_USED)
+  @Json(name = SERIALIZED_NAME_TIMES_USED)
   private Integer timesUsed;
 
   public static final String SERIALIZED_NAME_IS_RSS = "is_rss";
-  @SerializedName(SERIALIZED_NAME_IS_RSS)
+  @Json(name = SERIALIZED_NAME_IS_RSS)
   private Boolean isRss;
 
   public static final String SERIALIZED_NAME_COUPON_TYPE = "coupon_type";
-  @SerializedName(SERIALIZED_NAME_COUPON_TYPE)
+  @Json(name = SERIALIZED_NAME_COUPON_TYPE)
   private String couponType;
 
   public static final String SERIALIZED_NAME_USE_AUTO_GENERATION = "use_auto_generation";
-  @SerializedName(SERIALIZED_NAME_USE_AUTO_GENERATION)
+  @Json(name = SERIALIZED_NAME_USE_AUTO_GENERATION)
   private Boolean useAutoGeneration;
 
   public static final String SERIALIZED_NAME_USES_PER_COUPON = "uses_per_coupon";
-  @SerializedName(SERIALIZED_NAME_USES_PER_COUPON)
+  @Json(name = SERIALIZED_NAME_USES_PER_COUPON)
   private Integer usesPerCoupon;
 
   public static final String SERIALIZED_NAME_SIMPLE_FREE_SHIPPING = "simple_free_shipping";
-  @SerializedName(SERIALIZED_NAME_SIMPLE_FREE_SHIPPING)
+  @Json(name = SERIALIZED_NAME_SIMPLE_FREE_SHIPPING)
   private String simpleFreeShipping;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private SalesRuleDataRuleExtensionInterface extensionAttributes;
 
 

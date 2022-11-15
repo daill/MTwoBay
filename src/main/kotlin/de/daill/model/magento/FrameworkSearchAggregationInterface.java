@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,11 +28,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class FrameworkSearchAggregationInterface {
   public static final String SERIALIZED_NAME_BUCKETS = "buckets";
-  @SerializedName(SERIALIZED_NAME_BUCKETS)
+  @Json(name = SERIALIZED_NAME_BUCKETS)
   private List<FrameworkSearchBucketInterface> buckets = new ArrayList<FrameworkSearchBucketInterface>();
 
   public static final String SERIALIZED_NAME_BUCKET_NAMES = "bucket_names";
-  @SerializedName(SERIALIZED_NAME_BUCKET_NAMES)
+  @Json(name = SERIALIZED_NAME_BUCKET_NAMES)
   private List<String> bucketNames = new ArrayList<String>();
 
 

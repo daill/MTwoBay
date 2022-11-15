@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,11 +27,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeGroupExtensionInterface {
   public static final String SERIALIZED_NAME_ATTRIBUTE_GROUP_CODE = "attribute_group_code";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_GROUP_CODE)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_GROUP_CODE)
   private String attributeGroupCode;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private String sortOrder;
 
 

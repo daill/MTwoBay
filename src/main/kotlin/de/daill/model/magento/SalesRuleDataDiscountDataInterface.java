@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,19 +27,19 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesRuleDataDiscountDataInterface {
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  @Json(name = SERIALIZED_NAME_AMOUNT)
   private BigDecimal amount;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT = "base_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT)
   private BigDecimal baseAmount;
 
   public static final String SERIALIZED_NAME_ORIGINAL_AMOUNT = "original_amount";
-  @SerializedName(SERIALIZED_NAME_ORIGINAL_AMOUNT)
+  @Json(name = SERIALIZED_NAME_ORIGINAL_AMOUNT)
   private BigDecimal originalAmount;
 
   public static final String SERIALIZED_NAME_BASE_ORIGINAL_AMOUNT = "base_original_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_ORIGINAL_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_ORIGINAL_AMOUNT)
   private BigDecimal baseOriginalAmount;
 
 

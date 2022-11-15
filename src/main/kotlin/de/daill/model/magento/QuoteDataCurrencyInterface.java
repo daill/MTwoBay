@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -25,39 +27,39 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataCurrencyInterface {
   public static final String SERIALIZED_NAME_GLOBAL_CURRENCY_CODE = "global_currency_code";
-  @SerializedName(SERIALIZED_NAME_GLOBAL_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_GLOBAL_CURRENCY_CODE)
   private String globalCurrencyCode;
 
   public static final String SERIALIZED_NAME_BASE_CURRENCY_CODE = "base_currency_code";
-  @SerializedName(SERIALIZED_NAME_BASE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_BASE_CURRENCY_CODE)
   private String baseCurrencyCode;
 
   public static final String SERIALIZED_NAME_STORE_CURRENCY_CODE = "store_currency_code";
-  @SerializedName(SERIALIZED_NAME_STORE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_STORE_CURRENCY_CODE)
   private String storeCurrencyCode;
 
   public static final String SERIALIZED_NAME_QUOTE_CURRENCY_CODE = "quote_currency_code";
-  @SerializedName(SERIALIZED_NAME_QUOTE_CURRENCY_CODE)
+  @Json(name = SERIALIZED_NAME_QUOTE_CURRENCY_CODE)
   private String quoteCurrencyCode;
 
   public static final String SERIALIZED_NAME_STORE_TO_BASE_RATE = "store_to_base_rate";
-  @SerializedName(SERIALIZED_NAME_STORE_TO_BASE_RATE)
+  @Json(name = SERIALIZED_NAME_STORE_TO_BASE_RATE)
   private BigDecimal storeToBaseRate;
 
   public static final String SERIALIZED_NAME_STORE_TO_QUOTE_RATE = "store_to_quote_rate";
-  @SerializedName(SERIALIZED_NAME_STORE_TO_QUOTE_RATE)
+  @Json(name = SERIALIZED_NAME_STORE_TO_QUOTE_RATE)
   private BigDecimal storeToQuoteRate;
 
   public static final String SERIALIZED_NAME_BASE_TO_GLOBAL_RATE = "base_to_global_rate";
-  @SerializedName(SERIALIZED_NAME_BASE_TO_GLOBAL_RATE)
+  @Json(name = SERIALIZED_NAME_BASE_TO_GLOBAL_RATE)
   private BigDecimal baseToGlobalRate;
 
   public static final String SERIALIZED_NAME_BASE_TO_QUOTE_RATE = "base_to_quote_rate";
-  @SerializedName(SERIALIZED_NAME_BASE_TO_QUOTE_RATE)
+  @Json(name = SERIALIZED_NAME_BASE_TO_QUOTE_RATE)
   private BigDecimal baseToQuoteRate;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

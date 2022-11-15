@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,23 +28,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CatalogInventoryStockItemCriteriaInterface {
   public static final String SERIALIZED_NAME_MAPPER_INTERFACE_NAME = "mapper_interface_name";
-  @SerializedName(SERIALIZED_NAME_MAPPER_INTERFACE_NAME)
+  @Json(name = SERIALIZED_NAME_MAPPER_INTERFACE_NAME)
   private String mapperInterfaceName;
 
   public static final String SERIALIZED_NAME_CRITERIA_LIST = "criteria_list";
-  @SerializedName(SERIALIZED_NAME_CRITERIA_LIST)
+  @Json(name = SERIALIZED_NAME_CRITERIA_LIST)
   private List<FrameworkCriteriaInterface> criteriaList = new ArrayList<FrameworkCriteriaInterface>();
 
   public static final String SERIALIZED_NAME_FILTERS = "filters";
-  @SerializedName(SERIALIZED_NAME_FILTERS)
+  @Json(name = SERIALIZED_NAME_FILTERS)
   private List<String> filters = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_ORDERS = "orders";
-  @SerializedName(SERIALIZED_NAME_ORDERS)
+  @Json(name = SERIALIZED_NAME_ORDERS)
   private List<String> orders = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
-  @SerializedName(SERIALIZED_NAME_LIMIT)
+  @Json(name = SERIALIZED_NAME_LIMIT)
   private List<String> limit = new ArrayList<String>();
 
 

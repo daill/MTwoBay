@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,23 +28,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CheckoutDataTotalsInformationInterface {
   public static final String SERIALIZED_NAME_ADDRESS = "address";
-  @SerializedName(SERIALIZED_NAME_ADDRESS)
+  @Json(name = SERIALIZED_NAME_ADDRESS)
   private QuoteDataAddressInterface address;
 
   public static final String SERIALIZED_NAME_SHIPPING_METHOD_CODE = "shipping_method_code";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_METHOD_CODE)
+  @Json(name = SERIALIZED_NAME_SHIPPING_METHOD_CODE)
   private String shippingMethodCode;
 
   public static final String SERIALIZED_NAME_SHIPPING_CARRIER_CODE = "shipping_carrier_code";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_CARRIER_CODE)
+  @Json(name = SERIALIZED_NAME_SHIPPING_CARRIER_CODE)
   private String shippingCarrierCode;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_CUSTOM_ATTRIBUTES = "custom_attributes";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_CUSTOM_ATTRIBUTES)
   private List<FrameworkAttributeInterface> customAttributes = null;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,31 +27,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CmsDataBlockInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
-  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
+  @Json(name = SERIALIZED_NAME_IDENTIFIER)
   private String identifier;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_CONTENT = "content";
-  @SerializedName(SERIALIZED_NAME_CONTENT)
+  @Json(name = SERIALIZED_NAME_CONTENT)
   private String content;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
-  @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @Json(name = SERIALIZED_NAME_CREATION_TIME)
   private String creationTime;
 
   public static final String SERIALIZED_NAME_UPDATE_TIME = "update_time";
-  @SerializedName(SERIALIZED_NAME_UPDATE_TIME)
+  @Json(name = SERIALIZED_NAME_UPDATE_TIME)
   private String updateTime;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
-  @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @Json(name = SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
 

@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,59 +27,59 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataOrderItemExtensionInterface {
   public static final String SERIALIZED_NAME_GIFT_MESSAGE = "gift_message";
-  @SerializedName(SERIALIZED_NAME_GIFT_MESSAGE)
+  @Json(name = SERIALIZED_NAME_GIFT_MESSAGE)
   private GiftMessageDataMessageInterface giftMessage;
 
   public static final String SERIALIZED_NAME_GW_ID = "gw_id";
-  @SerializedName(SERIALIZED_NAME_GW_ID)
+  @Json(name = SERIALIZED_NAME_GW_ID)
   private String gwId;
 
   public static final String SERIALIZED_NAME_GW_BASE_PRICE = "gw_base_price";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_BASE_PRICE)
   private String gwBasePrice;
 
   public static final String SERIALIZED_NAME_GW_PRICE = "gw_price";
-  @SerializedName(SERIALIZED_NAME_GW_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_PRICE)
   private String gwPrice;
 
   public static final String SERIALIZED_NAME_GW_BASE_TAX_AMOUNT = "gw_base_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_BASE_TAX_AMOUNT)
   private String gwBaseTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_TAX_AMOUNT = "gw_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_TAX_AMOUNT)
   private String gwTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_BASE_PRICE_INVOICED = "gw_base_price_invoiced";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_PRICE_INVOICED)
+  @Json(name = SERIALIZED_NAME_GW_BASE_PRICE_INVOICED)
   private String gwBasePriceInvoiced;
 
   public static final String SERIALIZED_NAME_GW_PRICE_INVOICED = "gw_price_invoiced";
-  @SerializedName(SERIALIZED_NAME_GW_PRICE_INVOICED)
+  @Json(name = SERIALIZED_NAME_GW_PRICE_INVOICED)
   private String gwPriceInvoiced;
 
   public static final String SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_INVOICED = "gw_base_tax_amount_invoiced";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_INVOICED)
+  @Json(name = SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_INVOICED)
   private String gwBaseTaxAmountInvoiced;
 
   public static final String SERIALIZED_NAME_GW_TAX_AMOUNT_INVOICED = "gw_tax_amount_invoiced";
-  @SerializedName(SERIALIZED_NAME_GW_TAX_AMOUNT_INVOICED)
+  @Json(name = SERIALIZED_NAME_GW_TAX_AMOUNT_INVOICED)
   private String gwTaxAmountInvoiced;
 
   public static final String SERIALIZED_NAME_GW_BASE_PRICE_REFUNDED = "gw_base_price_refunded";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_PRICE_REFUNDED)
+  @Json(name = SERIALIZED_NAME_GW_BASE_PRICE_REFUNDED)
   private String gwBasePriceRefunded;
 
   public static final String SERIALIZED_NAME_GW_PRICE_REFUNDED = "gw_price_refunded";
-  @SerializedName(SERIALIZED_NAME_GW_PRICE_REFUNDED)
+  @Json(name = SERIALIZED_NAME_GW_PRICE_REFUNDED)
   private String gwPriceRefunded;
 
   public static final String SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_REFUNDED = "gw_base_tax_amount_refunded";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_REFUNDED)
+  @Json(name = SERIALIZED_NAME_GW_BASE_TAX_AMOUNT_REFUNDED)
   private String gwBaseTaxAmountRefunded;
 
   public static final String SERIALIZED_NAME_GW_TAX_AMOUNT_REFUNDED = "gw_tax_amount_refunded";
-  @SerializedName(SERIALIZED_NAME_GW_TAX_AMOUNT_REFUNDED)
+  @Json(name = SERIALIZED_NAME_GW_TAX_AMOUNT_REFUNDED)
   private String gwTaxAmountRefunded;
 
 

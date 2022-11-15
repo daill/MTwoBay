@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,27 +28,27 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataProductOptionExtensionInterface {
   public static final String SERIALIZED_NAME_CUSTOM_OPTIONS = "custom_options";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_OPTIONS)
+  @Json(name = SERIALIZED_NAME_CUSTOM_OPTIONS)
   private List<CatalogDataCustomOptionInterface> customOptions = null;
 
   public static final String SERIALIZED_NAME_BUNDLE_OPTIONS = "bundle_options";
-  @SerializedName(SERIALIZED_NAME_BUNDLE_OPTIONS)
+  @Json(name = SERIALIZED_NAME_BUNDLE_OPTIONS)
   private List<BundleDataBundleOptionInterface> bundleOptions = null;
 
   public static final String SERIALIZED_NAME_DOWNLOADABLE_OPTION = "downloadable_option";
-  @SerializedName(SERIALIZED_NAME_DOWNLOADABLE_OPTION)
+  @Json(name = SERIALIZED_NAME_DOWNLOADABLE_OPTION)
   private DownloadableDataDownloadableOptionInterface downloadableOption;
 
   public static final String SERIALIZED_NAME_GIFTCARD_ITEM_OPTION = "giftcard_item_option";
-  @SerializedName(SERIALIZED_NAME_GIFTCARD_ITEM_OPTION)
+  @Json(name = SERIALIZED_NAME_GIFTCARD_ITEM_OPTION)
   private GiftCardDataGiftCardOptionInterface giftcardItemOption;
 
   public static final String SERIALIZED_NAME_CONFIGURABLE_ITEM_OPTIONS = "configurable_item_options";
-  @SerializedName(SERIALIZED_NAME_CONFIGURABLE_ITEM_OPTIONS)
+  @Json(name = SERIALIZED_NAME_CONFIGURABLE_ITEM_OPTIONS)
   private List<ConfigurableProductDataConfigurableItemOptionValueInterface> configurableItemOptions = null;
 
   public static final String SERIALIZED_NAME_GROUPED_OPTIONS = "grouped_options";
-  @SerializedName(SERIALIZED_NAME_GROUPED_OPTIONS)
+  @Json(name = SERIALIZED_NAME_GROUPED_OPTIONS)
   private List<GroupedProductDataGroupedOptionsInterface> groupedOptions = null;
 
 

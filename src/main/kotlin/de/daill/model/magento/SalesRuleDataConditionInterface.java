@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,31 +28,31 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesRuleDataConditionInterface {
   public static final String SERIALIZED_NAME_CONDITION_TYPE = "condition_type";
-  @SerializedName(SERIALIZED_NAME_CONDITION_TYPE)
+  @Json(name = SERIALIZED_NAME_CONDITION_TYPE)
   private String conditionType;
 
   public static final String SERIALIZED_NAME_CONDITIONS = "conditions";
-  @SerializedName(SERIALIZED_NAME_CONDITIONS)
+  @Json(name = SERIALIZED_NAME_CONDITIONS)
   private List<SalesRuleDataConditionInterface> conditions = null;
 
   public static final String SERIALIZED_NAME_AGGREGATOR_TYPE = "aggregator_type";
-  @SerializedName(SERIALIZED_NAME_AGGREGATOR_TYPE)
+  @Json(name = SERIALIZED_NAME_AGGREGATOR_TYPE)
   private String aggregatorType;
 
   public static final String SERIALIZED_NAME_OPERATOR = "operator";
-  @SerializedName(SERIALIZED_NAME_OPERATOR)
+  @Json(name = SERIALIZED_NAME_OPERATOR)
   private String operator;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_NAME = "attribute_name";
-  @SerializedName(SERIALIZED_NAME_ATTRIBUTE_NAME)
+  @Json(name = SERIALIZED_NAME_ATTRIBUTE_NAME)
   private String attributeName;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  @Json(name = SERIALIZED_NAME_VALUE)
   private String value;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

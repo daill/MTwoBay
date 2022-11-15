@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,23 +28,23 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class TaxDataOrderTaxDetailsItemInterface {
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
-  @SerializedName(SERIALIZED_NAME_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ITEM_ID)
   private Integer itemId;
 
   public static final String SERIALIZED_NAME_ASSOCIATED_ITEM_ID = "associated_item_id";
-  @SerializedName(SERIALIZED_NAME_ASSOCIATED_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ASSOCIATED_ITEM_ID)
   private Integer associatedItemId;
 
   public static final String SERIALIZED_NAME_APPLIED_TAXES = "applied_taxes";
-  @SerializedName(SERIALIZED_NAME_APPLIED_TAXES)
+  @Json(name = SERIALIZED_NAME_APPLIED_TAXES)
   private List<TaxDataOrderTaxDetailsAppliedTaxInterface> appliedTaxes = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

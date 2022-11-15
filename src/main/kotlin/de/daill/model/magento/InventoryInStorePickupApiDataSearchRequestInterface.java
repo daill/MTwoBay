@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,35 +28,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InventoryInStorePickupApiDataSearchRequestInterface {
   public static final String SERIALIZED_NAME_AREA = "area";
-  @SerializedName(SERIALIZED_NAME_AREA)
+  @Json(name = SERIALIZED_NAME_AREA)
   private InventoryInStorePickupApiDataSearchRequestAreaInterface area;
 
   public static final String SERIALIZED_NAME_FILTERS = "filters";
-  @SerializedName(SERIALIZED_NAME_FILTERS)
+  @Json(name = SERIALIZED_NAME_FILTERS)
   private InventoryInStorePickupApiDataSearchRequestFiltersInterface filters;
 
   public static final String SERIALIZED_NAME_PAGE_SIZE = "page_size";
-  @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
+  @Json(name = SERIALIZED_NAME_PAGE_SIZE)
   private Integer pageSize;
 
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
-  @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
+  @Json(name = SERIALIZED_NAME_CURRENT_PAGE)
   private Integer currentPage;
 
   public static final String SERIALIZED_NAME_SCOPE_TYPE = "scope_type";
-  @SerializedName(SERIALIZED_NAME_SCOPE_TYPE)
+  @Json(name = SERIALIZED_NAME_SCOPE_TYPE)
   private String scopeType;
 
   public static final String SERIALIZED_NAME_SCOPE_CODE = "scope_code";
-  @SerializedName(SERIALIZED_NAME_SCOPE_CODE)
+  @Json(name = SERIALIZED_NAME_SCOPE_CODE)
   private String scopeCode;
 
   public static final String SERIALIZED_NAME_SORT = "sort";
-  @SerializedName(SERIALIZED_NAME_SORT)
+  @Json(name = SERIALIZED_NAME_SORT)
   private List<FrameworkSortOrder> sort = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private InventoryInStorePickupApiDataSearchRequestExtensionInterface extensionAttributes;
 
 

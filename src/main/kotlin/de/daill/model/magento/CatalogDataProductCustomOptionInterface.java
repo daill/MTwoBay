@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,63 +29,63 @@ public class CatalogDataProductCustomOptionInterface {
   public static final String SERIALIZED_NAME_PRODUCT_SKU = "product_sku";
 
 
-  @SerializedName(SERIALIZED_NAME_PRODUCT_SKU)
+  @Json(name = SERIALIZED_NAME_PRODUCT_SKU)
   private String productSku;
 
   public static final String SERIALIZED_NAME_OPTION_ID = "option_id";
-  @SerializedName(SERIALIZED_NAME_OPTION_ID)
+  @Json(name = SERIALIZED_NAME_OPTION_ID)
   private Integer optionId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  @Json(name = SERIALIZED_NAME_TITLE)
   private String title;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  @Json(name = SERIALIZED_NAME_TYPE)
   private String type;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
-  @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @Json(name = SERIALIZED_NAME_SORT_ORDER)
   private Integer sortOrder;
 
   public static final String SERIALIZED_NAME_IS_REQUIRE = "is_require";
-  @SerializedName(SERIALIZED_NAME_IS_REQUIRE)
+  @Json(name = SERIALIZED_NAME_IS_REQUIRE)
   private Boolean isRequire;
 
   public static final String SERIALIZED_NAME_PRICE = "price";
-  @SerializedName(SERIALIZED_NAME_PRICE)
+  @Json(name = SERIALIZED_NAME_PRICE)
   private BigDecimal price;
 
   public static final String SERIALIZED_NAME_PRICE_TYPE = "price_type";
-  @SerializedName(SERIALIZED_NAME_PRICE_TYPE)
+  @Json(name = SERIALIZED_NAME_PRICE_TYPE)
   private String priceType;
 
   public static final String SERIALIZED_NAME_SKU = "sku";
-  @SerializedName(SERIALIZED_NAME_SKU)
+  @Json(name = SERIALIZED_NAME_SKU)
   private String sku;
 
   public static final String SERIALIZED_NAME_FILE_EXTENSION = "file_extension";
-  @SerializedName(SERIALIZED_NAME_FILE_EXTENSION)
+  @Json(name = SERIALIZED_NAME_FILE_EXTENSION)
   private String fileExtension;
 
   public static final String SERIALIZED_NAME_MAX_CHARACTERS = "max_characters";
-  @SerializedName(SERIALIZED_NAME_MAX_CHARACTERS)
+  @Json(name = SERIALIZED_NAME_MAX_CHARACTERS)
   private Integer maxCharacters;
 
   public static final String SERIALIZED_NAME_IMAGE_SIZE_X = "image_size_x";
-  @SerializedName(SERIALIZED_NAME_IMAGE_SIZE_X)
+  @Json(name = SERIALIZED_NAME_IMAGE_SIZE_X)
   private Integer imageSizeX;
 
   public static final String SERIALIZED_NAME_IMAGE_SIZE_Y = "image_size_y";
-  @SerializedName(SERIALIZED_NAME_IMAGE_SIZE_Y)
+  @Json(name = SERIALIZED_NAME_IMAGE_SIZE_Y)
   private Integer imageSizeY;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
-  @SerializedName(SERIALIZED_NAME_VALUES)
+  @Json(name = SERIALIZED_NAME_VALUES)
   private List<CatalogDataProductCustomOptionValuesInterface> values = null;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public CatalogDataProductCustomOptionInterface productSku(String productSku) {

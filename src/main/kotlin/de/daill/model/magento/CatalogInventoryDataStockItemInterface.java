@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -24,111 +26,111 @@ import java.util.Objects;
 
 public class CatalogInventoryDataStockItemInterface {
   public static final String SERIALIZED_NAME_ITEM_ID = "item_id";
-  @SerializedName(SERIALIZED_NAME_ITEM_ID)
+  @Json(name = SERIALIZED_NAME_ITEM_ID)
   private Integer itemId;
 
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
-  @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @Json(name = SERIALIZED_NAME_PRODUCT_ID)
   private Integer productId;
 
   public static final String SERIALIZED_NAME_STOCK_ID = "stock_id";
-  @SerializedName(SERIALIZED_NAME_STOCK_ID)
+  @Json(name = SERIALIZED_NAME_STOCK_ID)
   private Integer stockId;
 
   public static final String SERIALIZED_NAME_QTY = "qty";
-  @SerializedName(SERIALIZED_NAME_QTY)
+  @Json(name = SERIALIZED_NAME_QTY)
   private BigDecimal qty;
 
   public static final String SERIALIZED_NAME_IS_IN_STOCK = "is_in_stock";
-  @SerializedName(SERIALIZED_NAME_IS_IN_STOCK)
+  @Json(name = SERIALIZED_NAME_IS_IN_STOCK)
   private Boolean isInStock;
 
   public static final String SERIALIZED_NAME_IS_QTY_DECIMAL = "is_qty_decimal";
-  @SerializedName(SERIALIZED_NAME_IS_QTY_DECIMAL)
+  @Json(name = SERIALIZED_NAME_IS_QTY_DECIMAL)
   private Boolean isQtyDecimal;
 
   public static final String SERIALIZED_NAME_SHOW_DEFAULT_NOTIFICATION_MESSAGE = "show_default_notification_message";
-  @SerializedName(SERIALIZED_NAME_SHOW_DEFAULT_NOTIFICATION_MESSAGE)
+  @Json(name = SERIALIZED_NAME_SHOW_DEFAULT_NOTIFICATION_MESSAGE)
   private Boolean showDefaultNotificationMessage;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_MIN_QTY = "use_config_min_qty";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_MIN_QTY)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_MIN_QTY)
   private Boolean useConfigMinQty;
 
   public static final String SERIALIZED_NAME_MIN_QTY = "min_qty";
-  @SerializedName(SERIALIZED_NAME_MIN_QTY)
+  @Json(name = SERIALIZED_NAME_MIN_QTY)
   private BigDecimal minQty;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_MIN_SALE_QTY = "use_config_min_sale_qty";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_MIN_SALE_QTY)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_MIN_SALE_QTY)
   private Integer useConfigMinSaleQty;
 
   public static final String SERIALIZED_NAME_MIN_SALE_QTY = "min_sale_qty";
-  @SerializedName(SERIALIZED_NAME_MIN_SALE_QTY)
+  @Json(name = SERIALIZED_NAME_MIN_SALE_QTY)
   private BigDecimal minSaleQty;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_MAX_SALE_QTY = "use_config_max_sale_qty";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_MAX_SALE_QTY)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_MAX_SALE_QTY)
   private Boolean useConfigMaxSaleQty;
 
   public static final String SERIALIZED_NAME_MAX_SALE_QTY = "max_sale_qty";
-  @SerializedName(SERIALIZED_NAME_MAX_SALE_QTY)
+  @Json(name = SERIALIZED_NAME_MAX_SALE_QTY)
   private BigDecimal maxSaleQty;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_BACKORDERS = "use_config_backorders";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_BACKORDERS)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_BACKORDERS)
   private Boolean useConfigBackorders;
 
   public static final String SERIALIZED_NAME_BACKORDERS = "backorders";
-  @SerializedName(SERIALIZED_NAME_BACKORDERS)
+  @Json(name = SERIALIZED_NAME_BACKORDERS)
   private Integer backorders;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_NOTIFY_STOCK_QTY = "use_config_notify_stock_qty";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_NOTIFY_STOCK_QTY)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_NOTIFY_STOCK_QTY)
   private Boolean useConfigNotifyStockQty;
 
   public static final String SERIALIZED_NAME_NOTIFY_STOCK_QTY = "notify_stock_qty";
-  @SerializedName(SERIALIZED_NAME_NOTIFY_STOCK_QTY)
+  @Json(name = SERIALIZED_NAME_NOTIFY_STOCK_QTY)
   private BigDecimal notifyStockQty;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_QTY_INCREMENTS = "use_config_qty_increments";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_QTY_INCREMENTS)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_QTY_INCREMENTS)
   private Boolean useConfigQtyIncrements;
 
   public static final String SERIALIZED_NAME_QTY_INCREMENTS = "qty_increments";
-  @SerializedName(SERIALIZED_NAME_QTY_INCREMENTS)
+  @Json(name = SERIALIZED_NAME_QTY_INCREMENTS)
   private BigDecimal qtyIncrements;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_ENABLE_QTY_INC = "use_config_enable_qty_inc";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_ENABLE_QTY_INC)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_ENABLE_QTY_INC)
   private Boolean useConfigEnableQtyInc;
 
   public static final String SERIALIZED_NAME_ENABLE_QTY_INCREMENTS = "enable_qty_increments";
-  @SerializedName(SERIALIZED_NAME_ENABLE_QTY_INCREMENTS)
+  @Json(name = SERIALIZED_NAME_ENABLE_QTY_INCREMENTS)
   private Boolean enableQtyIncrements;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_MANAGE_STOCK = "use_config_manage_stock";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_MANAGE_STOCK)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_MANAGE_STOCK)
   private Boolean useConfigManageStock;
 
   public static final String SERIALIZED_NAME_MANAGE_STOCK = "manage_stock";
-  @SerializedName(SERIALIZED_NAME_MANAGE_STOCK)
+  @Json(name = SERIALIZED_NAME_MANAGE_STOCK)
   private Boolean manageStock;
 
   public static final String SERIALIZED_NAME_LOW_STOCK_DATE = "low_stock_date";
-  @SerializedName(SERIALIZED_NAME_LOW_STOCK_DATE)
+  @Json(name = SERIALIZED_NAME_LOW_STOCK_DATE)
   private String lowStockDate;
 
   public static final String SERIALIZED_NAME_IS_DECIMAL_DIVIDED = "is_decimal_divided";
-  @SerializedName(SERIALIZED_NAME_IS_DECIMAL_DIVIDED)
+  @Json(name = SERIALIZED_NAME_IS_DECIMAL_DIVIDED)
   private Boolean isDecimalDivided;
 
   public static final String SERIALIZED_NAME_STOCK_STATUS_CHANGED_AUTO = "stock_status_changed_auto";
-  @SerializedName(SERIALIZED_NAME_STOCK_STATUS_CHANGED_AUTO)
+  @Json(name = SERIALIZED_NAME_STOCK_STATUS_CHANGED_AUTO)
   private Integer stockStatusChangedAuto;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
 

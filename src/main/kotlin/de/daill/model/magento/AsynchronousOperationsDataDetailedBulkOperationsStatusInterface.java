@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,35 +28,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface {
   public static final String SERIALIZED_NAME_OPERATIONS_LIST = "operations_list";
-  @SerializedName(SERIALIZED_NAME_OPERATIONS_LIST)
+  @Json(name = SERIALIZED_NAME_OPERATIONS_LIST)
   private List<AsynchronousOperationsDataOperationInterface> operationsList = new ArrayList<AsynchronousOperationsDataOperationInterface>();
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private Object extensionAttributes;
 
   public static final String SERIALIZED_NAME_USER_TYPE = "user_type";
-  @SerializedName(SERIALIZED_NAME_USER_TYPE)
+  @Json(name = SERIALIZED_NAME_USER_TYPE)
   private Integer userType;
 
   public static final String SERIALIZED_NAME_BULK_ID = "bulk_id";
-  @SerializedName(SERIALIZED_NAME_BULK_ID)
+  @Json(name = SERIALIZED_NAME_BULK_ID)
   private String bulkId;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
-  @SerializedName(SERIALIZED_NAME_START_TIME)
+  @Json(name = SERIALIZED_NAME_START_TIME)
   private String startTime;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
-  @SerializedName(SERIALIZED_NAME_USER_ID)
+  @Json(name = SERIALIZED_NAME_USER_ID)
   private Integer userId;
 
   public static final String SERIALIZED_NAME_OPERATION_COUNT = "operation_count";
-  @SerializedName(SERIALIZED_NAME_OPERATION_COUNT)
+  @Json(name = SERIALIZED_NAME_OPERATION_COUNT)
   private Integer operationCount;
 
 

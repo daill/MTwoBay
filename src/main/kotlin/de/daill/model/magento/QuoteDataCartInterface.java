@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,83 +29,83 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataCartInterface {
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  @Json(name = SERIALIZED_NAME_ID)
   private Integer id;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
-  @SerializedName(SERIALIZED_NAME_CREATED_AT)
+  @Json(name = SERIALIZED_NAME_CREATED_AT)
   private String createdAt;
 
   public static final String SERIALIZED_NAME_UPDATED_AT = "updated_at";
-  @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+  @Json(name = SERIALIZED_NAME_UPDATED_AT)
   private String updatedAt;
 
   public static final String SERIALIZED_NAME_CONVERTED_AT = "converted_at";
-  @SerializedName(SERIALIZED_NAME_CONVERTED_AT)
+  @Json(name = SERIALIZED_NAME_CONVERTED_AT)
   private String convertedAt;
 
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @Json(name = SERIALIZED_NAME_IS_ACTIVE)
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_IS_VIRTUAL = "is_virtual";
-  @SerializedName(SERIALIZED_NAME_IS_VIRTUAL)
+  @Json(name = SERIALIZED_NAME_IS_VIRTUAL)
   private Boolean isVirtual;
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
+  @Json(name = SERIALIZED_NAME_ITEMS)
   private List<QuoteDataCartItemInterface> items = null;
 
   public static final String SERIALIZED_NAME_ITEMS_COUNT = "items_count";
-  @SerializedName(SERIALIZED_NAME_ITEMS_COUNT)
+  @Json(name = SERIALIZED_NAME_ITEMS_COUNT)
   private Integer itemsCount;
 
   public static final String SERIALIZED_NAME_ITEMS_QTY = "items_qty";
-  @SerializedName(SERIALIZED_NAME_ITEMS_QTY)
+  @Json(name = SERIALIZED_NAME_ITEMS_QTY)
   private BigDecimal itemsQty;
 
   public static final String SERIALIZED_NAME_CUSTOMER = "customer";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER)
+  @Json(name = SERIALIZED_NAME_CUSTOMER)
   private CustomerDataCustomerInterface customer;
 
   public static final String SERIALIZED_NAME_BILLING_ADDRESS = "billing_address";
-  @SerializedName(SERIALIZED_NAME_BILLING_ADDRESS)
+  @Json(name = SERIALIZED_NAME_BILLING_ADDRESS)
   private QuoteDataAddressInterface billingAddress;
 
   public static final String SERIALIZED_NAME_RESERVED_ORDER_ID = "reserved_order_id";
-  @SerializedName(SERIALIZED_NAME_RESERVED_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_RESERVED_ORDER_ID)
   private String reservedOrderId;
 
   public static final String SERIALIZED_NAME_ORIG_ORDER_ID = "orig_order_id";
-  @SerializedName(SERIALIZED_NAME_ORIG_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_ORIG_ORDER_ID)
   private Integer origOrderId;
 
   public static final String SERIALIZED_NAME_CURRENCY = "currency";
-  @SerializedName(SERIALIZED_NAME_CURRENCY)
+  @Json(name = SERIALIZED_NAME_CURRENCY)
   private QuoteDataCurrencyInterface currency;
 
   public static final String SERIALIZED_NAME_CUSTOMER_IS_GUEST = "customer_is_guest";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_IS_GUEST)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_IS_GUEST)
   private Boolean customerIsGuest;
 
   public static final String SERIALIZED_NAME_CUSTOMER_NOTE = "customer_note";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_NOTE)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_NOTE)
   private String customerNote;
 
   public static final String SERIALIZED_NAME_CUSTOMER_NOTE_NOTIFY = "customer_note_notify";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_NOTE_NOTIFY)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_NOTE_NOTIFY)
   private Boolean customerNoteNotify;
 
   public static final String SERIALIZED_NAME_CUSTOMER_TAX_CLASS_ID = "customer_tax_class_id";
-  @SerializedName(SERIALIZED_NAME_CUSTOMER_TAX_CLASS_ID)
+  @Json(name = SERIALIZED_NAME_CUSTOMER_TAX_CLASS_ID)
   private Integer customerTaxClassId;
 
   public static final String SERIALIZED_NAME_STORE_ID = "store_id";
-  @SerializedName(SERIALIZED_NAME_STORE_ID)
+  @Json(name = SERIALIZED_NAME_STORE_ID)
   private Integer storeId;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private QuoteDataCartExtensionInterface extensionAttributes;
 
 

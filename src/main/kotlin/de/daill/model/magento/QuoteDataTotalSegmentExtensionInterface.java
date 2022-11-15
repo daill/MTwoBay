@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -26,99 +28,99 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class QuoteDataTotalSegmentExtensionInterface {
   public static final String SERIALIZED_NAME_TAX_GRANDTOTAL_DETAILS = "tax_grandtotal_details";
-  @SerializedName(SERIALIZED_NAME_TAX_GRANDTOTAL_DETAILS)
+  @Json(name = SERIALIZED_NAME_TAX_GRANDTOTAL_DETAILS)
   private List<TaxDataGrandTotalDetailsInterface> taxGrandtotalDetails = null;
 
   public static final String SERIALIZED_NAME_GIFT_CARDS = "gift_cards";
-  @SerializedName(SERIALIZED_NAME_GIFT_CARDS)
+  @Json(name = SERIALIZED_NAME_GIFT_CARDS)
   private String giftCards;
 
   public static final String SERIALIZED_NAME_GW_ORDER_ID = "gw_order_id";
-  @SerializedName(SERIALIZED_NAME_GW_ORDER_ID)
+  @Json(name = SERIALIZED_NAME_GW_ORDER_ID)
   private String gwOrderId;
 
   public static final String SERIALIZED_NAME_GW_ITEM_IDS = "gw_item_ids";
-  @SerializedName(SERIALIZED_NAME_GW_ITEM_IDS)
+  @Json(name = SERIALIZED_NAME_GW_ITEM_IDS)
   private List<String> gwItemIds = null;
 
   public static final String SERIALIZED_NAME_GW_ALLOW_GIFT_RECEIPT = "gw_allow_gift_receipt";
-  @SerializedName(SERIALIZED_NAME_GW_ALLOW_GIFT_RECEIPT)
+  @Json(name = SERIALIZED_NAME_GW_ALLOW_GIFT_RECEIPT)
   private String gwAllowGiftReceipt;
 
   public static final String SERIALIZED_NAME_GW_ADD_CARD = "gw_add_card";
-  @SerializedName(SERIALIZED_NAME_GW_ADD_CARD)
+  @Json(name = SERIALIZED_NAME_GW_ADD_CARD)
   private String gwAddCard;
 
   public static final String SERIALIZED_NAME_GW_PRICE = "gw_price";
-  @SerializedName(SERIALIZED_NAME_GW_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_PRICE)
   private String gwPrice;
 
   public static final String SERIALIZED_NAME_GW_BASE_PRICE = "gw_base_price";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_BASE_PRICE)
   private String gwBasePrice;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_PRICE = "gw_items_price";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_PRICE)
   private String gwItemsPrice;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_BASE_PRICE = "gw_items_base_price";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_BASE_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_BASE_PRICE)
   private String gwItemsBasePrice;
 
   public static final String SERIALIZED_NAME_GW_CARD_PRICE = "gw_card_price";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_CARD_PRICE)
   private String gwCardPrice;
 
   public static final String SERIALIZED_NAME_GW_CARD_BASE_PRICE = "gw_card_base_price";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_BASE_PRICE)
+  @Json(name = SERIALIZED_NAME_GW_CARD_BASE_PRICE)
   private String gwCardBasePrice;
 
   public static final String SERIALIZED_NAME_GW_BASE_TAX_AMOUNT = "gw_base_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_BASE_TAX_AMOUNT)
   private String gwBaseTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_TAX_AMOUNT = "gw_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_TAX_AMOUNT)
   private String gwTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_BASE_TAX_AMOUNT = "gw_items_base_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_BASE_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_BASE_TAX_AMOUNT)
   private String gwItemsBaseTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_TAX_AMOUNT = "gw_items_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_TAX_AMOUNT)
   private String gwItemsTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_CARD_BASE_TAX_AMOUNT = "gw_card_base_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_BASE_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_CARD_BASE_TAX_AMOUNT)
   private String gwCardBaseTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_CARD_TAX_AMOUNT = "gw_card_tax_amount";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_TAX_AMOUNT)
+  @Json(name = SERIALIZED_NAME_GW_CARD_TAX_AMOUNT)
   private String gwCardTaxAmount;
 
   public static final String SERIALIZED_NAME_GW_PRICE_INCL_TAX = "gw_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_PRICE_INCL_TAX)
   private String gwPriceInclTax;
 
   public static final String SERIALIZED_NAME_GW_BASE_PRICE_INCL_TAX = "gw_base_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_BASE_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_BASE_PRICE_INCL_TAX)
   private String gwBasePriceInclTax;
 
   public static final String SERIALIZED_NAME_GW_CARD_PRICE_INCL_TAX = "gw_card_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_CARD_PRICE_INCL_TAX)
   private String gwCardPriceInclTax;
 
   public static final String SERIALIZED_NAME_GW_CARD_BASE_PRICE_INCL_TAX = "gw_card_base_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_CARD_BASE_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_CARD_BASE_PRICE_INCL_TAX)
   private String gwCardBasePriceInclTax;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_PRICE_INCL_TAX = "gw_items_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_PRICE_INCL_TAX)
   private String gwItemsPriceInclTax;
 
   public static final String SERIALIZED_NAME_GW_ITEMS_BASE_PRICE_INCL_TAX = "gw_items_base_price_incl_tax";
-  @SerializedName(SERIALIZED_NAME_GW_ITEMS_BASE_PRICE_INCL_TAX)
+  @Json(name = SERIALIZED_NAME_GW_ITEMS_BASE_PRICE_INCL_TAX)
   private String gwItemsBasePriceInclTax;
 
 

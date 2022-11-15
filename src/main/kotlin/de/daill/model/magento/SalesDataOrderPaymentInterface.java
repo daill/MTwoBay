@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.math.BigDecimal;
@@ -27,223 +29,223 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class SalesDataOrderPaymentInterface {
   public static final String SERIALIZED_NAME_ACCOUNT_STATUS = "account_status";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_STATUS)
+  @Json(name = SERIALIZED_NAME_ACCOUNT_STATUS)
   private String accountStatus;
 
   public static final String SERIALIZED_NAME_ADDITIONAL_DATA = "additional_data";
-  @SerializedName(SERIALIZED_NAME_ADDITIONAL_DATA)
+  @Json(name = SERIALIZED_NAME_ADDITIONAL_DATA)
   private String additionalData;
 
   public static final String SERIALIZED_NAME_ADDITIONAL_INFORMATION = "additional_information";
-  @SerializedName(SERIALIZED_NAME_ADDITIONAL_INFORMATION)
+  @Json(name = SERIALIZED_NAME_ADDITIONAL_INFORMATION)
   private List<String> additionalInformation = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_ADDRESS_STATUS = "address_status";
-  @SerializedName(SERIALIZED_NAME_ADDRESS_STATUS)
+  @Json(name = SERIALIZED_NAME_ADDRESS_STATUS)
   private String addressStatus;
 
   public static final String SERIALIZED_NAME_AMOUNT_AUTHORIZED = "amount_authorized";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_AUTHORIZED)
+  @Json(name = SERIALIZED_NAME_AMOUNT_AUTHORIZED)
   private BigDecimal amountAuthorized;
 
   public static final String SERIALIZED_NAME_AMOUNT_CANCELED = "amount_canceled";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_CANCELED)
+  @Json(name = SERIALIZED_NAME_AMOUNT_CANCELED)
   private BigDecimal amountCanceled;
 
   public static final String SERIALIZED_NAME_AMOUNT_ORDERED = "amount_ordered";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_ORDERED)
+  @Json(name = SERIALIZED_NAME_AMOUNT_ORDERED)
   private BigDecimal amountOrdered;
 
   public static final String SERIALIZED_NAME_AMOUNT_PAID = "amount_paid";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_PAID)
+  @Json(name = SERIALIZED_NAME_AMOUNT_PAID)
   private BigDecimal amountPaid;
 
   public static final String SERIALIZED_NAME_AMOUNT_REFUNDED = "amount_refunded";
-  @SerializedName(SERIALIZED_NAME_AMOUNT_REFUNDED)
+  @Json(name = SERIALIZED_NAME_AMOUNT_REFUNDED)
   private BigDecimal amountRefunded;
 
   public static final String SERIALIZED_NAME_ANET_TRANS_METHOD = "anet_trans_method";
-  @SerializedName(SERIALIZED_NAME_ANET_TRANS_METHOD)
+  @Json(name = SERIALIZED_NAME_ANET_TRANS_METHOD)
   private String anetTransMethod;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_AUTHORIZED = "base_amount_authorized";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_AUTHORIZED)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_AUTHORIZED)
   private BigDecimal baseAmountAuthorized;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_CANCELED = "base_amount_canceled";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_CANCELED)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_CANCELED)
   private BigDecimal baseAmountCanceled;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_ORDERED = "base_amount_ordered";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_ORDERED)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_ORDERED)
   private BigDecimal baseAmountOrdered;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_PAID = "base_amount_paid";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_PAID)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_PAID)
   private BigDecimal baseAmountPaid;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_PAID_ONLINE = "base_amount_paid_online";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_PAID_ONLINE)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_PAID_ONLINE)
   private BigDecimal baseAmountPaidOnline;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_REFUNDED = "base_amount_refunded";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_REFUNDED)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_REFUNDED)
   private BigDecimal baseAmountRefunded;
 
   public static final String SERIALIZED_NAME_BASE_AMOUNT_REFUNDED_ONLINE = "base_amount_refunded_online";
-  @SerializedName(SERIALIZED_NAME_BASE_AMOUNT_REFUNDED_ONLINE)
+  @Json(name = SERIALIZED_NAME_BASE_AMOUNT_REFUNDED_ONLINE)
   private BigDecimal baseAmountRefundedOnline;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_AMOUNT = "base_shipping_amount";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_AMOUNT)
   private BigDecimal baseShippingAmount;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_CAPTURED = "base_shipping_captured";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_CAPTURED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_CAPTURED)
   private BigDecimal baseShippingCaptured;
 
   public static final String SERIALIZED_NAME_BASE_SHIPPING_REFUNDED = "base_shipping_refunded";
-  @SerializedName(SERIALIZED_NAME_BASE_SHIPPING_REFUNDED)
+  @Json(name = SERIALIZED_NAME_BASE_SHIPPING_REFUNDED)
   private BigDecimal baseShippingRefunded;
 
   public static final String SERIALIZED_NAME_CC_APPROVAL = "cc_approval";
-  @SerializedName(SERIALIZED_NAME_CC_APPROVAL)
+  @Json(name = SERIALIZED_NAME_CC_APPROVAL)
   private String ccApproval;
 
   public static final String SERIALIZED_NAME_CC_AVS_STATUS = "cc_avs_status";
-  @SerializedName(SERIALIZED_NAME_CC_AVS_STATUS)
+  @Json(name = SERIALIZED_NAME_CC_AVS_STATUS)
   private String ccAvsStatus;
 
   public static final String SERIALIZED_NAME_CC_CID_STATUS = "cc_cid_status";
-  @SerializedName(SERIALIZED_NAME_CC_CID_STATUS)
+  @Json(name = SERIALIZED_NAME_CC_CID_STATUS)
   private String ccCidStatus;
 
   public static final String SERIALIZED_NAME_CC_DEBUG_REQUEST_BODY = "cc_debug_request_body";
-  @SerializedName(SERIALIZED_NAME_CC_DEBUG_REQUEST_BODY)
+  @Json(name = SERIALIZED_NAME_CC_DEBUG_REQUEST_BODY)
   private String ccDebugRequestBody;
 
   public static final String SERIALIZED_NAME_CC_DEBUG_RESPONSE_BODY = "cc_debug_response_body";
-  @SerializedName(SERIALIZED_NAME_CC_DEBUG_RESPONSE_BODY)
+  @Json(name = SERIALIZED_NAME_CC_DEBUG_RESPONSE_BODY)
   private String ccDebugResponseBody;
 
   public static final String SERIALIZED_NAME_CC_DEBUG_RESPONSE_SERIALIZED = "cc_debug_response_serialized";
-  @SerializedName(SERIALIZED_NAME_CC_DEBUG_RESPONSE_SERIALIZED)
+  @Json(name = SERIALIZED_NAME_CC_DEBUG_RESPONSE_SERIALIZED)
   private String ccDebugResponseSerialized;
 
   public static final String SERIALIZED_NAME_CC_EXP_MONTH = "cc_exp_month";
-  @SerializedName(SERIALIZED_NAME_CC_EXP_MONTH)
+  @Json(name = SERIALIZED_NAME_CC_EXP_MONTH)
   private String ccExpMonth;
 
   public static final String SERIALIZED_NAME_CC_EXP_YEAR = "cc_exp_year";
-  @SerializedName(SERIALIZED_NAME_CC_EXP_YEAR)
+  @Json(name = SERIALIZED_NAME_CC_EXP_YEAR)
   private String ccExpYear;
 
   public static final String SERIALIZED_NAME_CC_LAST4 = "cc_last4";
-  @SerializedName(SERIALIZED_NAME_CC_LAST4)
+  @Json(name = SERIALIZED_NAME_CC_LAST4)
   private String ccLast4;
 
   public static final String SERIALIZED_NAME_CC_NUMBER_ENC = "cc_number_enc";
-  @SerializedName(SERIALIZED_NAME_CC_NUMBER_ENC)
+  @Json(name = SERIALIZED_NAME_CC_NUMBER_ENC)
   private String ccNumberEnc;
 
   public static final String SERIALIZED_NAME_CC_OWNER = "cc_owner";
-  @SerializedName(SERIALIZED_NAME_CC_OWNER)
+  @Json(name = SERIALIZED_NAME_CC_OWNER)
   private String ccOwner;
 
   public static final String SERIALIZED_NAME_CC_SECURE_VERIFY = "cc_secure_verify";
-  @SerializedName(SERIALIZED_NAME_CC_SECURE_VERIFY)
+  @Json(name = SERIALIZED_NAME_CC_SECURE_VERIFY)
   private String ccSecureVerify;
 
   public static final String SERIALIZED_NAME_CC_SS_ISSUE = "cc_ss_issue";
-  @SerializedName(SERIALIZED_NAME_CC_SS_ISSUE)
+  @Json(name = SERIALIZED_NAME_CC_SS_ISSUE)
   private String ccSsIssue;
 
   public static final String SERIALIZED_NAME_CC_SS_START_MONTH = "cc_ss_start_month";
-  @SerializedName(SERIALIZED_NAME_CC_SS_START_MONTH)
+  @Json(name = SERIALIZED_NAME_CC_SS_START_MONTH)
   private String ccSsStartMonth;
 
   public static final String SERIALIZED_NAME_CC_SS_START_YEAR = "cc_ss_start_year";
-  @SerializedName(SERIALIZED_NAME_CC_SS_START_YEAR)
+  @Json(name = SERIALIZED_NAME_CC_SS_START_YEAR)
   private String ccSsStartYear;
 
   public static final String SERIALIZED_NAME_CC_STATUS = "cc_status";
-  @SerializedName(SERIALIZED_NAME_CC_STATUS)
+  @Json(name = SERIALIZED_NAME_CC_STATUS)
   private String ccStatus;
 
   public static final String SERIALIZED_NAME_CC_STATUS_DESCRIPTION = "cc_status_description";
-  @SerializedName(SERIALIZED_NAME_CC_STATUS_DESCRIPTION)
+  @Json(name = SERIALIZED_NAME_CC_STATUS_DESCRIPTION)
   private String ccStatusDescription;
 
   public static final String SERIALIZED_NAME_CC_TRANS_ID = "cc_trans_id";
-  @SerializedName(SERIALIZED_NAME_CC_TRANS_ID)
+  @Json(name = SERIALIZED_NAME_CC_TRANS_ID)
   private String ccTransId;
 
   public static final String SERIALIZED_NAME_CC_TYPE = "cc_type";
-  @SerializedName(SERIALIZED_NAME_CC_TYPE)
+  @Json(name = SERIALIZED_NAME_CC_TYPE)
   private String ccType;
 
   public static final String SERIALIZED_NAME_ECHECK_ACCOUNT_NAME = "echeck_account_name";
-  @SerializedName(SERIALIZED_NAME_ECHECK_ACCOUNT_NAME)
+  @Json(name = SERIALIZED_NAME_ECHECK_ACCOUNT_NAME)
   private String echeckAccountName;
 
   public static final String SERIALIZED_NAME_ECHECK_ACCOUNT_TYPE = "echeck_account_type";
-  @SerializedName(SERIALIZED_NAME_ECHECK_ACCOUNT_TYPE)
+  @Json(name = SERIALIZED_NAME_ECHECK_ACCOUNT_TYPE)
   private String echeckAccountType;
 
   public static final String SERIALIZED_NAME_ECHECK_BANK_NAME = "echeck_bank_name";
-  @SerializedName(SERIALIZED_NAME_ECHECK_BANK_NAME)
+  @Json(name = SERIALIZED_NAME_ECHECK_BANK_NAME)
   private String echeckBankName;
 
   public static final String SERIALIZED_NAME_ECHECK_ROUTING_NUMBER = "echeck_routing_number";
-  @SerializedName(SERIALIZED_NAME_ECHECK_ROUTING_NUMBER)
+  @Json(name = SERIALIZED_NAME_ECHECK_ROUTING_NUMBER)
   private String echeckRoutingNumber;
 
   public static final String SERIALIZED_NAME_ECHECK_TYPE = "echeck_type";
-  @SerializedName(SERIALIZED_NAME_ECHECK_TYPE)
+  @Json(name = SERIALIZED_NAME_ECHECK_TYPE)
   private String echeckType;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
-  @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @Json(name = SERIALIZED_NAME_ENTITY_ID)
   private Integer entityId;
 
   public static final String SERIALIZED_NAME_LAST_TRANS_ID = "last_trans_id";
-  @SerializedName(SERIALIZED_NAME_LAST_TRANS_ID)
+  @Json(name = SERIALIZED_NAME_LAST_TRANS_ID)
   private String lastTransId;
 
   public static final String SERIALIZED_NAME_METHOD = "method";
-  @SerializedName(SERIALIZED_NAME_METHOD)
+  @Json(name = SERIALIZED_NAME_METHOD)
   private String method;
 
   public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
-  @SerializedName(SERIALIZED_NAME_PARENT_ID)
+  @Json(name = SERIALIZED_NAME_PARENT_ID)
   private Integer parentId;
 
   public static final String SERIALIZED_NAME_PO_NUMBER = "po_number";
-  @SerializedName(SERIALIZED_NAME_PO_NUMBER)
+  @Json(name = SERIALIZED_NAME_PO_NUMBER)
   private String poNumber;
 
   public static final String SERIALIZED_NAME_PROTECTION_ELIGIBILITY = "protection_eligibility";
-  @SerializedName(SERIALIZED_NAME_PROTECTION_ELIGIBILITY)
+  @Json(name = SERIALIZED_NAME_PROTECTION_ELIGIBILITY)
   private String protectionEligibility;
 
   public static final String SERIALIZED_NAME_QUOTE_PAYMENT_ID = "quote_payment_id";
-  @SerializedName(SERIALIZED_NAME_QUOTE_PAYMENT_ID)
+  @Json(name = SERIALIZED_NAME_QUOTE_PAYMENT_ID)
   private Integer quotePaymentId;
 
   public static final String SERIALIZED_NAME_SHIPPING_AMOUNT = "shipping_amount";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_AMOUNT)
+  @Json(name = SERIALIZED_NAME_SHIPPING_AMOUNT)
   private BigDecimal shippingAmount;
 
   public static final String SERIALIZED_NAME_SHIPPING_CAPTURED = "shipping_captured";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_CAPTURED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_CAPTURED)
   private BigDecimal shippingCaptured;
 
   public static final String SERIALIZED_NAME_SHIPPING_REFUNDED = "shipping_refunded";
-  @SerializedName(SERIALIZED_NAME_SHIPPING_REFUNDED)
+  @Json(name = SERIALIZED_NAME_SHIPPING_REFUNDED)
   private BigDecimal shippingRefunded;
 
   public static final String SERIALIZED_NAME_EXTENSION_ATTRIBUTES = "extension_attributes";
-  @SerializedName(SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
+  @Json(name = SERIALIZED_NAME_EXTENSION_ATTRIBUTES)
   private SalesDataOrderPaymentExtensionInterface extensionAttributes;
 
 

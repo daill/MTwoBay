@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -25,35 +27,35 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class CompanyDataCompanyExtensionInterface {
   public static final String SERIALIZED_NAME_APPLICABLE_PAYMENT_METHOD = "applicable_payment_method";
-  @SerializedName(SERIALIZED_NAME_APPLICABLE_PAYMENT_METHOD)
+  @Json(name = SERIALIZED_NAME_APPLICABLE_PAYMENT_METHOD)
   private Integer applicablePaymentMethod;
 
   public static final String SERIALIZED_NAME_AVAILABLE_PAYMENT_METHODS = "available_payment_methods";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_PAYMENT_METHODS)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_PAYMENT_METHODS)
   private String availablePaymentMethods;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_SETTINGS = "use_config_settings";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_SETTINGS)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_SETTINGS)
   private Integer useConfigSettings;
 
   public static final String SERIALIZED_NAME_QUOTE_CONFIG = "quote_config";
-  @SerializedName(SERIALIZED_NAME_QUOTE_CONFIG)
+  @Json(name = SERIALIZED_NAME_QUOTE_CONFIG)
   private NegotiableQuoteDataCompanyQuoteConfigInterface quoteConfig;
 
   public static final String SERIALIZED_NAME_IS_PURCHASE_ORDER_ENABLED = "is_purchase_order_enabled";
-  @SerializedName(SERIALIZED_NAME_IS_PURCHASE_ORDER_ENABLED)
+  @Json(name = SERIALIZED_NAME_IS_PURCHASE_ORDER_ENABLED)
   private Boolean isPurchaseOrderEnabled;
 
   public static final String SERIALIZED_NAME_APPLICABLE_SHIPPING_METHOD = "applicable_shipping_method";
-  @SerializedName(SERIALIZED_NAME_APPLICABLE_SHIPPING_METHOD)
+  @Json(name = SERIALIZED_NAME_APPLICABLE_SHIPPING_METHOD)
   private Integer applicableShippingMethod;
 
   public static final String SERIALIZED_NAME_AVAILABLE_SHIPPING_METHODS = "available_shipping_methods";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_SHIPPING_METHODS)
+  @Json(name = SERIALIZED_NAME_AVAILABLE_SHIPPING_METHODS)
   private String availableShippingMethods;
 
   public static final String SERIALIZED_NAME_USE_CONFIG_SETTINGS_SHIPPING = "use_config_settings_shipping";
-  @SerializedName(SERIALIZED_NAME_USE_CONFIG_SETTINGS_SHIPPING)
+  @Json(name = SERIALIZED_NAME_USE_CONFIG_SETTINGS_SHIPPING)
   private Integer useConfigSettingsShipping;
 
 

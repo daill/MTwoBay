@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,11 +26,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class InlineObject53 {
   public static final String SERIALIZED_NAME_TFA_TOKEN = "tfaToken";
-  @SerializedName(SERIALIZED_NAME_TFA_TOKEN)
+  @Json(name = SERIALIZED_NAME_TFA_TOKEN)
   private String tfaToken;
 
   public static final String SERIALIZED_NAME_DEVICE_DATA = "deviceData";
-  @SerializedName(SERIALIZED_NAME_DEVICE_DATA)
+  @Json(name = SERIALIZED_NAME_DEVICE_DATA)
   private TwoFactorAuthDataAuthyDeviceInterface deviceData;
 
 

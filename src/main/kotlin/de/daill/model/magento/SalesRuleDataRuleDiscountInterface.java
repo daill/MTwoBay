@@ -13,6 +13,8 @@
 
 package de.daill.model.magento;
 
+import com.squareup.moshi.Json;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Objects;
@@ -24,15 +26,15 @@ import java.util.Objects;
 
 public class SalesRuleDataRuleDiscountInterface {
   public static final String SERIALIZED_NAME_DISCOUNT_DATA = "discount_data";
-  @SerializedName(SERIALIZED_NAME_DISCOUNT_DATA)
+  @Json(name = SERIALIZED_NAME_DISCOUNT_DATA)
   private SalesRuleDataDiscountDataInterface discountData;
 
   public static final String SERIALIZED_NAME_RULE_LABEL = "rule_label";
-  @SerializedName(SERIALIZED_NAME_RULE_LABEL)
+  @Json(name = SERIALIZED_NAME_RULE_LABEL)
   private String ruleLabel;
 
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
-  @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @Json(name = SERIALIZED_NAME_RULE_ID)
   private Integer ruleId;
 
 
