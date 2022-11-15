@@ -23,12 +23,11 @@ open class EbayApiClient() {
     var username: String? = null
     var password: String? = null
     val baseUrl: String? = null
-    var accessToken: String? = null
     var client = OkHttpClient()
 
+    var environment: EbayEnvironments = EbayEnvironments.SANDBOX
     @Autowired
     lateinit var properties: EbayProperties
-    var environment: EbayEnvironments = EbayEnvironments.SANDBOX
 
     val ContentType = "Content-Type"
     val Accept = "Accept"
@@ -116,11 +115,11 @@ open class EbayApiClient() {
     }
 
     fun updateAuthParams(requestConfig: RequestConfig) {
-        if (requestConfig.headers[Authorization].isNullOrEmpty()) {
-            accessToken?.let { accessToken ->
-                requestConfig.headers[Authorization] = "Bearer $accessToken "
-            }
+        // need to check if the token is valid, otherwise use the refresh token to get a new one
+        if (environment == EbayEnvironments.PRODUCTION) {
+
         }
+        requestConfig.headers[Authorization] = "Bearer ${properties.production.} "
     }
 
     final inline fun <reified T> request(requestConfig: RequestConfig, body : Any? = null): ApiInfrastructureResponse<T?> {

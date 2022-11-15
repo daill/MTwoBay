@@ -20,13 +20,19 @@ class MagentoMoshiAttributeAdapter: JsonAdapter<FrameworkAttributeInterface>() {
             resultAttribute.attributeCode = reader.nextString()
         }
         if (reader.nextName() == "value") {
-            if (reader.peek() ==)
+            if (reader.peek() == JsonReader.Token.BEGIN_ARRAY) {
+                reader.beginArray()
+                while(reader.hasNext() && reader.peek() == JsonReader.Token.STRING) {
+                    resultAttribute.value.add(reader.nextString())
+                }
+                reader.endArray()
+            } else if (reader.peek() == JsonReader.Token.STRING) {
+                resultAttribute.value.add(reader.nextString())
+            }
         }
-            LOG.debug()
         reader.endObject()
 
-
-        return FrameworkAttributeInterface()
+        return resultAttribute
     }
 
 

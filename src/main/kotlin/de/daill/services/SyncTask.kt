@@ -53,6 +53,7 @@ class SyncTask {
         products?.items?.forEach {
             if (LocalDateTime.parse(it.createdAt).isAfter(lastSync.lastSyncDate)) {
                 // new product so not yet seen
+                
 
             } else if  (LocalDateTime.parse(it.updatedAt).isAfter(lastSync.lastSyncDate)) {
                 // updated item, get the one from the local database to build the delta

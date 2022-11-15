@@ -1,10 +1,10 @@
-package de.daill.services.ebay
+package de.daill
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
 import java.util.UUID
 
-class UUIDAdapter {
+object UUIDAdapter {
     @ToJson
     fun toJson(uuid: UUID) = uuid.toString()
 

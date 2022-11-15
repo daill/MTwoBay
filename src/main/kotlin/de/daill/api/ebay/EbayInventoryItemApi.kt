@@ -34,7 +34,7 @@ class EbayInventoryItemApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun bulkCreateOrReplaceInventoryItem(body: BulkInventoryItem) : BulkInventoryItemResponse {
-        val localVariableBody: kotlin.Any? = body
+        val localVariableBody: Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -75,7 +75,7 @@ class EbayInventoryItemApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun bulkGetInventoryItem(body: BulkGetInventoryItem) : BulkGetInventoryItemResponse {
-        val localVariableBody: kotlin.Any? = body
+        val localVariableBody: Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -116,7 +116,7 @@ class EbayInventoryItemApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun bulkUpdatePriceQuantity(body: BulkPriceQuantity) : BulkPriceQuantityResponse {
-        val localVariableBody: kotlin.Any? = body
+        val localVariableBody: Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -158,8 +158,8 @@ class EbayInventoryItemApi() {
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun createOrReplaceInventoryItem(contentLanguage: kotlin.String, sku: kotlin.String, body: InventoryItem1) : BaseResponse {
-        val localVariableBody: kotlin.Any? = body
+    fun createOrReplaceInventoryItem(contentLanguage: String, sku: String, body: InventoryItem1) : BaseResponse {
+        val localVariableBody: Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         contentLanguage?.apply { localVariableHeaders["Content-Language"] = this.toString() }
@@ -199,8 +199,8 @@ class EbayInventoryItemApi() {
     * @throws ServerException If the API returns a server error response
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun deleteInventoryItem(sku: kotlin.String) : Unit {
-        val localVariableBody: kotlin.Any? = null
+    fun deleteInventoryItem(sku: String) : Unit {
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -241,8 +241,8 @@ class EbayInventoryItemApi() {
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getInventoryItem(sku: kotlin.String) : InventoryItemWithSkuLocaleGroupid {
-        val localVariableBody: kotlin.Any? = null
+    fun getInventoryItem(sku: String) : InventoryItemWithSkuLocaleGroupid {
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -283,9 +283,9 @@ class EbayInventoryItemApi() {
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getInventoryItems(limit: kotlin.String?, offset: kotlin.String?) : InventoryItems {
-        val localVariableBody: kotlin.Any? = null
-        val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+    fun getInventoryItems(limit: String?, offset: String?) : InventoryItems {
+        val localVariableBody: Any? = null
+        val localVariableQuery: MultiValueMap = mutableMapOf<String, List<String>>()
             .apply {
                 if (limit != null) {
                     put("limit", listOf(limit.toString()))
