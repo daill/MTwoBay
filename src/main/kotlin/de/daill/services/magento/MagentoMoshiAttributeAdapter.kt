@@ -14,7 +14,17 @@ class MagentoMoshiAttributeAdapter: JsonAdapter<FrameworkAttributeInterface>() {
 
 
     override fun fromJson(reader: JsonReader): FrameworkAttributeInterface? {
-        LOG.debug(reader.peekJson().toString())
+        var resultAttribute = FrameworkAttributeInterface()
+        reader.beginObject()
+        if (reader.nextName() == "attribute_code") {
+            resultAttribute.attributeCode = reader.nextString()
+        }
+        if (reader.nextName() == "value") {
+            if (reader.peek() ==)
+        }
+            LOG.debug()
+        reader.endObject()
+
 
         return FrameworkAttributeInterface()
     }

@@ -3,6 +3,11 @@ package de.daill.services.ebay
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import de.daill.ByteArrayAdapter
+import de.daill.LocalDateAdapter
+import de.daill.LocalDateTimeAdapter
+import de.daill.BigDecimalAdapter
+import de.daill.OffsetDateTimeAdapter
 import java.util.Date
 
 object Serializer {
@@ -14,7 +19,7 @@ object Serializer {
         .add(LocalDateAdapter())
         .add(UUIDAdapter())
         .add(ByteArrayAdapter())
-        .add(BigDecimalAdapter())
+        .add(BigDecimalAdapter)
         .add(KotlinJsonAdapterFactory())
 
     @JvmStatic

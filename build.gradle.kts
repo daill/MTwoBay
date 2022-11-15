@@ -62,8 +62,6 @@ dependencies {
     implementation("com.squareup.moshi:moshi:1.14.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
     implementation("com.squareup.moshi:moshi-adapters:1.14.0")
-    implementation("com.google.code.gson:gson:2.9.0")
-    implementation("io.gsonfire:gson-fire:1.8.5")
     implementation("com.ebay.auth:ebay-oauth-java-client:1.1.7")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.7.5")
 

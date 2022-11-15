@@ -1,7 +1,8 @@
-package de.daill.services.ebay
+package de.daill
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
+
 
 class ByteArrayAdapter {
     @ToJson
