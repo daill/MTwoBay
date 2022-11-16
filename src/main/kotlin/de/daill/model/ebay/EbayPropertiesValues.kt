@@ -9,7 +9,7 @@ class EbayPropertiesValues() {
     lateinit var devId: String
     lateinit var redirectUri: String
     var accessToken: String = ""
-    var accessTokenValidUntil: String = ""
+    var accessTokenExpirationDate: String = ""
     var refreshToken: String = ""
-    var refreshTokenValidUntil: String = ""
+    var refreshTokenExpirationDate: String = ""
 }

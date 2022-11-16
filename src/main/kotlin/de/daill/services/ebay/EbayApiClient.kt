@@ -1,5 +1,8 @@
 package de.daill.services.ebay
 
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
 import de.daill.model.ebay.EbayEnvironments
 import de.daill.model.ebay.EbayProperties
 import okhttp3.*
@@ -7,6 +10,7 @@ import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.Response
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -119,7 +123,7 @@ open class EbayApiClient() {
         if (environment == EbayEnvironments.PRODUCTION) {
 
         }
-        requestConfig.headers[Authorization] = "Bearer ${properties.production.} "
+        requestConfig.headers[Authorization] = "Bearer ${properties.production} "
     }
 
     final inline fun <reified T> request(requestConfig: RequestConfig, body : Any? = null): ApiInfrastructureResponse<T?> {
@@ -257,7 +261,19 @@ open class EbayApiClient() {
             .build()
 
         val response = client.newCall(request).execute()
-        LOG.debug(response.body?.string())
+        if (response.code == 200){
+            var bodyString = response.body?.string()
+            LOG.debug(response.body?.string())
+            var moshi = Moshi.Builder().build()
+            var adapter: JsonAdapter<Map<String, String>> = moshi.adapter(Types.newParameterizedType(Map::class.java, String::class.java, String::class.java))
+            var parsed: Map<String, String>? = adapter.fromJson(bodyString)
+            environmentalCreds.accessToken = parsed?.get("access_token") ?: ""
+            var accessTokenExpirationDate
+            environmentalCreds.accessToken = parsed?.get("expires_in") ?: ""
+
+            environmentalCreds.refreshToken = parsed?.get("refresh_token") ?: ""
+            environmentalCreds.accessToken = parsed?.get("access_token") ?: ""
+        }
         response.close()
     }
 
