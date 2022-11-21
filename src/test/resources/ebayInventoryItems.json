@@ -1,0 +1,177 @@
+{
+  "total": 15,
+  "size": 5,
+  "href": "/sell/inventory/v1/inventory_item?offset=0&limit=5",
+  "next": "/sell/inventory/v1/inventory_item?offset=5&limit=5",
+  "limit": 5,
+  "inventoryItems": [
+    {
+      "sku": "K003",
+      "locale": "de_DE",
+      "product": {
+        "title": "Kolbenringe 65,00mm 172 cm³  Gilera Runner Piaggio Hexagon",
+        "aspects": {
+          "Herstellernummer": [
+            "K0025"
+          ],
+          "Hersteller": [
+            "NO"
+          ],
+          "Kraftradtyp": [
+            "Roller"
+          ]
+        },
+        "ean": [
+          "Nicht zutreffend"
+        ],
+        "imageUrls": [
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/AewAAOSwbMBiPhX~/$_57.JPG?set_id=8800005007"
+        ]
+      },
+      "condition": "NEW",
+      "packageWeightAndSize": {
+        "weight": {
+          "value": 0.0,
+          "unit": "KILOGRAM"
+        }
+      },
+      "availability": {
+        "shipToLocationAvailability": {
+          "quantity": 3
+        }
+      }
+    },
+    {
+      "sku": "K001",
+      "locale": "de_DE",
+      "product": {
+        "title": "Kolbenringe Satz Sfera TPH ZIP NRG Free 40.00mm 50cm³ G15 Piaggio AC",
+        "aspects": {
+          "Herstellernummer": [
+            "BB"
+          ],
+          "Hersteller": [
+            "NO"
+          ]
+        },
+        "imageUrls": [
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/VeMAAOSwFb9iO1-m/$_57.JPG?set_id=8800005007"
+        ]
+      },
+      "condition": "NEW",
+      "packageWeightAndSize": {
+        "weight": {
+          "value": 0.0,
+          "unit": "KILOGRAM"
+        }
+      },
+      "availability": {
+        "shipToLocationAvailability": {
+          "quantity": 7
+        }
+      }
+    },
+    {
+      "sku": "D007",
+      "locale": "de_DE",
+      "product": {
+        "title": "Zylinderkopf und Zylinderdichtung Gilera  Piaggio LC",
+        "aspects": {
+          "Herstellernummer": [
+            "D001"
+          ],
+          "Hersteller": [
+            "NO"
+          ]
+        },
+        "imageUrls": [
+          "https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/lv8AAOSwEEpiPgr7/$_57.JPG?set_id=8800005007"
+        ]
+      },
+      "condition": "NEW",
+      "packageWeightAndSize": {
+        "weight": {
+          "value": 0.0,
+          "unit": "KILOGRAM"
+        }
+      },
+      "availability": {
+        "shipToLocationAvailability": {
+          "quantity": 3
+        }
+      }
+    },
+    {
+      "sku": "V002",
+      "locale": "de_DE",
+      "product": {
+        "title": "Mikuni Vergaser VM16 1E40QMB E-Choke Minarelli CPI Keeway Generic Explorer ATU",
+        "aspects": {
+          "Herstellernummer": [
+            "AT100"
+          ],
+          "Kraftradtyp": [
+            "Roller"
+          ],
+          "Hersteller": [
+            "Carbman"
+          ],
+          "Besonderheiten": [
+            "E-Choke"
+          ]
+        },
+        "imageUrls": [
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/jTUAAOSwLjdh3dQe/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/p6AAAOSwgA5h3dQi/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/QIQAAOSwYbJh3dQk/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/dRkAAOSwfUBh3dQl/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/GhsAAOSwLqth3dQo/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/QHgAAOSwYbJh3dQc/$_57.JPG?set_id=8800005007",
+          "https://i.ebayimg.com/00/s/MTM5MFgxMTM2/z/Ez8AAOSwXzBh3dfu/$_57.JPG?set_id=8800005007"
+        ]
+      },
+      "condition": "NEW",
+      "packageWeightAndSize": {
+        "weight": {
+          "value": 0.0,
+          "unit": "KILOGRAM"
+        }
+      },
+      "availability": {
+        "shipToLocationAvailability": {
+          "quantity": 6
+        }
+      }
+    },
+    {
+      "sku": "D00004",
+      "locale": "de_DE",
+      "product": {
+        "title": "China Roller 4 Takter Ölfilter mit Sprungfeder 139QMB/QMA (GY6 50) 4T China Rex ",
+        "aspects": {
+          "Herstellernummer": [
+            "K001"
+          ],
+          "Hersteller": [
+            "NO"
+          ]
+        },
+        "imageUrls": [
+          "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/lZsAAOSwQ4xi0Xxj/$_57.JPG?set_id=8800005007"
+        ]
+      },
+      "condition": "NEW",
+      "packageWeightAndSize": {
+        "weight": {
+          "value": 0.0,
+          "unit": "KILOGRAM"
+        }
+      },
+      "availability": {
+        "shipToLocationAvailability": {
+          "quantity": 2
+        }
+      }
+    }
+  ]
+}

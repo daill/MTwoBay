@@ -3,14 +3,12 @@ package de.daill.services.ebay
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import de.daill.model.ebay.EbayEnvironments
-import de.daill.model.ebay.EbayProperties
+import de.daill.model.ebay.*
 import okhttp3.*
-import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.Response
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -20,7 +18,7 @@ import java.time.*
 import java.util.*
 
 @Service
-open class EbayApiClient() {
+open class EbayApiClient {
     val LOG = LoggerFactory.getLogger(this::class.java)
     val apiKey: MutableMap<String, String> = mutableMapOf()
     val apiKeyPrefix: MutableMap<String, String> = mutableMapOf()
@@ -30,6 +28,11 @@ open class EbayApiClient() {
     var client = OkHttpClient()
 
     var environment: EbayEnvironments = EbayEnvironments.SANDBOX
+    var tokens: EbayTokens = EbayTokens()
+
+    @Autowired
+    lateinit var tokenRepository: EbayTokenRepository
+
     @Autowired
     lateinit var properties: EbayProperties
 
@@ -96,9 +99,12 @@ open class EbayApiClient() {
                     }
                 }.build()
             }
-            mediaType == JsonMediaType -> Serializer.moshi.adapter(T::class.java).toJson(content).toRequestBody(
-                mediaType.toMediaTypeOrNull()
-            )
+            mediaType == JsonMediaType -> {
+                var result = Serializer.moshi.adapter(T::class.java).toJson(content)
+                var requestBody = result.toRequestBody(mediaType.toMediaTypeOrNull())
+                LOG.debug(result)
+                requestBody
+            }
             mediaType == XmlMediaType -> throw UnsupportedOperationException("xml not currently supported.")
             // TODO: this should be extended with other serializers
             else -> throw UnsupportedOperationException("requestBody currently only supports JSON body and File body.")
@@ -120,14 +126,23 @@ open class EbayApiClient() {
 
     fun updateAuthParams(requestConfig: RequestConfig) {
         // need to check if the token is valid, otherwise use the refresh token to get a new one
-        if (environment == EbayEnvironments.PRODUCTION) {
-
+        var environmentalTokens = tokens.byEnvironment(environment)
+        if (environmentalTokens.accessTokenExpirationDate?.isBefore(LocalDateTime.now()) == true) {
+            // access token invalid, need to trigger exchange first
+            refreshAccessToken()
         }
-        requestConfig.headers[Authorization] = "Bearer ${properties.production} "
+        requestConfig.headers[Authorization] = "Bearer ${environmentalTokens.accessToken} "
+    }
+
+    fun initProperties() {
+        var props = tokenRepository.findAll()
+        tokens = props.last()
     }
 
     final inline fun <reified T> request(requestConfig: RequestConfig, body : Any? = null): ApiInfrastructureResponse<T?> {
-        val httpUrl = baseUrl?.toHttpUrlOrNull() ?: throw IllegalStateException("baseUrl is invalid.")
+        val httpUrl = environment.baseUrl.toHttpUrl()
+
+        initProperties()
 
         // take authMethod from operation
         updateAuthParams(requestConfig)
@@ -160,7 +175,7 @@ open class EbayApiClient() {
         }
 
         // TODO: support multiple contentType options here.
-        val contentType = (headers[ContentType] as String).substringBefore(";").toLowerCase()
+        val contentType = (headers[ContentType] as String).substringBefore(";").lowercase(Locale.getDefault())
 
         val request = when (requestConfig.method) {
             RequestMethod.DELETE -> Request.Builder().url(url).delete(requestBody(body, contentType))
@@ -175,7 +190,7 @@ open class EbayApiClient() {
         }.build()
 
         val response = client.newCall(request).execute()
-        val accept = response.header(ContentType)?.substringBefore(";")?.toLowerCase()
+        val accept = response.header(ContentType)?.substringBefore(";")?.lowercase(Locale.getDefault())
 
         // TODO: handle specific mapping types. e.g. Map<int, Class<?>>
         when {
@@ -239,13 +254,46 @@ open class EbayApiClient() {
         return Serializer.moshi.adapter(T::class.java).toJson(value).replace("\"", "")
     }
 
+    fun refreshAccessToken() {
+        val environmentalTokens = tokens.byEnvironment(environment)
+        val environmentalCreds = properties.byEnvironment(environment)
+
+        if (environmentalTokens.refreshTokenExpirationDate?.isBefore(LocalDateTime.now()) == true) {
+            throw EbayAuthException("refresh token is invalid. new auth flow required")
+        }
+
+        val client = OkHttpClient()
+
+        val scope = EbayScopes.scopes.joinToString("+")
+
+        val requestData = StringBuilder()
+        requestData.append("grant_type=refresh_token").append("&")
+        requestData.append(String.format("refresh_token=%s", environmentalTokens.refreshToken))
+        requestData.append(String.format("scope=%s", scope)).append("&")
+        val requestBody: RequestBody = requestData.toString().toRequestBody("application/x-www-form-urlencoded".toMediaTypeOrNull())
+
+        var authHeader = String(Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray()))
+
+        val request: Request = Request.Builder().url(environment.apiEndpoint)
+            .header("Authorization", "Basic $authHeader")
+            .header("Content-Type", "application/x-www-form-urlencoded")
+            .post(requestBody)
+            .build()
+
+        val response = client.newCall(request).execute()
+        if (response.isSuccessful){
+            var bodyString = response.body?.string()
+            LOG.debug(bodyString)
+            parseTokens(bodyString, environmentalTokens)
+            tokenRepository.save(tokens)
+        }
+    }
+
     fun exchangeAccessToken(code: String) {
         val client = OkHttpClient()
-        var environmentalCreds = properties!!.sandbox
+        var environmentalCreds = properties.byEnvironment(environment)
+        var environmentalTokens = tokens.byEnvironment(environment)
 
-        if (environment == EbayEnvironments.PRODUCTION) {
-            environmentalCreds = properties!!.production
-        }
 
         val requestData = StringBuilder()
         requestData.append("grant_type=authorization_code").append("&")
@@ -254,27 +302,40 @@ open class EbayApiClient() {
         val requestBody = requestData.toString().toRequestBody("application/x-www-form-urlencoded".toMediaTypeOrNull())
         var authHeader = String(Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray()))
 
-        val request: Request = Request.Builder().url(environment!!.apiEndpoint)
+        val request: Request = Request.Builder().url(environment.apiEndpoint)
             .header("Authorization", "Basic $authHeader")
             .header("Content-Type", "application/x-www-form-urlencoded")
             .post(requestBody)
             .build()
 
         val response = client.newCall(request).execute()
-        if (response.code == 200){
+        if (response.isSuccessful){
             var bodyString = response.body?.string()
-            LOG.debug(response.body?.string())
+            LOG.debug(bodyString)
+            parseTokens(bodyString, environmentalTokens)
+            tokenRepository.save(tokens)
+        }
+
+        response.close()
+    }
+
+    fun parseTokens(bodyString: String?, environmentalTokens: EbayTokenValues?) {
+        with (environmentalTokens!!) {
             var moshi = Moshi.Builder().build()
             var adapter: JsonAdapter<Map<String, String>> = moshi.adapter(Types.newParameterizedType(Map::class.java, String::class.java, String::class.java))
-            var parsed: Map<String, String>? = adapter.fromJson(bodyString)
-            environmentalCreds.accessToken = parsed?.get("access_token") ?: ""
-            var accessTokenExpirationDate
-            environmentalCreds.accessToken = parsed?.get("expires_in") ?: ""
-
-            environmentalCreds.refreshToken = parsed?.get("refresh_token") ?: ""
-            environmentalCreds.accessToken = parsed?.get("access_token") ?: ""
+            var parsed: Map<String, String>? = adapter.fromJson(bodyString.orEmpty())
+            accessToken = parsed?.get("access_token")?: ""
+            accessTokenExpirationDate = parsed?.get("expires_in")
+                ?.let { LocalDateTime.now().plusSeconds(it.toLong()) }
+            with(parsed) {
+                if (this!!.get("refresh_token") != null) {
+                    refreshToken = parsed?.get("refresh_token") ?: refreshToken
+                refreshTokenExpirationDate = parsed?.get("refresh_token_expires_in")
+                    ?.let { LocalDateTime.now().plusSeconds(it.toLong()) }
+                }
+            }
         }
-        response.close()
+
     }
 
 }

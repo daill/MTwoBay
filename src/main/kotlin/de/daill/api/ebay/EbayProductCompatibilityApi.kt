@@ -15,8 +15,9 @@ import de.daill.model.ebay.BaseResponse
 import de.daill.model.ebay.Compatibility
 import de.daill.services.ebay.*
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
-
+@Service
 class EbayProductCompatibilityApi() {
 
     @Autowired
@@ -39,7 +40,7 @@ class EbayProductCompatibilityApi() {
         val localVariableBody: kotlin.Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        contentLanguage?.apply { localVariableHeaders["Content-Language"] = this.toString() }
+        contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.PUT,
             "/inventory_item/{sku}/product_compatibility".replace("{"+"sku"+"}", "$sku"),

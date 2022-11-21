@@ -15,8 +15,9 @@ import de.daill.model.ebay.BulkMigrateListing
 import de.daill.model.ebay.BulkMigrateListingResponse
 import de.daill.services.ebay.*
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
-
+@Service
 class EbayListingApi() {
 
     @Autowired

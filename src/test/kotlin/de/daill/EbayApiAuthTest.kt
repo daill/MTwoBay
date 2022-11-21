@@ -9,7 +9,7 @@ import org.springframework.util.ResourceUtils
 class EbayApiAuthTest {
     @Test
     fun deserializeTokenResponse() {
-        var resourceFile = ResourceUtils.getFile("classpath:ebay.json");
+        var resourceFile = ResourceUtils.getFile("classpath:ebayAuth.json");
         var json = resourceFile.readText(Charsets.UTF_8)
         var moshi = Moshi.Builder().build()
         var adapter: JsonAdapter<Map<String, String>> = moshi.adapter(Types.newParameterizedType(Map::class.java, String::class.java, String::class.java))

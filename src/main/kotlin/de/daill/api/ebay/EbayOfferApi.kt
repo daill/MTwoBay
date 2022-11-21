@@ -14,8 +14,9 @@ package de.daill.api.ebay
 import de.daill.model.ebay.*
 import de.daill.services.ebay.*
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
-
+@Service
 class EbayOfferApi()  {
 
     @Autowired
@@ -118,7 +119,7 @@ class EbayOfferApi()  {
         val localVariableBody: kotlin.Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        contentLanguage?.apply { localVariableHeaders["Content-Language"] = this.toString() }
+        contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
             "/offer",
@@ -428,7 +429,7 @@ class EbayOfferApi()  {
         val localVariableBody: kotlin.Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        contentLanguage?.apply { localVariableHeaders["Content-Language"] = this.toString() }
+        contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.PUT,
             "/offer/{offerId}".replace("{"+"offerId"+"}", "$offerId"),

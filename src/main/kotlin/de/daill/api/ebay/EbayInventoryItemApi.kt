@@ -11,16 +11,22 @@
 */
 package de.daill.api.ebay
 
+import com.ebay.api.client.auth.oauth2.model.Environment
 import de.daill.model.ebay.*
 import de.daill.services.ebay.*
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 import de.daill.model.ebay.InventoryItem as InventoryItem1
 
 
+@Service
 class EbayInventoryItemApi() {
-
+    val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired
     lateinit var client: EbayApiClient
+
+    var environment: EbayEnvironments = EbayEnvironments.SANDBOX
 
     /**
     * 
@@ -39,10 +45,11 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
-            "/bulk_create_or_replace_inventory_item",
+            "/sell/inventory/v1/bulk_create_or_replace_inventory_item",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+        client.environment = this.environment
         val localVarResponse = client.request<BulkInventoryItemResponse>(
             localVariableConfig,
             localVariableBody
@@ -80,10 +87,11 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
-            "/bulk_get_inventory_item",
+            "/sell/inventory/v1/bulk_get_inventory_item",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+        client.environment = this.environment
         val localVarResponse = client.request<BulkGetInventoryItemResponse>(
             localVariableConfig,
             localVariableBody
@@ -121,10 +129,12 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
-            "/bulk_update_price_quantity",
+            "/sell/inventory/v1/bulk_update_price_quantity",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+
+        client.environment = this.environment
         val localVarResponse = client.request<BulkPriceQuantityResponse>(
             localVariableConfig,
             localVariableBody
@@ -162,13 +172,15 @@ class EbayInventoryItemApi() {
         val localVariableBody: Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        contentLanguage?.apply { localVariableHeaders["Content-Language"] = this.toString() }
+        contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.PUT,
-            "/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
+            "/sell/inventory/v1/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+
+        client.environment = this.environment
         val localVarResponse = client.request<BaseResponse>(
             localVariableConfig,
             localVariableBody
@@ -205,11 +217,12 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.DELETE,
-            "/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
+            "/sell/inventory/v1/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
 
+        client.environment = this.environment
         val localVarResponse = client.request<Any?>(
             localVariableConfig,
             localVariableBody
@@ -247,10 +260,12 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
+            "/sell/inventory/v1/inventory_item/{sku}".replace("{"+"sku"+"}", "$sku"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+
+        client.environment = this.environment
         val localVarResponse = client.request<InventoryItemWithSkuLocaleGroupid>(
             localVariableConfig,
             localVariableBody
@@ -297,17 +312,19 @@ class EbayInventoryItemApi() {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/inventory_item",
+            "/sell/inventory/v1/inventory_item",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
+
+        client.environment = this.environment
         val localVarResponse = client.request<InventoryItems>(
             localVariableConfig,
             localVariableBody
         )
 
-        return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as InventoryItems
+        var result = when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -319,6 +336,9 @@ class EbayInventoryItemApi() {
                 throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
             }
         }
+
+        LOG.debug(result.toString())
+        return result as InventoryItems
     }
 
 }
