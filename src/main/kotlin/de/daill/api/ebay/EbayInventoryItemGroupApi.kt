@@ -14,15 +14,16 @@ package de.daill.api.ebay
 import de.daill.model.ebay.BaseResponse
 import de.daill.model.ebay.InventoryItemGroup
 import de.daill.services.ebay.*
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class EbayInventoryItemGroupApi() {
-
+    val LOG = LoggerFactory.getLogger(this::class.java)
 
     @Autowired
-    lateinit var apiClient: EbayApiClient
+    lateinit var client: EbayApiClient
 
     /**
     * 
@@ -48,7 +49,7 @@ class EbayInventoryItemGroupApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<BaseResponse>(
+        val localVarResponse = client.request<BaseResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -88,7 +89,7 @@ class EbayInventoryItemGroupApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<Any?>(
+        val localVarResponse = client.request<Any?>(
             localVariableConfig,
             localVariableBody
         )
@@ -129,7 +130,7 @@ class EbayInventoryItemGroupApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<InventoryItemGroup>(
+        val localVarResponse = client.request<InventoryItemGroup>(
             localVariableConfig,
             localVariableBody
         )

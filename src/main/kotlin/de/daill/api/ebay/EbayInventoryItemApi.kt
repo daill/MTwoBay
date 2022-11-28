@@ -11,7 +11,6 @@
 */
 package de.daill.api.ebay
 
-import com.ebay.api.client.auth.oauth2.model.Environment
 import de.daill.model.ebay.*
 import de.daill.services.ebay.*
 import org.slf4j.LoggerFactory

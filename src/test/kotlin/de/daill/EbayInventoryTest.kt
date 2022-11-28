@@ -29,6 +29,5 @@ class EbayInventoryTest {
         var images = listOf("https://schraubermarkt.com/media/catalog/product/d/s/dsc04511.jpg")
         var product = Product(title = "TEST ITEM", aspects = aspects, imageUrls = images)
         var item = InventoryItem(condition = "NEW", product = product, packageWeightAndSize = packageWeightAndSize)
-        Serializer.moshi.adapter(T::class.java).fromJson(bodyContent)
     }
 }

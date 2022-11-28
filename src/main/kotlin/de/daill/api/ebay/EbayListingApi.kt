@@ -14,14 +14,15 @@ package de.daill.api.ebay
 import de.daill.model.ebay.BulkMigrateListing
 import de.daill.model.ebay.BulkMigrateListingResponse
 import de.daill.services.ebay.*
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class EbayListingApi() {
-
+    val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired
-    lateinit var apiClient: EbayApiClient
+    lateinit var client: EbayApiClient
 
     /**
     * 
@@ -44,7 +45,7 @@ class EbayListingApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<BulkMigrateListingResponse>(
+        val localVarResponse = client.request<BulkMigrateListingResponse>(
             localVariableConfig,
             localVariableBody
         )

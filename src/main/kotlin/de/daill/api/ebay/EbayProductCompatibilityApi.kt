@@ -14,19 +14,21 @@ package de.daill.api.ebay
 import de.daill.model.ebay.BaseResponse
 import de.daill.model.ebay.Compatibility
 import de.daill.services.ebay.*
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class EbayProductCompatibilityApi() {
 
+    val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired
-    lateinit var apiClient: EbayApiClient
+    lateinit var client: EbayApiClient
 
     /**
     * 
-    * This call is used by the seller to create or replace a list of products that are compatible with the inventory item. The inventory item is identified with a SKU value in the URI. Product compatibility is currently only applicable to motor vehicle parts and accessory categories, but more categories may be supported in the future.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;In addition to the &lt;code&gt;authorization&lt;/code&gt; header, which is required for all eBay REST API calls, the &lt;strong&gt;createOrReplaceProductCompatibility&lt;/strong&gt; call also requires the &lt;code&gt;Content-Language&lt;/code&gt; header, that sets the natural language that will be used in the field values of the apiClient.request payload. For US English, the code value passed in this header should be &lt;code&gt;en-US&lt;/code&gt;. To view other supported &lt;code&gt;Content-Language&lt;/code&gt; values, and to read more about all supported HTTP headers for eBay REST API calls, see the &lt;a href&#x3D;\&quot;/api-docs/static/rest-apiClient.request-components.html#HTTP\&quot;&gt;HTTP apiClient.request headers&lt;/a&gt; topic in the &lt;strong&gt;Using eBay RESTful APIs&lt;/strong&gt; document.&lt;/p&gt;
-    * @param contentLanguage This apiClient.request header sets the natural language that will be provided in the field values of the apiClient.request payload.
+    * This call is used by the seller to create or replace a list of products that are compatible with the inventory item. The inventory item is identified with a SKU value in the URI. Product compatibility is currently only applicable to motor vehicle parts and accessory categories, but more categories may be supported in the future.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;In addition to the &lt;code&gt;authorization&lt;/code&gt; header, which is required for all eBay REST API calls, the &lt;strong&gt;createOrReplaceProductCompatibility&lt;/strong&gt; call also requires the &lt;code&gt;Content-Language&lt;/code&gt; header, that sets the natural language that will be used in the field values of the client.request payload. For US English, the code value passed in this header should be &lt;code&gt;en-US&lt;/code&gt;. To view other supported &lt;code&gt;Content-Language&lt;/code&gt; values, and to read more about all supported HTTP headers for eBay REST API calls, see the &lt;a href&#x3D;\&quot;/api-docs/static/rest-client.request-components.html#HTTP\&quot;&gt;HTTP client.request headers&lt;/a&gt; topic in the &lt;strong&gt;Using eBay RESTful APIs&lt;/strong&gt; document.&lt;/p&gt;
+    * @param contentLanguage This client.request header sets the natural language that will be provided in the field values of the client.request payload.
     * @param sku A SKU (stock keeping unit) is an unique identifier defined by a seller for a product 
     * @param body Details of the compatibility 
     * @return BaseResponse
@@ -47,7 +49,7 @@ class EbayProductCompatibilityApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<BaseResponse>(
+        val localVarResponse = client.request<BaseResponse>(
             localVariableConfig,
             localVariableBody
         )
@@ -87,7 +89,7 @@ class EbayProductCompatibilityApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<Any?>(
+        val localVarResponse = client.request<Any?>(
             localVariableConfig,
             localVariableBody
         )
@@ -128,7 +130,7 @@ class EbayProductCompatibilityApi() {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = apiClient.request<Compatibility>(
+        val localVarResponse = client.request<Compatibility>(
             localVariableConfig,
             localVariableBody
         )

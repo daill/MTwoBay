@@ -7,6 +7,7 @@ import de.daill.model.magento.CatalogDataProductQueryFilterParam
 import de.daill.model.magento.MagentoSyncStatus
 import de.daill.services.magento.MagentoProductsRepository
 import de.daill.services.magento.MagentoSyncRepository
+import org.openapitools.client.apis.EbayCategoryTreeApi
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -29,6 +30,13 @@ class SyncTask {
 
     @Autowired
     lateinit var ebayInventoryItemApi: EbayInventoryItemApi
+
+    @Autowired
+    lateinit var ebayCategoryTreeApi: EbayCategoryTreeApi
+
+    var paymentPolicy = "228861724011"
+    var returnPolicy = "228878038011"
+    var fulfillmentPolicy = "235961836011"
 
     //@Scheduled(initialDelay = 2000, fixedDelayString = "PT30M" )
     fun process() {
@@ -59,7 +67,10 @@ class SyncTask {
         products?.items?.forEach {
             if (LocalDateTime.parse(it.createdAt, formatter).isAfter(lastSync.lastSyncDate)) {
                 // new product so not yet seen
-                
+                // weight is pretty obvious
+                // need to get the manufacturer and categories to determine aspects
+
+
 
             } else if  (LocalDateTime.parse(it.updatedAt, formatter).isAfter(lastSync.lastSyncDate)) {
                 // updated item, get the one from the local database to build the delta
@@ -76,6 +87,7 @@ class SyncTask {
 
         var weight = Weight(value = BigDecimal(1.0), unit = "KILOGRAM")
         var packageWeightAndSize = PackageWeightAndSize(weight = weight)
+
         var aspects = mapOf("Herstellernummer" to listOf("AT1000"), "Kraftradtyp" to listOf("Roller"))
         var images = listOf("https://schraubermarkt.com/media/catalog/product/d/s/dsc04511.jpg")
         var product = Product(title = "TEST ITEM", aspects = aspects, imageUrls = images)
@@ -92,6 +104,7 @@ class SyncTask {
         // create delta set
         // update ebay products
     }
+
 
 
 }
