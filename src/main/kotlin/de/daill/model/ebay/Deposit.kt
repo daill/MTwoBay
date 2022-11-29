@@ -11,10 +11,6 @@
 */
 package de.daill.model.ebay
 
-import org.openapitools.client.models.Amount
-import org.openapitools.client.models.PaymentMethod
-import org.openapitools.client.models.TimeDuration
-
 import com.squareup.moshi.Json
 
 /**
