@@ -39,7 +39,7 @@ class EbayFulfillmentPolicyApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun createFulfillmentPolicy(fulfillmentPolicyRequest: FulfillmentPolicyRequest) : SetFulfillmentPolicyResponse {
-        val localVariableBody: kotlin.Any? = fulfillmentPolicyRequest
+        val localVariableBody: Any? = fulfillmentPolicyRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -79,7 +79,7 @@ class EbayFulfillmentPolicyApi() {
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun deleteFulfillmentPolicy(fulfillmentPolicyId: kotlin.String) : Unit {
-        val localVariableBody: kotlin.Any? = null
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -120,7 +120,7 @@ class EbayFulfillmentPolicyApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun getFulfillmentPolicies(marketplaceId: kotlin.String) : FulfillmentPolicyResponse {
-        val localVariableBody: kotlin.Any? = null
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
                 put("marketplace_id", listOf(marketplaceId.toString()))
@@ -164,7 +164,7 @@ class EbayFulfillmentPolicyApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun getFulfillmentPolicy(fulfillmentPolicyId: kotlin.String) : FulfillmentPolicy {
-        val localVariableBody: kotlin.Any? = null
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
@@ -206,7 +206,7 @@ class EbayFulfillmentPolicyApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun getFulfillmentPolicyByName(marketplaceId: kotlin.String, name: kotlin.String) : FulfillmentPolicy {
-        val localVariableBody: kotlin.Any? = null
+        val localVariableBody: Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
                 put("marketplace_id", listOf(marketplaceId.toString()))
@@ -252,7 +252,7 @@ class EbayFulfillmentPolicyApi() {
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
     fun updateFulfillmentPolicy(fulfillmentPolicyId: kotlin.String, fulfillmentPolicyRequest: FulfillmentPolicyRequest) : SetFulfillmentPolicyResponse {
-        val localVariableBody: kotlin.Any? = fulfillmentPolicyRequest
+        val localVariableBody: Any? = fulfillmentPolicyRequest
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
