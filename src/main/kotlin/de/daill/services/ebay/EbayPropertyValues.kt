@@ -1,4 +1,4 @@
-package de.daill.model.ebay
+package de.daill.services.ebay
 
 import org.springframework.context.annotation.Configuration
 

@@ -11,22 +11,17 @@
 */
 package de.daill.api.ebay
 
-import org.openapitools.client.infrastructure.ApiClient
-import org.openapitools.client.infrastructure.ClientError
-import org.openapitools.client.infrastructure.ClientException
-import org.openapitools.client.infrastructure.MultiValueMap
-import org.openapitools.client.infrastructure.RequestConfig
-import org.openapitools.client.infrastructure.RequestMethod
-import org.openapitools.client.infrastructure.ResponseType
-import org.openapitools.client.infrastructure.ServerError
-import org.openapitools.client.infrastructure.ServerException
-import org.openapitools.client.infrastructure.Success
-import org.openapitools.client.models.PaymentPolicy
-import org.openapitools.client.models.PaymentPolicyRequest
-import org.openapitools.client.models.PaymentPolicyResponse
-import org.openapitools.client.models.SetPaymentPolicyResponse
+import de.daill.model.ebay.PaymentPolicyRequest
+import de.daill.model.ebay.PaymentPolicyResponse
+import de.daill.model.ebay.SetPaymentPolicyResponse
+import de.daill.services.ebay.*
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
+import de.daill.model.ebay.PaymentPolicy as PaymentPolicy1
 
-class EbayPaymentPolicyApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+@Service
+class EbayPaymentPolicyApi() {
     val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired
     lateinit var client: EbayApiClient
@@ -167,7 +162,7 @@ class EbayPaymentPolicyApi(basePath: kotlin.String = defaultBasePath) : ApiClien
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getPaymentPolicy(paymentPolicyId: kotlin.String) : PaymentPolicy {
+    fun getPaymentPolicy(paymentPolicyId: kotlin.String) : PaymentPolicy1 {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -177,13 +172,13 @@ class EbayPaymentPolicyApi(basePath: kotlin.String = defaultBasePath) : ApiClien
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = client.request<PaymentPolicy>(
+        val localVarResponse = client.request<PaymentPolicy1>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentPolicy
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentPolicy1
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -209,7 +204,7 @@ class EbayPaymentPolicyApi(basePath: kotlin.String = defaultBasePath) : ApiClien
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getPaymentPolicyByName(marketplaceId: kotlin.String, name: kotlin.String) : PaymentPolicy {
+    fun getPaymentPolicyByName(marketplaceId: kotlin.String, name: kotlin.String) : PaymentPolicy1 {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -223,13 +218,13 @@ class EbayPaymentPolicyApi(basePath: kotlin.String = defaultBasePath) : ApiClien
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = client.request<PaymentPolicy>(
+        val localVarResponse = client.request<PaymentPolicy1>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentPolicy
+            ResponseType.Success -> (localVarResponse as Success<*>).data as PaymentPolicy1
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

@@ -4,9 +4,9 @@ import com.squareup.moshi.Moshi
 import de.daill.model.magento.CatalogDataProductSearchResultsInterface
 import de.daill.model.magento.FrameworkAttributeInterface
 import de.daill.services.magento.MagentoMoshiAttributeAdapter
-import org.junit.jupiter.api.Test
 import org.springframework.util.ResourceUtils
 import de.daill.BigDecimalAdapter
+import org.junit.jupiter.api.Test
 
 class MagentoApiProductsTests {
 

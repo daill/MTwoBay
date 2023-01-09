@@ -11,8 +11,6 @@
 */
 package de.daill.model.ebay
 
-import org.openapitools.client.models.SellingLimit
-
 import com.squareup.moshi.Json
 
 /**

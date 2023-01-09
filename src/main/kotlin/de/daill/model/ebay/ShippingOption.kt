@@ -11,9 +11,6 @@
 */
 package de.daill.model.ebay
 
-import org.openapitools.client.models.Amount
-import org.openapitools.client.models.ShippingService
-
 import com.squareup.moshi.Json
 
 /**

@@ -9,7 +9,8 @@
 * https://openapi-generator.tech
 * Do not edit the class manually.
 */
-package org.openapitools.client.apis
+
+package de.daill.api.ebay
 
 import de.daill.model.ebay.*
 import de.daill.services.ebay.*
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service
 @Service
 class EbayCategoryTreeApi()  {
     val LOG = LoggerFactory.getLogger(this::class.java)
+
     @Autowired
     lateinit var client: EbayApiClient
 

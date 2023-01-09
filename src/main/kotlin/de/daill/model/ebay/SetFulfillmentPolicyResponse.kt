@@ -11,12 +11,6 @@
 */
 package de.daill.model.ebay
 
-import org.openapitools.client.models.CategoryType
-import org.openapitools.client.models.Error
-import org.openapitools.client.models.RegionSet
-import org.openapitools.client.models.ShippingOption
-import org.openapitools.client.models.TimeDuration
-
 import com.squareup.moshi.Json
 
 /**

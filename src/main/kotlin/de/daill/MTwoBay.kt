@@ -17,8 +17,7 @@
 
 package de.daill
 
-import de.daill.model.ebay.EbayEnvironments
-import de.daill.model.ebay.EbayProperties
+import de.daill.services.MappingProperties
 import de.daill.services.SyncTask
 import de.daill.services.ebay.EbayApiClient
 import org.slf4j.LoggerFactory
@@ -38,7 +37,7 @@ class MTwoBay: ApplicationRunner {
 
     @Autowired
     lateinit var task: SyncTask
-
+    
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
         task.process()

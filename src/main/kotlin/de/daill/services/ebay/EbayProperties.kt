@@ -1,5 +1,7 @@
-package de.daill.model.ebay
+package de.daill.services.ebay
 
+import de.daill.model.ebay.EbayEnvironmentalInterface
+import de.daill.model.ebay.EbayEnvironments
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.PropertySource

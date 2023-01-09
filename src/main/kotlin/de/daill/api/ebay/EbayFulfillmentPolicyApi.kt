@@ -15,7 +15,10 @@ import de.daill.model.ebay.*
 import de.daill.services.ebay.*
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
+
+@Service
 class EbayFulfillmentPolicyApi() {
     val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired

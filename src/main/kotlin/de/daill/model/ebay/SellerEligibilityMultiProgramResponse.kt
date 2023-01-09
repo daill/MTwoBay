@@ -11,8 +11,6 @@
 */
 package de.daill.model.ebay
 
-import org.openapitools.client.models.SellerEligibilityResponse
-
 import com.squareup.moshi.Json
 
 /**

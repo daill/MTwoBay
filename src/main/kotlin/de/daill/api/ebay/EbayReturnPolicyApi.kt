@@ -9,7 +9,7 @@
 * https://openapi-generator.tech
 * Do not edit the class manually.
 */
-package org.openapitools.client.apis
+package de.daill.api.ebay
 
 import de.daill.model.ebay.ReturnPolicy
 import de.daill.model.ebay.ReturnPolicyRequest
@@ -18,7 +18,9 @@ import de.daill.model.ebay.SetReturnPolicyResponse
 import de.daill.services.ebay.*
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 
+@Service
 class EbayReturnPolicyApi()  {
     val LOG = LoggerFactory.getLogger(this::class.java)
     @Autowired

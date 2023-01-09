@@ -16,6 +16,7 @@ import de.daill.services.ebay.*
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.util.*
 import de.daill.model.ebay.InventoryItem as InventoryItem1
 
 
@@ -186,7 +187,14 @@ class EbayInventoryItemApi() {
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as BaseResponse
+            ResponseType.Success -> {
+                var resp = (localVarResponse as Success<*>)
+                var ret = BaseResponse()
+                if (resp.data != null) {
+                    resp.data as BaseResponse
+                }
+                ret
+            }
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
