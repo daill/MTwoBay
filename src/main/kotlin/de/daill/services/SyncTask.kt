@@ -6,6 +6,7 @@ import de.daill.api.magento.MagentoProductsApi
 import de.daill.model.ebay.*
 import de.daill.model.magento.CatalogDataProductQueryFilterParam
 import de.daill.model.magento.MagentoSyncStatus
+import de.daill.services.ebay.EbayProperties
 import de.daill.services.magento.MagentoProductsRepository
 import de.daill.services.magento.MagentoSyncRepository
 import org.slf4j.LoggerFactory
@@ -36,6 +37,9 @@ class SyncTask {
 
     @Autowired
     lateinit var mappingProperties: MappingProperties
+
+    @Autowired
+    lateinit var ebayProperties: EbayProperties
 
     //@Scheduled(initialDelay = 2000, fixedDelayString = "PT30M" )
     fun process() {

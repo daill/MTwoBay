@@ -14,6 +14,7 @@ import org.springframework.context.annotation.PropertySource
 class EbayProperties: EbayEnvironmentalInterface<EbayPropertyValues> {
     var production: EbayPropertyValues = EbayPropertyValues()
     var sandbox: EbayPropertyValues = EbayPropertyValues()
+    lateinit var currentEnvironment: EbayEnvironments
     override fun byEnvironment(environment: EbayEnvironments): EbayPropertyValues {
         if (environment == EbayEnvironments.PRODUCTION) {
             return production
