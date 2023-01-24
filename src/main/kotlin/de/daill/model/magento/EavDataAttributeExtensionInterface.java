@@ -24,9 +24,9 @@ import java.util.Objects;
  * ExtensionInterface class for @see \\Magento\\Eav\\Api\\Data\\AttributeInterface
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-05T21:04:04.031930900+02:00[Europe/Berlin]")
 public class EavDataAttributeExtensionInterface {
   public static final String SERIALIZED_NAME_IS_PAGEBUILDER_ENABLED = "is_pagebuilder_enabled";
+
   @Json(name = SERIALIZED_NAME_IS_PAGEBUILDER_ENABLED)
   private Boolean isPagebuilderEnabled;
 
