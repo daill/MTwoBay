@@ -116,14 +116,14 @@ class EbayOfferApi()  {
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun createOffer(contentLanguage: kotlin.String, body: EbayOfferDetailsWithKeys) : OfferResponse {
+    fun createOffer(contentLanguage: kotlin.String, body: EbayOfferDetailsWithAll) : OfferResponse {
         val localVariableBody: kotlin.Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
-            "/offer",
+            "/sell/inventory/v1/offer",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -163,7 +163,7 @@ class EbayOfferApi()  {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.DELETE,
-            "/offer/{offerId}".replace("{"+"offerId"+"}", "$offerId"),
+            "/sell/inventory/v1/offer/{offerId}".replace("{"+"offerId"+"}", "$offerId"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -426,14 +426,14 @@ class EbayOfferApi()  {
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun updateOffer(contentLanguage: kotlin.String, offerId: kotlin.String, body: EbayOfferDetailsWithId) : OfferResponse {
+    fun updateOffer(contentLanguage: kotlin.String,body: EbayOfferDetailsWithAll) {
         val localVariableBody: kotlin.Any? = body
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         contentLanguage.apply { localVariableHeaders["Content-Language"] = this.toString() }
         val localVariableConfig = RequestConfig(
             RequestMethod.PUT,
-            "/offer/{offerId}".replace("{"+"offerId"+"}", "$offerId"),
+            "/sell/inventory/v1/offer/{offerId}".replace("{offerId}", body.offerId.toString()),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -443,7 +443,7 @@ class EbayOfferApi()  {
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as OfferResponse
+            ResponseType.Success -> Unit
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

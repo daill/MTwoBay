@@ -2,9 +2,9 @@ package de.daill.services.magento
 
 import de.daill.api.magento.MagentoAuthApi
 import de.daill.model.magento.MagentoProperties
+import de.daill.services.mtwobay.MTwoBayPropertiesRepository
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.context.ApplicationEventPublisher
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -19,7 +19,7 @@ class MagentoAuthCallback {
     val LOG = LoggerFactory.getLogger(this::class.java)
 
     @Autowired
-    lateinit var propertiesRepository: MagentoPropertiesRepository
+    lateinit var propertiesRepository: MTwoBayPropertiesRepository
 
     @Autowired
     lateinit var authApi: MagentoAuthApi

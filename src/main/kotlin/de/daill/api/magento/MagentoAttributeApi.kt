@@ -1,14 +1,9 @@
 package de.daill.api.magento
 
 import com.squareup.moshi.Moshi
-import com.squareup.moshi.adapter
 import de.daill.BigDecimalAdapter
 import de.daill.model.magento.CatalogDataProductAttributeInterface
-import de.daill.model.magento.CatalogDataProductSearchResultsInterface
-import de.daill.model.magento.FrameworkAttributeInterface
 import de.daill.services.magento.MagentoApiClient
-import de.daill.services.magento.MagentoMoshiAttributeAdapter
-import de.daill.services.magento.MagentoPropertiesRepository
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.Request
 import org.slf4j.LoggerFactory
@@ -24,9 +19,6 @@ class MagentoAttributeApi {
 
     @Autowired
     lateinit var magentoClient: MagentoApiClient
-
-    @Autowired
-    lateinit var propertyRepository: MagentoPropertiesRepository
 
     fun getAttributeDetails(attribute: String): CatalogDataProductAttributeInterface? {
         var apiResource = "rest/V1/products/attributes/$attribute"

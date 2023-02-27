@@ -282,9 +282,10 @@ open class EbayApiClient {
 
         val response = client.newCall(request).execute()
         if (response.isSuccessful){
-            var bodyString = response.body?.string()
-            LOG.debug(bodyString)
-            parseTokens(bodyString, environmentalTokens)
+            var bodyString = response.body?.string().let {
+                LOG.debug(it)
+                parseTokens(it, environmentalTokens)
+            }
             tokenRepository.save(tokens)
         }
     }

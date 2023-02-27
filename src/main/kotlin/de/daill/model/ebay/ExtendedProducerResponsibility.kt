@@ -12,6 +12,7 @@
 package de.daill.model.ebay
 
 import com.squareup.moshi.Json
+import org.springframework.data.mongodb.core.mapping.Document
 
 /**
  * This type provides IDs for the producer or importer related to the new item, packaging, added documentation, or an eco-participation fee. In some markets, such as in France, this may be the importer of the item.
@@ -21,7 +22,7 @@ import com.squareup.moshi.Json
  * @param productDocumentationId This ID is the Unique Identifier of the producer of any paper added to the parcel of the item by the seller. For example, this ID concerns any notice, leaflet, or paper that the seller adds to a cell phone parcel.
  * @param ecoParticipationFee 
  */
-
+@Document
 data class ExtendedProducerResponsibility (
     /* This ID is the Unique Identifier of the producer related to the item. For instance, if the seller is selling a cell phone, it is the ID related to the cell phone. */
     @Json(name = "producerProductId")

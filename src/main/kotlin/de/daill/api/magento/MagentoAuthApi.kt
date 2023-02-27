@@ -2,7 +2,7 @@ package de.daill.api.magento
 
 import de.daill.services.magento.MagentoApiTools
 import de.daill.services.magento.MagentoApiClient
-import de.daill.services.magento.MagentoPropertiesRepository
+import de.daill.services.mtwobay.MTwoBayPropertiesRepository
 import okhttp3.FormBody
 import okhttp3.Request
 import org.slf4j.LoggerFactory
@@ -20,7 +20,7 @@ class MagentoAuthApi {
     lateinit var magentoClient: MagentoApiClient
 
     @Autowired
-    lateinit var propertyRepository: MagentoPropertiesRepository
+    lateinit var propertyRepository: MTwoBayPropertiesRepository
 
 
     /**

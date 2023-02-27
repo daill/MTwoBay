@@ -2,37 +2,48 @@ package de.daill.services
 
 import de.daill.api.ebay.EbayCategoryTreeApi
 import de.daill.api.ebay.EbayInventoryItemApi
+import de.daill.api.ebay.EbayOfferApi
 import de.daill.api.magento.MagentoAttributeApi
 import de.daill.api.magento.MagentoProductsApi
+import de.daill.model.MappingProperties
 import de.daill.model.ebay.*
+import de.daill.model.magento.CatalogDataProductInterface
 import de.daill.model.magento.CatalogDataProductQueryFilterParam
-import de.daill.model.magento.EavDataAttributeOptionInterface
+import de.daill.model.magento.FrameworkAttributeInterface
 import de.daill.model.magento.MagentoSyncStatus
+import de.daill.model.mtwobay.GeneratedOffer
+import de.daill.services.ebay.ClientException
 import de.daill.services.ebay.EbayProperties
-import de.daill.services.magento.MagentoProductsRepository
-import de.daill.services.magento.MagentoSyncRepository
+import de.daill.services.mtwobay.MTwoBayOfferRepository
+import de.daill.services.mtwobay.MTwoBayProductsRepository
+import de.daill.services.mtwobay.MTwoBayPropertiesRepository
+import de.daill.services.mtwobay.MTwoBaySyncRepository
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
+import java.net.URLDecoder
+import java.nio.charset.Charset
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 @Service
 class SyncTask {
+
+
     val LOG = LoggerFactory.getLogger(this::class.java)
 
     @Autowired
-    lateinit var magentProductsApi: MagentoProductsApi
+    lateinit var magentoProductsApi: MagentoProductsApi
 
     @Autowired
-    lateinit var magentoProductsRepository: MagentoProductsRepository
+    lateinit var magentoProductsRepository: MTwoBayProductsRepository
 
     @Autowired
     lateinit var magentoAttributeApi: MagentoAttributeApi
 
     @Autowired
-    lateinit var magentoProductsSyncRepository: MagentoSyncRepository
+    lateinit var magentoProductsSyncRepository: MTwoBaySyncRepository
 
     @Autowired
     lateinit var ebayInventoryItemApi: EbayInventoryItemApi
@@ -46,11 +57,20 @@ class SyncTask {
     @Autowired
     lateinit var ebayProperties: EbayProperties
 
+    @Autowired
+    lateinit var ebayOfferApi: EbayOfferApi
+
+    @Autowired
+    lateinit var magentoRepository: MTwoBayPropertiesRepository
+
+    @Autowired
+    lateinit var mTwoBayGeneratedOfferRepository: MTwoBayOfferRepository
+
+
+
     //@Scheduled(initialDelay = 2000, fixedDelayString = "PT30M" )
     fun process() {
-        var baugruppen = magentoAttributeApi.getAttributeDetails("baugruppe")
-        var models = magentoAttributeApi.getAttributeDetails("modell")
-        var conditions = magentoAttributeApi.getAttributeDetails("zustand")
+
 
         ebayInventoryItemApi.environment = ebayProperties.currentEnvironment
 
@@ -61,7 +81,7 @@ class SyncTask {
 
         if (lastSync == null) {
             lastSync = MagentoSyncStatus()
-            lastSync.lastSyncDate = LocalDateTime.now().minusMonths(24)
+            lastSync.lastSyncDate = LocalDateTime.now().minusMonths(36)
         }
         // fetch all products with ebay flag
 
@@ -69,46 +89,22 @@ class SyncTask {
 
         var params = listOf(
             CatalogDataProductQueryFilterParam(conditionType = "eq", field = "ebay_listing", value = "1"),
+            CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "qty", value = "1", group = 3),
             CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "created_at", value = lastSync.lastSyncDate.toString(), group = 1),
             CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "updated_at", value = lastSync.lastSyncDate.toString(), group = 2)
             //CatalogDataProductQueryPageSizeParam(pageSize = 10)
         )
-        var products = magentProductsApi.getProducts(params)
-        LOG.debug(products.toString())
+        var products = magentoProductsApi.getProducts(params)
+//        LOG.debug(products.toString())
 
         var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
         products?.items?.forEach {
 
+
             if (LocalDateTime.parse(it.createdAt, formatter).isAfter(lastSync.lastSyncDate)) {
-                var baugruppe = ""
-                var description = ""
-                var manufacturer = ""
-                var model = ""
-                var price = it.price.toString()
-                var image = ""
-                var condition = ""
-                it.customAttributes.forEach {attr ->
-                    when (attr.attributeCode) {
-                        "baugruppe" -> baugruppe = baugruppen?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
-                        "modell" -> model = models?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
-                        "image" -> image = attr.value.first().toString()
-                        "zustand" -> condition = conditions?.options?.find { opt -> opt.value == attr.value.first()}?.label.toString()
-                    }
-                }
-                // new product so not yet seen
-                // weight is pretty obvious
-                // need to chose shipping terms
-                var weight = Weight(value = BigDecimal(1.0), unit = "KILOGRAM")
-                var packageWeightAndSize = PackageWeightAndSize(weight = weight)
+                processInventoryItem(it)
+                var id = processOfferItem(it)
 
-                var aspects = mapOf("Hersteller" to listOf("asd"), "Model" to listOf("Roller"), "Artikelnummer" to listOf("Blubb"))
-                var images = listOf("https://schraubermarkt.com/media/catalog/product/d/s/dsc04511.jpg")
-                var product = Product(title = it.name, aspects = aspects, imageUrls = images)
-                // need to get the manufacturer and categories to determine aspects
-
-                var inventoryItem = InventoryItem(condition = "NEW", packageWeightAndSize = packageWeightAndSize, product = product)
-
-                ebayInventoryItemApi.createOrReplaceInventoryItem("de-DE", sku = it.sku, inventoryItem)
 
             } else if  (LocalDateTime.parse(it.updatedAt, formatter).isAfter(lastSync.lastSyncDate)) {
                 // updated item, get the one from the local database to build the delta
@@ -125,12 +121,144 @@ class SyncTask {
         // update ebay products
     }
 
-    fun getFulfillment(weight: Int) {
+    fun publishOffer(offerId: String) {
+
+    }
+
+    fun processOfferItem(item: CatalogDataProductInterface): String? {
+        var generatedOffer = mTwoBayGeneratedOfferRepository.findBySku(item.sku) ?: EbayOfferDetailsWithAll()
+
+
+
+        var stockItem = magentoProductsApi.getStockItem(item.sku)
+        var mappings = magentoMappingProperties.byEnvironment(ebayProperties.currentEnvironment)
+
+        var priceAmount = Amount(currency = mappings.currency, value = item.price.toString())
+        var pricingSummary = PricingSummary(price = priceAmount)
+
+        var listingPolicies = ListingPolicies(
+            fulfillmentPolicyId = getFulfillment(item.weight.toInt()),
+            paymentPolicyId = mappings.paymentPolicy,
+            returnPolicyId = mappings.returnPolicy
+        )
+
+        var tax = Tax(
+           applyTax = false
+        )
+
+        with(generatedOffer) {
+            sku = item.sku
+            availableQuantity = stockItem?.qty?.toInt()
+            categoryId = mappings.categories[item.customAttributes.find { attr -> attr.attributeCode == "baugruppe" }?.value?.first()]
+            marketplaceId = mappings.marketPlace
+            format = mappings.format
+            this.pricingSummary = pricingSummary
+            this.listingPolicies = listingPolicies
+            merchantLocationKey = mappings.merchantLocationKey
+            this.tax = tax
+            listingDescription = item.customAttributes.find { attr -> attr.attributeCode == "description" }?.value?.first().toString()
+        }
+
+        try {
+            val offerResponse: OfferResponse = when(generatedOffer.offerId.isNullOrEmpty()) {
+                true -> ebayOfferApi.createOffer(contentLanguage = "de-DE", generatedOffer)
+                false -> {
+                    ebayOfferApi.updateOffer(contentLanguage = "de-DE", body = generatedOffer);
+                    OfferResponse(offerId = generatedOffer.offerId)
+                }
+            }
+
+            LOG.debug("offer created with id ${offerResponse.offerId}")
+            offerResponse.offerId?.let {
+
+                // write back the order id into the table as value for attribute ebay_orderid
+                item.customAttributes.add(FrameworkAttributeInterface().value("ebay_offerId", listOf("ebay_offerid")))
+                var productJson =
+                    "{ \"sku\": \"${item.sku}\", \"custom_attributes\": [{ \"attribute_code\": \"ebay_offerId\", \"value\": \"${offerResponse.offerId}\"}] }"
+                magentoProductsApi.putProduct(item.sku, productJson)
+
+                generatedOffer.offerId = offerResponse.offerId
+                // save the generated offer to the database
+                mTwoBayGeneratedOfferRepository.save(generatedOffer)
+            }
+
+            offerResponse.warnings?.forEach { error -> LOG.debug(error.message) }
+
+            return offerResponse.offerId
+        } catch(e: ClientException) {
+            LOG.error("adding offer failed: ${e.message}")
+        }
+        return null
+    }
+
+    fun processInventoryItem(item: CatalogDataProductInterface) {
+        var baugruppen = magentoAttributeApi.getAttributeDetails("baugruppe")
+        var models = magentoAttributeApi.getAttributeDetails("modell")
+        var conditions = magentoAttributeApi.getAttributeDetails("zustand")
+        var manufacturers = magentoAttributeApi.getAttributeDetails("manufacturer")
+        var magentoProperties = magentoRepository.findAll().last()
+
+        var baugruppe = ""
+        var description = ""
+        var manufacturer = ""
+        var model = ""
+        var price = item.price.toString()
+        var image = ""
+        var condition = ""
+
+        item.customAttributes.forEach {attr ->
+            when (attr.attributeCode) {
+                "baugruppe" -> baugruppe = baugruppen?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
+                "modell" -> model = models?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
+                "image" -> image = "${URLDecoder.decode(magentoProperties.storeBaseUrl, Charset.defaultCharset())}/media/catalog/product${attr.value.first().toString()}"
+                "zustand" -> condition = conditions?.options?.find { opt -> opt.value == attr.value.first()}?.label.toString()
+                "manufacturer" -> manufacturer = manufacturers?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
+            }
+        }
+        // new product so not yet seen
+        // weight is pretty obvious
+        // need to chose shipping terms
+        var weight = Weight(value = BigDecimal(1.0), unit = "KILOGRAM")
+        var packageWeightAndSize = PackageWeightAndSize(weight = weight)
+        var aspects = mutableMapOf(
+            "Artikelnummer" to listOf(item.id.toString()),
+            "Zustand" to listOf(condition),
+            "Herstellernummer" to listOf(item.id.toString()),
+        )
+        if (manufacturer.isNotBlank() && manufacturer.isNotEmpty()) {
+            aspects.put("Hersteller", listOf(manufacturer))
+        }
+        if (model.isNotBlank() && model.isNotEmpty()) {
+            aspects.put("Model", listOf(model))
+        }
+        var images = listOf(image)
+        var product = Product(title = item.name, aspects = aspects, imageUrls = images)
+        // need to get the manufacturer and categories to determine aspects
+
+        var inventoryItem = InventoryItem(condition = encodeCondition(condition), packageWeightAndSize = packageWeightAndSize, product = product)
+
+        var response = ebayInventoryItemApi.createOrReplaceInventoryItem("de-DE", sku = item.sku, inventoryItem)
+
+        if (response.warnings?.isNotEmpty() == true) {
+            LOG.error("item ${item.sku} could not be created/updated: ${response.warnings?.joinToString { e -> e.message.toString() }}")
+        }
+    }
+
+    fun encodeCondition(condition: String) : String {
+        return when(condition) {
+            "Gebraucht" -> "USED_EXCELLENT"
+            "Neu" -> "NEW"
+            else -> "NEW_OTHER"
+        }
+    }
+
+    fun getFulfillment(weight: Int) : String{
         var evnProps = magentoMappingProperties.byEnvironment(ebayProperties.currentEnvironment)
-        when(weight) {
-            in 0..evnProps.weightSmall as Int -> evnProps.fulfillmentSmall
-            in evnProps.weightSmall as Int ..evnProps.weightMiddle as Int -> evnProps.fulfillmentMiddle
-            in evnProps.weightMiddle as Int ..evnProps.weightNormal as Int -> evnProps.fulfillmentNormal
+        return when(weight) {
+            in 0..evnProps.weightSmall.toInt()  -> evnProps.fulfillmentPolicySmall
+            in evnProps.weightSmall.toInt() ..evnProps.weightMiddle.toInt()  -> evnProps.fulfillmentPolicyMiddle
+            in evnProps.weightMiddle.toInt() ..evnProps.weightNormal.toInt() -> evnProps.fulfillmentPolicyNormal
+            else -> ""
         }
     }
 

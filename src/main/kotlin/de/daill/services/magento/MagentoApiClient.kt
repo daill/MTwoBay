@@ -1,6 +1,7 @@
 package de.daill.services.magento
 
 import de.daill.model.magento.MagentoProperties
+import de.daill.services.mtwobay.MTwoBayPropertiesRepository
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -21,10 +22,10 @@ class MagentoApiClient {
 
     lateinit var magentoProperties: MagentoProperties
 
-    var repository: MagentoPropertiesRepository
+    var repository: MTwoBayPropertiesRepository
 
     @Autowired
-    constructor(repository: MagentoPropertiesRepository) {
+    constructor(repository: MTwoBayPropertiesRepository) {
         this.repository = repository
         var props = repository.findAll()
         if (props.count() > 0) {

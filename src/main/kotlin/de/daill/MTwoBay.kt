@@ -17,7 +17,6 @@
 
 package de.daill
 
-import de.daill.services.MappingProperties
 import de.daill.services.SyncTask
 import de.daill.services.ebay.EbayApiClient
 import org.slf4j.LoggerFactory

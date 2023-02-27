@@ -12,6 +12,7 @@
 package de.daill.model.ebay
 
 import com.squareup.moshi.Json
+import org.springframework.data.mongodb.core.mapping.Document
 
 /**
  * This type is used to specify the listing price for the product and settings for the Minimum Advertised Price and Strikethrough Pricing features. The <strong>price</strong> field must be supplied before an offer is published, but a seller may create an offer without supplying a price initially. The Minimum Advertised Price feature is only available on the US site. Strikethrough Pricing is available on the US, eBay Motors, UK, Germany, Canada (English and French), France, Italy, and Spain sites.
@@ -23,23 +24,22 @@ import com.squareup.moshi.Json
  * @param price 
  * @param pricingVisibility This field is needed if the Minimum Advertised Price (MAP) feature will be used in the offer. This field is only applicable if an eligible US seller is using the Minimum Advertised Price (MAP) feature and a <strong>minimumAdvertisedPrice</strong> has been specified. The value set in this field will determine whether the MAP price is shown to a prospective buyer prior to checkout through a pop-up window accessed from the View Item page, or if the MAP price is not shown until the checkout flow after the buyer has already committed to buying the item. To show the MAP price prior to checkout, the seller will set this value to <code>PRE_CHECKOUT</code>. To show the MAP price after the buyer already commits to buy the item, the seller will set this value to <code>DURING_CHECKOUT</code>. This field will be ignored if the seller and/or the listing is not eligible for the MAP feature.<br/><br/>This field will be returned if set for the offer. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/inventory/types/slr:MinimumAdvertisedPriceHandlingEnum'>eBay API documentation</a>
  */
-
+@Document
 data class PricingSummary (
     @Json(name = "auctionReservePrice")
-    val auctionReservePrice: Amount? = null,
+    var auctionReservePrice: Amount? = null,
     @Json(name = "auctionStartPrice")
-    val auctionStartPrice: Amount? = null,
+    var auctionStartPrice: Amount? = null,
     @Json(name = "minimumAdvertisedPrice")
-    val minimumAdvertisedPrice: Amount? = null,
+    var minimumAdvertisedPrice: Amount? = null,
     /* This field is needed if the Strikethrough Pricing (STP) feature will be used in the offer. This field indicates that the product was sold for the price in the <strong>originalRetailPrice</strong> field on an eBay site, or sold for that price by a third-party retailer. When using the <strong>createOffer</strong> or <strong>updateOffer</strong> calls, the seller will pass in a value of <code>ON_EBAY</code> to indicate that the product was sold for the <strong>originalRetailPrice</strong> on an eBay site, or the seller will pass in a value of <code>OFF_EBAY</code> to indicate that the product was sold for the <strong>originalRetailPrice</strong> through a third-party retailer. This field and the <strong>originalRetailPrice</strong> field are only applicable if the seller and listing are eligible to use the Strikethrough Pricing feature, a feature which is limited to the US (core site and Motors), UK, Germany, Canada (English and French versions), France, Italy, and Spain sites.<br/><br/>This field will be returned if set for the offer. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/inventory/types/slr:SoldOnEnum'>eBay API documentation</a> */
     @Json(name = "originallySoldForRetailPriceOn")
-    val originallySoldForRetailPriceOn: kotlin.String? = null,
+    var originallySoldForRetailPriceOn: kotlin.String? = null,
     @Json(name = "originalRetailPrice")
-    val originalRetailPrice: Amount? = null,
+    var originalRetailPrice: Amount? = null,
     @Json(name = "price")
-    val price: Amount? = null,
+    var price: Amount? = null,
     /* This field is needed if the Minimum Advertised Price (MAP) feature will be used in the offer. This field is only applicable if an eligible US seller is using the Minimum Advertised Price (MAP) feature and a <strong>minimumAdvertisedPrice</strong> has been specified. The value set in this field will determine whether the MAP price is shown to a prospective buyer prior to checkout through a pop-up window accessed from the View Item page, or if the MAP price is not shown until the checkout flow after the buyer has already committed to buying the item. To show the MAP price prior to checkout, the seller will set this value to <code>PRE_CHECKOUT</code>. To show the MAP price after the buyer already commits to buy the item, the seller will set this value to <code>DURING_CHECKOUT</code>. This field will be ignored if the seller and/or the listing is not eligible for the MAP feature.<br/><br/>This field will be returned if set for the offer. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/inventory/types/slr:MinimumAdvertisedPriceHandlingEnum'>eBay API documentation</a> */
     @Json(name = "pricingVisibility")
-    val pricingVisibility: kotlin.String? = null
+    var pricingVisibility: kotlin.String? = null
 )
-
