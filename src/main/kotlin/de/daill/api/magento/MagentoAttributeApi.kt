@@ -21,7 +21,7 @@ class MagentoAttributeApi {
     lateinit var magentoClient: MagentoApiClient
 
     fun getAttributeDetails(attribute: String): CatalogDataProductAttributeInterface? {
-        var apiResource = "rest/V1/products/attributes/$attribute"
+        var apiResource = "rest/all/V1/products/attributes/$attribute"
         val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).build()

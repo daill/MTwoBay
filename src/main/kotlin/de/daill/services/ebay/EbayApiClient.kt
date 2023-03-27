@@ -136,7 +136,9 @@ open class EbayApiClient {
 
     fun initProperties() {
         var props = tokenRepository.findAll()
-        tokens = props.last()
+        tokens = props.elementAtOrElse(props.count()-1) {
+            EbayTokens()
+        }
     }
 
     final inline fun <reified T> request(requestConfig: RequestConfig, body : Any? = null): ApiInfrastructureResponse<T?> {
@@ -255,8 +257,8 @@ open class EbayApiClient {
     }
 
     fun refreshAccessToken() {
-        val environmentalTokens = tokens.byEnvironment(environment)
-        val environmentalCreds = properties.byEnvironment(environment)
+        val environmentalTokens = tokens.byEnvironment(properties.currentEnvironment)
+        val environmentalCreds = properties.byEnvironment(properties.currentEnvironment)
 
         if (environmentalTokens.refreshTokenExpirationDate?.isBefore(LocalDateTime.now()) == true) {
             throw EbayAuthException("refresh token is invalid. new auth flow required")
@@ -274,7 +276,7 @@ open class EbayApiClient {
 
         var authHeader = String(Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray()))
 
-        val request: Request = Request.Builder().url(environment.apiEndpoint)
+        val request: Request = Request.Builder().url(properties.currentEnvironment.apiEndpoint)
             .header("Authorization", "Basic $authHeader")
             .header("Content-Type", "application/x-www-form-urlencoded")
             .post(requestBody)
@@ -292,8 +294,8 @@ open class EbayApiClient {
 
     fun exchangeAccessToken(code: String) {
         val client = OkHttpClient()
-        var environmentalCreds = properties.byEnvironment(environment)
-        var environmentalTokens = tokens.byEnvironment(environment)
+        var environmentalCreds = properties.byEnvironment(properties.currentEnvironment)
+        var environmentalTokens = tokens.byEnvironment(properties.currentEnvironment)
 
 
         val requestData = StringBuilder()
@@ -303,7 +305,7 @@ open class EbayApiClient {
         val requestBody = requestData.toString().toRequestBody("application/x-www-form-urlencoded".toMediaTypeOrNull())
         var authHeader = String(Base64.getEncoder().encode("${environmentalCreds.appId}:${environmentalCreds.certId}".toByteArray()))
 
-        val request: Request = Request.Builder().url(environment.apiEndpoint)
+        val request: Request = Request.Builder().url(properties.currentEnvironment.apiEndpoint)
             .header("Authorization", "Basic $authHeader")
             .header("Content-Type", "application/x-www-form-urlencoded")
             .post(requestBody)
@@ -315,6 +317,8 @@ open class EbayApiClient {
             LOG.debug(bodyString)
             parseTokens(bodyString, environmentalTokens)
             tokenRepository.save(tokens)
+        } else {
+            LOG.debug(response.body?.string())
         }
 
         response.close()

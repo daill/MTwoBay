@@ -307,7 +307,7 @@ class EbayOfferApi()  {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/offer",
+            "/sell/inventory/v1/offer",
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -348,7 +348,7 @@ class EbayOfferApi()  {
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
-            "/offer/{offerId}/publish/".replace("{"+"offerId"+"}", "$offerId"),
+            "/sell/inventory/v1/offer/{offerId}/publish/".replace("{"+"offerId"+"}", "$offerId"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )

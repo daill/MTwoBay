@@ -7,11 +7,7 @@ import de.daill.api.magento.MagentoAttributeApi
 import de.daill.api.magento.MagentoProductsApi
 import de.daill.model.MappingProperties
 import de.daill.model.ebay.*
-import de.daill.model.magento.CatalogDataProductInterface
-import de.daill.model.magento.CatalogDataProductQueryFilterParam
-import de.daill.model.magento.FrameworkAttributeInterface
-import de.daill.model.magento.MagentoSyncStatus
-import de.daill.model.mtwobay.GeneratedOffer
+import de.daill.model.magento.*
 import de.daill.services.ebay.ClientException
 import de.daill.services.ebay.EbayProperties
 import de.daill.services.mtwobay.MTwoBayOfferRepository
@@ -20,11 +16,13 @@ import de.daill.services.mtwobay.MTwoBayPropertiesRepository
 import de.daill.services.mtwobay.MTwoBaySyncRepository
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
 import java.net.URLDecoder
 import java.nio.charset.Charset
 import java.time.LocalDateTime
+import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 @Service
@@ -43,7 +41,7 @@ class SyncTask {
     lateinit var magentoAttributeApi: MagentoAttributeApi
 
     @Autowired
-    lateinit var magentoProductsSyncRepository: MTwoBaySyncRepository
+    lateinit var mTwoBaySyncRepository: MTwoBaySyncRepository
 
     @Autowired
     lateinit var ebayInventoryItemApi: EbayInventoryItemApi
@@ -68,20 +66,20 @@ class SyncTask {
 
 
 
-    //@Scheduled(initialDelay = 2000, fixedDelayString = "PT30M" )
+    @Scheduled(initialDelay = 2000, fixedDelayString = "PT30M" )
     fun process() {
-
 
         ebayInventoryItemApi.environment = ebayProperties.currentEnvironment
 
         // get last sync status
 
-        var lastSync = magentoProductsSyncRepository.findTopByOrderByLastSyncDateDesc()
+        var lastSync = mTwoBaySyncRepository.findTopByOrderByLastSyncDateDesc()
         LOG.debug(lastSync.toString())
 
+        // initial sync
         if (lastSync == null) {
             lastSync = MagentoSyncStatus()
-            lastSync.lastSyncDate = LocalDateTime.now().minusMonths(36)
+            lastSync.lastSyncDate = LocalDateTime.now(ZoneOffset.UTC).minusMonths(36)
         }
         // fetch all products with ebay flag
 
@@ -90,47 +88,73 @@ class SyncTask {
         var params = listOf(
             CatalogDataProductQueryFilterParam(conditionType = "eq", field = "ebay_listing", value = "1"),
             CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "qty", value = "1", group = 3),
-            CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "created_at", value = lastSync.lastSyncDate.toString(), group = 1),
-            CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "updated_at", value = lastSync.lastSyncDate.toString(), group = 2)
+//            CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "created_at", value = lastSync.lastSyncDate.toString(), group = 1),
+//            CatalogDataProductQueryFilterParam(conditionType = "gteq", field = "updated_at", value = lastSync.lastSyncDate.toString(), group = 2)
             //CatalogDataProductQueryPageSizeParam(pageSize = 10)
         )
         var products = magentoProductsApi.getProducts(params)
 //        LOG.debug(products.toString())
+        var syncedEntries = mTwoBayGeneratedOfferRepository.findAll()
+
 
         var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-        products?.items?.forEach {
+        products?.items?.forEach {item ->
+
+            var updated = (LocalDateTime.parse(item.updatedAt, formatter).isAfter(lastSync.lastSyncDate))
+            var created = (LocalDateTime.parse(item.createdAt, formatter).isAfter(lastSync.lastSyncDate))
 
 
-            if (LocalDateTime.parse(it.createdAt, formatter).isAfter(lastSync.lastSyncDate)) {
-                processInventoryItem(it)
-                var id = processOfferItem(it)
-
-
-            } else if  (LocalDateTime.parse(it.updatedAt, formatter).isAfter(lastSync.lastSyncDate)) {
-                // updated item, get the one from the local database to build the delta
+            if (created || updated) {
+                var stockItem = magentoProductsApi.getStockItem(item.sku)
+                LOG.info("processing item with sku ${item.sku}")
+                processInventoryItem(item, stockItem)
+                var id = processOfferItem(item, stockItem, updated)
+                id?.let { id ->
+                    publishOffer(id)
+                }
             }
 
+            syncedEntries.removeIf{ it -> it.sku == item.sku }
+
+
+        }
+        // reflect flag revoke
+        syncedEntries.forEach { item ->
+            try {
+                item.offerId?.let { id -> ebayOfferApi.deleteOffer(id) }
+            } catch (e: ClientException) {
+                LOG.error("Could not delete offer with id ${item.offerId}: ${e.cause?.message}")
+            }
+            try {
+
+                item.sku?.let { sku ->
+                    ebayInventoryItemApi.deleteInventoryItem(sku);
+                }
+            } catch (e: ClientException) {
+                LOG.error("Could not delete inventory item with sku ${item.sku}: ${e.cause?.message}")
+            }
+            mTwoBayGeneratedOfferRepository.deleteById(item.sku)
         }
 
-        //productsRepository.saveAll(products?.items)
+        lastSync.lastSyncDate = LocalDateTime.now(ZoneOffset.UTC)
+        mTwoBaySyncRepository.save(lastSync)
 
-        // sync with products in internal database
-
-
-        // create delta set
-        // update ebay products
     }
 
     fun publishOffer(offerId: String) {
+        var response = ebayOfferApi.publishOffer(offerId)
 
+        response.warnings?.forEach { LOG.error("error while publishing offerId $offerId: ${it.errorId} - ${it.message}") }
     }
 
-    fun processOfferItem(item: CatalogDataProductInterface): String? {
+    fun processOfferItem(
+        item: CatalogDataProductInterface,
+        stockItem: CatalogInventoryDataStockItemInterface?,
+        update: Boolean
+    ): String? {
         var generatedOffer = mTwoBayGeneratedOfferRepository.findBySku(item.sku) ?: EbayOfferDetailsWithAll()
 
 
-
-        var stockItem = magentoProductsApi.getStockItem(item.sku)
         var mappings = magentoMappingProperties.byEnvironment(ebayProperties.currentEnvironment)
 
         var priceAmount = Amount(currency = mappings.currency, value = item.price.toString())
@@ -159,14 +183,33 @@ class SyncTask {
             listingDescription = item.customAttributes.find { attr -> attr.attributeCode == "description" }?.value?.first().toString()
         }
 
-        try {
-            val offerResponse: OfferResponse = when(generatedOffer.offerId.isNullOrEmpty()) {
-                true -> ebayOfferApi.createOffer(contentLanguage = "de-DE", generatedOffer)
+
+
+            val offerResponse: OfferResponse = when (update) {
+                true -> {
+                    lateinit var response: OfferResponse
+                    try {
+                        response = ebayOfferApi.createOffer(contentLanguage = "de-DE", generatedOffer)
+                    } catch(e: ClientException) {
+                        LOG.error("adding offer failed: ${e.message} ${e.cause}")
+                        var existing = ebayOfferApi.getOffers(format = null, sku = item.sku, limit = null, marketplaceId = "EBAY_DE", offset = null)
+                        existing.offers?.let {
+                            response = OfferResponse(offerId = it.first().offerId)
+                        }
+                    }
+                    response
+                }
                 false -> {
-                    ebayOfferApi.updateOffer(contentLanguage = "de-DE", body = generatedOffer);
+                    try {
+                        ebayOfferApi.updateOffer(contentLanguage = "de-DE", body = generatedOffer);
+                    } catch(e: ClientException) {
+                        LOG.error("updating offer failed: ${e.message} ${e.cause}")
+                    }
+
                     OfferResponse(offerId = generatedOffer.offerId)
                 }
             }
+
 
             LOG.debug("offer created with id ${offerResponse.offerId}")
             offerResponse.offerId?.let {
@@ -182,16 +225,12 @@ class SyncTask {
                 mTwoBayGeneratedOfferRepository.save(generatedOffer)
             }
 
-            offerResponse.warnings?.forEach { error -> LOG.debug(error.message) }
+            offerResponse.warnings?.forEach { LOG.error("error while adding/updating offer ${offerResponse.offerId}: ${it.errorId} - ${it.message}") }
 
             return offerResponse.offerId
-        } catch(e: ClientException) {
-            LOG.error("adding offer failed: ${e.message}")
-        }
-        return null
     }
 
-    fun processInventoryItem(item: CatalogDataProductInterface) {
+    fun processInventoryItem(item: CatalogDataProductInterface, stockItem: CatalogInventoryDataStockItemInterface?) {
         var baugruppen = magentoAttributeApi.getAttributeDetails("baugruppe")
         var models = magentoAttributeApi.getAttributeDetails("modell")
         var conditions = magentoAttributeApi.getAttributeDetails("zustand")
@@ -203,14 +242,17 @@ class SyncTask {
         var manufacturer = ""
         var model = ""
         var price = item.price.toString()
-        var image = ""
+        var images: MutableList<String> = ArrayList<String>()
         var condition = ""
 
+        item.mediaGalleryEntries.forEach {entry ->
+            images.add("${URLDecoder.decode(magentoProperties.storeBaseUrl, Charset.defaultCharset())}/media/catalog/product${entry.file}")
+        }
         item.customAttributes.forEach {attr ->
             when (attr.attributeCode) {
                 "baugruppe" -> baugruppe = baugruppen?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
                 "modell" -> model = models?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
-                "image" -> image = "${URLDecoder.decode(magentoProperties.storeBaseUrl, Charset.defaultCharset())}/media/catalog/product${attr.value.first().toString()}"
+                //"image" -> image = "${URLDecoder.decode(magentoProperties.storeBaseUrl, Charset.defaultCharset())}/media/catalog/product${attr.value.first().toString()}"
                 "zustand" -> condition = conditions?.options?.find { opt -> opt.value == attr.value.first()}?.label.toString()
                 "manufacturer" -> manufacturer = manufacturers?.options?.find { opt -> opt.value == attr.value.first() }?.label.toString()
             }
@@ -231,11 +273,11 @@ class SyncTask {
         if (model.isNotBlank() && model.isNotEmpty()) {
             aspects.put("Model", listOf(model))
         }
-        var images = listOf(image)
+        var availability = Availability(shipToLocationAvailability = ShipToLocationAvailability(quantity = stockItem?.qty?.toInt()))
         var product = Product(title = item.name, aspects = aspects, imageUrls = images)
         // need to get the manufacturer and categories to determine aspects
 
-        var inventoryItem = InventoryItem(condition = encodeCondition(condition), packageWeightAndSize = packageWeightAndSize, product = product)
+        var inventoryItem = InventoryItem(condition = encodeCondition(condition), packageWeightAndSize = packageWeightAndSize, product = product, availability = availability)
 
         var response = ebayInventoryItemApi.createOrReplaceInventoryItem("de-DE", sku = item.sku, inventoryItem)
 

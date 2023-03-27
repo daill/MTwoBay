@@ -34,7 +34,6 @@ class EbayAuthCallback: ApplicationListener<EbayAuthEvent> {
     }
 
     override fun onApplicationEvent(event: EbayAuthEvent) {
-        apiClient.environment = EbayEnvironments.SANDBOX
         apiClient.exchangeAccessToken(event.authCode.orEmpty())
     }
 

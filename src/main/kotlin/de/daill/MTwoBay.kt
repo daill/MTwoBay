@@ -34,12 +34,9 @@ class MTwoBay: ApplicationRunner {
     @Autowired
     lateinit var apiClient: EbayApiClient
 
-    @Autowired
-    lateinit var task: SyncTask
-    
+
     override fun run(args: ApplicationArguments?) {
         LOG.info("server starting")
-        task.process()
         LOG.debug(apiClient.properties.production.toString())
 
     }

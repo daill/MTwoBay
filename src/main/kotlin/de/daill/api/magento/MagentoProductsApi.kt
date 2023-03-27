@@ -49,7 +49,7 @@ class MagentoProductsApi {
     }
 
     fun getStockItem(productSKU: String): CatalogInventoryDataStockItemInterface? {
-        var apiResource = "rest/V1/stockItems/${URLEncoder.encode(productSKU, Charset.defaultCharset())}"
+        var apiResource = "rest/all/V1/stockItems/${URLEncoder.encode(productSKU, Charset.defaultCharset())}"
         val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).build()
@@ -84,7 +84,7 @@ class MagentoProductsApi {
      *
      */
     fun getProducts(params: List<Any>): CatalogDataProductSearchResultsInterface? {
-        var apiResource = "rest/V1/products"
+        var apiResource = "rest/all/V1/products"
         val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).add(FrameworkAttributeInterface::class.java, MagentoMoshiAttributeAdapter()).build()
