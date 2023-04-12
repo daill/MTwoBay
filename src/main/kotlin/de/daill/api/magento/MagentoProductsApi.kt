@@ -28,7 +28,7 @@ class MagentoProductsApi {
      */
     fun putProduct(sku: String, productJson: String) {
         var apiResource = "rest/all/V1/products/${URLEncoder.encode(sku, Charset.defaultCharset())}"
-        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
+        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl, "UTF-8") + apiResource
 
         val queryUrl = url.toHttpUrl().newBuilder()
         val queryParams = mutableMapOf<String, String>()
@@ -50,7 +50,7 @@ class MagentoProductsApi {
 
     fun getStockItem(productSKU: String): CatalogInventoryDataStockItemInterface? {
         var apiResource = "rest/all/V1/stockItems/${URLEncoder.encode(productSKU, Charset.defaultCharset())}"
-        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
+        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).build()
 
@@ -67,7 +67,7 @@ class MagentoProductsApi {
         var body = response.body?.string()
         LOG.debug("body read: ${body}")
 
-        return moshi.adapter(CatalogInventoryDataStockItemInterface::class.java).fromJson(body)
+        return moshi.adapter(CatalogInventoryDataStockItemInterface::class.java).fromJson(body!!)
     }
 
     /**
@@ -85,7 +85,7 @@ class MagentoProductsApi {
      */
     fun getProducts(params: List<Any>): CatalogDataProductSearchResultsInterface? {
         var apiResource = "rest/all/V1/products"
-        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
+        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).add(FrameworkAttributeInterface::class.java, MagentoMoshiAttributeAdapter()).build()
 
@@ -132,7 +132,7 @@ class MagentoProductsApi {
         var body = response.body?.string()
         LOG.debug("body read: ${body}")
 
-        return moshi.adapter(CatalogDataProductSearchResultsInterface::class.java).fromJson(body)
+        return moshi.adapter(CatalogDataProductSearchResultsInterface::class.java).fromJson(body!!)
 
     }
 }

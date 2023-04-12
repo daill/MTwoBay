@@ -22,7 +22,7 @@ class MagentoAttributeApi {
 
     fun getAttributeDetails(attribute: String): CatalogDataProductAttributeInterface? {
         var apiResource = "rest/all/V1/products/attributes/$attribute"
-        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl!!, "UTF-8") + apiResource
+        val url =  URLDecoder.decode(magentoClient.magentoProperties.storeBaseUrl, "UTF-8") + apiResource
 
         var moshi = Moshi.Builder().add(BigDecimalAdapter).build()
 
@@ -37,7 +37,7 @@ class MagentoAttributeApi {
         var body = response.body?.string()
         LOG.debug("body read: ${body}")
 
-        return moshi.adapter(CatalogDataProductAttributeInterface::class.java).fromJson(body)
+        return moshi.adapter(CatalogDataProductAttributeInterface::class.java).fromJson(body!!)
 
     }
 

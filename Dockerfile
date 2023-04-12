@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY ./build/libs/WeserBot-0.2.3.jar WeserBot.jar
+COPY ./build/libs/MTwoBay-0.0.1.jar MTwoBay.jar
 COPY /data /data
-ENTRYPOINT ["java", "-jar", "WeserBot.jar"]
+ENTRYPOINT ["java", "-jar", "MTwoBay.jar"]

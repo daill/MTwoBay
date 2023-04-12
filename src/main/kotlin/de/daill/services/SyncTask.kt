@@ -108,10 +108,10 @@ class SyncTask {
                 var stockItem = magentoProductsApi.getStockItem(item.sku)
                 LOG.info("processing item with sku ${item.sku}")
                 processInventoryItem(item, stockItem)
-                var id = processOfferItem(item, stockItem, updated)
-                id?.let { id ->
-                    publishOffer(id)
-                }
+//                var id = processOfferItem(item, stockItem, updated)
+//                id?.let { value ->
+//                    publishOffer(value)
+//                }
             }
 
             syncedEntries.removeIf{ it -> it.sku == item.sku }
@@ -133,7 +133,7 @@ class SyncTask {
             } catch (e: ClientException) {
                 LOG.error("Could not delete inventory item with sku ${item.sku}: ${e.cause?.message}")
             }
-            mTwoBayGeneratedOfferRepository.deleteById(item.sku)
+            mTwoBayGeneratedOfferRepository.deleteById(item.sku!!)
         }
 
         lastSync.lastSyncDate = LocalDateTime.now(ZoneOffset.UTC)
@@ -238,10 +238,8 @@ class SyncTask {
         var magentoProperties = magentoRepository.findAll().last()
 
         var baugruppe = ""
-        var description = ""
         var manufacturer = ""
         var model = ""
-        var price = item.price.toString()
         var images: MutableList<String> = ArrayList<String>()
         var condition = ""
 

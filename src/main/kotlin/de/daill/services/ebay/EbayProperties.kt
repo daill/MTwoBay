@@ -10,7 +10,6 @@ import org.springframework.context.annotation.PropertySource
 @Configuration
 @PropertySource("classpath:ebay.properties")
 @ConfigurationProperties(prefix = "api")
-
 class EbayProperties: EbayEnvironmentalInterface<EbayPropertyValues> {
     var production: EbayPropertyValues = EbayPropertyValues()
     var sandbox: EbayPropertyValues = EbayPropertyValues()

@@ -55,7 +55,7 @@ class MagentoAuthApi {
 
         var request = Request.Builder().url(url)
         request.post(FormBody.Builder().build())
-        paramString += ",oauth_signature=\"${java.net.URLEncoder.encode(magentoClient.createSignature("POST", url, paramMap = paramMap, consumerSecret = magentoProperties.consumerSecret, tokenSecret = magentoProperties.tokenSecret!!), "UTF-8")}\""
+        paramString += ",oauth_signature=\"${java.net.URLEncoder.encode(magentoClient.createSignature("POST", url, paramMap = paramMap, consumerSecret = magentoProperties.consumerSecret, tokenSecret = magentoProperties.tokenSecret), "UTF-8")}\""
 
         request.addHeader("Authorization", "OAuth $paramString")
         LOG.debug("Authorization=OAuth $paramString")
